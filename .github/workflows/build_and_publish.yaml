@@ -1,0 +1,31 @@
+name: Build docker image and publish
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: r
+        registry: docker.opensafely.org
+        username: docker
+        password: ${{ secrets.OPENSAFELY_DOCKER_PASSWORD }}
+        buildargs:
+    - name: Generate renv.lock
+      run: |
+        docker build .
+        id=$(docker create r)
+        docker cp $id:/workspace/renv.lock .
+        docker rm -v $id
+    - name: Commit files
+      run: |
+        git config --local user.email "tech@thedatalab.org"
+        git config --local user.name "GitHub Action user"
+        git commit -am "Add current version"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
