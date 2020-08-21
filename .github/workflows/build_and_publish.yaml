@@ -15,14 +15,14 @@ jobs:
         buildargs:
     - name: Generate renv.lock
       run: |
-        docker build .
-        id=$(docker create r)
+        id=$(docker create docker.opensafely.org/r:latest)
         docker cp $id:/workspace/renv.lock .
         docker rm -v $id
     - name: Commit files
       run: |
         git config --local user.email "tech@thedatalab.org"
         git config --local user.name "GitHub Action user"
+        git add renv.lock
         git commit -am "Add current version"
     - name: Push changes
       uses: ad-m/github-push-action@master
