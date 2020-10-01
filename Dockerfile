@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM docker.opensafely.org/base-docker
 
 RUN apt-get update --fix-missing
 
