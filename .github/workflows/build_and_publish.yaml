@@ -1,10 +1,43 @@
 name: Build docker image and publish
-on: [push]
+on:
+  push:
+    branches: [master]
+env:
+  IMAGE_NAME: r
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - name: checkout
+      uses: actions/checkout@master
+    - name: Build image
+      run: docker build . --file Dockerfile --tag $IMAGE_NAME
+    - name: Log into GitHub Container Registry
+      run: docker login https://ghcr.io -u ${{ github.actor }} --password ${{ secrets.CR_PAT }}
+    - name: Push image to GitHub Container Registry
+      run: |
+        IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
+        docker tag $IMAGE_NAME $IMAGE_ID:latest
+        docker push $IMAGE_ID:latest
+    - name: Write packages
+      id: write_packages
+      run: |
+        packages=$(docker run $IMAGE_NAME -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE)')
+        echo "::set-output name=packages=$packages"
+    - name: Publish package list
+      id: packages_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: R Packages included in ${{ github.ref }}
+        body: |
+          R packages in this image:
+          ${{ steps.write_packages.outputs.packages }}
+        draft: false
+        prerelease: false
+    # deprecated
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
@@ -13,19 +46,3 @@ jobs:
         username: docker
         password: ${{ secrets.OPENSAFELY_DOCKER_PASSWORD }}
         buildargs:
-    - name: Generate renv.lock
-      run: |
-        id=$(docker create docker.opensafely.org/r:latest)
-        docker cp $id:/workspace/renv.lock .
-        docker rm -v $id
-    - name: Commit files
-      run: |
-        git config --local user.email "tech@thedatalab.org"
-        git config --local user.name "GitHub Action user"
-        git add renv.lock
-        git commit -am "Add current version"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true

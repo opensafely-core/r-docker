@@ -81,5 +81,6 @@ RUN R -e 'renv::install("pacman")'
 WORKDIR /workspace
 
 RUN R -e 'renv::snapshot(type = "all")'
+RUN R -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/packages.csv")'
 
 ENTRYPOINT ["/usr/bin/Rscript"]
