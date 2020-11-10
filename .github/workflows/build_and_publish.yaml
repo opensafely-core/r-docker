@@ -1,10 +1,25 @@
 name: Build docker image and publish
-on: [push]
+on:
+  push:
+    branches: [master]
+env:
+  IMAGE_NAME: r
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - name: checkout
+      uses: actions/checkout@master
+    - name: Build image
+      run: docker build . --file Dockerfile --tag $IMAGE_NAME
+    - name: Log into GitHub Container Registry
+      run: docker login https://ghcr.io -u ${{ github.actor }} --password ${{ secrets.CR_PAT }}
+    - name: Push image to GitHub Container Registry
+      run: |
+        IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
+        docker tag $IMAGE_NAME $IMAGE_ID:latest
+        docker push $IMAGE_ID:latest
+    # deprecated
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
@@ -13,19 +28,3 @@ jobs:
         username: docker
         password: ${{ secrets.OPENSAFELY_DOCKER_PASSWORD }}
         buildargs:
-    - name: Generate renv.lock
-      run: |
-        id=$(docker create docker.opensafely.org/r:latest)
-        docker cp $id:/workspace/renv.lock .
-        docker rm -v $id
-    - name: Commit files
-      run: |
-        git config --local user.email "tech@thedatalab.org"
-        git config --local user.name "GitHub Action user"
-        git add renv.lock
-        git commit -am "Add current version"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true
