@@ -1,0 +1,26 @@
+A base R docker image for running OpenSAFELY studies.
+
+It uses [Miniconda](https://docs.conda.io/en/latest/miniconda.html) to manage
+the R dependencies from CRAN. The `packages.in` file lists the main top-level
+dependencies, and packages.txt explicitly lists the full pinned dependency tree
+for reproducibilty, and is used to build the docker image.
+
+To build the image locally: 
+
+    make build
+
+To add or update dependencies, edit `packages.in` and then run
+
+    make build
+
+and when you are happy, commit your changes to `packages.txt`.
+
+To recreate the R exact environment outside of docker:
+
+    conda create --name r --file packages.txt
+
+
+Notes:
+
+ - most regular R packages are prefixed with `r-` in the conda repository.
+ - you cannot reliably mix `conda install` with R's `install.packages`.

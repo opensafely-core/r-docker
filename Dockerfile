@@ -23,8 +23,8 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-4.7.12.1-Linux-x
     echo "conda activate r" >> ~/.bashrc
 
 # install our packages and clean up
-COPY r-environment.yml /opt/r-environment.yml
-RUN conda env create --file /opt/r-environment.yml && \
+COPY packages.txt /opt/packages.txt
+RUN conda create --name r --file /opt/packages.txt --channel r --channel conda-forge && \
     conda clean --all --yes
 
 ENTRYPOINT ["/opt/conda/envs/r/bin/Rscript"]
