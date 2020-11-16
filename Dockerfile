@@ -27,5 +27,6 @@ COPY packages.txt /opt/packages.txt
 RUN conda create --name r --file /opt/packages.txt --channel r --channel conda-forge && \
     conda clean --all --yes
 
+WORKDIR /workspace
 ENTRYPOINT ["/opt/conda/envs/r/bin/Rscript"]
 CMD [ "/bin/bash" ]
