@@ -30,7 +30,6 @@ cmd = [
     'conda', 'install', '--name', 'packages',
     '--file', str(packages_in),
     # the channel order here is important, it determines priority
-    '--channel', 'r', 
     '--channel', 'conda-forge',
     '--dry-run',    # do not actually install
     '--verbose',
@@ -41,9 +40,8 @@ process = run(cmd, stdout=subprocess.PIPE)
 json_packages = json.loads(process.stdout)  
 all_pkgs = json_packages['actions']['FETCH'] + json_packages['actions']['LINK']
 
-packages = []
+packages = set()
 for pkg in all_pkgs:
-    packages.append('{}={}'.format(pkg['name'], pkg['version']))
+    packages.add('{}={}'.format(pkg['name'], pkg['version']))
 
-packages.sort()
-print('\n'.join(packages))
+print('\n'.join(sorted(packages)))

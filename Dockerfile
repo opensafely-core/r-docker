@@ -24,7 +24,7 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-4.7.12.1-Linux-x
 
 # install our packages and clean up
 COPY packages.txt /opt/packages.txt
-RUN conda create --name r --file /opt/packages.txt --channel r --channel conda-forge && \
+RUN conda create --name r --file /opt/packages.txt --channel conda-forge && \
     conda clean --all --yes
 
 WORKDIR /workspace
