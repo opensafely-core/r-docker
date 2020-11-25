@@ -10,6 +10,8 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@master
+    - name: pull previous image
+      run: docker pull ghcr.io/opensafely/$IMAGE_NAME
     - name: Build image
       run: docker build . --file Dockerfile --tag $IMAGE_NAME
     - name: Log into GitHub Container Registry
@@ -24,19 +26,6 @@ jobs:
       run: |
         packages=$(docker run $IMAGE_NAME -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE)')
         echo "::set-output name=packages=$packages"
-    - name: Publish package list
-      id: packages_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: R Packages included in ${{ github.ref }}
-        body: |
-          R packages in this image:
-          ${{ steps.write_packages.outputs.packages }}
-        draft: false
-        prerelease: false
     # deprecated
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
