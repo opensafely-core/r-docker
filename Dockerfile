@@ -77,6 +77,7 @@ RUN R -e 'renv::install("tictoc")'
 RUN R -e 'renv::install("tidyverse")'
 RUN R -e 'renv::install("zoo")'
 RUN R -e 'renv::install("pacman")'
+RUN R -e 'renv::install("caret")'
 
 WORKDIR /workspace
 
