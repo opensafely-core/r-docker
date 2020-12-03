@@ -78,6 +78,8 @@ RUN R -e 'renv::install("tidyverse")'
 RUN R -e 'renv::install("zoo")'
 RUN R -e 'renv::install("pacman")'
 RUN R -e 'renv::install("caret")'
+RUN R -e 'renv::install("odbc")'
+RUN R -e 'renv::install("SCCS")'
 
 WORKDIR /workspace
 
