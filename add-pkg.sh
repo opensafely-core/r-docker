@@ -13,6 +13,7 @@ docker rm $NAME
 docker run r-$NAME -e "library('$PACKAGE')"
 ./test.sh r-$NAME
 docker tag r-$NAME $IMAGE
+echo $PACKAGE >> packages.txt
 
 set +x
 echo "Run this to push:"
