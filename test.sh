@@ -1,5 +1,5 @@
 #!/bin/bash
 set -eu
-IMAGE=${1:-docker.opensafely.org/r}
-tests=$(grep renv::install Dockerfile | sed -e 's/.*renv::install("\(.*\)").*/library("\1", warn.conflicts = FALSE)/')
+IMAGE=${1:-ghcr.io/opensafely/r}
+tests=$(grep -v '^#' packages.txt | xargs -L1 -I {} echo "library(\"{}\", warn.conflicts = FALSE)")
 docker run $IMAGE -e "$tests"
