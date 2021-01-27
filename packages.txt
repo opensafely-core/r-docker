@@ -50,3 +50,4 @@ patchwork
 svglite
 skimr
 gt
+flexsurv
