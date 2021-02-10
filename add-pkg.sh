@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eux
 PACKAGE=$1
-IMAGE=${2:-ghcr.io/opensafely/r}
+IMAGE=${2:-ghcr.io/opensafely-core/r}
 # docker tags need to be lowercase
 NAME=$(echo $PACKAGE | tr A-Z a-z)
 
@@ -14,6 +14,7 @@ docker run r-$NAME -e "library('$PACKAGE')"
 ./test.sh r-$NAME
 docker tag r-$NAME $IMAGE
 echo $PACKAGE >> packages.txt
+docker run -v $PWD:/out $IMAGE -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/out/packages.csv")'
 
 set +x
 echo "Run this to push:"
