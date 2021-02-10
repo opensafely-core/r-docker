@@ -51,3 +51,6 @@ svglite
 skimr
 gt
 flexsurv
+survminer
+pch
+fontquiver
