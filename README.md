@@ -3,16 +3,13 @@ Note: this Dockerfile is currently broken - do not build.
 Temporarily, we are adding packages hackily to the existing docker image
 and pushing updates.
 
-To do so, add the package to the current Dockerfile as renv::install,
-just to keep track of it.
-
-
-Then run:
+To add a new package run:
 
     ./add-pkg.sh [PACKAGE_NAME]
 
-This will install the package on the existing image, and then save that
-image, and test the package installation has worked.
+This will install the package in a layer on top of the existing image, and then tag that
+image locally as ghcr.io/opensafely-core/r. In then tests that all packages in
+packages.txt can be loaded without error. If so, it addes the new package to
+packages.txt and regenerates packages.csv.
 
-You can then push the updated docker image.
-
+You can then do `docker push ghcr.io/opensafely-core/r` to publish it.
