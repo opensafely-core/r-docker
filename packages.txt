@@ -54,3 +54,5 @@ flexsurv
 survminer
 pch
 fontquiver
+detectseparation
+parglm
