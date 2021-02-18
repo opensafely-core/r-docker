@@ -56,3 +56,6 @@ pch
 fontquiver
 detectseparation
 parglm
+interactions
+fastDummies
+splines2
