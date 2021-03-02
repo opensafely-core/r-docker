@@ -60,3 +60,4 @@ interactions
 fastDummies
 splines2
 gtsummary
+modelsummary
