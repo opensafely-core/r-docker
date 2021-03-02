@@ -61,3 +61,4 @@ fastDummies
 splines2
 gtsummary
 modelsummary
+mnlogit
