@@ -59,3 +59,4 @@ parglm
 interactions
 fastDummies
 splines2
+gtsummary
