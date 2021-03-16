@@ -21,6 +21,8 @@ if test "$TYPE" == "r"; then
     docker run "r-$NAME" -e "library('$PACKAGE')"
     ./test.sh "r-$NAME"
     echo "$PACKAGE" >> packages.txt
+else
+    echo "$PACKAGE" >> system-packages.txt
 fi
 
 docker tag "r-$NAME" "$IMAGE"
