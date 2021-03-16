@@ -62,3 +62,4 @@ splines2
 gtsummary
 modelsummary
 mnlogit
+Gmisc
