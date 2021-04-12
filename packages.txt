@@ -63,3 +63,4 @@ gtsummary
 modelsummary
 mnlogit
 Gmisc
+coxme
