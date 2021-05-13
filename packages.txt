@@ -65,3 +65,6 @@ mnlogit
 Gmisc
 coxme
 estimatr
+feather
+cpp11
+arrow
