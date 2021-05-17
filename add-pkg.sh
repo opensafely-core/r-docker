@@ -11,7 +11,7 @@ trap 'docker container rm $NAME || true' EXIT
 docker tag "$IMAGE" r-backup
 # build
 if test "$TYPE" == "r"; then
-    docker run --name "$NAME" "$IMAGE" -e "install.packages('$PACKAGE')"
+    docker run --name "$NAME" "$IMAGE" -e LIBARROW_MINIMAL=false "install.packages('$PACKAGE', Ncpus=8)"
 else
     docker run --name "$NAME" --entrypoint bash "$IMAGE" -c "apt-get install -y $PACKAGE"
 fi

@@ -1,2 +1,3 @@
 libgit2-dev
 pandoc
+liblz4-dev
