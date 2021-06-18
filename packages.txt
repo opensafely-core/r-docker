@@ -68,3 +68,7 @@ estimatr
 feather
 cpp11
 arrow
+detectseparation
+brglm2
+MatchIt
+egg
