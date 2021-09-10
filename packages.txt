@@ -73,3 +73,5 @@ brglm2
 MatchIt
 egg
 optparse
+caTools
+gets
