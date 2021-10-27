@@ -1,7 +1,15 @@
+# r-docker
+
+Docker image for running R scripts in OpenSAFELY.
+
 Note: this Dockerfile is currently broken - do not build.
+
+## Adding packages
 
 Temporarily, we are adding packages hackily to the existing docker image
 and pushing updates.
+
+We are not currently auditing packages added, we are trusting the requester. Users can already ship and run arbitrary code in this docker image.
 
 To add a new package run:
 
