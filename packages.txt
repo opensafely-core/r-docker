@@ -77,3 +77,4 @@ caTools
 gets
 ggalluvial
 ggvenn
+rms
