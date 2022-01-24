@@ -78,3 +78,4 @@ gets
 ggalluvial
 ggvenn
 rms
+finalfit
