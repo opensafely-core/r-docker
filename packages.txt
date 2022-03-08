@@ -81,3 +81,4 @@ rms
 finalfit
 pammtools
 multcomp
+magick
