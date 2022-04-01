@@ -84,3 +84,4 @@ multcomp
 magick
 cmprsk
 VGAM
+Epi
