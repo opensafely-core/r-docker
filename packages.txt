@@ -83,3 +83,4 @@ pammtools
 multcomp
 magick
 cmprsk
+VGAM
