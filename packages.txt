@@ -88,3 +88,4 @@ VGAM
 segmented
 Epi
 vcd
+tsModel
