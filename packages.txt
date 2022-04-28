@@ -86,3 +86,6 @@ cmprsk
 VGAM
 # Epi - installed but the automated test import doesn't work for it
 segmented
+Epi
+vcd
+tsModel
