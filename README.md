@@ -11,7 +11,15 @@ and pushing updates.
 
 We are not currently auditing packages added, we are trusting the requester. Users can already ship and run arbitrary code in this docker image.
 
-To add a new package run:
+To add a new package, first pull the latest image:
+
+    docker pull ghcr.io/opensafely-core/r
+
+then run the tests to check that all is well:
+
+    ./test.sh
+
+and add the package by running:
 
     ./add-pkg.sh [PACKAGE_NAME]
 
