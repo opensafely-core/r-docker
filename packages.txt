@@ -90,3 +90,4 @@ Epi
 vcd
 tsModel
 ggh4x
+RcppRoll
