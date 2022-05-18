@@ -91,3 +91,4 @@ vcd
 tsModel
 ggh4x
 RcppRoll
+bayesm
