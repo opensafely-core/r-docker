@@ -93,3 +93,4 @@ ggh4x
 RcppRoll
 bayesm
 consort
+survey
