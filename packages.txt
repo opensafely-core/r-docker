@@ -94,3 +94,4 @@ RcppRoll
 bayesm
 consort
 survey
+incidence
