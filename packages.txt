@@ -95,3 +95,4 @@ bayesm
 consort
 survey
 incidence
+predtools
