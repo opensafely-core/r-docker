@@ -97,3 +97,4 @@ survey
 incidence
 predtools
 pseudo
+WeightIt
