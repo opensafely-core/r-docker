@@ -98,3 +98,4 @@ incidence
 predtools
 pseudo
 WeightIt
+cobalt
