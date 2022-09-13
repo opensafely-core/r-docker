@@ -97,3 +97,5 @@ survey
 incidence
 predtools
 pseudo
+WeightIt
+cobalt
