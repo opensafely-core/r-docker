@@ -20,6 +20,8 @@
 "NHPoisson","3.3"
 "Publish","2020.12.23"
 "R.methodsS3","1.8.1"
+"R.oo","1.25.0"
+"R.utils","2.12.0"
 "R6","2.4.1"
 "RColorBrewer","1.1-2"
 "RConics","1.1.1"
