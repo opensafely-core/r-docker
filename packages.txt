@@ -102,3 +102,4 @@ cobalt
 glmnet
 R.utils
 metafor
+lcmm
