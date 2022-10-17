@@ -1,17 +1,22 @@
 #!/bin/bash
 set -eux
-PACKAGE=$1
-TYPE=${2:-r}
+test -n "$1" || { echo "You must specify 'r' or 'apt' for package type"; exit 1; }
+test -n "$2" || { echo "You must specify a package name"; exit 1; }
+TYPE=$1
+PACKAGE=$2
+REPO=${3:-}
 IMAGE=${IMAGE:-ghcr.io/opensafely-core/r}
 # docker tags need to be lowercase
 NAME=$(echo "$PACKAGE" | tr '[:upper:]' '[:lower:]')
+INSTALL_ARGS="Ncpus=8"
 
 trap 'docker container rm $NAME || true' EXIT
 
 docker tag "$IMAGE" r-backup
 # build
 if test "$TYPE" == "r"; then
-    docker run --name "$NAME" "$IMAGE" -e "install.packages('$PACKAGE', Ncpus=8)"
+    test -n "$REPO" && INSTALL_ARGS=$"$INSTALL_ARGS, repos='$REPO'"
+    docker run --name "$NAME" "$IMAGE" -e "install.packages('$PACKAGE', $INSTALL_ARGS)"
 else
     docker run --name "$NAME" --entrypoint bash "$IMAGE" -c "apt-get install -y $PACKAGE"
 fi
@@ -20,7 +25,12 @@ docker commit --change "CMD []" --change 'ENTRYPOINT ["/usr/bin/Rscript"]' "$NAM
 if test "$TYPE" == "r"; then
     docker run "r-$NAME" -e "library('$PACKAGE')"
     ./test.sh "r-$NAME"
-    echo "$PACKAGE" >> packages.txt
+    if test -n "$REPO"; then
+        echo "$PACKAGE  # repo: $REPO" >> packages.txt
+    else
+        echo "$PACKAGE" >> packages.txt
+    fi
+
 else
     echo "$PACKAGE" >> system-packages.txt
 fi
@@ -31,6 +41,3 @@ docker run -v "$PWD:/out" "$IMAGE" -e 'write.csv(installed.packages()[, c("Packa
 set +x
 echo "Run this to push:"
 echo "docker push $IMAGE"
-
-
-
