@@ -9,6 +9,8 @@ IMAGE=${IMAGE:-ghcr.io/opensafely-core/r}
 # docker tags need to be lowercase
 NAME=$(echo "$PACKAGE" | tr '[:upper:]' '[:lower:]')
 INSTALL_ARGS="Ncpus=8"
+BUILD_DATE="$(date +'%y-%m-%dT%H:%M:%S.%3NZ')"
+REVISION="$(git rev-parse --short HEAD)"
 
 trap 'docker container rm $NAME || true' EXIT
 
@@ -20,7 +22,7 @@ if test "$TYPE" == "r"; then
 else
     docker run --name "$NAME" --entrypoint bash "$IMAGE" -c "apt-get install -y $PACKAGE"
 fi
-docker commit --change "CMD []" --change 'ENTRYPOINT ["/usr/bin/Rscript"]' "$NAME" "r-$NAME"
+docker commit --change "CMD []" --change 'ENTRYPOINT ["/usr/bin/Rscript"]' --change "LABEL org.opencontainers.image.created=$BUILD_DATE org.opencontainers.image.revision=$REVISION" "$NAME" "r-$NAME" 
 
 if test "$TYPE" == "r"; then
     docker run "r-$NAME" -e "library('$PACKAGE')"
