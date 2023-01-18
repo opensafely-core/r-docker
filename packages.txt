@@ -106,3 +106,4 @@ lcmm
 dtwclust  # repo https://cran.microsoft.com/snapshot/2022-09-23/
 randomForest  # repo: https://cran.microsoft.com/snapshot/2022-02-03
 randomForestExplainer
+ggfortify
