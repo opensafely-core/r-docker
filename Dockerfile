@@ -1,89 +1,95 @@
-FROM ubuntu:bionic
+# syntax=docker/dockerfile:1.2
+#################################################
+#
+# We need base r dependencies on both the builder and r images, so
+# create base image with those installed to save installing them twice.
+FROM ghcr.io/opensafely-core/base-action:20.04 as base-r
 
-RUN apt-get update --fix-missing
+COPY dependencies.txt /root/dependencies.txt
 
-# Allows us to use add-apt-repository (below)
-RUN apt-get install -y software-properties-common
+# add cran repo for R packages and install
+RUN --mount=type=cache,target=/var/cache/apt \
+    echo "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" > /etc/apt/sources.list.d/cran.list &&\
+    /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc &&\
+    /root/docker-apt-install.sh /root/dependencies.txt
 
-# R install per https://cran.r-project.org/bin/linux/ubuntu/README.html
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-RUN add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release --codename --short)-cran40/"
+ENV RENV_PATHS_LIBRARY=/renv/lib \
+    RENV_PATHS_LOCKFILE=/renv/renv.lock
 
-# Required for non-interactive R install
-ENV DEBIAN_FRONTEND=noninteractive
-ENV TZ=Europe/London
-RUN apt-get install -y tzdata
+#################################################
+#
+# Next, use the base-docker-plus-r image to create a build image
+FROM base-r as builder
 
-# Requirements for most things in CRAN, taken from
-# https://packagemanager.rstudio.com/client/#/repos/2/overview
+# install build time dependencies 
+COPY build-dependencies.txt /root/build-dependencies.txt
+RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/build-dependencies.txt
 
-RUN apt-get install -y bowtie2 bwidget cargo cmake coinor-libclp-dev dcraw default-jdk gdal-bin git haveged imagej imagemagick jags libapparmor-dev libatk1.0-dev libcairo2-dev libfftw3-dev libfontconfig1-dev libfreetype6-dev libgdal-dev libgeos-dev libgl1-mesa-dev libglib2.0-dev libglpk-dev libglu1-mesa-dev libgmp3-dev libgpgme11-dev libgsl0-dev libgtk2.0-dev libhdf5-dev libhiredis-dev libicu-dev libimage-exiftool-perl libjpeg-dev libjq-dev libleptonica-dev libmagick++-dev libmpfr-dev libmysqlclient-dev libnetcdf-dev libopenmpi-dev libpango1.0-dev libpng-dev libpoppler-cpp-dev libpq-dev libproj-dev libprotobuf-dev libquantlib0-dev librdf0-dev librsvg2-dev libsasl2-dev libsecret-1-dev libsndfile1-dev libsodium-dev libssh2-1-dev libssl-dev libtesseract-dev libtiff-dev libudunits2-dev libv8-dev libwebp-dev libxft-dev libxml2-dev libxslt-dev libzmq3-dev make ocl-icd-opencl-dev pari-gp perl phantomjs protobuf-compiler python python3 rustc saga saint swftools tcl texlive tk tk-dev tk-table unixodbc-dev zlib1g-dev libraptor2-dev librasqal3-dev libcurl4-gnutls-dev
+RUN mkdir -p /cache /renv/lib
 
-# Don't install recommended packages; we want to handle all of that ourselves
-RUN apt install -y r-base-dev --no-install-recommends
+# Build a full arrow package, specifically for zstd compression, but also because its good.
+# The renv cache paths use /cache, which should be mounted a reusable build-time cache dir.
+ENV RENV_PATHS_SOURCE=/cache/source \
+    RENV_PATHS_BINARY=/cache/binary \
+    RENV_PATHS_CACHE=/cache/cache \
+    LIBARROW_MINIMAL=false
+
+WORKDIR /renv
+
+# install renv
+RUN --mount=type=cache,target=/cache,id=/cache-2004 R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE)'
+
+# use renv to install packages
+COPY renv.lock /renv/renv.lock
+RUN --mount=type=cache,target=/cache,id=/cache-2004 R -e 'renv::restore()'
+
+# renv uses symlinks to the the build cache to populate the lib directory. As
+# our cache is mounted only at build (so we can do fast rebuilds), we need to
+# change the symlinks into full copies, to store them in the image.
+COPY copy-symlink.sh /tmp/copy-symlink.sh
+RUN --mount=type=cache,target=/cache,id=/cache-2004 bash /tmp/copy-symlink.sh /renv/lib
 
 
-RUN R CMD javareconf
+###############################################
+#
+# This stage exists to allow installing a new package. 
+#
+# Building it explicitly with --target add-package will build and install the
+# package supplied by PACKAGE build arg. We do at as a build stage so we can
+# reuse and populate the build cache.  It will then update the renv.lock file,
+# include the cache hashes.  This renv.lock file is copied off this built image
+# by the project tooling.  This will then make normal image build a) use the
+# new renv.lock file and b) re-use the prepopulated cached build from building
+# this special layer.
+FROM builder as add-package
+
+ARG PACKAGE
+# install the package using the cache
+RUN --mount=type=cache,target=/cache,id=/cache-2004 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
 
 
-# Now we can install packages
-RUN R -e 'install.packages("renv")'
-RUN R -e 'renv::consent(provided = TRUE)'
-RUN R -e 'renv::init()'
+################################################
+#
+# Finally, build the actual image from the base-r image
+FROM base-r as r
 
-# The 'knitr' package is required to parse dependencies within multi-mode files
-RUN R -e 'install.packages("knitr")'
+# Some static metadata for this specific image, as defined by:
+# https://github.com/opencontainers/image-spec/blob/master/annotations.md#pre-defined-annotation-keys
+# The org.opensafely.action label is used by the jobrunner to indicate this is
+# an approved action image to run.
+LABEL org.opencontainers.image.title="r" \
+      org.opencontainers.image.description="R action for opensafely.org" \
+      org.opencontainers.image.source="https://github.com/opensafely-core/r-docker" \
+      org.opensafely.action="r"
 
-# These have been requested by OS users in https://github.com/opensafely/cohort-extractor/issues/227
-RUN R -e 'renv::install("DBI")'
-RUN R -e 'renv::install("GGally")'
-RUN R -e 'renv::install("Hmisc")'
-RUN R -e 'renv::install("NHPoisson")'
-RUN R -e 'renv::install("Rcpp")'
-RUN R -e 'renv::install("survival")'
-RUN R -e 'renv::install("binom")'
-RUN R -e 'renv::install("brms")'
-RUN R -e 'renv::install("cowplot")'
-RUN R -e 'renv::install("data.table")'
-RUN R -e 'renv::install("deSolve")'
-RUN R -e 'renv::install("doParallel")'
-RUN R -e 'renv::install("dplyr")'
-RUN R -e 'renv::install("dtplyr")'
-RUN R -e 'renv::install("foreach")'
-RUN R -e 'renv::install("furrr")'
-RUN R -e 'renv::install("ggdist")'
-RUN R -e 'renv::install("here")'
-RUN R -e 'renv::install("janitor")'
-RUN R -e 'renv::install("lme4")'
-RUN R -e 'renv::install("lubridate")'
-RUN R -e 'renv::install("magrittr")'
-RUN R -e 'renv::install("maptools")'
-RUN R -e 'renv::install("matrixStats")'
-RUN R -e 'renv::install("mgcv")'
-RUN R -e 'renv::install("mice")'
-RUN R -e 'renv::install("mvtnorm")'
-RUN R -e 'renv::install("naniar")'
-RUN R -e 'renv::install("nlme")'
-RUN R -e 'renv::install("parallel")'
-RUN R -e 'renv::install("plotrix")'
-RUN R -e 'renv::install("relsurv")'
-RUN R -e 'renv::install("rgdal")'
-RUN R -e 'renv::install("rgeos")'
-RUN R -e 'renv::install("sandwich")'
-RUN R -e 'renv::install("sf")'
-RUN R -e 'renv::install("stats")'
-RUN R -e 'renv::install("stringr")'
-RUN R -e 'renv::install("tictoc")'
-RUN R -e 'renv::install("tidyverse")'
-RUN R -e 'renv::install("zoo")'
-RUN R -e 'renv::install("pacman")'
-RUN R -e 'renv::install("caret")'
-RUN R -e 'renv::install("odbc")'
-RUN R -e 'renv::install("SCCS")'
+# ACTION_EXEC is our default executable
+ENV ACTION_EXEC="/usr/bin/Rscript"
 
+# setup /workspace
+RUN mkdir /workspace
 WORKDIR /workspace
 
-RUN R -e 'renv::snapshot(type = "all")'
-RUN R -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/packages.csv")'
-
-ENTRYPOINT ["/usr/bin/Rscript"]
+# copy the renv over from the builder image
+COPY --from=builder /renv /renv
+# this will ensure the renv is activated by default
+RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
