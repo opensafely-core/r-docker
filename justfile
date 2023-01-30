@@ -20,12 +20,12 @@ build:
 
 # build and a package and its dependencies to the image
 add-package package:
-    ./add-package.sh {{ package }}
+    bash ./add-package.sh {{ package }}
 
 
 # test the locally built image
 test image="r": build
-    ./test.sh "{{ image }}"
+    bash ./test.sh "{{ image }}"
 
 
 # lint source code

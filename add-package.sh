@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 test -n "$1" || { echo "You must specify a package name. If you want a specific version, append @VERSION"; exit 1; }
 
