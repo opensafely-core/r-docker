@@ -18,7 +18,7 @@ services:
     init: true
   add-package:
     extends: r
-    image: "r-${PACKAGE}"
+    image: "$IMAGE_TAG"
     build:
       target: add-package
       args:

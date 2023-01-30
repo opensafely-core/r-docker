@@ -63,7 +63,7 @@ RUN --mount=type=cache,target=/cache,id=/cache-2004 bash /tmp/copy-symlink.sh /r
 # this special layer.
 FROM builder as add-package
 
-ARG PACKAGE
+ARG PACKAGE="default-arg-to-silence-docker"
 # install the package using the cache
 RUN --mount=type=cache,target=/cache,id=/cache-2004 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
 

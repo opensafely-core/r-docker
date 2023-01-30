@@ -3,7 +3,9 @@ set -euo pipefail
 test -n "$1" || { echo "You must specify a package name. If you want a specific version, append @VERSION"; exit 1; }
 
 cp renv.lock renv.lock.bak
-export PACKAGE=$1
+export PACKAGE="$1"
+IMAGE_TAG="r-$(echo "$PACKAGE" | tr "[:upper:]" "[:lower:]")"
+export IMAGE_TAG
 IMAGE=${IMAGE:-r}
 echo "Attempting to build and install $PACKAGE"
 
@@ -16,7 +18,7 @@ fi
 # update renv.lock 
 cp renv.lock renv.lock.bak
 # cannot use docker-compose run as it mangles the output
-docker run --rm "r-$PACKAGE" cat /renv/renv.lock > renv.lock
+docker run --rm "$IMAGE_TAG" cat /renv/renv.lock > renv.lock
 
 echo "$PACKAGE and its dependencies built and cached, renv.lock updated." 
 echo "Rebuilding R image with new renv.lock file." 

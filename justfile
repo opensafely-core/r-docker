@@ -1,13 +1,14 @@
 set dotenv-load := true
 
+#enable modern docker build features
+export DOCKER_BUILDKIT := "1"
+export COMPOSE_DOCKER_CLI_BUILD := "1"
+
 # build the R image locally
 build: 
     #!/usr/bin/env bash
     set -euo pipefail
 
-    # enable modern docker build features
-    export DOCKER_BUILDKIT=1
-    export COMPOSE_DOCKER_CLI_BUILD=1
 
     # set build args for prod builds
     export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
