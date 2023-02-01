@@ -31,4 +31,4 @@ fi
 just test "$IMAGE"
 
 # update packages.csv for backwards compat with current docs
-docker run "$IMAGE" -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/dev/stdout")' 2>/dev/null | sort > packages.csv
+docker run "$IMAGE" -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/dev/stdout")' 2>/dev/null | sort -f > packages.csv
