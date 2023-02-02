@@ -4,7 +4,7 @@ test -n "$1" || { echo "You must specify a package name. If you want a specific 
 
 cp renv.lock renv.lock.bak
 export PACKAGE="$1"
-IMAGE_TAG="r-$(echo "$PACKAGE" | tr "[:upper:]" "[:lower:]")"
+IMAGE_TAG="r-$(echo "${PACKAGE%@*}" | tr "[:upper:]" "[:lower:]")"
 export IMAGE_TAG
 IMAGE=${IMAGE:-r}
 echo "Attempting to build and install $PACKAGE"
