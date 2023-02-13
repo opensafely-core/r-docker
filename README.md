@@ -38,14 +38,14 @@ If the package requires any system build dependencies (e.g. -dev packages with
 headers), they should be added to `build-dependencies.txt` If it requires
 runtime dependencies, they should be added to `dependencies.txt`.  Packages
 don't advertise their system dependencies, so you may need to figure them out
-via trying to add it and reading and error output.
+by trying to add the package and reading any error output on failure.
 
 
 #### Installing an older version
 
 If the package still fails to build, you may be able to install an older version.
 
-Find and previous version  at https://cran.r-project.org/src/contrib/Archive/{PACKAGE}/, and attempt to install it specifically with
+Find a previous version at https://cran.r-project.org/src/contrib/Archive/{PACKAGE}/, and attempt to install it specifically with
 
 ```
 just add-package PACKAGE@VERSION

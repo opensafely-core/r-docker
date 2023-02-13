@@ -28,7 +28,7 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/b
 RUN mkdir -p /cache /renv/lib
 
 # Build a full arrow package, specifically for zstd compression, but also because its good.
-# The renv cache paths use /cache, which should be mounted a reusable build-time cache dir.
+# The renv cache paths use /cache, which should be mounted as a reusable build-time cache dir.
 ENV RENV_PATHS_SOURCE=/cache/source \
     RENV_PATHS_BINARY=/cache/binary \
     RENV_PATHS_CACHE=/cache/cache \

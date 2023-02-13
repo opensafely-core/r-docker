@@ -10,7 +10,7 @@ IMAGE=${IMAGE:-r}
 echo "Attempting to build and install $PACKAGE"
 
 if ! docker-compose build add-package; then
-    echo "Builing $PACKAGE failed."
+    echo "Building $PACKAGE failed."
     echo "You may need to add build dependencies (e.g. -dev packages) to build-dependencies.txt"
     exit 1
 fi
