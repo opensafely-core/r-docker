@@ -14,6 +14,7 @@ RUN --mount=type=cache,target=/var/cache/apt \
     /root/docker-apt-install.sh /root/dependencies.txt
 
 ENV RENV_PATHS_LIBRARY=/renv/lib \
+    RENV_PATHS_SANDBOX=/renv/sandbox \
     RENV_PATHS_LOCKFILE=/renv/renv.lock
 
 #################################################

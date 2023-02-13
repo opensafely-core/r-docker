@@ -2,7 +2,6 @@
 set -euo pipefail
 test -n "$1" || { echo "You must specify a package name. If you want a specific version, append @VERSION"; exit 1; }
 
-cp renv.lock renv.lock.bak
 export PACKAGE="$1"
 IMAGE_TAG="r-$(echo "${PACKAGE%@*}" | tr "[:upper:]" "[:lower:]")"
 export IMAGE_TAG
@@ -12,6 +11,7 @@ echo "Attempting to build and install $PACKAGE"
 if ! docker-compose build add-package; then
     echo "Building $PACKAGE failed."
     echo "You may need to add build dependencies (e.g. -dev packages) to build-dependencies.txt"
+    echo "Alternatively, you may need to install an older version of $PACKAGE. Please see the Trouble shooting section of the README."
     exit 1
 fi
 
