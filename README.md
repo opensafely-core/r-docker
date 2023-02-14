@@ -45,7 +45,7 @@ by trying to add the package and reading any error output on failure.
 
 If the package still fails to build, you may be able to install an older version.
 
-Find a previous version at https://cran.r-project.org/src/contrib/Archive/{PACKAGE}/, and attempt to install it specifically with
+Find a previous version at `https://cran.r-project.org/src/contrib/Archive/{PACKAGE}/`, and attempt to install it specifically with
 
 ```
 just add-package PACKAGE@VERSION
