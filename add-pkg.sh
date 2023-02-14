@@ -38,7 +38,7 @@ else
 fi
 
 docker tag "r-$NAME" "$IMAGE"
-docker run "$IMAGE" -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/dev/stdout")' 2>/dev/null | sort > packages.csv
+docker run -e LC_ALL=C.UTF-8 "$IMAGE" -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/dev/stdout")' 2>/dev/null > packages.csv
 
 set +x
 echo "Run this to push:"
