@@ -1630,6 +1630,17 @@
         "magrittr"
       ]
     },
+    "forestploter": {
+      "Package": "forestploter",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "7b83f61e7eea3610e2f63e3c93bafaa5",
+      "Requirements": [
+        "gridExtra",
+        "gtable"
+      ]
+    },
     "fs": {
       "Package": "fs",
       "Version": "1.5.0",
