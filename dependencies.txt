@@ -1,0 +1,11 @@
+tzdata
+r-base-core=4.0.5-1.2004.0
+libcurl3-gnutls
+libxml2
+libgdal26
+librsvg2-2
+libudunits2-0
+libnode64
+libmagick++-6.q16-8
+libgit2-28
+pandoc

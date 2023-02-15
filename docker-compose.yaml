@@ -1,0 +1,26 @@
+services:
+  # used to build the production image
+  r:
+    image: r
+    build:
+      context: .
+      target: r
+      cache_from:  # should speed up the build in CI, where we have a cold cache
+        - ghcr.io/opensafely-core/base-docker
+        - ghcr.io/opensafely-core/r
+      args:
+        # this makes the image work for later cache_from: usage
+        - BUILDKIT_INLINE_CACHE=1
+        # env vars supplied by make/just
+        - BUILD_DATE
+        - REVISION
+        - VERSION
+    init: true
+  add-package:
+    extends: r
+    image: "${IMAGE_TAG:-}"
+    build:
+      target: add-package
+      args:
+       - PACKAGE
+

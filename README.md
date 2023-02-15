@@ -1,43 +1,52 @@
 # r-docker
 
-Docker image for running R scripts in OpenSAFELY.
+Docker image for running R code in OpenSAFELY, both locally and in production.
 
-Note: this Dockerfile is currently broken - do not build.
+## Requirements
 
-## Adding packages
-
-Temporarily, we are adding packages hackily to the existing docker image and
-pushing updates.
-
-We are not currently auditing packages added, we are trusting the requester.
-Users can already ship and run arbitrary code in this docker image.
-
-To add a new package, first pull the latest image:
-
-    docker pull ghcr.io/opensafely-core/r
-
-then run the tests to check that all is well:
-
-    ./test.sh
+You will need docker, docker-compose and [just](https://github.com/casey/just) installed.
 
 
-To add an R package, run:
+## Building
 
-    ./add-pkg.sh r PACKAGE_NAME [REPO]
+`just build`
 
-To add a system package run:
+Under the hood, this builds `./Dockerfile` using docker-compose and buildkit.
 
-    ./add-pkg.sh apt PACKAGE_NAME
-
-This will install the requested package in a layer on top of the existing
-image, and then tag that image locally as ghcr.io/opensafely-core/r. It then
-tests that all packages in packages.txt can be loaded without error. 
-
-For R packages, it adds the new package to packages.txt and regenerates
-packages.csv.
-
-You can then do `docker push ghcr.io/opensafely-core/r` to publish it.
+We currently build a lot of packages, so an initial build on a fresh checkout
+can take a long time (e.g. an hour).  However, to alleviate this, the
+Dockerfile is carefully designed to use local buildkit cache, so subequent
+rebuilds should be very fast.
 
 
-Note: this could be automated, but we are wary of this, due to unintended
-upgrades of libraries, so we do it by hand currently.
+## Adding new packages
+
+To add a package, it must be available on CRAN. We cannot currently install
+things from Github or other locations.
+
+`just add-package PACKAGE` 
+
+This will attempt to install and build the package and its dependencies, and
+update the `renv.lock`. It will then rebuild the R image with the new lock file
+and test it.
+
+### Trouble shooting
+
+####  System dependencies
+
+If the package requires any system build dependencies (e.g. -dev packages with
+headers), they should be added to `build-dependencies.txt` If it requires
+runtime dependencies, they should be added to `dependencies.txt`.  Packages
+don't advertise their system dependencies, so you may need to figure them out
+by trying to add the package and reading any error output on failure.
+
+
+#### Installing an older version
+
+If the package still fails to build, you may be able to install an older version.
+
+Find a previous version at `https://cran.r-project.org/src/contrib/Archive/{PACKAGE}/`, and attempt to install it specifically with
+
+```
+just add-package PACKAGE@VERSION
+```

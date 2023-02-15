@@ -1,1 +1,4 @@
 *~
+renv.lock.bak
+renv/
+.tests.R

@@ -1,0 +1,14 @@
+r-base-dev=4.0.5-1.2004.0
+git
+cmake
+libgdal-dev
+libjpeg-dev
+libmagick++-dev
+libpng-dev
+librsvg2-dev
+libssl-dev
+libudunits2-dev
+libv8-dev
+libxml2-dev
+unixodbc-dev
+libcurl4-gnutls-dev

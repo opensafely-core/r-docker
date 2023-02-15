@@ -1,0 +1,561 @@
+updated: libacl: 2.2.52-3 -> 2.2.53-6
+updated: libaec: 0.3.2-2 -> 1.0.4-1
+updated: libapt-pkg: 1.6.12 -> 2.0.9
+updated: libarmadillo: 1:8.400.0 -> 1:9.800.4
+updated: libarpack: 3.5.0 -> 3.7.0-3
+updated: libasn1-8-heimdal: 7.5.0 -> 7.7.0
+updated: libasound: 1.1.3-5 -> 1.2.2-2.1
+updated: libasound2-data: 1.1.3-5 -> 1.2.2-2.1
+updated: libatomic: 8.4.0-1 -> 10.3.0-1
+updated: libattr: 1:2.4.47-2 -> 1:2.4.48-5
+updated: libaudit: 1:2.8.2-1 -> 1:2.8.5-2
+updated: libaudit-common: 1:2.8.2-1 -> 1:2.8.5-2
+updated: libblas: 3.7.1-4 -> 3.9.0-1
+updated: libblkid: 2.31.1-0.4 -> 2.34-0.1
+updated: libbsd: 0.8.7-1 -> 0.10.0-1
+updated: libbz2: 1.0.6-8.1 -> 1.0.8-2
+updated: libc: 2.27-3 -> 2.31-0
+updated: libcairo: 1.15.10-2 -> 1.16.0-4
+updated: libcairo-gobject: 1.15.10-2 -> 1.16.0-4
+updated: libcap-ng: 0.7.7-3.1 -> 0.7.9-2.1
+updated: libc-bin: 2.27-3 -> 2.31-0
+updated: libcharls: 1.1.0 -> 2.0.0
+updated: libcom-err: 1.44.1-1 -> 1.45.5-2
+updated: libcurl3-gnutls: 7.58.0-2 -> 7.68.0-1
+updated: libcurl: 7.58.0-2 -> 7.68.0-1
+updated: libdap: 3.19.1-2 -> 3.20.5-1
+updated: libdapclient6v: 3.19.1-2 -> 3.20.5-1
+updated: libdatrie: 0.2.10-7 -> 0.2.12-3
+updated: libdb: 5.3.28-13.1 -> 5.3.28
+updated: libdebconfclient: 0.213 -> 0.251
+updated: libexpat: 2.2.5-3 -> 2.2.9-1
+updated: libext2fs: 1.44.1-1 -> 1.45.5-2
+updated: libfdisk: 2.31.1-0.4 -> 2.34-0.1
+updated: libffi: 3.2.1-8 -> 3.3-4
+updated: libfftw3-double: 3.3.7-1 -> 3.3.8-2
+updated: libfontconfig: 2.12.6-0 -> 2.13.1-2
+updated: libfreetype: 2.8.1-2 -> 2.10.1-2
+updated: libfreexl: 1.0.5-1 -> 1.0.5-3
+updated: libfyba: 4.1.1-3 -> 4.1.1-6
+updated: libgcrypt: 1.8.1-4 -> 1.8.5-5
+updated: libgdal: 2.2.3 -> 3.0.4
+updated: libgdk-pixbuf2.0: 2.36.11-2 -> 2.40.0
+updated: libgdk-pixbuf2.0-common: 2.36.11-2 -> 2.40.0
+updated: libgeos-3.: 3.6.2-1 -> 3.8.0-1
+updated: libgeos-c1v: 3.6.2-1 -> 3.8.0-1
+updated: libgeotiff: 1.4.2-2 -> 1.5.1-2
+updated: libgfortran: 7.5.0-3 -> 10.3.0-1
+updated: libgif: 5.1.4-2 -> 5.1.9-1
+updated: libgit2: 0.26.0 -> 0.28.4
+updated: libglib2.0: 2.56.4-0 -> 2.64.6-1
+updated: libgmp: 2:6.1.2 -> 2:6.2.0
+updated: libgnutls: 3.5.18-1 -> 3.6.13-2
+updated: libgomp: 8.4.0-1 -> 10.3.0-1
+updated: libgpg-error: 1.27-6 -> 1.37-1
+updated: libgraphite2: 1.3.11-2 -> 1.3.13-11
+updated: libgssapi3-heimdal: 7.5.0 -> 7.7.0
+updated: libgssapi-krb5: 1.16-2 -> 1.17-6
+updated: libharfbuzz0b: 1.7.2-1 -> 2.6.4-1
+updated: libhcrypto4-heimdal: 7.5.0 -> 7.7.0
+updated: libhdf4-0-alt: 4.2.13-2 -> 4.2.14-1
+updated: libhdf5: 1.10.0-patch1 -> 1.10.4
+updated: libheimbase1-heimdal: 7.5.0 -> 7.7.0
+updated: libheimntlm0-heimdal: 7.5.0 -> 7.7.0
+updated: libhogweed: 3.4-1 -> 3.5.1
+updated: libhx509-5-heimdal: 7.5.0 -> 7.7.0
+updated: libice: 2:1.0.9-2 -> 2:1.0.10-0
+updated: libicu: 60.2-3 -> 66.1-2
+updated: libidn2: 2.0.4-1.1 -> 2.2.0-2
+updated: libjpeg-turbo: 1.5.2-0 -> 2.0.3-0
+updated: libjson-c: 0.12.1-1.3 -> 0.13.1
+updated: libk5crypto: 1.16-2 -> 1.17-6
+updated: libkeyutils: 1.5.9-9.2 -> 1.6-6
+updated: libkmlbase: 1.3.0-5 -> 1.3.0-8
+updated: libkmldom: 1.3.0-5 -> 1.3.0-8
+updated: libkmlengine: 1.3.0-5 -> 1.3.0-8
+updated: libkrb5-26-heimdal: 7.5.0 -> 7.7.0
+updated: libkrb5: 1.16-2 -> 1.17-6
+updated: libkrb5support: 1.16-2 -> 1.17-6
+updated: liblapack: 3.7.1-4 -> 3.9.0-1
+updated: liblcms2: 2.9-1 -> 2.9-4
+updated: libldap-2.4: 2.4.45 -> 2.4.49
+updated: libldap-common: 2.4.45 -> 2.4.49
+updated: libltdl: 2.4.6-2 -> 2.4.6-14
+updated: liblz4: 0.0 -> 1.9.2-2
+updated: liblzma: 5.2.2-1.3 -> 5.2.4-1
+updated: libmagic: 1:5.32-2 -> 1:5.38-4
+updated: libmagick++-6.q16: 8:6.9.7.4 -> 8:6.9.10.23
+updated: libmagickcore-6.q16: 8:6.9.7.4 -> 8:6.9.10.23
+updated: libmagickwand-6.q16: 8:6.9.7.4 -> 8:6.9.10.23
+updated: libmagic-mgc: 1:5.32-2 -> 1:5.38-4
+updated: libmount: 2.31.1-0.4 -> 2.34-0.1
+updated: libmpdec: 2.4.2-1 -> 2.4.2-3
+updated: libmysqlclient: 5.7.31-0 -> 8.0.31-0
+updated: libncurses: 6.1-1 -> 6.2-0
+updated: libncursesw: 6.1-1 -> 6.2-0
+updated: libnetcdf: 1:4.6.0-2 -> 1:4.7.3-1
+updated: libnettle: 3.4-1 -> 3.5.1
+updated: libnghttp2: 1.30.0-1 -> 1.40.0-1
+updated: libnspr: 2:4.18-1 -> 2:4.25-1
+updated: libnss: 2:3.35-2 -> 2:3.49.1-1
+updated: libodbc: 2.3.4-1.1 -> 2.3.6-0.1
+updated: libogdi: 3.2.0 -> 4.1.0
+updated: libogg: 1.3.2-1 -> 1.3.4-0
+updated: libopenjp2: 2.3.0-2 -> 2.3.1-1
+updated: libp11-kit: 0.23.9-2 -> 0.23.20-1
+updated: libpam0g: 1.1.8-3.6 -> 1.3.1-5
+updated: libpam-modules-bin: 1.1.8-3.6 -> 1.3.1-5
+updated: libpam-modules: 1.1.8-3.6 -> 1.3.1-5
+updated: libpam-runtime: 1.1.8-3.6 -> 1.3.1-5
+updated: libpango-1.0: 1.40.14-1 -> 1.44.7-2
+updated: libpangocairo-1.0: 1.40.14-1 -> 1.44.7-2
+updated: libpangoft2-1.0: 1.40.14-1 -> 1.44.7-2
+updated: libpaper: 1.1.24 -> 1.1.28
+updated: libpaper-utils: 1.1.24 -> 1.1.28
+updated: libpcre2-8: 10.31-2 -> 10.34-7
+updated: libpcre: 2:8.39-9 -> 2:8.39-12
+updated: libpixman-1: 0.34.0-2 -> 0.38.4-0
+updated: libpng16: 1.6.34-1 -> 1.6.37-2
+updated: libpoppler: 0.62.0-2 -> 0.86.1-0
+updated: libpq: 10.12-0 -> 12.13-0
+updated: libprocps: 2:3.3.12-3 -> 2:3.3.16-1
+updated: libproj: 4.9.3-2 -> 6.3.1-1
+updated: libpsl: 0.19.1-5 -> 0.21.0-1
+updated: libpython: 3.6.9-1 -> 3.8.10-0
+updated: libquadmath: 8.4.0-1 -> 10.3.0-1
+updated: libreadline: 7.0-3 -> 8.0-4
+updated: libroken18-heimdal: 7.5.0 -> 7.7.0
+updated: librsvg2: 2.40.20-2 -> 2.48.9-1
+updated: libseccomp: 2.4.1-0 -> 2.5.1-1
+updated: libselinux: 2.7-2 -> 3.0-1
+updated: libsemanage: 2.7-2 -> 3.0-1
+updated: libsemanage-common: 2.7-2 -> 3.0-1
+updated: libsensors: 1:3.4.0-4 -> 1:3.6.0-2
+updated: libsepol: 2.7-1 -> 3.0-1
+updated: libsm: 2:1.2.2-1 -> 2:1.2.3-1
+updated: libsmartcols: 2.31.1-0.4 -> 2.34-0.1
+updated: libspatialite: 4.3.0a-5 -> 4.3.0a-6
+updated: libsqlite3: 3.22.0-1 -> 3.31.1-4
+updated: libss: 1.44.1-1 -> 1.45.5-2
+updated: libssh2: 1.8.0-1 -> 1.8.0-2.1
+updated: libssl: 1.1.1-1 -> 1.1.1f-1
+updated: libstdc+: 8.4.0-1 -> 10.3.0-1
+updated: libsystemd: 237-3 -> 245.4-4
+updated: libsz: 0.3.2-2 -> 1.0.4-1
+updated: libtasn1: 4.13-2 -> 4.16.0-2
+updated: libtcl: 8.6.8 -> 8.6.10
+updated: libthai: 0.1.27-2 -> 0.1.28-3
+updated: libthai-data: 0.1.27-2 -> 0.1.28-3
+updated: libtiff: 4.0.9-5 -> 4.1.0
+updated: libtinfo: 6.1-1 -> 6.2-0
+updated: libtk: 8.6.8-4 -> 8.6.10-1
+updated: libudev: 237-3 -> 245.4-4
+updated: libudunits2: 2.2.26-1 -> 2.2.26-5
+updated: libudunits2-data: 2.2.26-1 -> 2.2.26-5
+updated: libunistring: 0.9.9-0 -> 0.9.10-2
+updated: libunwind: 1.2.1-8 -> 1.2.1-9
+updated: liburiparser: 0.8.4-1 -> 0.9.3-2
+updated: libuuid: 2.31.1-0.4 -> 2.34-0.1
+updated: libuv: 1.18.0-3 -> 1.34.2-1
+updated: libvorbis0a: 1.3.5-4.2 -> 1.3.6-2
+updated: libvorbisfile: 1.3.5-4.2 -> 1.3.6-2
+updated: libwind0-heimdal: 7.5.0 -> 7.7.0
+updated: libx11: 2:1.6.4-3 -> 2:1.6.9-2
+updated: libx11-data: 2:1.6.4-3 -> 2:1.6.9-2
+updated: libxau: 1:1.0.8-1 -> 1:1.0.9-0
+updated: libxcb: 1.13-2 -> 1.14-2
+updated: libxcb-render: 1.13-2 -> 1.14-2
+updated: libxcb-shm: 1.13-2 -> 1.14-2
+updated: libxdmcp: 1:1.1.2-3 -> 1:1.1.3-0
+updated: libxerces-c: 3.2.0 -> 3.2.2
+updated: libxext: 2:1.3.3-1 -> 2:1.3.4-0
+updated: libxft: 2.3.2-1 -> 2.3.3-0
+updated: libxml: 2.9.4 -> 2.9.10
+updated: libxss: 1:1.2.2-1 -> 1:1.2.3-1
+updated: libzstd: 1.3.3 -> 1.4.4
+removed: libaacs
+removed: libalgorithm-diff-perl
+removed: libalgorithm-diff-xs-perl
+removed: libalgorithm-merge-perl
+removed: libamd
+removed: libapparmor
+removed: libapt-inst
+removed: libarchive
+removed: libarchive-cpio-perl
+removed: libarchive-zip-perl
+removed: libasan
+removed: libassuan
+removed: libatk1.0
+removed: libatk1.0-data
+removed: libatk-bridge2.0
+removed: libatk-wrapper-java
+removed: libatk-wrapper-java-jni
+removed: libatspi2.0
+removed: libauthen-sasl-perl
+removed: libavahi-client
+removed: libavahi-common
+removed: libavahi-common-data
+removed: libavcodec
+removed: libavformat
+removed: libavutil
+removed: libbabeltrace
+removed: libbdplus
+removed: libbinutils
+removed: libbluray
+removed: libboost-test1.
+removed: libbtf
+removed: libc6-dbg
+removed: libcairo-script-interpreter
+removed: libcamd
+removed: libcc1
+removed: libccolamd
+removed: libcholmod
+removed: libchromaprint
+removed: libcilkrts
+removed: libcolamd
+removed: libcolord
+removed: libcroco
+removed: libcrystalhd
+removed: libcups
+removed: libcupsfilters
+removed: libcupsimage
+removed: libcxsparse
+removed: libdapserver7v
+removed: libdata-dump-perl
+removed: libdbus-1
+removed: libdc1394
+removed: libdconf
+removed: libdjvulibre
+removed: libdjvulibre-text
+removed: libdpkg-perl
+removed: libdrm
+removed: libdrm-amdgpu
+removed: libdrm-common
+removed: libdrm-intel
+removed: libdrm-nouveau
+removed: libdrm-radeon
+removed: libdw
+removed: libdxflib
+removed: libedit
+removed: libegl
+removed: libegl-mesa
+removed: libelf
+removed: libencode-locale-perl
+removed: libepoxy
+removed: liberror-perl
+removed: libexif
+removed: libexif-doc
+removed: libfabric
+removed: libfakeroot
+removed: libfftw3-bin
+removed: libfftw3-long
+removed: libfftw3-quad
+removed: libfftw3-single
+removed: libfile-basedir-perl
+removed: libfile-desktopentry-perl
+removed: libfile-fcntllock-perl
+removed: libfile-listing-perl
+removed: libfile-mimeinfo-perl
+removed: libfile-stripnondeterminism-perl
+removed: libflac
+removed: libfont-afm-perl
+removed: libfontenc
+removed: libgail
+removed: libgail-common
+removed: libgbm
+removed: libgcc
+removed: libgd
+removed: libgdbm
+removed: libgdbm-compat
+removed: libgdcm
+removed: libgdk-pixbuf2.0-bin
+removed: libgirepository-1.0
+removed: libgl
+removed: libgl1-mesa-dri
+removed: libglapi-mesa
+removed: libgles
+removed: libglib2.0-bin
+removed: libglib2.0-data
+removed: libglpk
+removed: libglu1-mesa
+removed: libglvnd
+removed: libglx
+removed: libglx-mesa
+removed: libgme
+removed: libgmpxx4ldbl
+removed: libgpgme
+removed: libgphoto2
+removed: libgphoto2-l10n
+removed: libgphoto2-port
+removed: libgraphblas
+removed: libgs
+removed: libgs9-common
+removed: libgsl
+removed: libgslcblas
+removed: libgsm
+removed: libgtk2.0
+removed: libgtk2.0-bin
+removed: libgtk2.0-common
+removed: libgtk-3
+removed: libgtk-3-bin
+removed: libgtk-3-common
+removed: libharfbuzz-gobject
+removed: libharfbuzz-icu
+removed: libhavege
+removed: libhdf5-cpp
+removed: libhiredis
+removed: libhpdf-2.
+removed: libhtml-format-perl
+removed: libhtml-form-perl
+removed: libhtml-parser-perl
+removed: libhtml-tagset-perl
+removed: libhtml-tree-perl
+removed: libhttp-cookies-perl
+removed: libhttp-daemon-perl
+removed: libhttp-date-perl
+removed: libhttp-message-perl
+removed: libhttp-negotiate-perl
+removed: libhttp-parser2.
+removed: libhwloc
+removed: libhwloc-plugins
+removed: libibverbs
+removed: libicu-le-hb
+removed: libiculx
+removed: libidn
+removed: libij-java
+removed: libijs
+removed: libilmbase
+removed: libimage-exiftool-perl
+removed: libio-html-perl
+removed: libio-socket-ssl-perl
+removed: libipc-system-simple-perl
+removed: libisl
+removed: libitm
+removed: libjbig2dec
+removed: libjq
+removed: libjs-jquery
+removed: libjsoncpp
+removed: libjson-glib-1.0
+removed: libjson-glib-1.0-common
+removed: libklu
+removed: libkmlconvenience
+removed: libkmlregionator
+removed: libkmlxsd
+removed: libkpathsea
+removed: libksba
+removed: libldl
+removed: liblept
+removed: libllvm
+removed: liblocale-gettext-perl
+removed: liblsan
+removed: liblua5.1
+removed: libluajit-5.1
+removed: libluajit-5.1-common
+removed: liblwp-mediatypes-perl
+removed: liblwp-protocol-https-perl
+removed: liblzo2
+removed: libmagick++-6-headers
+removed: libmagickcore-6-arch-config
+removed: libmagickcore-6-headers
+removed: libmagickcore-6.q16-3-extra
+removed: libmagickwand-6-headers
+removed: libmail-sendmail-perl
+removed: libmailtools-perl
+removed: libmetis
+removed: libmhash
+removed: libmime-charset-perl
+removed: libmp3lame
+removed: libmpc
+removed: libmpfr
+removed: libmpg123
+removed: libmpx
+removed: libnet-dbus-perl
+removed: libnet-http-perl
+removed: libnetpbm
+removed: libnet-smtp-ssl-perl
+removed: libnet-ssleay-perl
+removed: libnl-3
+removed: libnl-route-3
+removed: libnorm
+removed: libnotify
+removed: libnpth
+removed: libnuma
+removed: libonig
+removed: libopencv-calib3d
+removed: libopencv-core
+removed: libopencv-features2d
+removed: libopencv-flann
+removed: libopencv-highgui
+removed: libopencv-imgcodecs
+removed: libopencv-imgproc
+removed: libopencv-ml
+removed: libopencv-videoio
+removed: libopenexr
+removed: libopengl
+removed: libopenmpi
+removed: libopenmpt
+removed: libopus
+removed: libpangoxft-1.0
+removed: libpciaccess
+removed: libpcre16
+removed: libpcre2-16
+removed: libpcre2-32
+removed: libpcre2-posix
+removed: libpcre32
+removed: libpcrecpp0v
+removed: libpcsclite
+removed: libperl
+removed: libpgm-5.2
+removed: libpipeline
+removed: libpng-tools
+removed: libpoppler-cpp0v
+removed: libposix-strptime-perl
+removed: libpotrace
+removed: libprotobuf
+removed: libprotobuf-lite
+removed: libprotoc
+removed: libproxy1v
+removed: libpsm-infinipath
+removed: libptexenc
+removed: libpython2.7-minimal
+removed: libpython2.7-stdlib
+removed: libpython3.6-minimal
+removed: libpython3.6-stdlib
+removed: libpython3-stdlib
+removed: libpython-stdlib
+removed: libqhull-r
+removed: libquantlib0v
+removed: libraptor2
+removed: librasqal
+removed: libraw1394
+removed: librbio
+removed: librdf
+removed: librdmacm
+removed: librest-0.7
+removed: librhash
+removed: librsvg2-common
+removed: libsaga-api-2.
+removed: libsaga-gdi-2.
+removed: libsasl2-modules
+removed: libsecret-1
+removed: libsecret-common
+removed: libshine
+removed: libsigsegv
+removed: libsnappy1v
+removed: libsndfile
+removed: libsocket+
+removed: libsodium
+removed: libsombok
+removed: libsoup2.4
+removed: libsoup-gnome2.4
+removed: libsoxr
+removed: libspeex
+removed: libspqr
+removed: libssh-gcrypt
+removed: libssl1.
+removed: libstd-rust
+removed: libsuitesparseconfig
+removed: libsvm
+removed: libswresample
+removed: libswscale
+removed: libsynctex
+removed: libsys-hostname-long-perl
+removed: libtbb
+removed: libtesseract
+removed: libtexlua
+removed: libtexluajit
+removed: libtext-iconv-perl
+removed: libtheora
+removed: libtie-ixhash-perl
+removed: libtiffxx
+removed: libtimedate-perl
+removed: libtool
+removed: libtry-tiny-perl
+removed: libtsan
+removed: libtwolame
+removed: libubsan
+removed: libumfpack
+removed: libunicode-linebreak-perl
+removed: liburi-perl
+removed: libusb-1.0
+removed: libutempter
+removed: libv8-3.
+removed: libva
+removed: libva-drm
+removed: libva-x11
+removed: libvdpau
+removed: libvigraimpex
+removed: libvorbisenc
+removed: libvpx
+removed: libwavpack
+removed: libwayland-client
+removed: libwayland-cursor
+removed: libwayland-egl
+removed: libwayland-server
+removed: libwebpdemux
+removed: libwmf0.2
+removed: libwww-perl
+removed: libwww-robotrules-perl
+removed: libwxbase3.0-0v
+removed: libwxgtk3.0-0v
+removed: libx11-doc
+removed: libx11-protocol-perl
+removed: libx11-xcb
+removed: libx264
+removed: libx265
+removed: libxaw
+removed: libxcb-dri2
+removed: libxcb-dri3
+removed: libxcb-glx
+removed: libxcb-present
+removed: libxcb-randr
+removed: libxcb-shape
+removed: libxcb-sync
+removed: libxcb-xfixes
+removed: libxcomposite
+removed: libxcursor
+removed: libxdamage
+removed: libxfixes
+removed: libxi
+removed: libxinerama
+removed: libxkbcommon
+removed: libxml2-utils
+removed: libxml-parser-perl
+removed: libxml-twig-perl
+removed: libxml-xpathengine-perl
+removed: libxmu
+removed: libxmuu
+removed: libxpm
+removed: libxrandr
+removed: libxshmfence
+removed: libxslt
+removed: libxtst
+removed: libxv
+removed: libxvidcore
+removed: libxxf86dga
+removed: libxxf86vm
+removed: libyajl
+removed: libyaml-0
+removed: libzmq
+removed: libzvbi
+removed: libzvbi-common
+removed: libzzip-0
+added  : libbrotli
+added  : libcanberra
+added  : libc-ares
+added  : libcfitsio
+added  : libcrypt
+added  : libfribidi
+added  : libgcc-s
+added  : libgpm
+added  : libhttp-parser
+added  : libmbedcrypto
+added  : libmbedtls
+added  : libmbedx509
+added  : libnode
+added  : libpcap
+added  : libpython3.8-minimal
+added  : libpython3.8-stdlib
+added  : libsensors-config
+added  : libssh
+added  : libtdb
