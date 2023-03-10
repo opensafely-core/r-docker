@@ -32,3 +32,7 @@ test image="r": build
 lint:
     docker pull hadolint/hadolint
     docker run --rm -i hadolint/hadolint < Dockerfile
+
+publish:
+    docker tag r ghcr.io/opensafely-core/r:latest
+    docker push ghcr.io/opensafely-core/r:latest
