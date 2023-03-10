@@ -237,6 +237,21 @@
         "car"
       ]
     },
+    "PHEindicatormethods": {
+      "Package": "PHEindicatormethods",
+      "Version": "1.3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "65a9313d17145de576ed505ee68774dc",
+      "Requirements": [
+        "broom",
+        "dplyr",
+        "purrr",
+        "rlang",
+        "tibble",
+        "tidyr"
+      ]
+    },
     "Publish": {
       "Package": "Publish",
       "Version": "2020.12.23",
