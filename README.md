@@ -21,14 +21,55 @@ rebuilds should be very fast.
 
 ## Adding new packages
 
+**WARNING!** To do this you will need:
+ * Enough bandwidth to comfortably push potentionally gigabytes worth of
+   Docker layers.
+ * Several hours worth of CPU time to re-compile all the packages (if
+   this is the first time you've done this and don't have them cached
+   locally).
+ * Push access to ghcr.io.
+
+If you don't have all these things then please don't start.
+
+### Install it
+
 To add a package, it must be available on CRAN. We cannot currently install
 things from Github or other locations.
-
-`just add-package PACKAGE` 
+```
+just add-package PACKAGE
+```
 
 This will attempt to install and build the package and its dependencies, and
 update the `renv.lock`. It will then rebuild the R image with the new lock file
 and test it.
+
+Note that the first time you do this it will need to compile every
+included R package (because you won't have the R package builds cached
+locally). This can take **several hours**. (When we solve the caching
+problem here we'll be able to do this all in CI.)
+
+### Push to Github Container Registry
+
+Run:
+```
+just publish
+```
+
+### Commit changes
+
+Commit and push the small resulting change (should only be a few extra
+lines in `packages.csv` and `renv.lock`).
+
+You may as well push this direct to `main`; there's no point getting it
+reviewed because you've just pushed the built image direct to the
+Docker registry in any case.
+
+### Deploy new image
+
+The updated image will need pulling into production. This is covered
+separately in the tech team manual. If you don't have access, ask in
+`#tech`.
+
 
 ### Trouble shooting
 
