@@ -18,7 +18,7 @@ build:
     docker-compose build --pull r
 
 
-# build and a package and its dependencies to the image
+# build and add a package and its dependencies to the image
 add-package package:
     bash ./add-package.sh {{ package }}
 
