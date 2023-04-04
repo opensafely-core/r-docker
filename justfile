@@ -19,8 +19,8 @@ build:
 
 
 # build and a package and its dependencies to the image
-add-package package:
-    bash ./add-package.sh {{ package }}
+add-package package repos="NULL":
+    bash ./add-package.sh {{ package }} {{ repos }}
 
 
 # test the locally built image
