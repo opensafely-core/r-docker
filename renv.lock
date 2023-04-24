@@ -3589,6 +3589,17 @@
       "Hash": "7d9d967e4064739de11e50b108c1b894",
       "Requirements": []
     },
+    "rdrobust": {
+      "Package": "rdrobust",
+      "Version": "2.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a2d50aa0a80b7209363306ded73db0fd",
+      "Requirements": [
+        "MASS",
+        "ggplot2"
+      ]
+    },
     "readr": {
       "Package": "readr",
       "Version": "1.3.1",
