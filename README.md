@@ -66,11 +66,11 @@ just publish
 ### Commit changes to this repository
 
 Commit and push the small resulting change (should only be a few extra
-lines in `packages.csv` and `renv.lock`).
+lines in `packages.csv` and `renv.lock`) to a branch, then get the changes
+merged via pull request.
 
-You may as well push this direct to `main`; there's no point getting it
-reviewed because you've just pushed the built image direct to the
-Docker registry in any case.
+The review is a trivial exercise because the Docker image has already been
+pushed to GitHub.
 
 ### Deploy the new Docker image
 

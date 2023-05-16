@@ -4534,6 +4534,17 @@
       "Hash": "057179df16ea1ccdf02e2260774fd2ed",
       "Requirements": []
     },
+    "twopartm": {
+      "Package": "twopartm",
+      "Version": "0.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "abd420ce1dd90ecca06005f94efa788e",
+      "Requirements": [
+        "MASS",
+        "data.table"
+      ]
+    },
     "units": {
       "Package": "units",
       "Version": "0.6-7",
