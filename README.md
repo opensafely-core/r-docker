@@ -34,6 +34,11 @@ rebuilds should be very fast.
 
 If you don't have all these things then please don't start.
 
+### Confirm that the package is suitable to add
+
+Before adding a package, check with an OpenSAFELY team member with R
+experience to approve the package.
+
 ### Install the package within Docker
 
 To add a package, it must be available on CRAN. We cannot currently install
