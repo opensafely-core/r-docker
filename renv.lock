@@ -3458,6 +3458,16 @@
       "Hash": "a54a7dfd68124abb2225dbfa9a85c457",
       "Requirements": []
     },
+    "pscl": {
+      "Package": "pscl",
+      "Version": "1.5.5.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "9f0b86478998d1dbb01fbce8720a3d01",
+      "Requirements": [
+        "MASS"
+      ]
+    },
     "pseudo": {
       "Package": "pseudo",
       "Version": "1.4.3",
