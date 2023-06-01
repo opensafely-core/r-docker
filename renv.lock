@@ -1848,6 +1848,19 @@
         "vctrs"
       ]
     },
+    "ggfittext": {
+      "Package": "ggfittext",
+      "Version": "0.10.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "bac4a2bf2c6943646aef028c26081e25",
+      "Requirements": [
+        "ggplot2",
+        "gridtext",
+        "shades",
+        "stringi"
+      ]
+    },
     "ggfortify": {
       "Package": "ggfortify",
       "Version": "0.4.15",
@@ -1862,6 +1875,18 @@
         "stringr",
         "tibble",
         "tidyr"
+      ]
+    },
+    "gggenes": {
+      "Package": "gggenes",
+      "Version": "0.5.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8493a1aaa4a722c6f7d99c911b34d943",
+      "Requirements": [
+        "ggfittext",
+        "ggplot2",
+        "rlang"
       ]
     },
     "ggh4x": {
@@ -2067,6 +2092,23 @@
       "Hash": "7d7f283939f563670a697165b2cf5560",
       "Requirements": [
         "gtable"
+      ]
+    },
+    "gridtext": {
+      "Package": "gridtext",
+      "Version": "0.1.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "05e4f5fffb1eecfeaac9ea0b7f255fef",
+      "Requirements": [
+        "Rcpp",
+        "curl",
+        "jpeg",
+        "markdown",
+        "png",
+        "rlang",
+        "stringr",
+        "xml2"
       ]
     },
     "gt": {
@@ -4098,6 +4140,14 @@
         "units"
       ]
     },
+    "shades": {
+      "Package": "shades",
+      "Version": "1.4.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "3a2cf5eecb2cbca814d01d56bfb51494",
+      "Requirements": []
+    },
     "shape": {
       "Package": "shape",
       "Version": "1.4.6",
@@ -4105,6 +4155,22 @@
       "Repository": "CRAN",
       "Hash": "9067f962730f58b14d8ae54ca885509f",
       "Requirements": []
+    },
+    "shapviz": {
+      "Package": "shapviz",
+      "Version": "0.8.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "9b248984d3cf7f0410a0c5879a7c9d22",
+      "Requirements": [
+        "ggfittext",
+        "gggenes",
+        "ggplot2",
+        "ggrepel",
+        "patchwork",
+        "rlang",
+        "xgboost"
+      ]
     },
     "shiny": {
       "Package": "shiny",
@@ -4714,6 +4780,18 @@
       "Repository": "CRAN",
       "Hash": "b4106139b90981a8bfea9c10bab0baf1",
       "Requirements": []
+    },
+    "xgboost": {
+      "Package": "xgboost",
+      "Version": "1.7.5.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6b8d09cf8ffc148162a4d57d01e61490",
+      "Requirements": [
+        "Matrix",
+        "data.table",
+        "jsonlite"
+      ]
     },
     "xml2": {
       "Package": "xml2",
