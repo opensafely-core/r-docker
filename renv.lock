@@ -1412,6 +1412,14 @@
       "Hash": "6c5f5a71aad384ceec8a418a6978e66b",
       "Requirements": []
     },
+    "epitools": {
+      "Package": "epitools",
+      "Version": "0.5-10.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b1eef914dc165a4974012e43efb58da0",
+      "Requirements": []
+    },
     "estimability": {
       "Package": "estimability",
       "Version": "1.4.1",
