@@ -17,6 +17,29 @@
       "Hash": "8f9ce74c6417d61f0782cbae5fd2b7b0",
       "Requirements": []
     },
+    "BayesianTools": {
+      "Package": "BayesianTools",
+      "Version": "0.1.8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6f37f391a9029a6490c8bee77d3e483c",
+      "Requirements": [
+        "DHARMa",
+        "IDPmisc",
+        "MASS",
+        "Matrix",
+        "Rcpp",
+        "bridgesampling",
+        "coda",
+        "ellipse",
+        "emulator",
+        "gap",
+        "msm",
+        "mvtnorm",
+        "numDeriv",
+        "tmvtnorm"
+      ]
+    },
     "Brobdingnag": {
       "Package": "Brobdingnag",
       "Version": "1.2-6",
@@ -32,6 +55,21 @@
       "Repository": "CRAN",
       "Hash": "4744be45519d675af66c28478720fce5",
       "Requirements": []
+    },
+    "DHARMa": {
+      "Package": "DHARMa",
+      "Version": "0.4.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ffebef4763cbacec396d5f841b391739",
+      "Requirements": [
+        "Matrix",
+        "ape",
+        "gap",
+        "lme4",
+        "lmtest",
+        "qgam"
+      ]
     },
     "DT": {
       "Package": "DT",
@@ -158,6 +196,16 @@
         "rpart",
         "survival",
         "viridis"
+      ]
+    },
+    "IDPmisc": {
+      "Package": "IDPmisc",
+      "Version": "1.1.20",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a295af998b430837400506b0ac1a9213",
+      "Requirements": [
+        "lattice"
       ]
     },
     "KMsurv": {
@@ -550,6 +598,19 @@
       "Repository": "CRAN",
       "Hash": "4f57884290cc75ab22f4af9e9d4ca862",
       "Requirements": []
+    },
+    "ape": {
+      "Package": "ape",
+      "Version": "5.7-1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "10705eec964349f270504754d8fe8ef1",
+      "Requirements": [
+        "Rcpp",
+        "digest",
+        "lattice",
+        "nlme"
+      ]
     },
     "arrow": {
       "Package": "arrow",
@@ -1381,6 +1442,14 @@
         "gtable"
       ]
     },
+    "ellipse": {
+      "Package": "ellipse",
+      "Version": "0.5.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "4aa52573ccedf7dc635a0eb471944a36",
+      "Requirements": []
+    },
     "ellipsis": {
       "Package": "ellipsis",
       "Version": "0.3.1",
@@ -1402,6 +1471,16 @@
         "mvtnorm",
         "numDeriv",
         "xtable"
+      ]
+    },
+    "emulator": {
+      "Package": "emulator",
+      "Version": "1.2-21",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "35ea663fd3d5be6f04dba90b39f7b24c",
+      "Requirements": [
+        "mvtnorm"
       ]
     },
     "enrichwith": {
@@ -1471,6 +1550,16 @@
       "Repository": "CRAN",
       "Hash": "1cc8cd88a11115c88d8bac0369cf3bf4",
       "Requirements": []
+    },
+    "expm": {
+      "Package": "expm",
+      "Version": "0.999-7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "af0c5d9f9ece61d4723904c7b2b49b4d",
+      "Requirements": [
+        "Matrix"
+      ]
     },
     "fansi": {
       "Package": "fansi",
@@ -1745,6 +1834,27 @@
         "tibble",
         "tidyr"
       ]
+    },
+    "gap": {
+      "Package": "gap",
+      "Version": "1.5-1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "df6f3948dc58bb9f1b5282b9d042d778",
+      "Requirements": [
+        "dplyr",
+        "gap.datasets",
+        "ggplot2",
+        "plotly"
+      ]
+    },
+    "gap.datasets": {
+      "Package": "gap.datasets",
+      "Version": "0.0.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "978f81f3e861d14e49214c58d53a2bfb",
+      "Requirements": []
     },
     "gdtools": {
       "Package": "gdtools",
@@ -2070,6 +2180,16 @@
       "Hash": "6efd734b14c6471cfe443345f3e35e29",
       "Requirements": []
     },
+    "gmm": {
+      "Package": "gmm",
+      "Version": "1.8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "3ffb863ccab67ccd2f1e8e804018ebc0",
+      "Requirements": [
+        "sandwich"
+      ]
+    },
     "gnm": {
       "Package": "gnm",
       "Version": "1.1-1",
@@ -2222,6 +2342,16 @@
       "Hash": "2c0406b8e0a4c3516ab37be62da74e3c",
       "Requirements": [
         "rprojroot"
+      ]
+    },
+    "hexbin": {
+      "Package": "hexbin",
+      "Version": "1.28.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "124e384c01d8746f1c12f9dc1b80a161",
+      "Requirements": [
+        "lattice"
       ]
     },
     "highr": {
@@ -2979,6 +3109,18 @@
       "Hash": "f5a957c02222589bdf625a67be68b2a9",
       "Requirements": []
     },
+    "msm": {
+      "Package": "msm",
+      "Version": "1.7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "4c08d52892951cc803a86f4b2bc5ce00",
+      "Requirements": [
+        "expm",
+        "mvtnorm",
+        "survival"
+      ]
+    },
     "mstate": {
       "Package": "mstate",
       "Version": "0.3.1",
@@ -3383,6 +3525,36 @@
         "withr"
       ]
     },
+    "plotly": {
+      "Package": "plotly",
+      "Version": "4.8.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "7270ac04682209fa1328e1441f0ef6f2",
+      "Requirements": [
+        "RColorBrewer",
+        "base64enc",
+        "crosstalk",
+        "data.table",
+        "digest",
+        "dplyr",
+        "ggplot2",
+        "hexbin",
+        "htmltools",
+        "htmlwidgets",
+        "httr",
+        "jsonlite",
+        "lazyeval",
+        "magrittr",
+        "promises",
+        "purrr",
+        "rlang",
+        "scales",
+        "tibble",
+        "tidyr",
+        "viridisLite"
+      ]
+    },
     "plotrix": {
       "Package": "plotrix",
       "Version": "3.7-8",
@@ -3553,6 +3725,19 @@
       "Requirements": [
         "magrittr",
         "rlang"
+      ]
+    },
+    "qgam": {
+      "Package": "qgam",
+      "Version": "1.3.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "e3bd5ade848251657381d2a0668def59",
+      "Requirements": [
+        "doParallel",
+        "mgcv",
+        "plyr",
+        "shiny"
       ]
     },
     "quadprog": {
@@ -4624,6 +4809,18 @@
       "Hash": "a4b9662282097d1033c60420dcb83350",
       "Requirements": [
         "xfun"
+      ]
+    },
+    "tmvtnorm": {
+      "Package": "tmvtnorm",
+      "Version": "1.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "1e4beacf8b8e82280c0329d97a4740d5",
+      "Requirements": [
+        "Matrix",
+        "gmm",
+        "mvtnorm"
       ]
     },
     "tsModel": {
