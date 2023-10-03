@@ -1,5 +1,6 @@
 tzdata
 r-base-core=4.0.5-1.2004.0
+r-base-dev=4.0.5-1.2004.0
 libcurl3-gnutls
 libxml2
 libgdal26
