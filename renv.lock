@@ -2047,13 +2047,15 @@
     },
     "ggh4x": {
       "Package": "ggh4x",
-      "Version": "0.2.1",
+      "Version": "0.2.6",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "5e0b1591bf8489cfacdb5aecf1697626",
+      "Hash": "e82e0bef5e2db1243060afcb8be499ee",
       "Requirements": [
+        "cli",
         "ggplot2",
         "gtable",
+        "lifecycle",
         "rlang",
         "scales",
         "vctrs"
