@@ -10,3 +10,4 @@ libnode64
 libmagick++-6.q16-8
 libgit2-28
 pandoc
+wget

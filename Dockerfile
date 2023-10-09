@@ -13,6 +13,9 @@ RUN --mount=type=cache,target=/var/cache/apt \
     /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc &&\
     /root/docker-apt-install.sh /root/dependencies.txt
 
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN apt update && apt -f -y install ./google-chrome-stable_current_amd64.deb
+
 ENV RENV_PATHS_LIBRARY=/renv/lib \
     RENV_PATHS_SANDBOX=/renv/sandbox \
     RENV_PATHS_LOCKFILE=/renv/renv.lock
