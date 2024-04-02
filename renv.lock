@@ -537,6 +537,17 @@
         "survival"
       ]
     },
+    "TMB": {
+      "Package": "TMB",
+      "Version": "1.9.10",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "061ba6d7509e7148871b31b44e47c69b",
+      "Requirements": [
+        "Matrix",
+        "RcppEigen"
+      ]
+    },
     "UpSetR": {
       "Package": "UpSetR",
       "Version": "1.4.0",
@@ -2148,6 +2159,21 @@
       "Repository": "CRAN",
       "Hash": "f3aefccc1cc50de6338146b62f115de8",
       "Requirements": []
+    },
+    "glmmTMB": {
+      "Package": "glmmTMB",
+      "Version": "1.1.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "3e91f1654087101e9fc03382ab7d172d",
+      "Requirements": [
+        "Matrix",
+        "RcppEigen",
+        "TMB",
+        "lme4",
+        "nlme",
+        "numDeriv"
+      ]
     },
     "glmnet": {
       "Package": "glmnet",
