@@ -94,3 +94,43 @@ WORKDIR /workspace
 COPY --from=builder /renv /renv
 # this will ensure the renv is activated by default
 RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
+
+#################################################
+#
+# Add rstudio-server to r image - creating rstudio image
+FROM r as rstudio
+
+COPY rstudio-dependencies.txt /root/rstudio-dependencies.txt
+COPY rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
+
+# Install rstudio-server (and a few dependencies)
+RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
+    wget -q -O rstudio-server.deb https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.09.0-375-amd64.deb &&\
+    apt-get install --no-install-recommends -y ./rstudio-server.deb &&\
+    # delete the deb
+    rm rstudio-server.deb &&\
+    # Setup rstudio user using approach in opensafely-core/research-template-docker
+    useradd rstudio &&\
+    # Disable rstudio-server authentication
+    echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
+    # Run the server under the single user account
+    echo "server-user=rstudio" >> /etc/rstudio/rserver.conf &&\
+    echo "USER=rstudio" >> /etc/environment &&\
+    # Give the rstudio user sudo (aka root) permissions
+    usermod -aG sudo rstudio &&\
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&\
+    # Add a home directory for the rstudio user
+    mkdir /home/rstudio &&\
+    chown -R rstudio:rstudio /home/rstudio/ &&\
+    # Use renv R packages
+    # Remember that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72
+    # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
+    # so that is already setup
+    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site &&\
+    # Make entrypoint script executable
+    chmod +x /usr/local/bin/rstudio-entrypoint.sh &&\
+    # open RStudio in /workspace
+    echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf
+
+ENV USER rstudio
+ENV ACTION_EXEC="/usr/local/bin/rstudio-entrypoint.sh"

@@ -22,6 +22,9 @@ build:
 add-package package:
     bash ./add-package.sh {{ package }}
 
+# r image containing rstudio-server
+build-rstudio:
+    docker-compose build --pull rstudio
 
 # test the locally built image
 test image="r": build
@@ -36,3 +39,7 @@ lint:
 publish:
     docker tag r ghcr.io/opensafely-core/r:latest
     docker push ghcr.io/opensafely-core/r:latest
+
+publish-rstudio:
+    docker tag rstudio ghcr.io/opensafely-core/rstudio:latest
+    docker push ghcr.io/opensafely-core/rstudio:latest

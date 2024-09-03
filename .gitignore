@@ -2,3 +2,10 @@
 renv.lock.bak
 renv/
 .tests.R
+
+# rstudio-server directories
+*.config
+*.local
+
+# R files
+.Rhistory
