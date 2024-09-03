@@ -23,4 +23,12 @@ services:
       target: add-package
       args:
        - PACKAGE
-
+  rstudio:
+    extends: r
+    image: rstudio
+    build:
+      target: rstudio
+      args:
+        # supplied by just
+        - RSTUDIO_BASE_URL
+        - RSTUDIO_DEB

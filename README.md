@@ -102,3 +102,23 @@ Find a previous version at `https://cran.r-project.org/src/contrib/Archive/{PACK
 ```sh
 just add-package PACKAGE@VERSION
 ```
+
+## Building, testing, and publishing the rstudio image
+
+The rstudio image is based on the r image including rstudio-server. To build run
+
+```sh
+just build-rstudio
+```
+
+To test that rstudio-server appears at `http://localhost:8787` run
+
+```sh
+just test-rstudio
+```
+
+And then push the new rstudio image to the GitHub container registry with
+
+```sh
+just publish-rstudio
+```

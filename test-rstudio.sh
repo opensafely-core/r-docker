@@ -1,0 +1,39 @@
+#!/bin/bash
+set -eu
+
+# Detect operating system for `docker run` call
+OSTYPEFIRSTFIVE=$(echo "$OSTYPE" | cut -c1-5)
+if [[ "$OSTYPEFIRSTFIVE" == "linux" ]]; then
+  PLATFORM="linux"
+else
+  PLATFORM="somethingelse"
+fi
+
+trap "docker stop test_rstudio > /dev/null 2>&1 || true" EXIT
+
+docker run \
+    --rm \
+    --init \
+    --label=opensafely \
+    --interactive \
+    --user=0:0 --volume="/${PWD}://workspace" \
+    --platform=linux/amd64 \
+    -p=8787:8787 \
+    --name=test_rstudio \
+    --hostname=test_rstudio \
+    --volume="/${HOME}/.gitconfig:/home/rstudio/local-gitconfig" \
+    --env=HOSTPLATFORM=${PLATFORM} \
+    --env=HOSTUID=$(id -u) \
+    --detach \
+    rstudio > /dev/null 2>&1
+
+sleep 5
+
+status_code=$(curl --write-out %{http_code} --silent --output /dev/null -L --retry 3 --max-time 10 http://localhost:8787)
+if [[ "$status_code" -ne 200 ]] ; then
+  echo "200 response not received from http://localhost:8787"
+  exit 1
+else
+  echo "200 response successfully received from http://localhost:8787"
+  exit 0
+fi
