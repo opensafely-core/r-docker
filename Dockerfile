@@ -94,3 +94,9 @@ WORKDIR /workspace
 COPY --from=builder /renv /renv
 # this will ensure the renv is activated by default
 RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
+
+# Install rstudio-server (and a few dependencies)
+RUN apt-get update &&\
+    apt-get install -y wget gdebi-core psmisc libclang-dev sudo &&\
+    wget https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.04.2-764-amd64.deb &&\
+    dpkg -i rstudio-server-2024.04.2-764-amd64.deb
