@@ -95,11 +95,17 @@ COPY --from=builder /renv /renv
 # this will ensure the renv is activated by default
 RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 
+FROM r as rstudio
+
 # Install rstudio-server (and a few dependencies)
 RUN apt-get update &&\
+    # drop sudo??, drop gdebi-core??, drop libclang-dev??
     apt-get install -y wget gdebi-core psmisc libclang-dev sudo &&\
     wget https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.04.2-764-amd64.deb &&\
     dpkg -i rstudio-server-2024.04.2-764-amd64.deb
+    ## try: apt install --no-install-recommends ./rstudio-server-2024.04.2-764-amd64.deb
+    ## try: apt install ./rstudio-server-2024.04.2-764-amd64.deb
+    ## delete the deb
 
 # Setup rstudio user, disable rstudio-server authentication, and use renv R packages
 # Remembering that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72 
@@ -109,10 +115,13 @@ RUN useradd rstudio &&\
     echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
     echo "USER=rstudio" >> /etc/environment &&\
     # Give the local user sudo (aka root) permissions
-    usermod -aG sudo rstudio &&\
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&\
+    ## usermod -aG sudo rstudio &&\
+    ## echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&\
     # Add a home directory for the rstudio user
     mkdir /home/rstudio &&\
     chown -R rstudio /home/rstudio/ &&\
     echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron
-ENV USER rstudio
+## ENV USER rstudio
+USER rstudio
+## or amend ENTRYPOINT
+ENV ACTION_EXEC="rstudio-server start"
