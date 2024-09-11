@@ -115,15 +115,17 @@ RUN apt-get update &&\
     echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
     echo "USER=rstudio" >> /etc/environment &&\
     # Give the local user sudo (aka root) permissions
-    ## usermod -aG sudo rstudio &&\
-    ## echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&\
+    usermod -aG sudo rstudio &&\
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&\
     # Add a home directory for the rstudio user
     mkdir /home/rstudio &&\
     chown -R rstudio /home/rstudio/ &&\
-    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron
+    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron &&\
+    echo "rstudio-server start" > /workspace/rstudio-server-start &&\
+    chmod +x /workspace/rstudio-server-start
 
-## ENV USER rstudio
-USER rstudio
+ENV USER rstudio
+# USER rstudio
 
 ## or amend ENTRYPOINT
-ENV ACTION_EXEC="rstudio-server start"
+ENV ACTION_EXEC="./rstudio-server-start"
