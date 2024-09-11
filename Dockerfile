@@ -108,30 +108,22 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     apt-get install --no-install-recommends -y ./rstudio-server-2024.04.2-764-amd64.deb &&\
     # delete the deb
     rm rstudio-server-2024.04.2-764-amd64.deb &&\
-    # Setup rstudio user, disable rstudio-server authentication, and use renv R packages
-    # Remembering that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72 
-    # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
+    # Setup rstudio user
     # From https://github.com/opensafely-core/research-template-docker/blob/5f857e5ec2beb55327075c13c26b51e1accaeb0b/Dockerfile#L43C1-L47C56 with modifications
     useradd rstudio &&\
+    # Disable rstudio-server authentication
     echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
     echo "USER=rstudio" >> /etc/environment &&\
-    # Give the local user sudo (aka root) permissions
+    # Give the rstudio user sudo (aka root) permissions
+    # rstudio-server is difficult to run without root permissions
     usermod -aG sudo rstudio &&\
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&\
     # Add a home directory for the rstudio user
     mkdir /home/rstudio &&\
     chown -R rstudio /home/rstudio/ &&\
+    # Use renv R packages
+    # Remember that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72
+    # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
     echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron
-    
-    # &&\
-    # echo "rstudio-server start" > /workspace/rstudio-server-start &&\
-    # chmod +x /workspace/rstudio-server-start
-
-ENV USER rstudio
-# USER rstudio
 
 # ENV ACTION_EXEC="rstudio-server start"
-# /usr/sbin/rstudio-server start
-# /sbin/rstudio-server start
-## or amend ENTRYPOINT
-# ENTRYPOINT ["rstudio-server", "start"]
