@@ -39,3 +39,7 @@ lint:
 publish:
     docker tag r ghcr.io/opensafely-core/r:latest
     docker push ghcr.io/opensafely-core/r:latest
+
+publish-rstudio:
+    docker tag rstudio ghcr.io/opensafely-core/rstudio:latest
+    docker push ghcr.io/opensafely-core/rstudio:latest
