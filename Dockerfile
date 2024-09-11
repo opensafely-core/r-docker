@@ -100,13 +100,10 @@ RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 # Add rstudio-server to r image - creating rstudio image
 FROM r as rstudio
 
-# COPY rstudio-dependencies.txt /root/rstudio-dependencies.txt
-# RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt
+COPY rstudio-dependencies.txt /root/rstudio-dependencies.txt
 
 # Install rstudio-server (and a few dependencies)
-RUN apt-get update &&\
-    # drop sudo??, drop gdebi-core??, drop libclang-dev??
-    apt-get install --no-install-recommends -y wget sudo &&\
+RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
     wget https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.04.2-764-amd64.deb &&\
     apt-get install --no-install-recommends -y ./rstudio-server-2024.04.2-764-amd64.deb &&\
     # delete the deb
