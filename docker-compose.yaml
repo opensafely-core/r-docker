@@ -27,4 +27,3 @@ services:
     extends: r
     build:
       target: rstudio
-
