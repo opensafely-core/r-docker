@@ -106,10 +106,8 @@ FROM r as rstudio
 # Install rstudio-server (and a few dependencies)
 RUN apt-get update &&\
     # drop sudo??, drop gdebi-core??, drop libclang-dev??
-    apt-get install --no-install-recommends -y wget psmisc libclang-dev sudo &&\
+    apt-get install --no-install-recommends -y wget libclang-dev sudo &&\
     wget https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.04.2-764-amd64.deb &&\
-    # dpkg -i rstudio-server-2024.04.2-764-amd64.deb
-    ## try: apt install --no-install-recommends ./rstudio-server-2024.04.2-764-amd64.deb
     apt-get install --no-install-recommends -y ./rstudio-server-2024.04.2-764-amd64.deb &&\
     # delete the deb
     rm rstudio-server-2024.04.2-764-amd64.deb &&\
@@ -135,8 +133,8 @@ RUN apt-get update &&\
 ENV USER rstudio
 # USER rstudio
 
-## or amend ENTRYPOINT
 # ENV ACTION_EXEC="rstudio-server start"
-# /usr/sbin/rstudio-server
-# /sbin/rstudio-server
+# /usr/sbin/rstudio-server start
+# /sbin/rstudio-server start
+## or amend ENTRYPOINT
 # ENTRYPOINT ["rstudio-server", "start"]
