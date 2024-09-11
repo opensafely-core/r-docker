@@ -23,7 +23,7 @@ add-package package:
     bash ./add-package.sh {{ package }}
 
 # r image containing rstudio-server
-rstudio:
+build-rstudio:
     docker-compose build --pull rstudio
 
 # test the locally built image
