@@ -110,7 +110,7 @@ RUN apt-get update &&\
     # Setup rstudio user, disable rstudio-server authentication, and use renv R packages
     # Remembering that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72 
     # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
-   # From https://github.com/opensafely-core/research-template-docker/blob/5f857e5ec2beb55327075c13c26b51e1accaeb0b/Dockerfile#L43C1-L47C56 with modifications
+    # From https://github.com/opensafely-core/research-template-docker/blob/5f857e5ec2beb55327075c13c26b51e1accaeb0b/Dockerfile#L43C1-L47C56 with modifications
     useradd rstudio &&\
     echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
     echo "USER=rstudio" >> /etc/environment &&\
