@@ -102,16 +102,16 @@ RUN apt-get update &&\
     # drop sudo??, drop gdebi-core??, drop libclang-dev??
     apt-get install -y wget gdebi-core psmisc libclang-dev sudo &&\
     wget https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.04.2-764-amd64.deb &&\
-    dpkg -i rstudio-server-2024.04.2-764-amd64.deb
+    # dpkg -i rstudio-server-2024.04.2-764-amd64.deb
     ## try: apt install --no-install-recommends ./rstudio-server-2024.04.2-764-amd64.deb
-    ## try: apt install ./rstudio-server-2024.04.2-764-amd64.deb
-    ## delete the deb
-
-# Setup rstudio user, disable rstudio-server authentication, and use renv R packages
-# Remembering that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72 
-# contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
-# From https://github.com/opensafely-core/research-template-docker/blob/5f857e5ec2beb55327075c13c26b51e1accaeb0b/Dockerfile#L43C1-L47C56 with modifications
-RUN useradd rstudio &&\
+    apt install ./rstudio-server-2024.04.2-764-amd64.deb &&\
+    # delete the deb
+    rm rstudio-server-2024.04.2-764-amd64.deb &&\
+    # Setup rstudio user, disable rstudio-server authentication, and use renv R packages
+    # Remembering that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72 
+    # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
+   # From https://github.com/opensafely-core/research-template-docker/blob/5f857e5ec2beb55327075c13c26b51e1accaeb0b/Dockerfile#L43C1-L47C56 with modifications
+    useradd rstudio &&\
     echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
     echo "USER=rstudio" >> /etc/environment &&\
     # Give the local user sudo (aka root) permissions
@@ -121,7 +121,9 @@ RUN useradd rstudio &&\
     mkdir /home/rstudio &&\
     chown -R rstudio /home/rstudio/ &&\
     echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron
+
 ## ENV USER rstudio
 USER rstudio
+
 ## or amend ENTRYPOINT
 ENV ACTION_EXEC="rstudio-server start"
