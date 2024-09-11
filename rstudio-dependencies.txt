@@ -1,5 +1,5 @@
-wget
-gdebi-core
-psmisc
 libclang-dev
+lsb-release
+psmisc
 sudo
+wget
