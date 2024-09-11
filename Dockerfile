@@ -126,12 +126,17 @@ RUN apt-get update &&\
     # Add a home directory for the rstudio user
     mkdir /home/rstudio &&\
     chown -R rstudio /home/rstudio/ &&\
-    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron &&\
-    echo "rstudio-server start" > /workspace/rstudio-server-start &&\
-    chmod +x /workspace/rstudio-server-start
+    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron
+    
+    # &&\
+    # echo "rstudio-server start" > /workspace/rstudio-server-start &&\
+    # chmod +x /workspace/rstudio-server-start
 
 ENV USER rstudio
 # USER rstudio
 
 ## or amend ENTRYPOINT
-ENV ACTION_EXEC="./rstudio-server-start"
+# ENV ACTION_EXEC="rstudio-server start"
+# /usr/sbin/rstudio-server
+# /sbin/rstudio-server
+ENTRYPOINT ["rstudio-server", "start"]
