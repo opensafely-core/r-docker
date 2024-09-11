@@ -139,4 +139,4 @@ ENV USER rstudio
 # ENV ACTION_EXEC="rstudio-server start"
 # /usr/sbin/rstudio-server
 # /sbin/rstudio-server
-ENTRYPOINT ["rstudio-server", "start"]
+# ENTRYPOINT ["rstudio-server", "start"]
