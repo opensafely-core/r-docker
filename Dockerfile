@@ -104,7 +104,7 @@ COPY rstudio-dependencies.txt /root/rstudio-dependencies.txt
 
 # Install rstudio-server (and a few dependencies)
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
-    wget https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.04.2-764-amd64.deb &&\
+    wget -q https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.04.2-764-amd64.deb &&\
     apt-get install --no-install-recommends -y ./rstudio-server-2024.04.2-764-amd64.deb &&\
     # delete the deb
     rm rstudio-server-2024.04.2-764-amd64.deb &&\
