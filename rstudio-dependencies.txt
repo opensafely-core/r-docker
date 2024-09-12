@@ -1,6 +1,7 @@
 git
 libclang-dev
 lsb-release
+phantomjs
 psmisc
 sudo
 wget
