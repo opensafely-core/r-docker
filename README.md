@@ -103,7 +103,7 @@ Find a previous version at `https://cran.r-project.org/src/contrib/Archive/{PACK
 just add-package PACKAGE@VERSION
 ```
 
-## Building the rstudio image
+## Building and publishing the rstudio image
 
 The rstudio image is based on the r image including rstudio-server. To build run
 
