@@ -6,3 +6,6 @@ renv/
 # rstudio-server directories
 *.config
 *.local
+
+# R files
+.Rhistory
