@@ -125,7 +125,7 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # Remember that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72
     # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
     # so that is already setup
-    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /usr/lib/R/etc/Renviron.site &&\
+    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site &&\
     # Make entrypoint script executable
     chmod +x /root/rstudio-entrypoint.sh
 
