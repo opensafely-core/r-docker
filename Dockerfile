@@ -130,4 +130,12 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     echo "setwd('/workspace')" > /home/rstudio/.Rprofile
 
 ENV USER rstudio
+
 # ENV ACTION_EXEC="rstudio-server start"
+
+# Create a startup script
+RUN echo "#!/bin/bash" > /root/rstudio-start.sh &&\
+    echo "rstudio-server start" >> /root/rstudio-start.sh &&\
+    echo "sleep infinity" >> /root/rstudio-start.sh &&\
+    chmod +x /root/rstudio-start.sh
+ENTRYPOINT [ "/root/rstudio-start.sh" ]
