@@ -9,6 +9,3 @@ renv/
 
 # R files
 .Rhistory
-
-.wget-hsts
-bin/phantomjs
