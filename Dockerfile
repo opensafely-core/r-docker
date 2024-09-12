@@ -101,6 +101,7 @@ RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 FROM r as rstudio
 
 COPY rstudio-dependencies.txt /root/rstudio-dependencies.txt
+COPY rstudio-entrypoint.sh /root/rstudio-entrypoint.sh
 
 # Install rstudio-server (and a few dependencies)
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
@@ -108,8 +109,7 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     apt-get install --no-install-recommends -y ./rstudio-server-2024.04.2-764-amd64.deb &&\
     # delete the deb
     rm rstudio-server-2024.04.2-764-amd64.deb &&\
-    # Setup rstudio user
-    # From https://github.com/opensafely-core/research-template-docker/blob/5f857e5ec2beb55327075c13c26b51e1accaeb0b/Dockerfile#L43C1-L47C56 with modifications
+    # Setup rstudio user using approach in opensafely-core/research-template-docker
     useradd rstudio &&\
     # Disable rstudio-server authentication
     echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
@@ -128,11 +128,8 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron &&\
     # Set R current directory to workspace directory
     echo "setwd('/workspace')" > /home/rstudio/.Rprofile &&\
-    # Create a startup script - the sleep command is needed to keep container running
-    echo "#!/bin/bash" > /root/rstudio-start.sh &&\
-    echo "rstudio-server start" >> /root/rstudio-start.sh &&\
-    echo "sleep infinity" >> /root/rstudio-start.sh &&\
-    chmod +x /root/rstudio-start.sh
+    # Make entrypoint script executable
+    chmod +x /root/rstudio-entrypoint.sh
 
 ENV USER rstudio
-ENV ACTION_EXEC="/root/rstudio-start.sh"
+ENV ACTION_EXEC="/root/rstudio-entrypoint.sh"
