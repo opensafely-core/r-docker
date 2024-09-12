@@ -127,15 +127,12 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # so that is already setup
     echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron &&\
     # Set R current directory to workspace directory
-    echo "setwd('/workspace')" > /home/rstudio/.Rprofile
-
-ENV USER rstudio
-
-# ENV ACTION_EXEC="rstudio-server start"
-
-# Create a startup script
-RUN echo "#!/bin/bash" > /root/rstudio-start.sh &&\
+    echo "setwd('/workspace')" > /home/rstudio/.Rprofile &&\
+    # Create a startup script - the sleep command is needed to keep container running
+    echo "#!/bin/bash" > /root/rstudio-start.sh &&\
     echo "rstudio-server start" >> /root/rstudio-start.sh &&\
     echo "sleep infinity" >> /root/rstudio-start.sh &&\
     chmod +x /root/rstudio-start.sh
-ENTRYPOINT [ "/root/rstudio-start.sh" ]
+
+ENV USER rstudio
+ENV ACTION_EXEC="/root/rstudio-start.sh"
