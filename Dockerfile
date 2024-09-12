@@ -124,7 +124,10 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # Use renv R packages
     # Remember that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72
     # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
-    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron
+    # so that is already setup
+    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" > /home/rstudio/.Renviron &&\
+    # Set R current directory to workspace directory
+    echo "setwd('/workspace')" > /home/rstudio/.Rprofile
 
 ENV USER rstudio
 # ENV ACTION_EXEC="rstudio-server start"
