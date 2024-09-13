@@ -1,3 +1,4 @@
+git
 libclang-dev
 lsb-release
 psmisc
