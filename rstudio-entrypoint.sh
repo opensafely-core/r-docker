@@ -9,22 +9,19 @@ do
 done
 
 # Check for an .Rproj file - if exists open project on RStudio Server session start
-# if [ -f *.Rproj ] ; then
+if [ -f /home/rstudio/*.Rproj ] ; then
 
-#   # Rstudio hook to open project on startup
-#   file=$(ls *.Rproj)
-#   echo "setHook(\"rstudio.sessionInit\", function(newSession) { if (newSession && is.null(rstudioapi::getActiveProject())) rstudioapi::openProject(\"$file\") }, action = \"append\")" | sudo tee -a /usr/lib/R/etc/Rprofile.site
-# fi
+  # Avoid Git error fatal detected dubious ownership of repository if using Git in container
+  # Without this the Git pane fails to open when RStudio project opened
+  echo "[safe]" >> /home/rstudio/.gitconfig
+  echo "	directory = /home/rstudio" >> /home/rstudio/.gitconfig
+
+  # Rstudio hook to open project on startup
+  echo "setHook(\"rstudio.sessionInit\", function(newSession) { if (newSession && is.null(rstudioapi::getActiveProject())) rstudioapi::openProject(list.files(pattern = \"Rproj\")) }, action = \"append\")" >> /home/rstudio/.Rprofile
+fi
 
 # Start RStudio Server session
 rstudio-server start
-
-# Avoid Git error fatal detected dubious ownership of repository if using Git in container
-# Without this the Git pane fails to open when RStudio project opened
-sudo -H -u rstudio bash -c 'git config --global --add safe.directory /home/rstudio'
-# echo "[safe]" >> /home/rstudio/.gitconfig
-# echo "	directory = /home/rstudio" >> /home/rstudio/.gitconfig
-
 
 # Ensure that the docker container does not exit
 sleep infinity
