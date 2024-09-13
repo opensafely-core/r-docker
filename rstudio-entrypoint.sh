@@ -9,7 +9,7 @@ do
 done
 
 # Check for 1 .Rproj file
-if [ $(find /home/rstudio -type f -name "*.Rproj" | wc -w) -eq 1 ] ; then
+if [ $(find /home/rstudio -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
   # Avoid Git error fatal detected dubious ownership of repository if using Git in container
   # Without this the Git pane fails to open when RStudio project opened
   echo "[safe]\n	directory = \"*\"" >> /home/rstudio/.gitconfig
