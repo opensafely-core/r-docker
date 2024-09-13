@@ -127,9 +127,7 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # so that is already setup
     echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site &&\
     # Make entrypoint script executable
-    chmod +x /root/rstudio-entrypoint.sh &&\
-    # Avoid Git error fatal detected dubious ownership of repository if using Git in container
-    git config --global --add safe.directory /home/rstudio
+    chmod +x /root/rstudio-entrypoint.sh
 
 ENV USER rstudio
 ENV ACTION_EXEC="/root/rstudio-entrypoint.sh"
