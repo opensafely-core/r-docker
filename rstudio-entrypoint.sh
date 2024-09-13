@@ -9,7 +9,7 @@ do
 done
 
 # Check for an .Rproj file - if exists open project on RStudio Server session start
-if [ -f /home/rstudio/*.Rproj ] ; then
+if [ $(find /home/rstudio -type f -name "*.Rproj" | wc -w) -eq 1 ] ; then
 
   # Avoid Git error fatal detected dubious ownership of repository if using Git in container
   # Without this the Git pane fails to open when RStudio project opened
