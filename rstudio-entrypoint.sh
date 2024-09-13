@@ -14,7 +14,7 @@ if [ -f /home/rstudio/*.Rproj ] ; then
   # Avoid Git error fatal detected dubious ownership of repository if using Git in container
   # Without this the Git pane fails to open when RStudio project opened
   echo "[safe]" >> /home/rstudio/.gitconfig
-  echo "	directory = /home/rstudio" >> /home/rstudio/.gitconfig
+  echo "	directory = \"*\"" >> /home/rstudio/.gitconfig
 
   # Rstudio hook to open project on startup
   echo "setHook(\"rstudio.sessionInit\", function(newSession) { if (newSession && is.null(rstudioapi::getActiveProject())) rstudioapi::openProject(list.files(pattern = \"Rproj\")) }, action = \"append\")" >> /home/rstudio/.Rprofile
