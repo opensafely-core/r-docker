@@ -20,6 +20,8 @@ fi
 
 # Start RStudio Server session
 rstudio-server start
+# exec rstudio-studio start
+# rserver daemon ..... 0 # rocker look up
 
 # Ensure that the docker container does not exit
 sleep infinity
