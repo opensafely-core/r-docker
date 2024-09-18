@@ -19,9 +19,8 @@ if [ $(find /home/rstudio -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
 fi
 
 # Start RStudio Server session
-rstudio-server start
-# exec rstudio-studio start
-# rserver daemon ..... 0 # rocker look up
+# rstudio-server start
+exec /usr/lib/rstudio-server/bin/rserver --server-daemonize 0
 
 # Ensure that the docker container does not exit
-sleep infinity
+# sleep infinity
