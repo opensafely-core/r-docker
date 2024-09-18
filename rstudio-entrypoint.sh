@@ -22,9 +22,6 @@ if [ $(find /workspace -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
 
 fi
 
-# Start RStudio Server session
-# rstudio-server start
+# Start RStudio Server session in foreground
+# Hence don't use `rstudio-server start` which runs in background
 exec /usr/lib/rstudio-server/bin/rserver --server-daemonize 0
-
-# Ensure that the docker container does not exit
-# sleep infinity
