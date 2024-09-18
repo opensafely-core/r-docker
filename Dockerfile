@@ -127,9 +127,11 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # so that is already setup
     echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site &&\
     # Make entrypoint script executable
-    chmod +x /root/rstudio-entrypoint.sh
-
-RUN echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf
+    chmod +x /root/rstudio-entrypoint.sh &&\
+    # open RStudio in /workspace
+    echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf &&\
+    # Ensure rstudio user owns /workspace
+    chown -R rstudio /workspace
 
 ENV USER rstudio
 ENV ACTION_EXEC="/root/rstudio-entrypoint.sh"
