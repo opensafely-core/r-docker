@@ -129,5 +129,8 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # Make entrypoint script executable
     chmod +x /root/rstudio-entrypoint.sh
 
+RUN echo "session-default-working-dir=/workspace" >> /etc/rstudio/rserver.conf &&\
+    echo "session-default-new-project-dir=/workspace"
+
 ENV USER rstudio
 ENV ACTION_EXEC="/root/rstudio-entrypoint.sh"
