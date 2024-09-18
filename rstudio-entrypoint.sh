@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Check .gitignore for some entries, add them if not present
-# for item in .local .config;
-# do
-#   if ! grep -q $item /workspace/.gitignore; then
-#     echo $item >> /workspace/.gitignore
-#   fi
-# done
-
 # Check for 1 .Rproj file
 if [ $(find /workspace -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
   # Avoid creating setting in .gitconfig if already specified
