@@ -8,7 +8,6 @@ if [ $(find /workspace -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
 
   # Open RStudio project on opening RStudio Server session
   echo 'setHook("rstudio.sessionInit", function(newSession) { if (newSession && is.null(rstudioapi::getActiveProject())) rstudioapi::openProject(paste0("/workspace/", list.files(pattern = "Rproj"))) }, action = "append")' >> /home/rstudio/.Rprofile
-
 fi
 
 # Start RStudio Server session in foreground
