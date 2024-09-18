@@ -114,10 +114,6 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # Disable rstudio-server authentication
     echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
     echo "USER=rstudio" >> /etc/environment &&\
-    # Give the rstudio user sudo (aka root) permissions
-    # rstudio-server is difficult to run without root permissions
-    usermod -aG sudo rstudio &&\
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&\
     # Add a home directory for the rstudio user
     mkdir /home/rstudio &&\
     chown -R rstudio /home/rstudio/ &&\
