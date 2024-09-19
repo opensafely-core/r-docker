@@ -2,7 +2,13 @@
 
 # Check for 1 .Rproj file
 if [ $(find /workspace -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
-  # Avoid Git error fatal detected dubious ownership of repository if using Git in container
+
+  # Copy in Git user.name and user.email from copied local-gitconfig from additionally mounted volume
+  if test -f /home/rstudio/local-gitconfig; then
+    grep -e "\[user\]" -e "name = *" -e "email = *" /home/rstudio/local-gitconfig >> /home/rstudio/.gitconfig
+  fi
+
+  # Avoid Git error: fatal detected dubious ownership of repository if using Git in container
   # Without this the Git pane fails to open when RStudio project opened
   echo -e "[safe]\n\tdirectory = \"*\"" >> /home/rstudio/.gitconfig
 
