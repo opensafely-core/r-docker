@@ -18,7 +18,7 @@ fi
 
 # Set file line endings as crlf if docker run from Windows
 if [ "$HOST" = "nt" ]; then
-  echo -e "\{\n\t\"line\_ending\_conversion\": \"windows\"\n\}" >> /etc/rstudio/rstudio-prefs.json
+  echo -e "{\n\t\"line_ending_conversion\": \"windows\"\n}" >> /etc/rstudio/rstudio-prefs.json
 fi
 
 # Start RStudio Server session in foreground
