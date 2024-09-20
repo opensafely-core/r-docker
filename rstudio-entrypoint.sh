@@ -16,6 +16,11 @@ if [ $(find /workspace -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
   echo 'setHook("rstudio.sessionInit", function(newSession) { if (newSession && is.null(rstudioapi::getActiveProject())) rstudioapi::openProject(paste0("/workspace/", list.files(pattern = "Rproj"))) }, action = "append")' >> /home/rstudio/.Rprofile
 fi
 
+# Set file line endings as crlf if docker run from Windows
+if [ "$HOST" = "nt" ]; then
+  echo -e "\{\n\t\"line\_ending\_conversion\": \"windows\"\n\}" >> /etc/rstudio/rstudio-prefs.json
+fi
+
 # Start RStudio Server session in foreground
 # Hence don't use `rstudio-server start` which runs in background
 # and suppress messages about logging etc.
