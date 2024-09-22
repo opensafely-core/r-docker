@@ -118,7 +118,7 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     echo "USER=rstudio" >> /etc/environment &&\
     # Add a home directory for the rstudio user
     mkdir /home/rstudio &&\
-    chown -R rstudio /home/rstudio/ &&\
+    chown -R rstudio:rstudio /home/rstudio/ &&\
     # Use renv R packages
     # Remember that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72
     # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
@@ -129,10 +129,12 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # open RStudio in /workspace
     echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf &&\
     # Ensure rstudio user owns /workspace
-    chown -R rstudio /workspace &&\
+    chown -R rstudio:rstudio /workspace &&\
     # Set the ownership of /var/lib/rstudio-server/ to the rstudio user
     # (for rstudio.sqlite that will be created on rserver start)
-    chown -R rstudio:rstudio /var/lib/rstudio-server/
+    chown -R rstudio:rstudio /var/lib/rstudio-server/ &&\
+    # Ensure /etc/rstudio/ is owned by rstudio user
+    chown -R rstudio:rstudio /etc/rstudio/
 
 ENV USER rstudio
 ENV ACTION_EXEC="/usr/local/bin/rstudio-entrypoint.sh"
