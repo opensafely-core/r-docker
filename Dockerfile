@@ -130,8 +130,8 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf &&\
     # Ensure rstudio user owns /workspace
     chown -R rstudio /workspace &&\
-    # Set the owenership of the /var/lib/rstudio-server/ to the rstudio user
-    # (for the rstudio.sqlite file that will be created on rserver start)
+    # Set the ownership of /var/lib/rstudio-server/ to the rstudio user
+    # (for rstudio.sqlite that will be created on rserver start)
     chown -R rstudio:rstudio /var/lib/rstudio-server/
 
 ENV USER rstudio
