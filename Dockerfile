@@ -113,6 +113,8 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     useradd rstudio &&\
     # Disable rstudio-server authentication
     echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
+    # Run the server under the single user account
+    echo "server-user=rstudio" >> /etc/rstudio/rserver.conf &&\
     echo "USER=rstudio" >> /etc/environment &&\
     # Add a home directory for the rstudio user
     mkdir /home/rstudio &&\
@@ -127,7 +129,10 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # open RStudio in /workspace
     echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf &&\
     # Ensure rstudio user owns /workspace
-    chown -R rstudio /workspace
+    chown -R rstudio /workspace &&\
+    # Set the owenership of the /var/lib/rstudio-server/ to the rstudio user
+    # (for the rstudio.sqlite file that will be created on rserver start)
+    chown -R rstudio:rstudio /var/lib/rstudio-server/
 
 ENV USER rstudio
 ENV ACTION_EXEC="/usr/local/bin/rstudio-entrypoint.sh"
