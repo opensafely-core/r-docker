@@ -135,5 +135,4 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     chown -R rstudio:rstudio /var/lib/rstudio-server/
 
 ENV USER rstudio
-USER rstudio
 ENV ACTION_EXEC="/usr/local/bin/rstudio-entrypoint.sh"
