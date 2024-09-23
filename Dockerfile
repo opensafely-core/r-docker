@@ -131,7 +131,7 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # Ensure rstudio user owns /workspace
     chown -R rstudio:rstudio /workspace &&\
     # Set the ownership of /var/lib/rstudio-server/ to the rstudio user
-    # (for rstudio.sqlite that will be created on rserver start)
+    # (for rstudio.sqlite and related files are that created on installation and rserver startup)
     chown -R rstudio:rstudio /var/lib/rstudio-server/ &&\
     # Ensure /etc/rstudio/ is owned by rstudio user
     chown -R rstudio:rstudio /etc/rstudio/
