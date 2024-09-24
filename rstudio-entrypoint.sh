@@ -24,4 +24,5 @@ fi
 # Start RStudio Server session in foreground
 # Hence don't use `rstudio-server start` which runs in background
 # and suppress messages about logging etc.
-exec /usr/lib/rstudio-server/bin/rserver --server-daemonize 0 > /dev/null 2>&1
+mkdir -p /workspace/metadata
+exec /usr/lib/rstudio-server/bin/rserver --server-daemonize 0 >> /workspace/metadata/rstudio.log 2>&1
