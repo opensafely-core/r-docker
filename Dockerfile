@@ -130,14 +130,7 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     # Make entrypoint script executable
     chmod +x /usr/local/bin/rstudio-entrypoint.sh &&\
     # open RStudio in /workspace
-    echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf &&\
-    # Ensure rstudio user owns /workspace
-    chown -R rstudio:rstudio /workspace &&\
-    # Set the ownership of /var/lib/rstudio-server/ to the rstudio user
-    # (for rstudio-os.sqlite and related files are that created on installation and rserver startup)
-    chown -R rstudio:rstudio /var/lib/rstudio-server/ &&\
-    # Ensure /etc/rstudio/ is owned by rstudio user
-    chown -R rstudio:rstudio /etc/rstudio/
+    echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf
 
 ENV USER rstudio
 ENV ACTION_EXEC="/usr/local/bin/rstudio-entrypoint.sh"
