@@ -105,7 +105,7 @@ COPY rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
 # Install rstudio-server (and a few dependencies)
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
-    wget -q -O rstudio-server.deb https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.04.2-764-amd64.deb &&\
+    wget -q -O rstudio-server.deb https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.09.0-375-amd64.deb &&\
     apt-get install --no-install-recommends -y ./rstudio-server.deb &&\
     # delete the deb
     rm rstudio-server.deb &&\
