@@ -5,7 +5,6 @@ if [[ "$OSTYPEFIRSTFIVE" == "linux" ]]; then
   PLATFORM="linux"
 else
   PLATFORM="somethingelse"
-  echo "success"
 fi
 
 docker run --rm --init --label=opensafely --interactive \
