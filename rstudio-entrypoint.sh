@@ -30,4 +30,4 @@ fi
 # Hence don't use `rstudio-server start` which runs in background
 # and attempt to capture std out and err to a metadata log file
 mkdir -p /workspace/metadata
-exec /usr/lib/rstudio-server/bin/rserver --server-daemonize 0 >> /workspace/metadata/rstudio.log 2>&1
+exec /usr/lib/rstudio-server/bin/rserver --server-daemonize 0 >/workspace/metadata/rstudio.log 2>&1
