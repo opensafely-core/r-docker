@@ -98,16 +98,19 @@ RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 #################################################
 #
 # Add rstudio-server to r image - creating rstudio image
+ARG RSTUDIO_DEB=rstudio-server-2024.09.0-375-amd64.deb
 FROM r as rstudio
 
-COPY rstudio-dependencies.txt /root/rstudio-dependencies.txt
-
 # Install rstudio-server (and a few dependencies)
+COPY rstudio-dependencies.txt /root/rstudio-dependencies.txt
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
-    /usr/lib/apt/apt-helper download-file https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.09.0-375-amd64.deb /var/cache/apt/rstudio-server.deb &&\
-    apt-get install --no-install-recommends -y /var/cache/apt/rstudio-server.deb &&\
-    # Setup rstudio user using approach in opensafely-core/research-template-docker
-    useradd rstudio &&\
+    test -f /var/cache/apt/${RSTUDIO_DEB} ||\
+    /usr/lib/apt/apt-helper download-file https://download2.rstudio.org/server/focal/amd64/${RSTUDIO_DEB} /var/cache/apt/${RSTUDIO_DEB}; \
+    apt-get install --no-install-recommends -y /var/cache/apt/${RSTUDIO_DEB}
+
+# Configuration
+## Start by setting up rstudio user using approach in opensafely-core/research-template-docker
+RUN useradd rstudio &&\
     # Disable rstudio-server authentication
     echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
     # Run the server under the single user account

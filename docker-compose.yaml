@@ -28,3 +28,5 @@ services:
     image: rstudio
     build:
       target: rstudio
+      args:
+        - RSTUDIO_DEB=rstudio-server-2024.09.0-375-amd64.deb
