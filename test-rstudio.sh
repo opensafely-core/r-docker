@@ -1,5 +1,7 @@
 #!/bin/bash
 set -eu
+
+# Detect operating system for `docker run` call
 OSTYPEFIRSTFIVE=$(echo "$OSTYPE" | cut -c1-5)
 if [[ "$OSTYPEFIRSTFIVE" == "linux" ]]; then
   PLATFORM="linux"
