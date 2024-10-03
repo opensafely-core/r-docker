@@ -131,8 +131,5 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
 
 COPY rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
-# Make entrypoint script executable
-RUN chmod +x /usr/local/bin/rstudio-entrypoint.sh
-
 ENV USER rstudio
 ENTRYPOINT ["/usr/local/bin/rstudio-entrypoint.sh"]
