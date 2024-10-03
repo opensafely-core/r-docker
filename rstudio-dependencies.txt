@@ -3,4 +3,3 @@ libclang-dev
 lsb-release
 psmisc
 sudo
-wget
