@@ -17,8 +17,8 @@ if [ $(find /workspace -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
   # Without this the Git pane fails to open when RStudio project opened
   echo -e "[safe]\n\tdirectory = \"*\"" >> /home/rstudio/.gitconfig
 
-  # Open RStudio project on opening RStudio Server session
-  echo 'setHook("rstudio.sessionInit", function(newSession) { if (newSession && is.null(rstudioapi::getActiveProject())) rstudioapi::openProject(paste0("/workspace/", list.files(pattern = "Rproj"))) }, action = "append")' >> /home/rstudio/.Rprofile
+  # Open RStudio project on opening RStudio Server session using an rstudio hook in .Rprofile
+  cat /home/rstudio/rstudio-rprofile.R >> /home/rstudio/.Rprofile
 fi
 
 # Set file line endings as crlf if docker run from Windows

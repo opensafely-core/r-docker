@@ -128,6 +128,7 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf
 
 COPY rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
+COPY rstudio-rprofile.R /home/rstudio/rstudio-rprofile.R
 
 ENV USER rstudio
 ENTRYPOINT ["/usr/local/bin/rstudio-entrypoint.sh"]
