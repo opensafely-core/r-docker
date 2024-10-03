@@ -101,7 +101,6 @@ RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 FROM r as rstudio
 
 COPY rstudio-dependencies.txt /root/rstudio-dependencies.txt
-COPY rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
 # Install rstudio-server (and a few dependencies)
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
@@ -131,6 +130,8 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
     chmod +x /usr/local/bin/rstudio-entrypoint.sh &&\
     # open RStudio in /workspace
     echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf
+
+COPY rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
 ENV USER rstudio
 ENV ACTION_EXEC="/usr/local/bin/rstudio-entrypoint.sh"
