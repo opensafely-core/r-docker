@@ -135,4 +135,4 @@ COPY rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 RUN chmod +x /usr/local/bin/rstudio-entrypoint.sh
 
 ENV USER rstudio
-ENV ACTION_EXEC="/usr/local/bin/rstudio-entrypoint.sh"
+ENTRYPOINT ["/usr/local/bin/rstudio-entrypoint.sh"]
