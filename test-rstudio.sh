@@ -18,9 +18,7 @@ docker run --rm --init --label=opensafely --interactive \
     rstudio
 
 sleep 10
-
 status_code=$(curl --write-out %{http_code} --silent --output /dev/null http://localhost:8787)
-
 if [[ "$status_code" -ne 200 ]] ; then
   echo "Response not received from http://localhost:8787"
   exit 1
