@@ -30,6 +30,9 @@ build-rstudio:
 test image="r": build
     bash ./test.sh "{{ image }}"
 
+# test rstudio-server launches
+test-rstudio:
+    bash ./test-rstudio.sh
 
 # lint source code
 lint:
