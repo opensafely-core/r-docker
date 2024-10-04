@@ -22,6 +22,7 @@ docker run \
     --volume="/${HOME}/.gitconfig:/home/rstudio/local-gitconfig" \
     --env=HOSTPLATFORM=${PLATFORM} \
     --env=HOSTUID=$(id -u) \
+    --detach \
     rstudio
 
 sleep 10
