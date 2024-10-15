@@ -103,7 +103,7 @@ ARG RSTUDIO_DEB="default-arg-to-silence-docker"
 FROM r as rstudio
 
 # Install rstudio-server (and a few dependencies)
-COPY rstudio-dependencies.txt /root/rstudio-dependencies.txt
+COPY rstudio/rstudio-dependencies.txt /root/rstudio-dependencies.txt
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
     test -f /var/cache/apt/"${RSTUDIO_DEB}" ||\
     /usr/lib/apt/apt-helper download-file "${RSTUDIO_BASE_URL}${RSTUDIO_DEB}" /var/cache/apt/"${RSTUDIO_DEB}" &&\
@@ -111,31 +111,19 @@ RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/r
 
 # Configuration
 ## Start by setting up rstudio user using approach in opensafely-core/research-template-docker
-RUN useradd rstudio &&\
-    # Disable rstudio-server authentication
-    echo "auth-none=1" >> /etc/rstudio/rserver.conf &&\
-    # Run the server under the single user account
-    echo "server-user=rstudio" >> /etc/rstudio/rserver.conf &&\
-    echo "USER=rstudio" >> /etc/environment &&\
-    # Give the rstudio user sudo (aka root) permissions
-    usermod -aG sudo rstudio &&\
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&\
-    # Add a home directory for the rstudio user
-    mkdir /home/rstudio &&\
-    chown -R rstudio:rstudio /home/rstudio/ &&\
+RUN useradd rstudio -m
+# copy R/rstudio config into user home dir
+COPY rstudio/home/* /home/rstudio/
+COPY rstudio/etc/* /etc/rstudio/
+
+RUN chown -R rstudio:rstudio /home/rstudio &&\
     # Use renv R packages
     # Remember that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72
     # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
     # so that is already setup
-    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site &&\
-    # open RStudio in /workspace
-    echo "session-default-working-dir=/workspace" >> /etc/rstudio/rsession.conf &&\
-    # Set log level to info
-    echo "[*]" > /etc/rstudio/logging.conf &&\
-    echo "log-level=info" >> /etc/rstudio/logging.conf
+    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site
 
-COPY rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
-COPY rstudio-rprofile.R /home/rstudio/rstudio-rprofile.R
+COPY rstudio/rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
 ENV USER rstudio
 ENTRYPOINT ["/usr/local/bin/rstudio-entrypoint.sh"]
