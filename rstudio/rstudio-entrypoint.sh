@@ -31,4 +31,6 @@ fi
 # By redirecting stdout and stderrr to rstudio.log file, the TTY informational messages are not shown
 # There are also log files in /var/log/rstudio/rstudio-server/rserver.log and
 # /home/rstudio/.local/share/rstudio/log/rsession-rstudio.log
+touch /var/log/rstudio/rstudio-server/rserver.log
+exec > >(tail -F /var/log/rstudio/rstudio-server/rserver.log)
 exec /usr/lib/rstudio-server/bin/rserver --server-daemonize 0
