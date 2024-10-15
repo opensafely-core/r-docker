@@ -37,8 +37,13 @@ test image="r": build
     bash ./test.sh "{{ image }}"
 
 # test rstudio-server launches
-test-rstudio:
+test-rstudio: _env
     bash ./test-rstudio.sh
+
+_env:
+    #!/bin/bash
+    test -f .env && exit
+    echo "HOSTUID=$(id -u)" > .env
 
 # lint source code
 lint:

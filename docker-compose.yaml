@@ -32,3 +32,12 @@ services:
         # supplied by just
         - RSTUDIO_BASE_URL
         - RSTUDIO_DEB
+    ports:
+      - 8787:8787
+    platform: linux/amd64
+    volumes:
+      - ${PWD}:/workspace
+      - ${HOME}/.gitconfig:/home/rstudio/local-gitconfig
+    environment:
+      HOSTPLATFORM: ${HOSTPLATFORM}
+      HOSTUID: ${HOSTUID}
