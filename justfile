@@ -44,6 +44,7 @@ _env:
     #!/bin/bash
     test -f .env && exit
     echo "HOSTUID=$(id -u)" > .env
+    echo "HOSTPLATFORM=$(docker info -f '{{{{ lower .ClientInfo.Os }}')" >> .env
 
 # lint source code
 lint:

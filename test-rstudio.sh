@@ -1,13 +1,5 @@
 #!/bin/bash
-set -eu
-
-# Detect operating system for `docker run` call
-OSTYPEFIRSTFIVE=$(echo "$OSTYPE" | cut -c1-5)
-if [[ "$OSTYPEFIRSTFIVE" == "linux" ]]; then
-  PLATFORM="linux"
-else
-  PLATFORM="somethingelse"
-fi
+set -euo pipefail
 
 trap "docker compose kill > /dev/null 2>&1 || true" EXIT
 
