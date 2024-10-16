@@ -22,7 +22,7 @@ if [ $(find /workspace -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
 fi
 
 # Set file line endings as crlf if docker run from Windows
-if [ "$HOSTPLATFORM" = "win32" ]; then
+if [ "$HOSTPLATFORM" = "win32" ] || [ "$HOSTPLATFORM" = "windows" ]; then
   echo -e "{\n\t\"line_ending_conversion\": \"windows\"\n}" >> /etc/rstudio/rstudio-prefs.json
 fi
 
