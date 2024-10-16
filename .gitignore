@@ -12,3 +12,5 @@ renv/
 
 # metadata directory, ignored in research-template, ignore for rstudio test
 metadata/
+
+.env
