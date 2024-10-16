@@ -2,3 +2,15 @@
 renv.lock.bak
 renv/
 .tests.R
+
+# rstudio-server directories
+*.config
+*.local
+
+# R files
+.Rhistory
+
+# metadata directory, ignored in research-template, ignore for rstudio test
+metadata/
+
+.env

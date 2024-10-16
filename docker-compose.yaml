@@ -23,4 +23,21 @@ services:
       target: add-package
       args:
        - PACKAGE
-
+  rstudio:
+    extends: r
+    image: rstudio
+    build:
+      target: rstudio
+      args:
+        # supplied by just
+        - RSTUDIO_BASE_URL
+        - RSTUDIO_DEB
+    ports:
+      - 8787:8787
+    platform: linux/amd64
+    volumes:
+      - ${PWD}:/workspace
+      - ${HOME}/.gitconfig:/home/rstudio/local-gitconfig
+    environment:
+      HOSTPLATFORM: ${HOSTPLATFORM}
+      HOSTUID: ${HOSTUID}

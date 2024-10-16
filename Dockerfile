@@ -94,3 +94,36 @@ WORKDIR /workspace
 COPY --from=builder /renv /renv
 # this will ensure the renv is activated by default
 RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
+
+#################################################
+#
+# Add rstudio-server to r image - creating rstudio image
+ARG RSTUDIO_BASE_URL="default-arg-to-silence-docker"
+ARG RSTUDIO_DEB="default-arg-to-silence-docker"
+FROM r as rstudio
+
+# Install rstudio-server (and a few dependencies)
+COPY rstudio/rstudio-dependencies.txt /root/rstudio-dependencies.txt
+RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
+    test -f /var/cache/apt/"${RSTUDIO_DEB}" ||\
+    /usr/lib/apt/apt-helper download-file "${RSTUDIO_BASE_URL}${RSTUDIO_DEB}" /var/cache/apt/"${RSTUDIO_DEB}" &&\
+    apt-get install --no-install-recommends -y /var/cache/apt/"${RSTUDIO_DEB}"
+
+# Configuration
+## Start by setting up rstudio user using approach in opensafely-core/research-template-docker
+RUN useradd rstudio -m
+# copy R/rstudio config into user home dir
+COPY rstudio/home/* /home/rstudio/
+COPY rstudio/etc/* /etc/rstudio/
+
+RUN chown -R rstudio:rstudio /home/rstudio &&\
+    # Use renv R packages
+    # Remember that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72
+    # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
+    # so that is already setup
+    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site
+
+COPY rstudio/rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
+
+ENV USER rstudio
+ENTRYPOINT ["/usr/local/bin/rstudio-entrypoint.sh"]
