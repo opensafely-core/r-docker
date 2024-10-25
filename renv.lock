@@ -3441,6 +3441,19 @@
         "remotes"
       ]
     },
+    "padr": {
+      "Package": "padr",
+      "Version": "0.6.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "87219527db60948eb37e3e9ee35479cf",
+      "Requirements": [
+        "Rcpp",
+        "dplyr",
+        "lubridate",
+        "rlang"
+      ]
+    },
     "pammtools": {
       "Package": "pammtools",
       "Version": "0.5.8",
