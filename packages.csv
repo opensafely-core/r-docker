@@ -171,6 +171,7 @@
 "htmlwidgets","1.5.1"
 "httpuv","1.5.4"
 "httr","1.4.2"
+"httr2","0.2.3"
 "IDPmisc","1.1.20"
 "igraph","1.2.5"
 "incidence","1.7.3"
