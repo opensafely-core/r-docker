@@ -86,6 +86,14 @@
         "promises"
       ]
     },
+    "Deriv": {
+      "Package": "Deriv",
+      "Version": "4.1.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "cd52c065c9e687c60c56b51f10f7bcd3",
+      "Requirements": []
+    },
     "Epi": {
       "Package": "Epi",
       "Version": "2.46",
