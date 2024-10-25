@@ -642,6 +642,17 @@
       "Hash": "4f57884290cc75ab22f4af9e9d4ca862",
       "Requirements": []
     },
+    "anytime": {
+      "Package": "anytime",
+      "Version": "0.3.9",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "74a64813f17b492da9c6afda6b128e3d",
+      "Requirements": [
+        "BH",
+        "Rcpp"
+      ]
+    },
     "ape": {
       "Package": "ape",
       "Version": "5.7-1",
