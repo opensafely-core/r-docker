@@ -5077,6 +5077,14 @@
         "tidyr"
       ]
     },
+    "warp": {
+      "Package": "warp",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "fea474d578b1cbcb696ae6ac8bdcc439",
+      "Requirements": []
+    },
     "webshot": {
       "Package": "webshot",
       "Version": "0.5.2",
