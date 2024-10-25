@@ -935,6 +935,21 @@
         "tidyr"
       ]
     },
+    "butcher": {
+      "Package": "butcher",
+      "Version": "0.1.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "47c3d6eac8256c88c0be7bd5c1cbc5d4",
+      "Requirements": [
+        "fs",
+        "lobstr",
+        "purrr",
+        "rlang",
+        "tibble",
+        "usethis"
+      ]
+    },
     "caTools": {
       "Package": "caTools",
       "Version": "1.18.2",
