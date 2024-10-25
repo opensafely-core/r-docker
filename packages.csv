@@ -224,6 +224,7 @@
 "mets","1.2.9"
 "mgcv","1.8-33"
 "mice","3.11.0"
+"microbenchmark","1.5.0"
 "mime","0.9"
 "miniUI","0.1.1.1"
 "minqa","1.2.4"
