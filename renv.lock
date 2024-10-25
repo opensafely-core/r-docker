@@ -5025,6 +5025,19 @@
       "Hash": "057179df16ea1ccdf02e2260774fd2ed",
       "Requirements": []
     },
+    "tseries": {
+      "Package": "tseries",
+      "Version": "0.10-58",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "f9269495a613f8e237f01691bf789ead",
+      "Requirements": [
+        "jsonlite",
+        "quadprog",
+        "quantmod",
+        "zoo"
+      ]
+    },
     "twopartm": {
       "Package": "twopartm",
       "Version": "0.1.0",
