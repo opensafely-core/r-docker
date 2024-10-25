@@ -402,6 +402,7 @@
 "threejs","0.3.3"
 "tibble","3.0.3"
 "tictoc","1.0"
+"tidyquant","1.0.9"
 "tidyr","1.1.2"
 "tidyselect","1.1.0"
 "tidyverse","1.3.0"

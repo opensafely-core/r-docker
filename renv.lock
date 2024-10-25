@@ -4927,6 +4927,38 @@
       "Hash": "f8cc5adf4671b013434bbe127f35b28c",
       "Requirements": []
     },
+    "tidyquant": {
+      "Package": "tidyquant",
+      "Version": "1.0.9",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "85e909dfed0d424398243e6e06c0a484",
+      "Requirements": [
+        "PerformanceAnalytics",
+        "TTR",
+        "cli",
+        "curl",
+        "dplyr",
+        "ggplot2",
+        "httr",
+        "httr2",
+        "lazyeval",
+        "lubridate",
+        "magrittr",
+        "purrr",
+        "quantmod",
+        "readr",
+        "readxl",
+        "rlang",
+        "stringr",
+        "tibble",
+        "tidyr",
+        "timeDate",
+        "timetk",
+        "xts",
+        "zoo"
+      ]
+    },
     "tidyr": {
       "Package": "tidyr",
       "Version": "1.1.2",
