@@ -5059,6 +5059,16 @@
         "Rcpp"
       ]
     },
+    "urca": {
+      "Package": "urca",
+      "Version": "1.3-4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b664d22e4483f8299ce03d3146971e56",
+      "Requirements": [
+        "nlme"
+      ]
+    },
     "usethis": {
       "Package": "usethis",
       "Version": "2.0.1",
