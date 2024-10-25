@@ -674,6 +674,14 @@
       "Hash": "50c838a310445e954bc13f26f26a6ecf",
       "Requirements": []
     },
+    "astsa": {
+      "Package": "astsa",
+      "Version": "2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c8f1497fb1283233c4f357ebf3f8024a",
+      "Requirements": []
+    },
     "aweek": {
       "Package": "aweek",
       "Version": "1.0.2",
