@@ -308,6 +308,18 @@
         "tidyr"
       ]
     },
+    "PerformanceAnalytics": {
+      "Package": "PerformanceAnalytics",
+      "Version": "2.0.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5ff15925d7e369565203053934e8d9d9",
+      "Requirements": [
+        "quadprog",
+        "xts",
+        "zoo"
+      ]
+    },
     "Publish": {
       "Package": "Publish",
       "Version": "2020.12.23",
