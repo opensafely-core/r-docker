@@ -2949,6 +2949,18 @@
         "zoo"
       ]
     },
+    "lobstr": {
+      "Package": "lobstr",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "3354c874f6008f7f1e418526df8ecd8a",
+      "Requirements": [
+        "Rcpp",
+        "crayon",
+        "rlang"
+      ]
+    },
     "locfit": {
       "Package": "locfit",
       "Version": "1.5-9.4",
