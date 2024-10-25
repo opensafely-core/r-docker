@@ -5016,6 +5016,41 @@
         "survival"
       ]
     },
+    "timetk": {
+      "Package": "timetk",
+      "Version": "2.7.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "556ebb09a5675cfe00a67afff7d45eac",
+      "Requirements": [
+        "anytime",
+        "assertthat",
+        "dplyr",
+        "forcats",
+        "forecast",
+        "generics",
+        "ggplot2",
+        "hms",
+        "lubridate",
+        "padr",
+        "plotly",
+        "purrr",
+        "readr",
+        "recipes",
+        "rlang",
+        "rsample",
+        "slider",
+        "stringi",
+        "stringr",
+        "tibble",
+        "tidyr",
+        "tidyselect",
+        "timeDate",
+        "tsfeatures",
+        "xts",
+        "zoo"
+      ]
+    },
     "tinytex": {
       "Package": "tinytex",
       "Version": "0.25",
