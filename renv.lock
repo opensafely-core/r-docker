@@ -568,6 +568,18 @@
         "RcppEigen"
       ]
     },
+    "TTR": {
+      "Package": "TTR",
+      "Version": "0.24.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "1acd2b3db6e118dd161ee6cabedc4d4e",
+      "Requirements": [
+        "curl",
+        "xts",
+        "zoo"
+      ]
+    },
     "UpSetR": {
       "Package": "UpSetR",
       "Version": "1.4.0",
@@ -3830,6 +3842,20 @@
       "Repository": "CRAN",
       "Hash": "5f919ae5e7f83a6f91dcf2288943370d",
       "Requirements": []
+    },
+    "quantmod": {
+      "Package": "quantmod",
+      "Version": "0.4.26",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "59321b609790f8ccf92145810e4dd507",
+      "Requirements": [
+        "TTR",
+        "curl",
+        "jsonlite",
+        "xts",
+        "zoo"
+      ]
     },
     "quantreg": {
       "Package": "quantreg",
