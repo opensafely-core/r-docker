@@ -4838,6 +4838,25 @@
         "gdtools"
       ]
     },
+    "sweep": {
+      "Package": "sweep",
+      "Version": "0.2.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "48ec69cb7859544b8cae9e9c90eb8b24",
+      "Requirements": [
+        "broom",
+        "dplyr",
+        "forecast",
+        "lubridate",
+        "rlang",
+        "tibble",
+        "tidyquant",
+        "tidyr",
+        "tidyverse",
+        "timetk"
+      ]
+    },
     "sys": {
       "Package": "sys",
       "Version": "3.4",
