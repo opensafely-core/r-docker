@@ -1335,6 +1335,25 @@
         "vctrs"
       ]
     },
+    "doBy": {
+      "Package": "doBy",
+      "Version": "4.6.15",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "69b5eff9c717ebed5255f1e287885831",
+      "Requirements": [
+        "Deriv",
+        "MASS",
+        "Matrix",
+        "broom",
+        "dplyr",
+        "ggplot2",
+        "magrittr",
+        "microbenchmark",
+        "pbkrtest",
+        "tibble"
+      ]
+    },
     "doParallel": {
       "Package": "doParallel",
       "Version": "1.0.15",
