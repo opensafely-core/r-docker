@@ -5059,6 +5059,24 @@
         "zoo"
       ]
     },
+    "tsfeatures": {
+      "Package": "tsfeatures",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "0749a31fa3e48efc115acd1e6daabac6",
+      "Requirements": [
+        "RcppRoll",
+        "forecast",
+        "fracdiff",
+        "furrr",
+        "future",
+        "purrr",
+        "tibble",
+        "tseries",
+        "urca"
+      ]
+    },
     "twopartm": {
       "Package": "twopartm",
       "Version": "0.1.0",
