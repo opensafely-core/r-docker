@@ -86,6 +86,14 @@
         "promises"
       ]
     },
+    "Deriv": {
+      "Package": "Deriv",
+      "Version": "4.1.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "cd52c065c9e687c60c56b51f10f7bcd3",
+      "Requirements": []
+    },
     "Epi": {
       "Package": "Epi",
       "Version": "2.46",
@@ -298,6 +306,18 @@
         "rlang",
         "tibble",
         "tidyr"
+      ]
+    },
+    "PerformanceAnalytics": {
+      "Package": "PerformanceAnalytics",
+      "Version": "2.0.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5ff15925d7e369565203053934e8d9d9",
+      "Requirements": [
+        "quadprog",
+        "xts",
+        "zoo"
       ]
     },
     "Publish": {
@@ -548,6 +568,18 @@
         "RcppEigen"
       ]
     },
+    "TTR": {
+      "Package": "TTR",
+      "Version": "0.24.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "1acd2b3db6e118dd161ee6cabedc4d4e",
+      "Requirements": [
+        "curl",
+        "xts",
+        "zoo"
+      ]
+    },
     "UpSetR": {
       "Package": "UpSetR",
       "Version": "1.4.0",
@@ -610,6 +642,17 @@
       "Hash": "4f57884290cc75ab22f4af9e9d4ca862",
       "Requirements": []
     },
+    "anytime": {
+      "Package": "anytime",
+      "Version": "0.3.9",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "74a64813f17b492da9c6afda6b128e3d",
+      "Requirements": [
+        "BH",
+        "Rcpp"
+      ]
+    },
     "ape": {
       "Package": "ape",
       "Version": "5.7-1",
@@ -664,6 +707,14 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "50c838a310445e954bc13f26f26a6ecf",
+      "Requirements": []
+    },
+    "astsa": {
+      "Package": "astsa",
+      "Version": "2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c8f1497fb1283233c4f357ebf3f8024a",
       "Requirements": []
     },
     "aweek": {
@@ -882,6 +933,21 @@
         "stringr",
         "tibble",
         "tidyr"
+      ]
+    },
+    "butcher": {
+      "Package": "butcher",
+      "Version": "0.1.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "47c3d6eac8256c88c0be7bd5c1cbc5d4",
+      "Requirements": [
+        "fs",
+        "lobstr",
+        "purrr",
+        "rlang",
+        "tibble",
+        "usethis"
       ]
     },
     "caTools": {
@@ -1327,6 +1393,25 @@
         "vctrs"
       ]
     },
+    "doBy": {
+      "Package": "doBy",
+      "Version": "4.6.15",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "69b5eff9c717ebed5255f1e287885831",
+      "Requirements": [
+        "Deriv",
+        "MASS",
+        "Matrix",
+        "broom",
+        "dplyr",
+        "ggplot2",
+        "magrittr",
+        "microbenchmark",
+        "pbkrtest",
+        "tibble"
+      ]
+    },
     "doParallel": {
       "Package": "doParallel",
       "Version": "1.0.15",
@@ -1767,6 +1852,27 @@
         "iterators"
       ]
     },
+    "forecast": {
+      "Package": "forecast",
+      "Version": "8.16",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5d2502b83f310c485c5ba62b6b0bbfb9",
+      "Requirements": [
+        "Rcpp",
+        "RcppArmadillo",
+        "colorspace",
+        "fracdiff",
+        "ggplot2",
+        "lmtest",
+        "magrittr",
+        "nnet",
+        "timeDate",
+        "tseries",
+        "urca",
+        "zoo"
+      ]
+    },
     "foreign": {
       "Package": "foreign",
       "Version": "0.8-80",
@@ -1796,6 +1902,14 @@
         "gridExtra",
         "gtable"
       ]
+    },
+    "fracdiff": {
+      "Package": "fracdiff",
+      "Version": "1.5-3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a74597c42c5343764548aee4930e1ee1",
+      "Requirements": []
     },
     "fs": {
       "Package": "fs",
@@ -2470,6 +2584,24 @@
         "openssl"
       ]
     },
+    "httr2": {
+      "Package": "httr2",
+      "Version": "0.2.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "193bb297368afbbb42dc85784a46b36e",
+      "Requirements": [
+        "R6",
+        "cli",
+        "curl",
+        "glue",
+        "magrittr",
+        "openssl",
+        "rappdirs",
+        "rlang",
+        "withr"
+      ]
+    },
     "igraph": {
       "Package": "igraph",
       "Version": "1.2.5",
@@ -2832,6 +2964,18 @@
         "zoo"
       ]
     },
+    "lobstr": {
+      "Package": "lobstr",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "3354c874f6008f7f1e418526df8ecd8a",
+      "Requirements": [
+        "Rcpp",
+        "crayon",
+        "rlang"
+      ]
+    },
     "locfit": {
       "Package": "locfit",
       "Version": "1.5-9.4",
@@ -3026,6 +3170,14 @@
         "lattice",
         "tidyr"
       ]
+    },
+    "microbenchmark": {
+      "Package": "microbenchmark",
+      "Version": "1.5.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "f9d226d88d4087d817d4e616626ce8e5",
+      "Requirements": []
     },
     "mime": {
       "Package": "mime",
@@ -3354,6 +3506,19 @@
       "Hash": "b37932b67288bc62bb81686b2f337a7d",
       "Requirements": [
         "remotes"
+      ]
+    },
+    "padr": {
+      "Package": "padr",
+      "Version": "0.6.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "87219527db60948eb37e3e9ee35479cf",
+      "Requirements": [
+        "Rcpp",
+        "dplyr",
+        "lubridate",
+        "rlang"
       ]
     },
     "pammtools": {
@@ -3776,6 +3941,20 @@
       "Hash": "5f919ae5e7f83a6f91dcf2288943370d",
       "Requirements": []
     },
+    "quantmod": {
+      "Package": "quantmod",
+      "Version": "0.4.26",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "59321b609790f8ccf92145810e4dd507",
+      "Requirements": [
+        "TTR",
+        "curl",
+        "jsonlite",
+        "xts",
+        "zoo"
+      ]
+    },
     "quantreg": {
       "Package": "quantreg",
       "Version": "5.61",
@@ -4194,6 +4373,28 @@
         "backports"
       ]
     },
+    "rsample": {
+      "Package": "rsample",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "d3ef8543c8f3b44990cc122909847087",
+      "Requirements": [
+        "dplyr",
+        "ellipsis",
+        "furrr",
+        "generics",
+        "glue",
+        "pillar",
+        "purrr",
+        "rlang",
+        "slider",
+        "tibble",
+        "tidyr",
+        "tidyselect",
+        "vctrs"
+      ]
+    },
     "rsconnect": {
       "Package": "rsconnect",
       "Version": "0.8.16",
@@ -4497,6 +4698,19 @@
       "Hash": "1ab2028f9597732e853f85b9b7ee0090",
       "Requirements": []
     },
+    "slider": {
+      "Package": "slider",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c1c73df260af9e1e3692eb3b8e1ecb88",
+      "Requirements": [
+        "cli",
+        "rlang",
+        "vctrs",
+        "warp"
+      ]
+    },
     "snakecase": {
       "Package": "snakecase",
       "Version": "0.11.0",
@@ -4651,6 +4865,25 @@
         "gdtools"
       ]
     },
+    "sweep": {
+      "Package": "sweep",
+      "Version": "0.2.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "48ec69cb7859544b8cae9e9c90eb8b24",
+      "Requirements": [
+        "broom",
+        "dplyr",
+        "forecast",
+        "lubridate",
+        "rlang",
+        "tibble",
+        "tidyquant",
+        "tidyr",
+        "tidyverse",
+        "timetk"
+      ]
+    },
     "sys": {
       "Package": "sys",
       "Version": "3.4",
@@ -4739,6 +4972,38 @@
       "Repository": "CRAN",
       "Hash": "f8cc5adf4671b013434bbe127f35b28c",
       "Requirements": []
+    },
+    "tidyquant": {
+      "Package": "tidyquant",
+      "Version": "1.0.9",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "85e909dfed0d424398243e6e06c0a484",
+      "Requirements": [
+        "PerformanceAnalytics",
+        "TTR",
+        "cli",
+        "curl",
+        "dplyr",
+        "ggplot2",
+        "httr",
+        "httr2",
+        "lazyeval",
+        "lubridate",
+        "magrittr",
+        "purrr",
+        "quantmod",
+        "readr",
+        "readxl",
+        "rlang",
+        "stringr",
+        "tibble",
+        "tidyr",
+        "timeDate",
+        "timetk",
+        "xts",
+        "zoo"
+      ]
     },
     "tidyr": {
       "Package": "tidyr",
@@ -4829,6 +5094,41 @@
         "survival"
       ]
     },
+    "timetk": {
+      "Package": "timetk",
+      "Version": "2.7.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "556ebb09a5675cfe00a67afff7d45eac",
+      "Requirements": [
+        "anytime",
+        "assertthat",
+        "dplyr",
+        "forcats",
+        "forecast",
+        "generics",
+        "ggplot2",
+        "hms",
+        "lubridate",
+        "padr",
+        "plotly",
+        "purrr",
+        "readr",
+        "recipes",
+        "rlang",
+        "rsample",
+        "slider",
+        "stringi",
+        "stringr",
+        "tibble",
+        "tidyr",
+        "tidyselect",
+        "timeDate",
+        "tsfeatures",
+        "xts",
+        "zoo"
+      ]
+    },
     "tinytex": {
       "Package": "tinytex",
       "Version": "0.25",
@@ -4859,6 +5159,37 @@
       "Hash": "057179df16ea1ccdf02e2260774fd2ed",
       "Requirements": []
     },
+    "tseries": {
+      "Package": "tseries",
+      "Version": "0.10-58",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "f9269495a613f8e237f01691bf789ead",
+      "Requirements": [
+        "jsonlite",
+        "quadprog",
+        "quantmod",
+        "zoo"
+      ]
+    },
+    "tsfeatures": {
+      "Package": "tsfeatures",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "0749a31fa3e48efc115acd1e6daabac6",
+      "Requirements": [
+        "RcppRoll",
+        "forecast",
+        "fracdiff",
+        "furrr",
+        "future",
+        "purrr",
+        "tibble",
+        "tseries",
+        "urca"
+      ]
+    },
     "twopartm": {
       "Package": "twopartm",
       "Version": "0.1.0",
@@ -4878,6 +5209,16 @@
       "Hash": "4a3df844d6d35ca2ba2b7ba95446b955",
       "Requirements": [
         "Rcpp"
+      ]
+    },
+    "urca": {
+      "Package": "urca",
+      "Version": "1.3-4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b664d22e4483f8299ce03d3146971e56",
+      "Requirements": [
+        "nlme"
       ]
     },
     "usethis": {
@@ -4977,6 +5318,14 @@
         "tibble",
         "tidyr"
       ]
+    },
+    "warp": {
+      "Package": "warp",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "fea474d578b1cbcb696ae6ac8bdcc439",
+      "Requirements": []
     },
     "webshot": {
       "Package": "webshot",
