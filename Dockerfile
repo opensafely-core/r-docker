@@ -85,6 +85,9 @@ LABEL org.opencontainers.image.title="r" \
 
 # ACTION_EXEC is our default executable
 ENV ACTION_EXEC="/usr/bin/Rscript"
+# INTERACTIVE_EXEC is used when running w/o any args, implying an interactive session.
+# See: https://github.com/opensafely-core/base-docker/blob/main/entrypoint.sh#L5
+ENV INTERACTIVE_EXEC="/usr/bin/R"
 
 # setup /workspace
 RUN mkdir /workspace
