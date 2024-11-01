@@ -132,6 +132,8 @@ As such we know that on a particular date CRAN has tested these package versions
 Hence this is an extremely stable approach.
 And we can add additional packages reliably.
 
-### How to choose a version of R and date
+### How to choose a version of R and CRAN date
 
-We recommend not choosing a date within the first week of a new version of R being release, because there may be alot of packages updated on CRAN during this time.
+Essentially we follow the approach of the Rocker project who list their R versions and CRAN dates on their [wiki](https://github.com/rocker-org/rocker-versioned2/wiki/Versions).
+
+Additionally, we recommend not choosing a date within the first week of a new version of R being released, because there may be alot of packages updated on CRAN during this time.
