@@ -122,3 +122,16 @@ And then push the new rstudio image to the GitHub container registry with
 ```sh
 just publish-rstudio
 ```
+
+## How to update the version of R
+
+In the second iteration of the r image we choose a date, the version of R in the image was the release version of R on this date.
+Similarly, all packages are installed from this date using a Posit Public Package Manager snapshot repository.
+We do this because CRAN follows a rolling release model.
+As such we know that on a particular date CRAN has tested these package versions on this version of R.
+Hence this is an extremely stable approach.
+And we can add additional packages reliably.
+
+### How to choose a version of R and date
+
+We recommend not choosing a date within the first week of a new version of R being release, because there may be alot of packages updated on CRAN during this time.
