@@ -123,17 +123,29 @@ And then push the new rstudio image to the GitHub container registry with
 just publish-rstudio
 ```
 
-## How to update the version of R
+## How to update the version of R and the packages
 
-In the second iteration of the r image we choose a date, the version of R in the image was the release version of R on this date.
-Similarly, all packages are installed from this date using a Posit Public Package Manager snapshot repository.
-We do this because CRAN follows a rolling release model.
+In the second iteration of the r image we choose a date from which to install the packages from CRAN, the version of R in the image must have been the release version of R on this date.
+
+R release dates can be found on the [R wikipedia page](https://en.wikipedia.org/wiki/R_(programming_language)#Version_names).
+
+When installing packages we initially try to use a Posit Public Package Manager snapshot repository of the chosen date.
+
+We use a fixed date because CRAN follows a rolling release model.
 As such we know that on a particular date CRAN has tested these package versions on this version of R.
 Hence this is an extremely stable approach.
-And we can add additional packages reliably.
+And we can add additional packages at their versions on this date reliably (and without updating dependency packages already included in the image).
+
+The CRAN apt repository for R is available [here](https://cran.r-project.org/bin/linux/ubuntu/noble-cran40/) (note you may need to amend the Ubuntu codename in the URL if using a newer base image), find the package number you require and edit the number in _dependencies.txt_ and _build-dependencies.txt_.
+
+Then amend the `CRAN_DATE` argument in the _justfile_.
 
 ### How to choose a version of R and CRAN date
 
-Essentially we follow the approach of the Rocker project who list their R versions and CRAN dates on their [wiki](https://github.com/rocker-org/rocker-versioned2/wiki/Versions).
+Choose a version of R.
 
-Additionally, we recommend not choosing a date within the first week of a new version of R being released, because there may be alot of packages updated on CRAN during this time.
+Choose a CRAN date when that version of R 
+
+Essentially we follow a very similar approach to the versioned stack of the Rocker project. They list their R versions and CRAN dates on their [wiki](https://github.com/rocker-org/rocker-versioned2/wiki/Versions).
+
+We recommend not choosing a date within the first week of a new version of R being released, because there may be alot of packages updated on CRAN during this time.
