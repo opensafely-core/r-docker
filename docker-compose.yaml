@@ -13,6 +13,7 @@ services:
         - BUILDKIT_INLINE_CACHE=1
         # env vars supplied by make/just
         - BUILD_DATE
+        - R_DATE
         - REVISION
         - VERSION
     init: true
