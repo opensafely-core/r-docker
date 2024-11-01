@@ -3,7 +3,7 @@
 #
 # We need base r dependencies on both the builder and r images, so
 # create base image with those installed to save installing them twice.
-FROM ghcr.io/opensafely-core/base-action:20.04 as base-r
+FROM ghcr.io/opensafely-core/base-action:24.04 as base-r
 
 COPY dependencies.txt /root/dependencies.txt
 
