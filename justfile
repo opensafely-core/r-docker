@@ -12,7 +12,7 @@ build:
     # set build args for prod builds
     export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
     export GITREF=$(git rev-parse --short HEAD)
-    export R_DATE=2024-10-30
+    export CRAN_DATE=2024-10-30
 
     # build the thing
     docker-compose build --pull r
