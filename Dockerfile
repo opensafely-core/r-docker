@@ -41,6 +41,7 @@ WORKDIR /renv
 RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE)'
 
 # use renv to install packages
+ARG UPDATE="default-arg-to-silence-docker"
 COPY renv.lock /renv/renv.lock
 RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e 'renv::restore()'
 

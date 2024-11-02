@@ -13,6 +13,7 @@ build:
     export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
     export GITREF=$(git rev-parse --short HEAD)
     export CRAN_DATE=2024-10-30
+    export UPDATE=true
 
     # build the thing
     docker-compose build --pull r

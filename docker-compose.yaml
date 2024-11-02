@@ -15,6 +15,7 @@ services:
         - BUILD_DATE
         - CRAN_DATE
         - REVISION
+        - UPDATE
         - VERSION
     init: true
   add-package:
