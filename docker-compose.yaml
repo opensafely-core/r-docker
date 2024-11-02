@@ -14,7 +14,7 @@ services:
         # env vars supplied by make/just
         - BUILD_DATE
         - CRAN_DATE
-        - PPPM_REPOS
+        - REPOS
         - REVISION
         - UPDATE
         - VERSION

@@ -41,8 +41,8 @@ WORKDIR /renv
 ARG UPDATE="default-arg-to-silence-docker"
 COPY packages.csv /renv/packages.csv
 COPY renv.lock /renv/renv.lock
-RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then R -e 'options(renv.config.pak.enabled = TRUE); renv::install(TODO:biglisthere, repos = "$PPPM_REPOS", destdir="/cache")';
-RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE); renv::restore()';
+RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then R -e 'install.packages("renv", repos = \"$REPOS\"); if (packageVersion("renv")) >= '' { options(renv.config.pak.enabled = TRUE) }; renv::install(TODO:biglisthere, repos = \"$REPOS\", destdir="/cache")';
+RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "false" ]; then R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE); renv::restore()';
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
@@ -66,7 +66,7 @@ FROM builder as add-package
 
 ARG PACKAGE="default-arg-to-silence-docker"
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-2404 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
+RUN --mount=type=cache,target=/cache,id=/cache-2404 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\", repos = \"$REPOS\"); renv::snapshot(type=\"all\")'"
 
 
 ################################################
