@@ -38,12 +38,11 @@ ENV RENV_PATHS_SOURCE=/cache/source \
 WORKDIR /renv
 
 # install renv
-RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE)'
-
-# use renv to install packages
 ARG UPDATE="default-arg-to-silence-docker"
+COPY packages.csv /renv/packages.csv
 COPY renv.lock /renv/renv.lock
-RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e 'renv::restore()'
+RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then R -e 'options(renv.config.pak.enabled = TRUE); renv::install(TODO:biglisthere, repos = "$PPPM_REPOS", destdir="/cache")';
+RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE); renv::restore()';
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
