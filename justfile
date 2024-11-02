@@ -13,6 +13,7 @@ build:
     export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
     export GITREF=$(git rev-parse --short HEAD)
     export CRAN_DATE=2024-10-30
+    export PPPM_REPOS=https://p3m.dev/cran/__linux__/noble/$CRAN_DATE
     export UPDATE=true
 
     # build the thing
