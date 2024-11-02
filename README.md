@@ -151,3 +151,5 @@ Essentially we follow a very similar approach to the versioned stack of the Rock
 We recommend not choosing a date within the first week of a new version of R being released, because there may be alot of packages updated on CRAN during this time.
 
 If you choose a version of R that is not the current version of R we recommend following the rocker approach and choosing the CRAN date as the day before the next version of R was released. For example, if choosing R 4.4.1, R 4.4.2 was released on 2024-10-31 and so we choose 2024-10-30 as the CRAN date.
+
+You can find out when the next release of R is scheduled for on the [R developer page](https://developer.r-project.org/).
