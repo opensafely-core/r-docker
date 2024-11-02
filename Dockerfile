@@ -9,7 +9,7 @@ COPY dependencies.txt /root/dependencies.txt
 
 # add cran repo for R packages and install
 RUN --mount=type=cache,target=/var/cache/apt \
-    echo "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" > /etc/apt/sources.list.d/cran.list &&\
+    echo "deb https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/" > /etc/apt/sources.list.d/cran.list &&\
     /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc &&\
     /root/docker-apt-install.sh /root/dependencies.txt
 
@@ -38,17 +38,17 @@ ENV RENV_PATHS_SOURCE=/cache/source \
 WORKDIR /renv
 
 # install renv
-RUN --mount=type=cache,target=/cache,id=/cache-2004 R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE)'
+RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE)'
 
 # use renv to install packages
 COPY renv.lock /renv/renv.lock
-RUN --mount=type=cache,target=/cache,id=/cache-2004 R -e 'renv::restore()'
+RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e 'renv::restore()'
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
 # change the symlinks into full copies, to store them in the image.
 COPY copy-symlink.sh /tmp/copy-symlink.sh
-RUN --mount=type=cache,target=/cache,id=/cache-2004 bash /tmp/copy-symlink.sh /renv/lib
+RUN --mount=type=cache,target=/cache,id=/cache-2404 bash /tmp/copy-symlink.sh /renv/lib
 
 
 ###############################################
@@ -66,7 +66,7 @@ FROM builder as add-package
 
 ARG PACKAGE="default-arg-to-silence-docker"
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-2004 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
+RUN --mount=type=cache,target=/cache,id=/cache-2404 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
 
 
 ################################################
