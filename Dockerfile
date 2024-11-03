@@ -124,7 +124,8 @@ RUN chown -R rstudio:rstudio /home/rstudio &&\
     # Remember that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72
     # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
     # so that is already setup
-    echo "R_LIBS_SITE=/renv/lib/R-4.0/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site
+    # TODO: check the filepath for R 4.4.#
+    echo "R_LIBS_SITE=/renv/lib/R-4.4/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site
 
 COPY rstudio/rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
