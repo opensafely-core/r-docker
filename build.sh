@@ -12,7 +12,7 @@ if [ -z "$1" ]; then
 elif [ "$1" = "update" ]; then
   export UPDATE=true
 else 
-  echo "Please specify `just build` as `just build` or `just build update`"
+  echo "Please specify `just build` as either `just build` or `just build update`"
   exit 1
 fi
 
