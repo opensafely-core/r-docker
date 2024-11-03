@@ -138,7 +138,19 @@ And we can add additional packages at their versions on this date reliably (and 
 
 The CRAN apt repository for R is available [here](https://cran.r-project.org/bin/linux/ubuntu/noble-cran40/) (note you may need to amend the Ubuntu codename in the URL if using a newer base image), find the package number you require and edit the number in _dependencies.txt_ and _build-dependencies.txt_.
 
-Then amend the `CRAN_DATE` argument in the _justfile_.
+Then amend the `CRAN_DATE` and `REPOS` arguments in _build.sh_.
+
+To update run
+
+```sh
+just build update
+```
+
+To build without updating simply run
+
+```sh
+just build
+```
 
 ### How to choose a version of R and CRAN date
 
@@ -150,7 +162,7 @@ Essentially we follow a very similar approach to the versioned stack of the Rock
 
 We recommend not choosing a date within the first week of a new version of R being released, because there may be alot of packages updated on CRAN during this time.
 
-You then need to check that a PPPM snapshot repository exists for your chosen date. Navigate to <https://p3m.dev/client/#/repos/cran/setup> inspect your chosen date. Set this as the `REPOS` argument.
+You then need to check that a PPPM snapshot repository exists for your chosen date. Navigate to <https://p3m.dev/client/#/repos/cran/setup> inspect your chosen date. Set this as the `REPOS` argument in _build.sh_.
 
 If you choose a version of R that is not the current version of R we recommend following the rocker approach and choosing the CRAN date as the day before the next version of R was released. For example, if choosing R 4.4.1, R 4.4.2 was released on 2024-10-31 and so we choose 2024-10-30 as the CRAN date.
 
