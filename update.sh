@@ -3,7 +3,7 @@ set -euo pipefail
 
 if [ "$UPDATE" = "true" ]; then
   R -e "options(HTTPUserAgent = \
-      sprintf(\"R/%s R (%s\", \
+      sprintf(\"R/%s R (%s)\", \
         getRversion(), \
         paste(getRversion(), \
           R.version[\"platform\"], \
