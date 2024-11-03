@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [ "$UPDATE" = "false" ]; then 
-  R -e "install.packages(c('renv', 'pak'), repos = \"$REPOS\", destdir = '/cache'); \
+  R -e "install.packages(c('renv', 'pak'), repos = c(CRAN = \"$REPOS\"), destdir = '/cache'); \
     options(renv.config.pak.enabled = TRUE); \
     renv::init(bare = TRUE); \
     renv::restore()"
