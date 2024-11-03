@@ -6,19 +6,7 @@ export COMPOSE_DOCKER_CLI_BUILD := "1"
 
 # build the R image locally
 build: 
-    #!/usr/bin/env bash
-    set -euo pipefail
-
-    # set build args for prod builds
-    export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
-    export GITREF=$(git rev-parse --short HEAD)
-    export CRAN_DATE=2024-10-30
-    export REPOS=https://p3m.dev/cran/__linux__/noble/$CRAN_DATE
-    export UPDATE=true
-
-    # build the thing
-    docker-compose build --pull r
-
+    bash ./build.sh {{ update }}
 
 # build and add a package and its dependencies to the image
 add-package package:
