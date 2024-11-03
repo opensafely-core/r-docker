@@ -17,6 +17,7 @@ if [ "$UPDATE" = "true" ]; then
     options(renv.config.pak.enabled = FALSE); \
     pkgs <- read.csv('packages.csv')\$Package; \
     pkgs <- pkgs[pkgs != 'renv']; \
+    pkgs <- pkgs[pkgs != 'dummies']; \
     renv::install(pkgs, destdir = '/cache'); \
     webshot::install_phantomjs(); \
     renv::install('sjPlot', destdir = '/cache'); \
