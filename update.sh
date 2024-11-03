@@ -14,7 +14,7 @@ if [ "$UPDATE" = "true" ]; then
     ); \
     options(repos = c(CRAN = \"$REPOS\")); \
     install.packages(c('renv', 'pak'), destdir = '/cache'); \
-    options(renv.config.pak.enabled = TRUE); \
+    options(renv.config.pak.enabled = FALSE); \
     pkgs <- read.csv('packages.csv')\$Package; \
     pkgs <- pkgs[pkgs != 'renv']; \
     renv::install(pkgs, destdir = '/cache'); \

@@ -13,7 +13,7 @@ if [ "$UPDATE" = "false" ]; then
         ) \
       ); \
     install.packages(c('renv', 'pak'), repos = c(CRAN = \"$REPOS\"), destdir = '/cache'); \
-    options(renv.config.pak.enabled = TRUE); \
+    options(renv.config.pak.enabled = FALSE); \
     renv::init(bare = TRUE); \
     renv::restore()"
 fi
