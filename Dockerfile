@@ -66,7 +66,7 @@ FROM builder as add-package
 
 ARG PACKAGE="default-arg-to-silence-docker"
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-2404 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\", repos = \"$REPOS\"); renv::snapshot(type=\"all\")'"
+RUN --mount=type=cache,target=/cache,id=/cache-2404 bash -c "R -e 'renv::activate(); options(renv.config.pak.enabled = TRUE); renv::install(\"$PACKAGE\", repos = \"$REPOS\"); renv::snapshot(type=\"all\")'"
 
 
 ################################################
