@@ -9,5 +9,5 @@ if [ "$UPDATE" = "true" ]; then
     renv::install(pkgs, repos = \"$REPOS\", destdir = '/cache'); \
     webshot::install_phantomjs(); \
     renv::install('sjPlot', repos = \"$REPOS\", destdir = '/cache'); \
-    renv::snapshot(type='all')"
+    renv::snapshot(type = 'all')"
 fi
