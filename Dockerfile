@@ -39,6 +39,7 @@ WORKDIR /renv
 
 # install renv
 ARG UPDATE="default-arg-to-silence-docker"
+ARG REPOS="default-arg-to-silence-docker"
 COPY packages.csv /renv/packages.csv
 COPY renv.lock /renv/renv.lock
 COPY update.sh /root/update.sh
