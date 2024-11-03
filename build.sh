@@ -16,9 +16,5 @@ else
   exit 1
 fi
 
-echo "here 1 $UPDATE"
-echo "here 1 $REPOS"
-echo "here 1 \"$REPOS\""
-
 # build the thing
 docker-compose build --pull r

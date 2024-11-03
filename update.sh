@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "here 2 $UPDATE"
-echo "here 2 $REPOS"
-echo "here 2 \"$REPOS\""
-
 if [ "$UPDATE" = "true" ]; then
   R -e "install.packages(c('renv', 'pak'), repos = \"$REPOS\", destdir='/cache'); \
     options(renv.config.pak.enabled = TRUE); \
