@@ -12,7 +12,6 @@ if [ "$UPDATE" = "true" ]; then
         ) \
       ) \
     ); \
-    print(getOption('HTTPUserAgent')); \
     options(repos = c(CRAN = \"$REPOS\")); \
     install.packages(c('renv', 'pak'), destdir = '/cache'); \
     options(renv.config.pak.enabled = TRUE); \
