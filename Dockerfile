@@ -42,9 +42,11 @@ ARG UPDATE="default-arg-to-silence-docker"
 ARG REPOS="default-arg-to-silence-docker"
 COPY packages.csv /renv/packages.csv
 COPY renv.lock /renv/renv.lock
+# Update: just build update
 COPY update.sh /root/update.sh
-COPY restore.sh /root/restore.sh
 RUN --mount=type=cache,target=/cache,id=/cache-2404 /root/update.sh
+# Alternatively build without updating: just build
+COPY restore.sh /root/restore.sh
 RUN --mount=type=cache,target=/cache,id=/cache-2404 /root/restore.sh
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
