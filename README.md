@@ -92,6 +92,7 @@ headers), they should be added to `build-dependencies.txt`. If it requires
 runtime dependencies, they should be added to `dependencies.txt`. Packages
 don't advertise their system dependencies, so you may need to figure them out
 by trying to add the package and reading any error output on failure.
+Note that the Public Posit Package Manager provides a list of apt dependencies for CRAN packages.
 
 #### Installing an older version
 
