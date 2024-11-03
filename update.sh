@@ -2,7 +2,18 @@
 set -euo pipefail
 
 if [ "$UPDATE" = "true" ]; then
-  R -e "install.packages(c('renv', 'pak'), repos = \"$REPOS\", destdir = '/cache'); \
+  R -e "options(HTTPUserAgent = \
+      sprintf(\"R/%s R (%s\", \
+        getRversion(), \
+        paste(getRversion(), \
+          R.version[\"platform\"], \
+          R.version[\"arch\"], \
+          R.version[\"os\"] \
+        ) \
+      ) \
+    ); \
+    print(getOption('HTTPUserAgent')); \
+    install.packages(c('renv', 'pak'), repos = \"$REPOS\", destdir = '/cache'); \
     options(renv.config.pak.enabled = TRUE); \
     pkgs <- read.csv('packages.csv')\$Package; \
     pkgs <- pkgs[pkgs != 'renv']; \
