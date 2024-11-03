@@ -41,8 +41,8 @@ WORKDIR /renv
 ARG UPDATE="default-arg-to-silence-docker"
 COPY packages.csv /renv/packages.csv
 COPY renv.lock /renv/renv.lock
-RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then R -e 'install.packages(c("renv", "pak"), repos = \"$REPOS\", destdir="/cache"); options(renv.config.pak.enabled = TRUE); pkgs <- read.csv("packages.csv")$Package; pkgs <- pkgs[pkgs != "renv"]; renv::install(pkgs, repos = \"$REPOS\", destdir="/cache"); webshot::install_phantomjs(); renv::install("sjPlot", repos = \"$REPOS\", destdir="/cache"); renv::snapshot(type=\"all\")';
-RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "false" ]; then R -e 'install.packages(c("renv", "pak"), repos = \"$REPOS\", destdir="/cache"); options(renv.config.pak.enabled = TRUE); renv::init(bare = TRUE); renv::restore()';
+RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then R -e 'install.packages(c("renv", "pak"), repos = \"$REPOS\", destdir="/cache"); options(renv.config.pak.enabled = TRUE); pkgs <- read.csv("packages.csv")$Package; pkgs <- pkgs[pkgs != "renv"]; renv::install(pkgs, repos = \"$REPOS\", destdir="/cache"); webshot::install_phantomjs(); renv::install("sjPlot", repos = \"$REPOS\", destdir="/cache"); renv::snapshot(type=\"all\")'
+RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "false" ]; then R -e 'install.packages(c("renv", "pak"), repos = \"$REPOS\", destdir="/cache"); options(renv.config.pak.enabled = TRUE); renv::init(bare = TRUE); renv::restore()'
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
