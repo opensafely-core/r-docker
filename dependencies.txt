@@ -3,10 +3,10 @@ r-base-core=4.4.1-3.2404.0
 r-base-dev=4.4.1-3.2404.0
 libcurl3-gnutls
 libxml2
-libgdal26
+libgdal-dev
 librsvg2-2
 libudunits2-0
-libnode64
-libmagick++-6.q16-8
-libgit2-28
+libnode-dev
+libmagick++-dev
+libgit2-1.7
 pandoc
