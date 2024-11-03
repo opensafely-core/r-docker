@@ -25,5 +25,6 @@ if [ "$UPDATE" = "true" ]; then
     renv::install(pkgs, destdir = '/cache'); \
     webshot::install_phantomjs(); \
     renv::install('sjPlot', destdir = '/cache'); \
+    # TODO: should I add sf and terra?? \
     renv::snapshot(type = 'all')"
 fi
