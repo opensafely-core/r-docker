@@ -18,7 +18,7 @@ build-rstudio:
     set -euo pipefail
 
     # Set RStudio Server .deb filename
-    export RSTUDIO_BASE_URL=https://download2.rstudio.org/server/focal/amd64/
+    export RSTUDIO_BASE_URL=https://download2.rstudio.org/server/jammy/amd64/
     export RSTUDIO_DEB=rstudio-server-2024.09.0-375-amd64.deb
     docker-compose build --pull rstudio
 
