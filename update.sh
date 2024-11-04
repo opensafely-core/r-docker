@@ -12,9 +12,9 @@ if [ "$UPDATE" = "true" ]; then
         ) \
       ) \
     ); \
-    options(repos = c(CRAN = \"$REPOS\")); \
-    install.packages(c('renv', 'pak'), destdir = '/cache'); \
-    options(renv.config.pak.enabled = FALSE); \
+    install.packages(c('renv', 'pak'), destdir = '/cache', repos = c(CRAN = \"$REPOS\")); \
+    pak::add_repos(CRAN = 'RSPM@2024-10-30'); \
+    options(renv.config.pak.enabled = TRUE); \
     pkgs <- read.csv('packages.csv')\$Package; \
     pkgs <- pkgs[! pkgs %in% c('renv', 'dummies', 'maptools', 'mnlogit', 'rgdal', 'rgeos')]; \
     renv::install(pkgs, destdir = '/cache'); \
