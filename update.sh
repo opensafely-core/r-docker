@@ -16,12 +16,7 @@ if [ "$UPDATE" = "true" ]; then
     install.packages(c('renv', 'pak'), destdir = '/cache'); \
     options(renv.config.pak.enabled = FALSE); \
     pkgs <- read.csv('packages.csv')\$Package; \
-    pkgs <- pkgs[pkgs != 'renv']; \
-    pkgs <- pkgs[pkgs != 'dummies']; \
-    pkgs <- pkgs[pkgs != 'maptools']; \
-    pkgs <- pkgs[pkgs != 'mnlogit']; \
-    pkgs <- pkgs[pkgs != 'rgdal']; \
-    pkgs <- pkgs[pkgs != 'rgeos']; \
+    pkgs <- pkgs[! pkgs %in% c('renv', 'dummies', 'maptools', 'mnlogit', 'rgdal', 'rgeos')]; \
     renv::install(pkgs, destdir = '/cache'); \
     webshot::install_phantomjs(); \
     renv::install('sjPlot', destdir = '/cache'); \
