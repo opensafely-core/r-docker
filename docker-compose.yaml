@@ -19,6 +19,7 @@ services:
         - UPDATE
         - VERSION
     init: true
+    platform: linux/amd64
   add-package:
     extends: r
     image: "${IMAGE_TAG:-}"
@@ -26,6 +27,7 @@ services:
       target: add-package
       args:
        - PACKAGE
+    platform: linux/amd64
   rstudio:
     extends: r
     image: rstudio
