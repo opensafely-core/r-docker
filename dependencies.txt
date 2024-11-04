@@ -8,5 +8,11 @@ librsvg2-2
 libudunits2-0
 libnode-dev
 libmagick++-dev
-libgit2-1.7
 pandoc
+libcurl4-openssl-dev
+libgit2-dev
+libglpk-dev
+gsfonts
+gdal-bin
+libfribidi-dev
+libharfbuzz-dev

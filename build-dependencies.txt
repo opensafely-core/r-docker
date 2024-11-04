@@ -13,3 +13,10 @@ libxml2-dev
 unixodbc-dev
 libcurl4-gnutls-dev
 curl
+libcurl4-openssl-dev
+libgit2-dev
+libglpk-dev
+gsfonts
+gdal-bin
+libfribidi-dev
+libharfbuzz-dev
