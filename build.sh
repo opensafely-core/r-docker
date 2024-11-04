@@ -18,3 +18,8 @@ fi
 
 # build the thing
 docker-compose build --pull r
+
+# update renv.lock 
+cp renv.lock renv.lock.bak
+# cannot use docker-compose run as it mangles the output
+docker run --rm r cat /renv/renv.lock > renv.lock
