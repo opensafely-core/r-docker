@@ -12,3 +12,4 @@ libv8-dev
 libxml2-dev
 unixodbc-dev
 libcurl4-gnutls-dev
+curl
