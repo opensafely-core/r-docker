@@ -99,6 +99,9 @@ ENV INTERACTIVE_EXEC="/usr/bin/R"
 RUN mkdir /workspace
 WORKDIR /workspace
 
+# Copy in phantomjs
+COPY --from=builder /root/bin/phantomjs /root/bin/phantomjs
+
 # copy the renv over from the builder image
 COPY --from=builder /renv /renv
 
