@@ -72,7 +72,7 @@ FROM builder as add-package
 
 ARG PACKAGE="default-arg-to-silence-docker"
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-2404 bash -c "R -e 'renv::activate(); options(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version[\"platform\"], R.version[\"arch\"], R.version[\"os\"]))); options(renv.config.pak.enabled = FALSE); renv::install(\"$PACKAGE\", repos = c(CRAN = \"$REPOS\")); renv::snapshot(type = \"all\")'"
+RUN --mount=type=cache,target=/cache,id=/cache-2404 bash -c "R -e 'renv::activate(); options(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version[\"platform\"], R.version[\"arch\"], R.version[\"os\"]))); options(renv.config.pak.enabled = TRUE); pak::repo_add(CRAN = \"RSPM@$CRAN_DATE\"); renv::install(\"$PACKAGE\"); renv::snapshot(type = \"all\")'"
 
 
 ################################################
