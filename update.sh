@@ -25,7 +25,6 @@ if [ "$UPDATE" = "true" ]; then
     webshot::install_phantomjs(); \
     renv::install('sjPlot', destdir = '/cache'); \
     renv::snapshot(type = 'all'); \
-    renv::activate(); \
-    renv::status()"
+    renv::activate()"
   docker run --rm r cat /renv/renv.lock > renv.lock
 fi
