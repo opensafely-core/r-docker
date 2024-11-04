@@ -26,6 +26,10 @@ build-rstudio:
 test image="r": build
     bash ./test.sh "{{ image }}"
 
+# test the locally built update image
+test-update image="r": (build "update")
+    bash ./test.sh "{{ image }}"
+
 # test rstudio-server launches
 test-rstudio: _env
     bash ./test-rstudio.sh
