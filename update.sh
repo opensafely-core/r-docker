@@ -2,6 +2,7 @@
 set -euo pipefail
 
 if [ "$UPDATE" = "true" ]; then
+  mv renv.lock renvlock.bak
   R -e "options(HTTPUserAgent = \
       sprintf(\"R/%s R (%s)\", \
         getRversion(), \
@@ -12,15 +13,20 @@ if [ "$UPDATE" = "true" ]; then
         ) \
       ) \
     ); \
-    install.packages(c('renv', 'pak'), destdir = '/cache', repos = c(CRAN = \"$REPOS\")); \
-    pak::repo_add(CRAN = 'RSPM@2024-10-30'); \
+    install.packages('renv', destdir = '/cache', repos = c(CRAN = \"$REPOS\")); \
+    renv::init(bare = TRUE); \
+    renv::snapshot(type = 'all'); \
+    renv::install('pak', destdir = '/cache', repos = c(CRAN = \"$REPOS\")); \
+    pak::repo_add(CRAN = \"RSPM@$CRAN_DATE\"); \
     options(renv.config.pak.enabled = TRUE); \
     pkgs <- read.csv('packages.csv')\$Package; \
-    # Remove packages no longer on CRAN \
     pkgs <- pkgs[! pkgs %in% c('renv', 'dummies', 'maptools', 'mnlogit', 'rgdal', 'rgeos')]; \
     renv::install(pkgs, destdir = '/cache'); \
+    print('Here 4'); \
     webshot::install_phantomjs(); \
     renv::install('sjPlot', destdir = '/cache'); \
-    # TODO: should I add sf and terra?? \
-    renv::snapshot(type = 'all')"
+    renv::snapshot(type = 'all'); \
+    renv::diagnostics(); \
+    renv::status(); \
+    print('Here 5')"
 fi
