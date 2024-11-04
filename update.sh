@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [ "$UPDATE" = "true" ]; then
-  mv renv.lock renvlock.bak
+  mv renv.lock renv.lock.bak
   R -e "options(HTTPUserAgent = \
       sprintf(\"R/%s R (%s)\", \
         getRversion(), \
@@ -24,5 +24,7 @@ if [ "$UPDATE" = "true" ]; then
     renv::install(pkgs, destdir = '/cache'); \
     webshot::install_phantomjs(); \
     renv::install('sjPlot', destdir = '/cache'); \
-    renv::snapshot(type = 'all')"
+    renv::snapshot(type = 'all'); \
+    renv::activate(); \
+    renv::status()"
 fi
