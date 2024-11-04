@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -eo pipefail
 
 # set build args for prod builds
 export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
