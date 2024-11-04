@@ -130,7 +130,7 @@ In the second iteration of the r image we choose a date from which to install th
 
 R release dates can be found on the [R wikipedia page](https://en.wikipedia.org/wiki/R_(programming_language)#Version_names).
 
-When installing packages we initially try to use a Posit Public Package Manager snapshot repository of the chosen date.
+When installing packages we use a Posit Public Package Manager (PPPM) snapshot repository on the chosen `CRAN_DATE`.
 
 We use a fixed date because CRAN follows a rolling release model.
 As such we know that on a particular date CRAN has tested these package versions on this version of R.
@@ -145,6 +145,12 @@ To update run
 
 ```sh
 just build update
+```
+
+To test the updated image run
+
+```sh
+just test-update
 ```
 
 To build without updating simply run
