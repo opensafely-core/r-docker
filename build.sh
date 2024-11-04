@@ -25,4 +25,4 @@ cp renv.lock renv.lock.bak
 docker run --rm r cat /renv/renv.lock > renv.lock
 
 # update packages.csv for backwards compat with current docs
-docker run r -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/dev/stdout")' 2>/dev/null > packages.csv
+docker run r -q -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/dev/stdout")' 2>/dev/null > packages.csv
