@@ -4,7 +4,7 @@ set -euo pipefail
 # set build args for prod builds
 export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
 export GITREF=$(git rev-parse --short HEAD)
-export CRAN_DATE=2024-10-30
+export CRAN_DATE=2024-11-03
 export REPOS=https://p3m.dev/cran/__linux__/noble/$CRAN_DATE
 
 if [ -z "$1" ]; then
