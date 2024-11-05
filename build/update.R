@@ -11,6 +11,7 @@ options(HTTPUserAgent = sprintf(
   )
 ))
 
+file.rename(from = "renv.lock", to = "renv.lock.bak")
 install.packages("renv", destdir = "/cache", repos = c(CRAN = REPOS))
 renv::init(bare = TRUE)
 renv::snapshot(type = "all")
