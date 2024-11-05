@@ -1,0 +1,18 @@
+REPOS <- Sys.getenv("REPOS")
+CRAN_DATE <- Sys.getenv("CRAN_DATE")
+
+options(HTTPUserAgent = sprintf(
+  "R/%s R (%s)", getRversion(),
+  paste(
+    getRversion(),
+    R.version["platform"],
+    R.version["arch"],
+    R.version["os"]
+  )
+))
+
+install.packages(c("renv", "pak"), repos = c(CRAN = REPOS), destdir = "/cache")
+options(renv.config.pak.enabled = TRUE)
+pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
+renv::init(bare = TRUE)
+renv::restore()

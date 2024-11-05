@@ -45,9 +45,11 @@ COPY packages.csv /renv/packages.csv
 COPY renv.lock /renv/renv.lock
 # Update: just build update
 COPY build/update.sh /root/update.sh
+COPY build/update.R /root/update.R
 RUN --mount=type=cache,target=/cache,id=/cache-2404 /root/update.sh
 # Alternatively build without updating: just build
 COPY build/restore.sh /root/restore.sh
+COPY build/restore.R /root/restore.R
 RUN --mount=type=cache,target=/cache,id=/cache-2404 /root/restore.sh
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
@@ -71,8 +73,9 @@ RUN --mount=type=cache,target=/cache,id=/cache-2404 bash /tmp/copy-symlink.sh /r
 FROM builder as add-package
 
 ARG PACKAGE="default-arg-to-silence-docker"
+COPY add-package/add-package.R /root/add-package.R
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-2404 bash -c "R -e 'renv::activate(); options(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version[\"platform\"], R.version[\"arch\"], R.version[\"os\"]))); options(renv.config.pak.enabled = TRUE); pak::repo_add(CRAN = \"RSPM@$CRAN_DATE\"); renv::install(\"$PACKAGE\"); renv::snapshot(type = \"all\")'"
+RUN --mount=type=cache,target=/cache,id=/cache-2404 Rscript /root/add-package.R
 
 
 ################################################
