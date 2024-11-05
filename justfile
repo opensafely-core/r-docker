@@ -6,7 +6,7 @@ export COMPOSE_DOCKER_CLI_BUILD := "1"
 
 # build the R image locally
 build *update:
-    bash ./build.sh {{ update }}
+    bash ./build/build.sh {{ update }}
 
 # build and add a package and its dependencies to the image
 add-package package:
