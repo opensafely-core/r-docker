@@ -6,11 +6,11 @@ export COMPOSE_DOCKER_CLI_BUILD := "1"
 
 # build the R image locally
 build *update:
-    bash ./scripts/build.sh {{ update }}
+    bash scripts/build.sh {{ update }}
 
 # build and add a package and its dependencies to the image
 add-package package:
-    bash ./scripts/add-package.sh {{ package }}
+    bash scripts/add-package.sh {{ package }}
 
 # r image containing rstudio-server
 build-rstudio:
