@@ -1,6 +1,7 @@
 REPOS <- Sys.getenv("REPOS")
 CRAN_DATE <- Sys.getenv("CRAN_DATE")
 
+# Set HTTPUserAgent so that PPPM serves binary R packages for Linux
 options(HTTPUserAgent = sprintf(
   "R/%s R (%s)", getRversion(),
   paste(

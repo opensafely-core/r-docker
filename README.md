@@ -174,3 +174,5 @@ You then need to check that a PPPM snapshot repository exists for your chosen da
 If you choose a version of R that is not the current version of R we recommend following the rocker approach and choosing the CRAN date as the day before the next version of R was released. For example, if choosing R 4.4.1, R 4.4.2 was released on 2024-10-31 and so we choose 2024-10-30 as the CRAN date.
 
 You can find out when the next release of R is scheduled for on the [R developer page](https://developer.r-project.org/).
+
+We set the `HTTPUserAgent` in the appropriate places so that we obtain binary R packages for Linux from the PPPM. There is additional information about this on the [PPPM website](https://p3m.dev/__docs__/admin/serving-binaries/#binary-user-agents).
