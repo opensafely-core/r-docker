@@ -1,0 +1,17 @@
+CRAN_DATE <- Sys.getenv("CRAN_DATE")
+PACKAGE <- Sys.Sys.getenv("PACKAGE")
+
+options(HTTPUserAgent = sprintf(
+  "R/%s R (%s)", getRversion(),
+  paste(
+    getRversion(),
+    R.version["platform"],
+    R.version["arch"],
+    R.version["os"]
+  )
+))
+
+options(renv.config.pak.enabled = TRUE)
+pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
+renv::install(PACKAGE)
+renv::snapshot(type = "all")
