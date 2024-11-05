@@ -44,10 +44,10 @@ ARG CRAN_DATE="default-arg-to-silence-docker"
 COPY packages.csv /renv/packages.csv
 COPY renv.lock /renv/renv.lock
 # Update: just build update
-COPY build/update.R /root/update.R
+COPY scripts/update.R /root/update.R
 RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
 # Alternatively build without updating: just build
-COPY build/restore.R /root/restore.R
+COPY scripts/restore.R /root/restore.R
 RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "false" ]; then Rscript /root/restore.R; fi
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
@@ -71,7 +71,7 @@ RUN --mount=type=cache,target=/cache,id=/cache-2404 bash /tmp/copy-symlink.sh /r
 FROM builder as add-package
 
 ARG PACKAGE="default-arg-to-silence-docker"
-COPY add-package/add-package.R /root/add-package.R
+COPY scripts/add-package.R /root/add-package.R
 # install the package using the cache
 RUN --mount=type=cache,target=/cache,id=/cache-2404 Rscript /root/add-package.R
 
@@ -106,7 +106,7 @@ COPY --from=builder /renv /renv
 
 # We require an empty /workspace/renv directory to seemingingly prevent renv::load() complaining on session start
 RUN mkdir renv
-COPY build/renv-gitignore /workspace/renv/.gitignore
+COPY scripts/renv-gitignore /workspace/renv/.gitignore
 
 # this will ensure the renv is activated by default
 RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.quiet = TRUE)' >> /etc/R/Rprofile.site; \
