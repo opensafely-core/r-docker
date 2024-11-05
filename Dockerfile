@@ -113,9 +113,8 @@ RUN mkdir renv
 COPY build/renv-gitignore /workspace/renv/.gitignore
 
 # this will ensure the renv is activated by default
-RUN echo 'options(renv.config.synchronized.check = FALSE)' >> /etc/R/Rprofile.site
-RUN echo 'options(renv.config.startup.quiet = TRUE)' >> /etc/R/Rprofile.site
-RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
+RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.quiet = TRUE)' >> /etc/R/Rprofile.site; \
+    echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 
 #################################################
 #
