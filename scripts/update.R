@@ -19,8 +19,9 @@ renv::snapshot(type = "all")
 renv::install("pak", destdir = "/cache", repos = c(CRAN = REPOS))
 pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
 options(renv.config.pak.enabled = TRUE)
-pkgs <- read.csv("packages.csv")$Package
-pkgs <- pkgs[!pkgs %in% c("renv", "dummies", "maptools", "mnlogit", "rgdal", "rgeos")]
+renv::install("jsonlite", destdir = "/cache")
+pkgs <- names(jsonlite::read_json("renv.lock")$Packages)
+pkgs <- pkgs[!pkgs %in% c("renv", "dummies", "maptools", "mnlogit", "rgdal", "rgeos", "jsonlite")]
 renv::install(pkgs, destdir = "/cache")
 renv::install("sjPlot", destdir = "/cache")
 renv::snapshot(type = "all")
