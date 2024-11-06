@@ -51,7 +51,7 @@ build-rstudio version:
     # Set RStudio Server .deb filename
     export RSTUDIO_BASE_URL=https://download2.rstudio.org/server/jammy/amd64/
     export RSTUDIO_DEB=rstudio-server-2024.09.0-375-amd64.deb
-    docker-compose build --pull rstudio
+    docker compose --env-file {{ version }}/env build --pull rstudio
 
 # test the locally built image
 test image="r": (build "version")

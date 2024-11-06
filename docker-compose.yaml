@@ -20,7 +20,6 @@ services:
         - VERSION
         - BASE
         - MAJOR_VERSION
-        - R_LIBS_SITE
     init: true
     platform: linux/amd64
   add-package:
@@ -38,6 +37,7 @@ services:
       target: rstudio
       args:
         # supplied by just
+        - R_LIBS_SITE
         - RSTUDIO_BASE_URL
         - RSTUDIO_DEB
     ports:
