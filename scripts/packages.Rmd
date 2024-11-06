@@ -9,6 +9,7 @@ This r: `r Sys.getenv('MAJOR_VERSION')` OpenSAFELY image is based on Ubuntu `r S
 
 The image comes pre-installed with a set of R packages.
 
-```{r}
-pkgs <- read.csv("packages.csv")
+```{r, echo=FALSE, results='asis'}
+pkgs <- read.csv("packages.csv", header = TRUE)
+knitr::kable(pkgs)
 ```
