@@ -11,5 +11,6 @@ The image comes pre-installed with a set of R packages.
 
 ```{r, echo=FALSE, results='asis'}
 pkgs <- read.csv("packages.csv", header = TRUE)
-knitr::kable(pkgs)
+pkgs$Url <- paste0("<https://cran.r-project.org/package=", pkgs$Package, ">")
+knitr::kable(pkgs, caption = "A table of the R packages included in the image.")
 ```
