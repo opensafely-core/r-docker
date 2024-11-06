@@ -20,6 +20,7 @@ services:
         - VERSION
         - BASE
         - MAJOR_VERSION
+        - R_LIBS_SITE
     init: true
     platform: linux/amd64
   add-package:
