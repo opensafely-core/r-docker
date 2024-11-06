@@ -41,7 +41,7 @@ build version *update="":
 
 # build and add a package and its dependencies to the image
 add-package version package:
-    bash scripts/add-package.sh {{ package }}
+    bash scripts/add-package.sh {{ version }} {{ package }}
 
 # r image containing rstudio-server
 build-rstudio version:
