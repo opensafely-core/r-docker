@@ -14,8 +14,6 @@ services:
         # env vars supplied by make/just
         - BUILD_DATE
         - CRAN_DATE
-        - PHANTOMJS_TAR
-        - PHANTOMJS_URL
         - REPOS
         - REVISION
         - UPDATE
