@@ -20,7 +20,7 @@ build version *update="":
     elif [ "{{ update }}" = "update" ]; then
       export UPDATE=true
     else
-      echo "Please specify -just build- as either -just build- or -just build update-"
+      echo "Please specify -just build- as either -just build {version}- or -just build {version} update-"
       exit 1
     fi
 
