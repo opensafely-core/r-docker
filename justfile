@@ -28,9 +28,9 @@ build version *update="":
     docker compose --env-file {{ version }}/env build --pull r
 
     # update renv.lock
-    cp renv.lock renv.lock.bak
+    cp ${MAJOR_VERSION}/renv.lock ${MAJOR_VERSION}/renv.lock.bak
     # cannot use docker-compose run as it mangles the output
-    docker run --platform linux/amd64 --rm r:{{ version }} cat /renv/renv.lock > renv.lock
+    docker run --platform linux/amd64 --rm r:{{ version }} cat /renv/renv.lock > ${MAJOR_VERSION}/renv.lock
 
     # update packages.csv for backwards compat with current docs
     docker compose --env-file {{ version }}/env run --platform linux/amd64 --rm -v "/$PWD:/out" r -q -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file=paste0("/out/", Sys.getenv(\"MAJOR_VERSION\"), "packages.csv")'
