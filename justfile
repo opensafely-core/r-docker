@@ -40,11 +40,11 @@ build version *update="":
 
 
 # build and add a package and its dependencies to the image
-add-package package:
+add-package version package:
     bash scripts/add-package.sh {{ package }}
 
 # r image containing rstudio-server
-build-rstudio:
+build-rstudio version:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -62,7 +62,7 @@ test-update image="r": (build "version" "update")
     bash tests/test.sh "{{ image }}"
 
 # test rstudio-server launches
-test-rstudio: _env
+test-rstudio version: _env
     bash tests/test-rstudio.sh
 
 _env:
@@ -76,10 +76,19 @@ lint:
     docker pull hadolint/hadolint
     docker run --rm -i hadolint/hadolint < Dockerfile
 
-publish:
-    docker tag r ghcr.io/opensafely-core/r:latest
-    docker push ghcr.io/opensafely-core/r:latest
+publish version:
+    #!/usr/bin/env bash
+    docker tag r:{{ version }} ghcr.io/opensafely-core/r:{{ version }}
+    docker push ghcr.io/opensafely-core/r:{{ version }}
+    if [ "{{ version }}" = "v1" ]; then
+      docker tag r:{{ version }} ghcr.io/opensafely-core/r:latest
+      docker push ghcr.io/opensafely-core/r:latest
+    fi
 
-publish-rstudio:
-    docker tag rstudio ghcr.io/opensafely-core/rstudio:latest
-    docker push ghcr.io/opensafely-core/rstudio:latest
+publish-rstudio version:
+    docker tag rstudio:{{ version }} ghcr.io/opensafely-core/rstudio:{{ version }}
+    docker push ghcr.io/opensafely-core/rstudio:{{ version }}
+    if [ "{{ version }}" = "v1" ]; then
+      docker tag rstudio:{{ version }} ghcr.io/opensafely-core/rstudio:latest
+      docker push ghcr.io/opensafely-core/rstudio:latest
+    fi
