@@ -24,7 +24,7 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 # Next, use the base-docker-plus-r image to create a build image
 FROM base-r as builder
 
-# install build time dependencies 
+# install build time dependencies
 COPY build-dependencies.txt /root/build-dependencies.txt
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/build-dependencies.txt
 
@@ -61,7 +61,7 @@ RUN --mount=type=cache,target=/cache,id=/cache-2404 bash /tmp/copy-symlink.sh /r
 
 ###############################################
 #
-# This stage exists to allow installing a new package. 
+# This stage exists to allow installing a new package.
 #
 # Building it explicitly with --target add-package will build and install the
 # package supplied by PACKAGE build arg. We do at as a build stage so we can
