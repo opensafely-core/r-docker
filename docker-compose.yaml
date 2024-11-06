@@ -20,6 +20,8 @@ services:
         - REVISION
         - UPDATE
         - VERSION
+        - BASE
+        - MAJOR_VERSION
     init: true
     platform: linux/amd64
   add-package:
