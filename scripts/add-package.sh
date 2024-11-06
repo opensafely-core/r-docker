@@ -20,8 +20,8 @@ cp renv.lock renv.lock.bak
 # cannot use docker-compose run as it mangles the output
 docker run --rm "$IMAGE_TAG" cat /renv/renv.lock > renv.lock
 
-echo "$PACKAGE and its dependencies built and cached, renv.lock updated." 
-echo "Rebuilding R image with new renv.lock file." 
+echo "$PACKAGE and its dependencies built and cached, renv.lock updated."
+echo "Rebuilding R image with new renv.lock file."
 
 if ! just build; then
     echo "Building the image with the new package failed"
