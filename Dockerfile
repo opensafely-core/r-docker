@@ -104,12 +104,10 @@ WORKDIR /workspace
 # copy the renv over from the builder image
 COPY --from=builder /renv /renv
 
-# We require an empty /workspace/renv directory to seemingingly prevent renv::load() complaining on session start
-RUN mkdir renv
-COPY scripts/renv-gitignore /workspace/renv/.gitignore
-
 # this will ensure the renv is activated by default
+# We seem to require an empty /workspace/renv directory to prevent renv::load() complaining on session start
 RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.quiet = TRUE)' >> /etc/R/Rprofile.site; \
+    echo 'dir.create("/workspace/renv", showWarnings = FALSE)' >> /etc/R/Rprofile.site; \
     echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 
 #################################################
