@@ -17,12 +17,15 @@ else
 fi
 
 # build the thing
-docker-compose build --pull r
+docker compose --env-file $MAJOR_VERSION/env build --pull r
 
-# update renv.lock 
+# update renv.lock
 cp renv.lock renv.lock.bak
 # cannot use docker-compose run as it mangles the output
-docker run --platform linux/amd64 --rm r cat /renv/renv.lock > renv.lock
+docker run --platform linux/amd64 --rm r:$MAJOR_VERSION cat /renv/renv.lock > renv.lock
 
 # update packages.csv for backwards compat with current docs
-docker run --platform linux/amd64 -v "/$PWD:/out" r -q -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/out/packages.csv")'
+docker compose --env-file $MAJOR_VERSION/env run --platform linux/amd64 --rm -v "/$PWD:/out" r -q -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/out/packages.csv")'
+
+# render the packages.md file
+docker compose --env-file $MAJOR_VERSION/env run --rm --platform linux/amd64 -v "/$PWD:/out" r -q -e 'rmarkdown::render("scripts/packages.Rmd", output_dir = paste0("out", Sys.getenv(\"MAJOR_VERSION\")))'
