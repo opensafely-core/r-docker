@@ -1,7 +1,7 @@
 services:
   # used to build the production image
   r:
-    image: r
+    image: r:${MAJOR_VERSION}
     build:
       context: .
       target: r
