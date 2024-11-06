@@ -31,4 +31,4 @@ fi
 just test "$IMAGE"
 
 # update packages.csv for backwards compat with current docs
-docker run --platform linux/amd64 -v "/$PWD:/out" "$IMAGE" -q -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/out/packages.csv")'
+docker run --platform linux/amd64 -v "/$PWD:/out" "$IMAGE" -q -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file=paste0("/out/", Sys.getenv(\"MAJOR_VERSION\"), "packages.csv")'
