@@ -47,16 +47,16 @@ COPY packages.csv /renv/packages.csv
 COPY renv.lock /renv/renv.lock
 # Update: just build update
 COPY scripts/update.R /root/update.R
-RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
+RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
 # Alternatively build without updating: just build
 COPY scripts/restore.R /root/restore.R
-RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "false" ]; then Rscript /root/restore.R; fi
+RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "false" ]; then Rscript /root/restore.R; fi
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
 # change the symlinks into full copies, to store them in the image.
 COPY copy-symlink.sh /tmp/copy-symlink.sh
-RUN --mount=type=cache,target=/cache,id=/cache-2404 bash /tmp/copy-symlink.sh /renv/lib
+RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" bash /tmp/copy-symlink.sh /renv/lib
 
 
 ###############################################
@@ -75,7 +75,7 @@ FROM builder as add-package
 ARG PACKAGE="default-arg-to-silence-docker"
 COPY scripts/add-package.R /root/add-package.R
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-2404 Rscript /root/add-package.R
+RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" Rscript /root/add-package.R
 
 
 ################################################
