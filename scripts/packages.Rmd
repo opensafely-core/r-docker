@@ -1,0 +1,14 @@
+---
+title: "Package Versions for `Sys.getenv('MAJOR_VERSION')`"
+output: github_document
+---
+
+This r: `r Sys.getenv('MAJOR_VERSION')` OpenSAFELY image is based on Ubuntu `r Sys.getenv('BASE')` with R `r getRversion()`.
+
+## R packages
+
+The image comes pre-installed with a set of R packages.
+
+```{r}
+pkgs <- read.csv("packages.csv")
+```
