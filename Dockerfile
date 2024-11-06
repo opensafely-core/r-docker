@@ -7,11 +7,11 @@ ARG BASE
 ARG MAJOR_VERSION
 FROM ghcr.io/opensafely-core/base-action:$BASE as base-r
 
-COPY dependencies.txt /root/dependencies.txt
+COPY ${MAJOR_VERSION}/dependencies.txt /root/dependencies.txt
 
 # add cran repo for R packages and install
 RUN --mount=type=cache,target=/var/cache/apt \
-    echo "deb https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/" > /etc/apt/sources.list.d/cran.list &&\
+    echo "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/" > /etc/apt/sources.list.d/cran.list &&\
     /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc &&\
     /root/docker-apt-install.sh /root/dependencies.txt
 
@@ -25,7 +25,7 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 FROM base-r as builder
 
 # install build time dependencies
-COPY build-dependencies.txt /root/build-dependencies.txt
+COPY ${MAJOR_VERSION}/build-dependencies.txt /root/build-dependencies.txt
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/build-dependencies.txt
 
 RUN mkdir -p /cache /renv/lib
@@ -43,8 +43,8 @@ WORKDIR /renv
 ARG UPDATE="default-arg-to-silence-docker"
 ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
-COPY packages.csv /renv/packages.csv
-COPY renv.lock /renv/renv.lock
+COPY ${MAJOR_VERSION}/packages.csv /renv/packages.csv
+COPY ${MAJOR_VERSION}/renv.lock /renv/renv.lock
 # Update: just build update
 COPY scripts/update.R /root/update.R
 RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
