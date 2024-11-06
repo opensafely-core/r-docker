@@ -8,6 +8,7 @@ This r: `r Sys.getenv('MAJOR_VERSION')` OpenSAFELY image is based on Ubuntu `r S
 ## R packages
 
 The image comes pre-installed with a set of R packages.
+Note that some packages may no longer be on CRAN and so their URL below will link to the archive of that package's source code.
 
 ```{r, echo=FALSE, results='asis'}
 pkgs <- read.csv("packages.csv", header = TRUE)
