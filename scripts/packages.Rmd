@@ -5,18 +5,15 @@ output:
     html_preview: false
 ---
 
-This r: `r Sys.getenv('MAJOR_VERSION')` OpenSAFELY image is based on Ubuntu `r Sys.getenv('BASE')` with R `r getRversion()`.
+This r:`r Sys.getenv('MAJOR_VERSION')` OpenSAFELY image is based on Ubuntu `r Sys.getenv('BASE')` with R `r getRversion()`.
 
 ## R packages
 
-The image comes pre-installed with a set of R packages.
+The image comes pre-installed with a set of R packages listed in the table below.
 Note that some packages may no longer be on CRAN and so their URL below will link to the archive of that package's source code.
 
 ```{r, echo=FALSE, results='asis'}
-print(Sys.getenv("MAJOR_VERSION"))
-print(paste0("/out/", Sys.getenv("MAJOR_VERSION"), "/packages.csv"))
-
 pkgs <- read.csv(paste0("/out/", Sys.getenv("MAJOR_VERSION"), "/packages.csv"), header = TRUE)
 pkgs$Url <- paste0("<https://cran.r-project.org/package=", pkgs$Package, ">")
-knitr::kable(pkgs, caption = "A table of the R packages included in the image.")
+knitr::kable(pkgs)
 ```
