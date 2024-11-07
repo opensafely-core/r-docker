@@ -3,13 +3,13 @@
 #
 # We need base r dependencies on both the builder and r images, so
 # create base image with those installed to save installing them twice.
-ARG BASE
+ARG BASE="default-arg-to-silence-docker"
 FROM ghcr.io/opensafely-core/base-action:$BASE as base-r
 
-ARG BASE
-ARG MAJOR_VERSION
+ARG BASE="default-arg-to-silence-docker"
+ARG MAJOR_VERSION="default-arg-to-silence-docker"
 COPY ${MAJOR_VERSION}/dependencies.txt /root/dependencies.txt
-ARG CODENAME
+ARG CODENAME="default-arg-to-silence-docker"
 
 # add cran repo for R packages and install
 RUN --mount=type=cache,target=/var/cache/apt \
@@ -25,7 +25,7 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 #
 # Next, use the base-docker-plus-r image to create a build image
 FROM base-r as builder
-ARG MAJOR_VERSION
+ARG MAJOR_VERSION="default-arg-to-silence-docker"
 
 # install build time dependencies
 COPY ${MAJOR_VERSION}/build-dependencies.txt /root/build-dependencies.txt
