@@ -1,6 +1,8 @@
 ---
 title: "Package Versions for `Sys.getenv('MAJOR_VERSION')`"
-output: github_document
+output:
+  github_document:
+    html_preview: false
 ---
 
 This r: `r Sys.getenv('MAJOR_VERSION')` OpenSAFELY image is based on Ubuntu `r Sys.getenv('BASE')` with R `r getRversion()`.
