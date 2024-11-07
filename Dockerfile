@@ -4,9 +4,10 @@
 # We need base r dependencies on both the builder and r images, so
 # create base image with those installed to save installing them twice.
 ARG BASE
-ARG MAJOR_VERSION
 FROM ghcr.io/opensafely-core/base-action:$BASE as base-r
 
+ARG BASE
+ARG MAJOR_VERSION
 COPY ${MAJOR_VERSION}/dependencies.txt /root/dependencies.txt
 
 # add cran repo for R packages and install
@@ -23,6 +24,7 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 #
 # Next, use the base-docker-plus-r image to create a build image
 FROM base-r as builder
+ARG MAJOR_VERSION
 
 # install build time dependencies
 COPY ${MAJOR_VERSION}/build-dependencies.txt /root/build-dependencies.txt
