@@ -7,3 +7,4 @@ libudunits2-0
 pandoc
 gsfonts
 gdal-bin
+libglpk-dev
