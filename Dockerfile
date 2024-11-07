@@ -9,10 +9,11 @@ FROM ghcr.io/opensafely-core/base-action:$BASE as base-r
 ARG BASE
 ARG MAJOR_VERSION
 COPY ${MAJOR_VERSION}/dependencies.txt /root/dependencies.txt
+ARG CODENAME
 
 # add cran repo for R packages and install
 RUN --mount=type=cache,target=/var/cache/apt \
-    echo "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/" > /etc/apt/sources.list.d/cran.list &&\
+    echo "deb https://cloud.r-project.org/bin/linux/ubuntu ${CODENAME}-cran40/" > /etc/apt/sources.list.d/cran.list &&\
     /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc &&\
     /root/docker-apt-install.sh /root/dependencies.txt
 
