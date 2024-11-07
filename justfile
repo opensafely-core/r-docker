@@ -80,6 +80,7 @@ publish version:
     fi
 
 publish-rstudio version:
+    #!/usr/bin/env bash
     docker tag rstudio:{{ version }} ghcr.io/opensafely-core/rstudio:{{ version }}
     docker push ghcr.io/opensafely-core/rstudio:{{ version }}
     if [ "{{ version }}" = "v1" ]; then
