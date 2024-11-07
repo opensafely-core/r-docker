@@ -27,6 +27,8 @@ build version *update="":
     # build the thing
     docker compose --env-file {{ version }}/env build --pull r
 
+    source {{ version }}/env
+    
     # update renv.lock
     cp ${MAJOR_VERSION}/renv.lock ${MAJOR_VERSION}/renv.lock.bak
     # cannot use docker-compose run as it mangles the output
