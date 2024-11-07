@@ -50,12 +50,10 @@ build-rstudio version:
     docker compose --env-file {{ version }}/env build --pull rstudio
 
 # test the locally built image
-test image="r": (build "version")
-    bash tests/test.sh "{{ image }}"
-
-# test the locally built update image
-test-update image="r": (build "version" "update")
-    bash tests/test.sh "{{ image }}"
+test version *update="": (build version "update")
+    #!/usr/bin/env bash
+    source {{ version }}/env
+    bash tests/test.sh {{ version }}
 
 # test rstudio-server launches
 test-rstudio version: _env
