@@ -38,7 +38,7 @@ build version *update="":
     docker compose --env-file {{ version }}/env run --rm -v "/$PWD:/out" r -q -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file=paste0("/out/", Sys.getenv(\"MAJOR_VERSION\"), "/packages.csv")'
 
     # render the packages.md file
-    docker compose --env-file {{ version }}/env run --rm -v "/$PWD:/out" r -q -e 'rmarkdown::render("scripts/packages.Rmd", output_dir = paste0("out", Sys.getenv(\"MAJOR_VERSION\")))'
+    docker compose --env-file {{ version }}/env run --rm -v "/$PWD:/out" r -q -e 'rmarkdown::render("scripts/packages.Rmd", output_dir = paste0("out/", Sys.getenv(\"MAJOR_VERSION\")))'
 
 
 # build and add a package and its dependencies to the image
