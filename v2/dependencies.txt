@@ -8,3 +8,4 @@ pandoc
 gsfonts
 gdal-bin
 libglpk-dev
+libmagick++-dev
