@@ -17,7 +17,7 @@ if ! docker compose --env-file ${MAJOR_VERSION}/env build add-package; then
     elif [ "${MAJOR_VERSION" = "v2" ]; then
       echo "Adding $PACKAGE failed."
       echo "Check that the package was on CRAN on ${CRAN_DATE}."
-      echo "If it was not it cannot be added."
+      echo "If it was not, it cannot be added."
     fi
     exit 1
 fi
