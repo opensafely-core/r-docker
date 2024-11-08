@@ -30,6 +30,7 @@ services:
       target: add-package
       args:
        - PACKAGE
+       - R_LIBS_SITE
     platform: linux/amd64
   rstudio:
     extends: r
