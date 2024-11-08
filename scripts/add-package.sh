@@ -9,10 +9,16 @@ export IMAGE_TAG
 IMAGE=${IMAGE:-r}
 echo "Attempting to build and install $PACKAGE"
 
-if ! docker-compose build add-package "$MAJOR_VERSION"; then
-    echo "Building $PACKAGE failed."
-    echo "You may need to add build dependencies (e.g. -dev packages) to build-dependencies.txt"
-    echo "Alternatively, you may need to install an older version of $PACKAGE. Please see the Trouble shooting section of the README."
+if ! docker compose --env-file ${MAJOR_VERSION}/env build add-package; then
+    if [ "${MAJOR_VERSION" = "v1" ]; then
+      echo "Building $PACKAGE failed."
+      echo "You may need to add build dependencies (e.g. -dev packages) to ${MAJOR_VERSION}/build-dependencies.txt"
+      echo "Alternatively, you may need to install an older version of $PACKAGE. Please see the Trouble shooting section of the README."
+    elif [ "${MAJOR_VERSION" = "v2" ]; then
+      echo "Adding $PACKAGE failed."
+      echo "Check that the package was on CRAN on ${CRAN_DATE}."
+      echo "If it was not it cannot be added."
+    fi
     exit 1
 fi
 
