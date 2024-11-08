@@ -19,6 +19,10 @@ build version *update="":
       export UPDATE=false
     elif [ "{{ update }}" = "update" ]; then
       export UPDATE=true
+      if [ "{{ version }}" = "v1" ]; then
+        echo "Error: update specified with version=v1; update can only be specified with version=v2."
+        exit 1
+      fi
     else
       echo "Please specify -just build- as either -just build {version}- or -just build {version} update-"
       exit 1
