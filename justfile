@@ -42,9 +42,12 @@ build version *update="":
     docker compose --env-file {{ version }}/env run --rm -v "/$PWD:/out" r -q -e "write.csv(installed.packages()[, c('Package','Version')], row.names=FALSE, file=paste0('/out/', \"$MAJOR_VERSION\", '/packages.csv'))"
 
     # render the packages.md file
+    {{ just_executable() }} render {{ version }}
+
+# render the version/packages.md file
+render version:
     docker run --platform linux/amd64 --env-file {{ version }}/env --entrypoint bash --rm -v "/$PWD:/out" -v "$PWD/scripts:/out/scripts" r:{{ version }} "/out/scripts/render.sh"
-
-
+    
 # build and add a package and its dependencies to the image
 add-package version package:
     bash scripts/add-package.sh {{ version }} {{ package }}
