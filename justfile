@@ -10,11 +10,10 @@ build version *update="":
     set -eo pipefail
 
     # set build args for prod builds
+    source {{ version }}/env
     export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
     export GITREF=$(git rev-parse --short HEAD)
-    export CRAN_DATE=2024-11-06
-    export REPOS=https://p3m.dev/cran/__linux__/noble/$CRAN_DATE
-
+    
     if [ -z "{{ update }}" ]; then
       export UPDATE=false
     elif [ "{{ update }}" = "update" ]; then
@@ -30,8 +29,6 @@ build version *update="":
 
     # build the thing
     docker compose --env-file {{ version }}/env build --pull r
-
-    source {{ version }}/env
     
     # update renv.lock
     cp ${MAJOR_VERSION}/renv.lock ${MAJOR_VERSION}/renv.lock.bak
