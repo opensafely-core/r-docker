@@ -1,5 +1,5 @@
 ---
-title: "Package Versions for `Sys.getenv('MAJOR_VERSION')`"
+title: "Package Versions for `r Sys.getenv('MAJOR_VERSION')`"
 output:
   github_document:
     html_preview: false
