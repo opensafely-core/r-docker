@@ -1,4 +1,4 @@
-Package Versions for `Sys.getenv('MAJOR_VERSION')`
+Package Versions for v2
 ================
 
 This r:v2 OpenSAFELY image is based on Ubuntu 24.04 with R 4.4.2.
