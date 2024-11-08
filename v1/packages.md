@@ -1,4 +1,4 @@
-Package Versions for `Sys.getenv('MAJOR_VERSION')`
+Package Versions for v1
 ================
 
 This r:v1 OpenSAFELY image is based on Ubuntu 20.04 with R 4.0.5.
