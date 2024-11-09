@@ -54,6 +54,10 @@ RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "t
 # Alternatively build without updating: just build
 COPY scripts/restore.R /root/restore.R
 RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "false" ]; then Rscript /root/restore.R; fi
+# For v2 add new packages in the build
+ARG PACKAGE="default-arg-to-silence-docker"
+COPY scripts/add-package.R /root/add-package.R
+RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ ! -z "$PACKAGE" ] || [ "$PACKAGE" != "nopackage" ] ; then Rscript /root/add-package.R; fi
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
@@ -114,10 +118,6 @@ RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.qu
     echo 'dir.create("/workspace/renv", showWarnings = FALSE)' >> /etc/R/Rprofile.site; \
     echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 
-# For v2 add new packages at end of build
-ARG PACKAGE="default-arg-to-silence-docker"
-COPY scripts/add-package.R /root/add-package.R
-RUN if [ ! -z "$PACKAGE" ] || [ "$PACKAGE" != "nopackage" ] ; then Rscript /root/add-package.R; fi
 
 #################################################
 #
