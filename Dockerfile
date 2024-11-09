@@ -48,10 +48,10 @@ ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
 COPY ${MAJOR_VERSION}/packages.csv /renv/packages.csv
 COPY ${MAJOR_VERSION}/renv.lock /renv/renv.lock
-# Update: just build update
+# Update: just build version update
 COPY scripts/update.R /root/update.R
 RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
-# Alternatively build without updating: just build
+# Alternatively build without updating: just build version
 COPY scripts/restore.R /root/restore.R
 RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "false" ]; then Rscript /root/restore.R; fi
 
