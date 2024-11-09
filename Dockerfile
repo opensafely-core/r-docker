@@ -115,8 +115,9 @@ RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.qu
     echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 
 # For v2 add new packages at end of build
+ARG PACKAGE="default-arg-to-silence-docker"
 COPY scripts/add-package.R /root/add-package.R
-RUN Rscript /root/add-package.R
+RUN if [ ! -z "$PACKAGE" ]; then Rscript /root/add-package.R; fi
 
 #################################################
 #

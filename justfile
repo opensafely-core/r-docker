@@ -26,6 +26,8 @@ build version *update="" *package="":
       exit 1
     fi
 
+    export PACKAGE={{ package }}
+    
     # build the thing
     docker compose --env-file {{ version }}/env build --pull r
 

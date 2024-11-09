@@ -21,6 +21,7 @@ services:
         - VERSION
         - BASE
         - MAJOR_VERSION
+        - PACKAGE
     init: true
     platform: linux/amd64
   add-package:
