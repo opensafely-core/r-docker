@@ -76,9 +76,8 @@ RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" bash /tmp/copy-syml
 FROM builder as add-package
 
 ARG PACKAGE="default-arg-to-silence-docker"
-COPY scripts/add-package.R /root/add-package.R
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" Rscript /root/add-package.R
+RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
 
 
 ################################################
