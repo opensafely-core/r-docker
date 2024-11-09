@@ -76,14 +76,9 @@ RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" bash /tmp/copy-syml
 FROM builder as add-package
 
 ARG PACKAGE="default-arg-to-silence-docker"
-ARG R_LIBS_SITE
-COPY scripts/add-package.R /root/add-package.R
+COPY scripts/add-package.R add-package.R
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" \
-    echo "CRAN_DATE=$CRAN_DATE" >> /usr/lib/R/etc/Renviron.site &&\
-    echo "MAJOR_VERSION=$MAJOR_VERSION" >> /usr/lib/R/etc/Renviron.site &&\
-    echo "PACKAGE=$PACKAGE" >> /usr/lib/R/etc/Renviron.site &&\
-    if [ "$MAJOR_VERSION" = "v2" ]; then echo "YES"; echo "R_LIBS_SITE=$R_LIBS_SITE" >> /usr/lib/R/etc/Renviron.site; fi; R -e "source('/root/add-package.R')"
+RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" Rscript ./add-package.R
 
 
 ################################################
