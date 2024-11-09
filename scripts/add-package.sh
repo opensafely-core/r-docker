@@ -41,3 +41,6 @@ just test $MAJOR_VERSION
 
 # update packages.csv for backwards compat with current docs
 docker compose --env-file ${MAJOR_VERSION}/env run -v "/$PWD:/out" "$IMAGE" -q -e "write.csv(installed.packages()[, c('Package','Version')], row.names=FALSE, file=paste0('/out/', \"$MAJOR_VERSION\"), 'packages.csv'))"
+
+# render the packages.md file
+just render $MAJOR_VERSION
