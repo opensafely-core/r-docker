@@ -9,7 +9,7 @@ export IMAGE_TAG
 IMAGE=${IMAGE:-r}
 echo "Attempting to build and install $PACKAGE"
 
-if ! docker-compose build add-package "$MAJOR_VERSION"; then
+if ! docker-compose build add-package; then
     echo "Building $PACKAGE failed."
     echo "You may need to add build dependencies (e.g. -dev packages) to build-dependencies.txt"
     echo "Alternatively, you may need to install an older version of $PACKAGE. Please see the Trouble shooting section of the README."
@@ -29,7 +29,7 @@ if ! just build "$MAJOR_VERSION"; then
     exit 1
 fi
 
-just test "$IMAGE"
+just test $MAJOR_VERSION
 
 # update packages.csv for backwards compat with current docs
 docker compose --env-file ${MAJOR_VERSION}/env run --platform linux/amd64 -v "/$PWD:/out" "$IMAGE" -q -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file=paste0("/out/", Sys.getenv(\"MAJOR_VERSION\"), "packages.csv")'
