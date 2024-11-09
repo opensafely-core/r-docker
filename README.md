@@ -8,6 +8,11 @@ Docker image for running R code in OpenSAFELY, both locally and in production.
 * docker-compose
 * [just](https://github.com/casey/just)
 
+And the tests additionally require
+
+* curl
+* python3
+
 ## Building
 
 ```sh
