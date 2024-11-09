@@ -5,7 +5,7 @@ export DOCKER_BUILDKIT := "1"
 export COMPOSE_DOCKER_CLI_BUILD := "1"
 
 # build the R image locally
-build version *update="" *package="":
+build version *update="noupdate" *package="nopackage":
     #!/usr/bin/env bash
     set -eo pipefail
 
@@ -13,7 +13,7 @@ build version *update="" *package="":
     export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
     export GITREF=$(git rev-parse --short HEAD)
 
-    if [ -z "{{ update }}" ]; then
+    if [ -z "{{ update }}" ] || [ "{{ update }}" = "noupdate" ]; then
       export UPDATE=false
     elif [ "{{ update }}" = "update" ]; then
       export UPDATE=true

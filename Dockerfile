@@ -117,7 +117,7 @@ RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.qu
 # For v2 add new packages at end of build
 ARG PACKAGE="default-arg-to-silence-docker"
 COPY scripts/add-package.R /root/add-package.R
-RUN if [ ! -z "$PACKAGE" ]; then Rscript /root/add-package.R; fi
+RUN if [ ! -z "$PACKAGE" ] || [ "$PACKAGE" != "nopackage" ] ; then Rscript /root/add-package.R; fi
 
 #################################################
 #
