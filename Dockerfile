@@ -114,6 +114,10 @@ RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.qu
     echo 'dir.create("/workspace/renv", showWarnings = FALSE)' >> /etc/R/Rprofile.site; \
     echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 
+# For v2 add new packages at end of build
+COPY scripts/add-package.R /root/add-package.R
+RUN Rscript /root/add-package.R
+
 #################################################
 #
 # Add rstudio-server to r image - creating rstudio image
