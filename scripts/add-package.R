@@ -1,25 +1,18 @@
 PACKAGE <- Sys.getenv("PACKAGE")
+CRAN_DATE <- Sys.getenv("CRAN_DATE")
 
-if (Sys.getenv("MAJOR_VERSION") == "v1") {
-  renv::activate()
-  renv::install(PACKAGE)
-  renv::snapshot(type = "all")
-} else if (Sys.getenv("MAJOR_VERSION") == "v2") {
-  CRAN_DATE <- Sys.getenv("CRAN_DATE")
+# Set HTTPUserAgent so that PPPM serves binary R packages for Linux
+options(HTTPUserAgent = sprintf(
+  "R/%s R (%s)", getRversion(),
+  paste(
+    getRversion(),
+    R.version["platform"],
+    R.version["arch"],
+    R.version["os"]
+  )
+))
 
-  # Set HTTPUserAgent so that PPPM serves binary R packages for Linux
-  options(HTTPUserAgent = sprintf(
-    "R/%s R (%s)", getRversion(),
-    paste(
-      getRversion(),
-      R.version["platform"],
-      R.version["arch"],
-      R.version["os"]
-    )
-  ))
-
-  options(renv.config.pak.enabled = TRUE)
-  pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
-  renv::install(PACKAGE)
-  renv::snapshot(type = "all")
-}
+options(renv.config.pak.enabled = TRUE)
+pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
+renv::install(PACKAGE)
+renv::snapshot(type = "all")
