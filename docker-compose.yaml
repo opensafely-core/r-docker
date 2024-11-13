@@ -24,7 +24,7 @@ services:
     init: true
     platform: linux/amd64
   add-package:
-    extends: r:${MAJOR_VERSION}
+    extends: r
     image: "${IMAGE_TAG:-}"
     build:
       target: add-package
@@ -33,7 +33,7 @@ services:
        - R_LIBS_SITE
     platform: linux/amd64
   rstudio:
-    extends: r:${MAJOR_VERSION}
+    extends: r
     image: rstudio:${MAJOR_VERSION}
     build:
       target: rstudio
