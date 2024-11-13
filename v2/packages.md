@@ -29,7 +29,7 @@ their URL below will link to the archive of that package’s source code.
 | bbmle                 | 1.0.25.1      | <https://cran.r-project.org/package=bbmle>                 |
 | bdsmatrix             | 1.3-7         | <https://cran.r-project.org/package=bdsmatrix>             |
 | BH                    | 1.84.0-0      | <https://cran.r-project.org/package=BH>                    |
-| bigD                  | 0.2.0         | <https://cran.r-project.org/package=bigD>                  |
+| bigD                  | 0.3.0         | <https://cran.r-project.org/package=bigD>                  |
 | binom                 | 1.1-1.1       | <https://cran.r-project.org/package=binom>                 |
 | bit                   | 4.5.0         | <https://cran.r-project.org/package=bit>                   |
 | bit64                 | 4.5.2         | <https://cran.r-project.org/package=bit64>                 |
@@ -217,7 +217,7 @@ their URL below will link to the archive of that package’s source code.
 | igraph                | 2.1.1         | <https://cran.r-project.org/package=igraph>                |
 | incidence             | 1.7.5         | <https://cran.r-project.org/package=incidence>             |
 | ini                   | 0.3.1         | <https://cran.r-project.org/package=ini>                   |
-| inline                | 0.3.19        | <https://cran.r-project.org/package=inline>                |
+| inline                | 0.3.20        | <https://cran.r-project.org/package=inline>                |
 | insight               | 0.20.5        | <https://cran.r-project.org/package=insight>               |
 | interactions          | 1.2.0         | <https://cran.r-project.org/package=interactions>          |
 | interp                | 1.1-6         | <https://cran.r-project.org/package=interp>                |
@@ -236,7 +236,7 @@ their URL below will link to the archive of that package’s source code.
 | KernSmooth            | 2.23-24       | <https://cran.r-project.org/package=KernSmooth>            |
 | km.ci                 | 0.5-6         | <https://cran.r-project.org/package=km.ci>                 |
 | KMsurv                | 0.1-5         | <https://cran.r-project.org/package=KMsurv>                |
-| knitr                 | 1.48          | <https://cran.r-project.org/package=knitr>                 |
+| knitr                 | 1.49          | <https://cran.r-project.org/package=knitr>                 |
 | ks                    | 1.14.3        | <https://cran.r-project.org/package=ks>                    |
 | labeling              | 0.4.3         | <https://cran.r-project.org/package=labeling>              |
 | labelled              | 2.13.0        | <https://cran.r-project.org/package=labelled>              |
@@ -284,7 +284,7 @@ their URL below will link to the archive of that package’s source code.
 | modelr                | 0.1.11        | <https://cran.r-project.org/package=modelr>                |
 | modelsummary          | 2.2.0         | <https://cran.r-project.org/package=modelsummary>          |
 | modeltools            | 0.2-23        | <https://cran.r-project.org/package=modeltools>            |
-| msm                   | 1.8.1         | <https://cran.r-project.org/package=msm>                   |
+| msm                   | 1.8.2         | <https://cran.r-project.org/package=msm>                   |
 | mstate                | 0.3.3         | <https://cran.r-project.org/package=mstate>                |
 | muhaz                 | 1.2.6.4       | <https://cran.r-project.org/package=muhaz>                 |
 | multcomp              | 1.4-26        | <https://cran.r-project.org/package=multcomp>              |
@@ -311,7 +311,7 @@ their URL below will link to the archive of that package’s source code.
 | pammtools             | 0.5.93        | <https://cran.r-project.org/package=pammtools>             |
 | pan                   | 1.9           | <https://cran.r-project.org/package=pan>                   |
 | pander                | 0.6.5         | <https://cran.r-project.org/package=pander>                |
-| parallelly            | 1.38.0        | <https://cran.r-project.org/package=parallelly>            |
+| parallelly            | 1.39.0        | <https://cran.r-project.org/package=parallelly>            |
 | parameters            | 0.23.0        | <https://cran.r-project.org/package=parameters>            |
 | parglm                | 0.1.7         | <https://cran.r-project.org/package=parglm>                |
 | patchwork             | 1.3.0         | <https://cran.r-project.org/package=patchwork>             |
@@ -366,7 +366,7 @@ their URL below will link to the archive of that package’s source code.
 | randomForest          | 4.7-1.2       | <https://cran.r-project.org/package=randomForest>          |
 | randomForestExplainer | 0.10.1        | <https://cran.r-project.org/package=randomForestExplainer> |
 | randtoolbox           | 2.0.5         | <https://cran.r-project.org/package=randtoolbox>           |
-| ranger                | 0.16.0        | <https://cran.r-project.org/package=ranger>                |
+| ranger                | 0.17.0        | <https://cran.r-project.org/package=ranger>                |
 | rappdirs              | 0.3.3         | <https://cran.r-project.org/package=rappdirs>              |
 | rbibutils             | 2.3           | <https://cran.r-project.org/package=rbibutils>             |
 | RColorBrewer          | 1.1-3         | <https://cran.r-project.org/package=RColorBrewer>          |
@@ -500,7 +500,7 @@ their URL below will link to the archive of that package’s source code.
 | viridisLite           | 0.4.2         | <https://cran.r-project.org/package=viridisLite>           |
 | visdat                | 0.6.0         | <https://cran.r-project.org/package=visdat>                |
 | vroom                 | 1.6.5         | <https://cran.r-project.org/package=vroom>                 |
-| waldo                 | 0.6.0         | <https://cran.r-project.org/package=waldo>                 |
+| waldo                 | 0.6.1         | <https://cran.r-project.org/package=waldo>                 |
 | warp                  | 0.2.1         | <https://cran.r-project.org/package=warp>                  |
 | webshot               | 0.5.5         | <https://cran.r-project.org/package=webshot>               |
 | WeightIt              | 1.3.2         | <https://cran.r-project.org/package=WeightIt>              |
