@@ -24,6 +24,6 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
   renv::init(bare = TRUE)
   renv::restore()
   if (PACKAGE != "") {
-    renv::install(PACKAGE)
+    renv::install(PACKAGE, destdir = "/cache")
   }
 }
