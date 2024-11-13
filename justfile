@@ -5,7 +5,7 @@ export DOCKER_BUILDKIT := "1"
 export COMPOSE_DOCKER_CLI_BUILD := "1"
 
 # build the R image locally
-build version update="noupdate" *package="nopackage":
+build version update="noupdate" package="nopackage":
     #!/usr/bin/env bash
     set -eo pipefail
 
