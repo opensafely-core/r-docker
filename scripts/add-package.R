@@ -6,7 +6,8 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
   renv::snapshot(type = "all")
 } else if (Sys.getenv("MAJOR_VERSION") == "v2") {
   CRAN_DATE <- Sys.getenv("CRAN_DATE")
-
+  REPOS <- Sys.getenv("REPOS")
+  
   # print(Sys.getenv())
   # print(.libPaths())
   # print(Sys.getenv("MAJOR_VERSION"))
@@ -41,8 +42,10 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
     )
   ))
 
+  install.packages("pak", repos = REPOS)
   options(renv.config.pak.enabled = TRUE)
   pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
+  pak::pkg_install("renv")
   renv::install(PACKAGE)
   renv::snapshot(type = "all")
 }
