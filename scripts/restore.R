@@ -5,6 +5,7 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
 } else if (Sys.getenv("MAJOR_VERSION") == "v2") {
   REPOS <- Sys.getenv("REPOS")
   CRAN_DATE <- Sys.getenv("CRAN_DATE")
+  PACKAGE <- Sys.getenv("PACKAGE")
 
   # Set HTTPUserAgent so that PPPM serves binary R packages for Linux
   options(HTTPUserAgent = sprintf(
@@ -22,4 +23,7 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
   pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
   renv::init(bare = TRUE)
   renv::restore()
+  if (PACKAGE != "") {
+    renv::install(PACKAGE)
+  }
 }
