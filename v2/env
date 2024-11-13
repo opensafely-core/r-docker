@@ -4,5 +4,5 @@ CODENAME=noble
 R_LIBS_SITE=/renv/lib/linux-ubuntu-noble/R-4.4/x86_64-pc-linux-gnu
 RSTUDIO_BASE_URL=https://download2.rstudio.org/server/jammy/amd64/
 RSTUDIO_DEB=rstudio-server-2024.09.1-394-amd64.deb
-CRAN_DATE=2024-11-06
+CRAN_DATE=2024-11-12
 REPOS=https://p3m.dev/cran/__linux__/noble/$CRAN_DATE
