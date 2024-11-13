@@ -24,5 +24,5 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
   pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
   pak::pkg_install("renv")
   renv::install(PACKAGE)
-  renv::snapshot(type = "all")
+  renv::snapshot(type = "all", force = TRUE)
 }
