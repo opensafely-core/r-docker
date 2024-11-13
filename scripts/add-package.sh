@@ -11,7 +11,7 @@ echo "Attempting to build and install $PACKAGE"
 
 source $MAJOR_VERSION/env
 
-if ! "docker compose --env-file ${MAJOR_VERSION}/env build add-package"; then
+if ! docker compose --env-file ${MAJOR_VERSION}/env build add-package; then
     if [ "${MAJOR_VERSION}" = "v1" ]; then
       echo "Building $PACKAGE failed."
       echo "You may need to add build dependencies (e.g. -dev packages) to ${MAJOR_VERSION}/build-dependencies.txt"
