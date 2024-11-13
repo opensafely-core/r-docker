@@ -23,6 +23,7 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
   options(renv.config.pak.enabled = TRUE)
   pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
   pak::pkg_install("renv")
+  renv::activate(project = "/renv")
   renv::install(PACKAGE)
   renv::snapshot(type = "all", force = TRUE)
 }
