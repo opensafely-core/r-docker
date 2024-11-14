@@ -82,11 +82,13 @@ their URL below will link to the archive of that package’s source code.
 | credentials           | 2.0.2         | <https://cran.r-project.org/package=credentials>           |
 | crosstalk             | 1.2.1         | <https://cran.r-project.org/package=crosstalk>             |
 | curl                  | 6.0.0         | <https://cran.r-project.org/package=curl>                  |
+| dagitty               | 0.3-4         | <https://cran.r-project.org/package=dagitty>               |
 | data.table            | 1.16.2        | <https://cran.r-project.org/package=data.table>            |
 | datawizard            | 0.13.0        | <https://cran.r-project.org/package=datawizard>            |
 | date                  | 1.2-42        | <https://cran.r-project.org/package=date>                  |
 | DBI                   | 1.2.3         | <https://cran.r-project.org/package=DBI>                   |
 | dbplyr                | 2.5.0         | <https://cran.r-project.org/package=dbplyr>                |
+| dd4d                  | 0.0.0.9000    | <https://cran.r-project.org/package=dd4d>                  |
 | deldir                | 2.0-4         | <https://cran.r-project.org/package=deldir>                |
 | Deriv                 | 4.1.6         | <https://cran.r-project.org/package=Deriv>                 |
 | desc                  | 1.4.3         | <https://cran.r-project.org/package=desc>                  |
