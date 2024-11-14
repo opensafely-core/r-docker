@@ -18,7 +18,8 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
     )
   ))
 
-  install.packages(c("renv", "pak"), repos = c(CRAN = REPOS), destdir = "/cache")
+  install.packages("renv", repos = c(CRAN = REPOS), destdir = "/cache")
+  renv::install("pak", destdir = "/cache", repos = c(CRAN = REPOS))
   options(renv.config.pak.enabled = TRUE)
   pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
   renv::init(bare = TRUE)
