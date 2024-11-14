@@ -27,6 +27,7 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
   # To obtain pak in the final set of installed packages we seem to need to reinstall
   renv::install("pak", destdir = "/cache")
   pak::repo_add(RUNI = "https://remlapmot.r-universe.dev")
+  renv::install("dd4d", destdir = "/cache")
   renv::snapshot(type = "all")
   if (!PACKAGE %in% c("", "pak")) {
     renv::install(PACKAGE, destdir = "/cache")
