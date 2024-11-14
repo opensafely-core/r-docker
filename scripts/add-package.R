@@ -1,5 +1,6 @@
 PACKAGE <- Sys.getenv("PACKAGE")
-CRAN_DATE <- Sys.getenv("CRAN_DATE")
+REPOS <- Sys.getenv("REPOS")
+
 
 # Set HTTPUserAgent so that PPPM serves binary R packages for Linux
 options(HTTPUserAgent = sprintf(
@@ -12,7 +13,5 @@ options(HTTPUserAgent = sprintf(
   )
 ))
 
-options(renv.config.pak.enabled = TRUE)
-pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
-renv::install(PACKAGE)
+renv::install(PACKAGE, repos = REPOS)
 renv::snapshot(type = "all")
