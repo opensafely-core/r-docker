@@ -307,7 +307,6 @@ their URL below will link to the archive of that package’s source code.
 | packrat               | 0.9.2         | <https://cran.r-project.org/package=packrat>               |
 | pacman                | 0.5.1         | <https://cran.r-project.org/package=pacman>                |
 | padr                  | 0.6.2         | <https://cran.r-project.org/package=padr>                  |
-| pak                   | 0.8.0         | <https://cran.r-project.org/package=pak>                   |
 | pammtools             | 0.5.93        | <https://cran.r-project.org/package=pammtools>             |
 | pan                   | 1.9           | <https://cran.r-project.org/package=pan>                   |
 | pander                | 0.6.5         | <https://cran.r-project.org/package=pander>                |
