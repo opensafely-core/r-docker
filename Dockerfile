@@ -52,7 +52,7 @@ COPY ${MAJOR_VERSION}/renv.lock /renv/renv.lock
 COPY scripts/update.R /root/update.R
 RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
 # Alternatively build without updating: just build version
-# For v2 new packages added here also
+# For v2 new packages added here also: just build version noupdate package
 ARG PACKAGE="default-arg-to-silence-docker"
 COPY scripts/restore.R /root/restore.R
 RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "false" ]; then Rscript /root/restore.R; fi
