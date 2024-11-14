@@ -54,7 +54,7 @@ build-rstudio version:
     docker compose --env-file {{ version }}/env build --pull rstudio
 
 # test the locally built image
-test version *update="": (build version update)
+test version:
     #!/usr/bin/env bash
     source {{ version }}/env
     bash tests/test.sh {{ version }}
