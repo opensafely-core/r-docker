@@ -26,7 +26,11 @@ build version update="noupdate" package="nopackage":
       exit 1
     fi
 
-    export PACKAGE={{ package }}
+    if [ "{{ package }}" = "nopackage" ]; then
+      export PACKAGE=""
+    else
+      export PACKAGE={{ package }}
+    fi
     
     # build the thing
     docker compose --env-file {{ version }}/env build --pull r
