@@ -24,7 +24,10 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
   pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
   renv::init(bare = TRUE)
   renv::restore()
-  if (PACKAGE != "") {
+  # To obtain pak in the final set of installed packages we seem to need to reinstall
+  renv::install("pak", destdir = "/cache")
+  renv::snapshot(type = "all")
+  if (!PACKAGE %in% c("", "pak")) {
     renv::install(PACKAGE, destdir = "/cache")
     renv::snapshot(type = "all")
   }
