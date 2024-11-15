@@ -34,3 +34,8 @@ if (Sys.getenv("MAJOR_VERSION") == "v1") {
     renv::snapshot(type = "all")
   }
 }
+
+print(.libPaths()[1])
+list.files(.libPaths()[1])
+print(.libPaths()[2])
+list.files(.libPaths()[2])
