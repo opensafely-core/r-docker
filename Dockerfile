@@ -5,6 +5,7 @@
 # create base image with those installed to save installing them twice.
 ARG BASE="default-arg-to-silence-docker"
 ARG MAJOR_VERSION="default-arg-to-silence-docker"
+ARG CRAN_DATE="default-arg-to-silence-docker"
 FROM ghcr.io/opensafely-core/base-action:$BASE as base-r
 
 ARG BASE="default-arg-to-silence-docker"
@@ -120,9 +121,12 @@ RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.qu
 #################################################
 #
 # Add rstudio-server to r image - creating rstudio image
+FROM remlapmot/r-docker:r-${MAJOR_VERSION}-${CRAN_DATE} AS rimage
+FROM r as rstudio
 ARG RSTUDIO_BASE_URL="default-arg-to-silence-docker"
 ARG RSTUDIO_DEB="default-arg-to-silence-docker"
-FROM r:${MAJOR_VERSION} as rstudio
+
+COPY --from=rimage /renv /renv
 
 # Install rstudio-server (and a few dependencies)
 COPY rstudio/rstudio-dependencies.txt /root/rstudio-dependencies.txt
