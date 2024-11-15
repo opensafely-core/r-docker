@@ -145,7 +145,9 @@ RUN chown -R rstudio:rstudio /home/rstudio &&\
     # or for R 4.4.# /renv/sandbox/linux-ubuntu-noble/R-4.4/x86_64-pc-linux-gnu/9a444a72 
     # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
     # so that is already setup
-    echo "R_LIBS_SITE=$R_LIBS_SITE" >> /usr/lib/R/etc/Renviron.site
+    head -n -2 /etc/R/Rprofile.site > tmp.txt && mv tmp.txt /etc/R/Rprofile.site &&\
+    echo "R_LIBS_SITE=$R_LIBS_SITE" >> /usr/lib/R/etc/Renviron.site &&\
+    echo "R_LIBS_USER=$R_LIBS_SITE" >> /home/rstudio/.Renviron
 
 COPY rstudio/rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
