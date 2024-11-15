@@ -7,8 +7,8 @@ services:
       target: r
       cache_from:  # should speed up the build in CI, where we have a cold cache
         - ghcr.io/opensafely-core/base-action:${BASE}
-        #- ghcr.io/opensafely-core/r:${MAJOR_VERSION}
-        - r:${MAJOR_VERSION}
+        # - ghcr.io/opensafely-core/r:${MAJOR_VERSION}
+        # - r:${MAJOR_VERSION}
       args:
         # this makes the image work for later cache_from: usage
         - BUILDKIT_INLINE_CACHE=1
