@@ -1858,7 +1858,7 @@
       "Package": "dd4d",
       "Version": "0.0.0.9000",
       "Source": "Repository",
-      "Repository": "https://remlapmot.r-universe.dev",
+      "Repository": "https://remlapmot.r-universe.dev/bin/linux/noble/4.4",
       "Requirements": [
         "dagitty",
         "dplyr",
