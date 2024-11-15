@@ -1,7 +1,7 @@
 services:
   # used to build the production image
   r:
-    image: r:${MAJOR_VERSION}
+    image: r
     build:
       context: .
       target: r
@@ -37,7 +37,7 @@ services:
   rstudio:
     extends:
       service: r
-    image: rstudio:${MAJOR_VERSION}
+    image: rstudio
     build:
       target: rstudio
       args:
