@@ -40,10 +40,10 @@ build version update="noupdate" package="nopackage":
     # update renv.lock
     cp ${MAJOR_VERSION}/renv.lock ${MAJOR_VERSION}/renv.lock.bak
     # cannot use docker-compose run as it mangles the output
-    docker run --platform linux/amd64 --rm r:{{ version }} cat /renv/renv.lock > ${MAJOR_VERSION}/renv.lock
+    docker run --platform linux/amd64 r:{{ version }} cat /renv/renv.lock > ${MAJOR_VERSION}/renv.lock
 
     # update packages.csv for backwards compat with current docs
-    docker compose --env-file {{ version }}/env run --rm -v "/$PWD:/out" r -q -e "write.csv(installed.packages()[, c('Package','Version')], row.names=FALSE, file=paste0('/out/', \"$MAJOR_VERSION\", '/packages.csv'))"
+    docker compose --env-file {{ version }}/env run -v "/$PWD:/out" r -q -e "write.csv(installed.packages()[, c('Package','Version')], row.names=FALSE, file=paste0('/out/', \"$MAJOR_VERSION\", '/packages.csv'))"
 
     # render the packages.md file
     {{ just_executable() }} render {{ version }}
@@ -53,7 +53,7 @@ build version update="noupdate" package="nopackage":
 
 # render the version/packages.md file
 render version:
-    docker run --platform linux/amd64 --env-file {{ version }}/env --entrypoint bash --rm -v "/$PWD:/out" -v "$PWD/scripts:/out/scripts" r:{{ version }} "/out/scripts/render.sh"
+    docker run --platform linux/amd64 --env-file {{ version }}/env --entrypoint bash -v "/$PWD:/out" -v "$PWD/scripts:/out/scripts" r:{{ version }} "/out/scripts/render.sh"
     
 # build and add a package and its dependencies to the image
 add-package version package:
@@ -66,7 +66,7 @@ add-package version package:
 
 # r image containing rstudio-server
 build-rstudio version:
-    docker compose --env-file {{ version }}/env build --pull rstudio
+    docker compose --env-file {{ version }}/env build rstudio
 
 # test the locally built image
 test version update="noupdate":
