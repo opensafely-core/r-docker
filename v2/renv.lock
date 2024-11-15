@@ -5,6 +5,10 @@
       {
         "Name": "CRAN",
         "URL": "https://packagemanager.posit.co/cran/2024-11-12"
+      },
+      {
+        "Name": "RUNI",
+        "URL": "https://remlapmot.r-universe.dev/bin/linux/noble/4.4"
       }
     ]
   },
@@ -1769,6 +1773,25 @@
       ],
       "Hash": "ff51697d9205fe715f29e7171e874c6e"
     },
+    "dagitty": {
+      "Package": "dagitty",
+      "Version": "0.3-4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "MASS",
+        "R",
+        "V8",
+        "boot",
+        "grDevices",
+        "graphics",
+        "jsonlite",
+        "methods",
+        "stats",
+        "utils"
+      ],
+      "Hash": "dfbd13468fb3d6747b4d9541a648df9d"
+    },
     "data.table": {
       "Package": "data.table",
       "Version": "1.16.2",
@@ -1830,6 +1853,23 @@
         "withr"
       ],
       "Hash": "39b2e002522bfd258039ee4e889e0fd1"
+    },
+    "dd4d": {
+      "Package": "dd4d",
+      "Version": "0.0.0.9000",
+      "Source": "Repository",
+      "Repository": "https://remlapmot.r-universe.dev",
+      "Requirements": [
+        "dagitty",
+        "dplyr",
+        "magrittr",
+        "purrr",
+        "rlang",
+        "tibble",
+        "tidyr",
+        "tidyselect"
+      ],
+      "Hash": "95f653ca37fc7eca41757f141f4374a9"
     },
     "deSolve": {
       "Package": "deSolve",
