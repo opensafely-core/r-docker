@@ -50,18 +50,18 @@ COPY ${MAJOR_VERSION}/packages.csv /renv/packages.csv
 COPY ${MAJOR_VERSION}/renv.lock /renv/renv.lock
 # Update: just build version update
 COPY scripts/update.R /root/update.R
-RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
+RUN --mount=type=cache,target=/cache,id=/cache-${MAJOR_VERSION} if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
 # Alternatively build without updating: just build version
 # For v2 new packages added here also: just build version noupdate package
 ARG PACKAGE="default-arg-to-silence-docker"
 COPY scripts/restore.R /root/restore.R
-RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "false" ]; then Rscript /root/restore.R; fi
+RUN --mount=type=cache,target=/cache,id=/cache-${MAJOR_VERSION} if [ "$UPDATE" = "false" ]; then Rscript /root/restore.R; fi
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
 # change the symlinks into full copies, to store them in the image.
 COPY scripts/copy-symlink.sh /tmp/copy-symlink.sh
-RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" bash /tmp/copy-symlink.sh /renv/lib
+RUN --mount=type=cache,target=/cache,id=/cache-${MAJOR_VERSION} bash /tmp/copy-symlink.sh /renv/lib
 
 
 ###############################################
@@ -79,7 +79,7 @@ FROM builder as add-package
 
 ARG PACKAGE="default-arg-to-silence-docker"
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
+RUN --mount=type=cache,target=/cache,id=/cache-${MAJOR_VERSION} bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
 
 
 ################################################
