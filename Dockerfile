@@ -123,6 +123,8 @@ ARG RSTUDIO_BASE_URL="default-arg-to-silence-docker"
 ARG RSTUDIO_DEB="default-arg-to-silence-docker"
 FROM r as rstudio
 
+COPY --from=remlapmot/r-docker:r-v2-for-will /renv /renv
+
 # Install rstudio-server (and a few dependencies)
 COPY rstudio/rstudio-dependencies.txt /root/rstudio-dependencies.txt
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
