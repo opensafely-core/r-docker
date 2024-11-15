@@ -147,6 +147,8 @@ RUN chown -R rstudio:rstudio /home/rstudio &&\
     # so that is already setup
     echo "R_LIBS_SITE=$R_LIBS_SITE" >> /usr/lib/R/etc/Renviron.site
 
+RUN sed -i '$d' /etc/R/Rprofile.site && cat /etc/R/Rprofile.site
+
 COPY rstudio/rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
 ENV USER rstudio
