@@ -8,3 +8,6 @@ docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD
 
 # Check that a basic Rcpp call runs successfully
 docker compose --env-file ${MAJOR_VERSION}/env run --rm r -q -e "Rcpp::evalCpp('2 + 2')"
+
+# Check that a basic Rcpp call runs successfully
+docker compose --env-file ${MAJOR_VERSION}/env run --rm r -q -e "nrow(installed.packages())"
