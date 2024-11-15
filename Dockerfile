@@ -4,6 +4,7 @@
 # We need base r dependencies on both the builder and r images, so
 # create base image with those installed to save installing them twice.
 ARG BASE="default-arg-to-silence-docker"
+ARG MAJOR_VERSION="default-arg-to-silence-docker"
 FROM ghcr.io/opensafely-core/base-action:$BASE as base-r
 
 ARG BASE="default-arg-to-silence-docker"
@@ -121,7 +122,6 @@ RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.qu
 # Add rstudio-server to r image - creating rstudio image
 ARG RSTUDIO_BASE_URL="default-arg-to-silence-docker"
 ARG RSTUDIO_DEB="default-arg-to-silence-docker"
-ARG MAJOR_VERSION="default-arg-to-silence-docker"
 FROM r:${MAJOR_VERSION} as rstudio
 
 # Install rstudio-server (and a few dependencies)
