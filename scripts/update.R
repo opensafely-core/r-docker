@@ -13,9 +13,9 @@ options(HTTPUserAgent = sprintf(
 ))
 
 file.rename(from = "renv.lock", to = "renv.lock.bak")
-install.packages("renv", destdir = "/cache", repos = c(CRAN = REPOS))
+install.packages("renv", repos = c(CRAN = REPOS))
 renv::init(bare = TRUE)
-renv::install(c("jsonlite", "pak"), destdir = "/cache", repos = c(CRAN = REPOS))
+renv::install(c("jsonlite", "pak"), repos = c(CRAN = REPOS))
 pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
 options(renv.config.pak.enabled = TRUE)
 pkgs <- names(jsonlite::read_json("renv.lock.bak")$Packages)
@@ -26,5 +26,5 @@ pkgs <- pkgs[!pkgs %in% c("renv", "dummies", "maptools", "mnlogit", "rgdal", "rg
 # Add sjPlot - requested in issue #160
 pkgs <- c(pkgs, "sjPlot")
 
-renv::install(pkgs, destdir = "/cache")
+renv::install(pkgs)
 renv::snapshot(type = "all")
