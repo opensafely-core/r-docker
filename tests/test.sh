@@ -7,7 +7,7 @@ python3 -c "import json; print('\n'.join(json.load(open(\"./$MAJOR_VERSION/renv.
 docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/tests" r:"${MAJOR_VERSION}" -q -e "source('/tests/.tests.R', echo = TRUE)"
 
 # Check that a basic Rcpp call runs successfully
-docker compose --env-file ${MAJOR_VERSION}/env run --rm r -q -e "Rcpp::evalCpp('2 + 2')"
+docker compose --env-file ${MAJOR_VERSION}/env run --rm rimage -q -e "Rcpp::evalCpp('2 + 2')"
 
 # Check number of packages
-docker compose --env-file ${MAJOR_VERSION}/env run --rm r -q -e "nrow(installed.packages())"
+docker compose --env-file ${MAJOR_VERSION}/env run --rm rimage -q -e "nrow(installed.packages())"

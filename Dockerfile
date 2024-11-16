@@ -4,8 +4,6 @@
 # We need base r dependencies on both the builder and r images, so
 # create base image with those installed to save installing them twice.
 ARG BASE="default-arg-to-silence-docker"
-ARG MAJOR_VERSION="default-arg-to-silence-docker"
-ARG CRAN_DATE="default-arg-to-silence-docker"
 FROM ghcr.io/opensafely-core/base-action:$BASE as base-r
 
 ARG BASE="default-arg-to-silence-docker"
@@ -55,7 +53,7 @@ COPY scripts/update.R /root/update.R
 RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
 # Alternatively build without updating: just build version
 # For v2 new packages added here also: just build version noupdate package
-ARG PACKAGE="default-arg-to-silence-docker"
+ARG PACKAGE
 COPY scripts/restore.R /root/restore.R
 RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" if [ "$UPDATE" = "false" ]; then Rscript /root/restore.R; fi
 
@@ -87,7 +85,7 @@ RUN --mount=type=cache,target=/cache,id=/cache-"${BASE//./}" bash -c "R -e 'renv
 ################################################
 #
 # Finally, build the actual image from the base-r image
-FROM base-r as r
+FROM base-r as rimage
 
 # Some static metadata for this specific image, as defined by:
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md#pre-defined-annotation-keys
@@ -121,12 +119,9 @@ RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.qu
 #################################################
 #
 # Add rstudio-server to r image - creating rstudio image
-FROM remlapmot/r-docker:r-${MAJOR_VERSION}-${CRAN_DATE} AS rimage
-FROM r as rstudio
+FROM rimage as rstudio
 ARG RSTUDIO_BASE_URL="default-arg-to-silence-docker"
 ARG RSTUDIO_DEB="default-arg-to-silence-docker"
-
-COPY --from=rimage /renv /renv
 
 # Install rstudio-server (and a few dependencies)
 COPY rstudio/rstudio-dependencies.txt /root/rstudio-dependencies.txt

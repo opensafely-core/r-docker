@@ -27,7 +27,7 @@ build version package="nopackage":
     fi
     
     # build the thing
-    docker compose --env-file {{ version }}/env build --pull r
+    docker compose --env-file {{ version }}/env build --pull rimage
     
     # update renv.lock
     cp ${MAJOR_VERSION}/renv.lock ${MAJOR_VERSION}/renv.lock.bak
@@ -35,7 +35,7 @@ build version package="nopackage":
     docker run --platform linux/amd64 --rm r:{{ version }} cat /renv/renv.lock > ${MAJOR_VERSION}/renv.lock
 
     # update packages.csv for backwards compat with current docs
-    docker compose --env-file {{ version }}/env run --rm -v "/$PWD:/out" r -q -e "write.csv(installed.packages()[, c('Package','Version')], row.names=FALSE, file=paste0('/out/', \"$MAJOR_VERSION\", '/packages.csv'))"
+    docker compose --env-file {{ version }}/env run --rm -v "/$PWD:/out" rimage -q -e "write.csv(installed.packages()[, c('Package','Version')], row.names=FALSE, file=paste0('/out/', \"$MAJOR_VERSION\", '/packages.csv'))"
 
     # render the packages.md file
     {{ just_executable() }} render {{ version }}
