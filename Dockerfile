@@ -6,6 +6,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y libnode-dev \
     tzdata pandoc
 COPY --from=r-image /renv/lib/R-4.0/x86_64-pc-linux-gnu /usr/local/lib/R/site-library
 RUN R -e "install.packages('dagitty', dependencies = FALSE); remotes::install_github('wjchulme/dd4d', dependencies = FALSE)"
+# setup /workspace
+RUN mkdir /workspace
+WORKDIR /workspace
 # ACTION_EXEC is our default executable
 ENV ACTION_EXEC="/usr/local/bin/Rscript"
 # INTERACTIVE_EXEC is used when running w/o any args, implying an interactive session.
