@@ -14,3 +14,4 @@ ENV ACTION_EXEC="/usr/local/bin/Rscript"
 # INTERACTIVE_EXEC is used when running w/o any args, implying an interactive session.
 # See: https://github.com/opensafely-core/base-docker/blob/main/entrypoint.sh#L5
 ENV INTERACTIVE_EXEC="/usr/local/bin/R"
+ENTRYPOINT [ "Rscript" ]
