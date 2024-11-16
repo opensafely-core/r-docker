@@ -5,24 +5,18 @@ export DOCKER_BUILDKIT := "1"
 export COMPOSE_DOCKER_CLI_BUILD := "1"
 
 # build the R image locally
-build version update="noupdate" package="nopackage":
+build version package="nopackage":
     #!/usr/bin/env bash
     set -eo pipefail
 
+    source {{ version }}/env
+    
     # set build args for prod builds
     export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
     export GITREF=$(git rev-parse --short HEAD)
 
-    if [ -z "{{ update }}" ] || [ "{{ update }}" = "noupdate" ]; then
-      export UPDATE=false
-    elif [ "{{ update }}" = "update" ]; then
-      export UPDATE=true
-      if [ "{{ version }}" = "v1" ]; then
-        echo "Error: update specified with version=v1; update can only be specified with version=v2."
-        exit 1
-      fi
-    else
-      echo "Please specify -just build- as either -just build {version}- or -just build {version} update-"
+    if [ "{{ version }}" = "v1" ] && [ "${UPDATE}" = "true" ]; then
+      echo "Error: UPDATE=true specified with version=v1; UPDATE=true can only be specified with version=v2."
       exit 1
     fi
 
@@ -34,8 +28,6 @@ build version update="noupdate" package="nopackage":
     
     # build the thing
     docker compose --env-file {{ version }}/env build --pull r
-
-    source {{ version }}/env
     
     # update renv.lock
     cp ${MAJOR_VERSION}/renv.lock ${MAJOR_VERSION}/renv.lock.bak
@@ -49,7 +41,7 @@ build version update="noupdate" package="nopackage":
     {{ just_executable() }} render {{ version }}
 
     # Run tests after build
-    {{ just_executable() }} test {{ version }} {{ update }}
+    {{ just_executable() }} test {{ version }}
 
 # render the version/packages.md file
 render version:
@@ -69,7 +61,7 @@ build-rstudio version:
     docker compose --env-file {{ version }}/env build --pull rstudio
 
 # test the locally built image
-test version update="noupdate":
+test version:
     #!/usr/bin/env bash
     source {{ version }}/env
     bash tests/test.sh {{ version }}
