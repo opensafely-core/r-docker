@@ -9,3 +9,4 @@ RUN R -e "install.packages('dagitty', dependencies = FALSE); remotes::install_gi
 # setup /workspace
 RUN mkdir /workspace
 WORKDIR /workspace
+COPY etc/* /etc/rstudio/
