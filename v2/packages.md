@@ -61,7 +61,7 @@ their URL below will link to the archive of that package’s source code.
 | cli                   | 3.6.3         | <https://cran.r-project.org/package=cli>                   |
 | clipr                 | 0.8.0         | <https://cran.r-project.org/package=clipr>                 |
 | clock                 | 0.7.1         | <https://cran.r-project.org/package=clock>                 |
-| clue                  | 0.3-65        | <https://cran.r-project.org/package=clue>                  |
+| clue                  | 0.3-66        | <https://cran.r-project.org/package=clue>                  |
 | cluster               | 2.1.6         | <https://cran.r-project.org/package=cluster>               |
 | cmprsk                | 2.2-12        | <https://cran.r-project.org/package=cmprsk>                |
 | cobalt                | 4.5.5         | <https://cran.r-project.org/package=cobalt>                |
@@ -81,7 +81,7 @@ their URL below will link to the archive of that package’s source code.
 | crayon                | 1.5.3         | <https://cran.r-project.org/package=crayon>                |
 | credentials           | 2.0.2         | <https://cran.r-project.org/package=credentials>           |
 | crosstalk             | 1.2.1         | <https://cran.r-project.org/package=crosstalk>             |
-| curl                  | 6.0.0         | <https://cran.r-project.org/package=curl>                  |
+| curl                  | 6.0.1         | <https://cran.r-project.org/package=curl>                  |
 | data.table            | 1.16.2        | <https://cran.r-project.org/package=data.table>            |
 | datawizard            | 0.13.0        | <https://cran.r-project.org/package=datawizard>            |
 | date                  | 1.2-42        | <https://cran.r-project.org/package=date>                  |
@@ -114,7 +114,7 @@ their URL below will link to the archive of that package’s source code.
 | emmeans               | 1.10.5        | <https://cran.r-project.org/package=emmeans>               |
 | emulator              | 1.2-24        | <https://cran.r-project.org/package=emulator>              |
 | enrichwith            | 0.3.1         | <https://cran.r-project.org/package=enrichwith>            |
-| Epi                   | 2.56          | <https://cran.r-project.org/package=Epi>                   |
+| Epi                   | 2.57          | <https://cran.r-project.org/package=Epi>                   |
 | epitools              | 0.5-10.1      | <https://cran.r-project.org/package=epitools>              |
 | estimability          | 1.5.1         | <https://cran.r-project.org/package=estimability>          |
 | estimatr              | 1.0.4         | <https://cran.r-project.org/package=estimatr>              |
@@ -135,7 +135,7 @@ their URL below will link to the archive of that package’s source code.
 | flexclust             | 1.4-2         | <https://cran.r-project.org/package=flexclust>             |
 | flexsurv              | 2.3.2         | <https://cran.r-project.org/package=flexsurv>              |
 | FNN                   | 1.1.4.1       | <https://cran.r-project.org/package=FNN>                   |
-| fontawesome           | 0.5.2         | <https://cran.r-project.org/package=fontawesome>           |
+| fontawesome           | 0.5.3         | <https://cran.r-project.org/package=fontawesome>           |
 | fontBitstreamVera     | 0.1.1         | <https://cran.r-project.org/package=fontBitstreamVera>     |
 | fontLiberation        | 0.1.0         | <https://cran.r-project.org/package=fontLiberation>        |
 | fontquiver            | 0.2.1         | <https://cran.r-project.org/package=fontquiver>            |
@@ -202,7 +202,7 @@ their URL below will link to the archive of that package’s source code.
 | HDInterval            | 0.2.4         | <https://cran.r-project.org/package=HDInterval>            |
 | hdrcde                | 3.4           | <https://cran.r-project.org/package=hdrcde>                |
 | here                  | 1.0.1         | <https://cran.r-project.org/package=here>                  |
-| hexbin                | 1.28.4        | <https://cran.r-project.org/package=hexbin>                |
+| hexbin                | 1.28.5        | <https://cran.r-project.org/package=hexbin>                |
 | highr                 | 0.11          | <https://cran.r-project.org/package=highr>                 |
 | Hmisc                 | 5.2-0         | <https://cran.r-project.org/package=Hmisc>                 |
 | hms                   | 1.1.3         | <https://cran.r-project.org/package=hms>                   |
@@ -260,7 +260,7 @@ their URL below will link to the archive of that package’s source code.
 | markdown              | 1.13          | <https://cran.r-project.org/package=markdown>              |
 | marqLevAlg            | 2.0.8         | <https://cran.r-project.org/package=marqLevAlg>            |
 | MASS                  | 7.3-61        | <https://cran.r-project.org/package=MASS>                  |
-| MatchIt               | 4.5.5         | <https://cran.r-project.org/package=MatchIt>               |
+| MatchIt               | 4.6.0         | <https://cran.r-project.org/package=MatchIt>               |
 | mathjaxr              | 1.6-0         | <https://cran.r-project.org/package=mathjaxr>              |
 | Matrix                | 1.7-1         | <https://cran.r-project.org/package=Matrix>                |
 | MatrixModels          | 0.5-3         | <https://cran.r-project.org/package=MatrixModels>          |
@@ -379,7 +379,7 @@ their URL below will link to the archive of that package’s source code.
 | RcppRoll              | 0.3.1         | <https://cran.r-project.org/package=RcppRoll>              |
 | RcppThread            | 2.1.7         | <https://cran.r-project.org/package=RcppThread>            |
 | RCurl                 | 1.98-1.16     | <https://cran.r-project.org/package=RCurl>                 |
-| Rdpack                | 2.6.1         | <https://cran.r-project.org/package=Rdpack>                |
+| Rdpack                | 2.6.2         | <https://cran.r-project.org/package=Rdpack>                |
 | rdrobust              | 2.2           | <https://cran.r-project.org/package=rdrobust>              |
 | reactable             | 0.4.4         | <https://cran.r-project.org/package=reactable>             |
 | reactR                | 0.6.1         | <https://cran.r-project.org/package=reactR>                |
@@ -438,7 +438,7 @@ their URL below will link to the archive of that package’s source code.
 | sjPlot                | 2.8.16        | <https://cran.r-project.org/package=sjPlot>                |
 | sjstats               | 0.19.0        | <https://cran.r-project.org/package=sjstats>               |
 | skimr                 | 2.1.5         | <https://cran.r-project.org/package=skimr>                 |
-| slam                  | 0.1-54        | <https://cran.r-project.org/package=slam>                  |
+| slam                  | 0.1-55        | <https://cran.r-project.org/package=slam>                  |
 | slider                | 0.3.2         | <https://cran.r-project.org/package=slider>                |
 | snakecase             | 0.11.1        | <https://cran.r-project.org/package=snakecase>             |
 | sourcetools           | 0.1.7-1       | <https://cran.r-project.org/package=sourcetools>           |

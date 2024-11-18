@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.posit.co/cran/2024-11-12"
+        "URL": "https://packagemanager.posit.co/cran/2024-11-18"
       }
     ]
   },
@@ -116,7 +116,7 @@
     },
     "Epi": {
       "Package": "Epi",
-      "Version": "2.56",
+      "Version": "2.57",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -136,7 +136,7 @@
         "utils",
         "zoo"
       ],
-      "Hash": "51c6ef07175f7b0c507fd5711c0d6852"
+      "Hash": "7a98370393ddc82bed537d85c3fad6cc"
     },
     "FNN": {
       "Package": "FNN",
@@ -299,7 +299,7 @@
     },
     "MatchIt": {
       "Package": "MatchIt",
-      "Version": "4.5.5",
+      "Version": "4.6.0",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -308,12 +308,13 @@
         "RcppProgress",
         "backports",
         "chk",
+        "grDevices",
         "graphics",
         "rlang",
         "stats",
         "utils"
       ],
-      "Hash": "f3bceab061c8d2da3c674d0b0cc3dd54"
+      "Hash": "23953b9db65be09e4f1aa8e28ea06a88"
     },
     "Matrix": {
       "Package": "Matrix",
@@ -636,7 +637,7 @@
     },
     "Rdpack": {
       "Package": "Rdpack",
-      "Version": "2.6.1",
+      "Version": "2.6.2",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -646,7 +647,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "24a964d2cf75ad25d7b843856c8d4c93"
+      "Hash": "a9e2118c664c2cd694f03de074e8d4b3"
     },
     "SCCS": {
       "Package": "SCCS",
@@ -1503,7 +1504,7 @@
     },
     "clue": {
       "Package": "clue",
-      "Version": "0.3-65",
+      "Version": "0.3-66",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1513,7 +1514,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "d6b53853800595408a776900bcc0c23f"
+      "Hash": "3604501a29faffcd155ae84c1872eaf3"
     },
     "cluster": {
       "Package": "cluster",
@@ -1761,13 +1762,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "6.0.0",
+      "Version": "6.0.1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R"
       ],
-      "Hash": "ff51697d9205fe715f29e7171e874c6e"
+      "Hash": "e8ba62486230951fcd2b881c5be23f96"
     },
     "data.table": {
       "Package": "data.table",
@@ -2495,7 +2496,7 @@
     },
     "fontawesome": {
       "Package": "fontawesome",
-      "Version": "0.5.2",
+      "Version": "0.5.3",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -2503,7 +2504,7 @@
         "htmltools",
         "rlang"
       ],
-      "Hash": "c2efdd5f0bcd1ea861c2d4e2a883a67d"
+      "Hash": "bd1297f9b5b1fc1372d19e2c4cd82215"
     },
     "fontquiver": {
       "Package": "fontquiver",
@@ -3465,7 +3466,7 @@
     },
     "hexbin": {
       "Package": "hexbin",
-      "Version": "1.28.4",
+      "Version": "1.28.5",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -3478,7 +3479,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "2520cb5cbe2c02559992b64f7ad80134"
+      "Hash": "10a44851f04ff2d0e26b1c84c38d914a"
     },
     "highr": {
       "Package": "highr",
@@ -6490,14 +6491,14 @@
     },
     "slam": {
       "Package": "slam",
-      "Version": "0.1-54",
+      "Version": "0.1-55",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "ac3e35b2fb2c202ff6b222e4c39f7b43"
+      "Hash": "a2a11fdcb7cf5afbf31aeb0e3828fbf6"
     },
     "slider": {
       "Package": "slider",
