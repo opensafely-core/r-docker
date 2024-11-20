@@ -67,7 +67,7 @@ test version:
     bash tests/test.sh {{ version }}
 
 # test rstudio-server launches
-test-rstudio: _env
+test-rstudio version: _env
     bash ./test-rstudio.sh {{ version }}
 
 _env:
