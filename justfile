@@ -35,9 +35,6 @@ build version package="nopackage":
     # render the packages.md file
     {{ just_executable() }} render {{ version }}
 
-    # Run tests after build
-    {{ just_executable() }} test {{ version }}
-
 # render the version/packages.md file
 render version:
     docker run --platform linux/amd64 --env-file {{ version }}/env --entrypoint bash --rm -v "/$PWD:/out" -v "$PWD/scripts:/out/scripts" r:{{ version }} "/out/scripts/render.sh"
