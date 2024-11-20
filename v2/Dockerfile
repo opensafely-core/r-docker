@@ -21,7 +21,6 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 #
 # Next, use the base-docker-plus-r image to create a build image
 FROM base-r as builder
-ARG MAJOR_VERSION="default-arg-to-silence-docker"
 
 # install build time dependencies 
 COPY v2/build-dependencies.txt /root/build-dependencies.txt
@@ -42,7 +41,7 @@ WORKDIR /renv
 ARG UPDATE="default-arg-to-silence-docker"
 ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
-COPY ${MAJOR_VERSION}/renv.lock /renv/renv.lock
+COPY v2/renv.lock /renv/renv.lock
 # Update
 COPY scripts/update.R /root/update.R
 RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
