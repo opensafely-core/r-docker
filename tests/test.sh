@@ -12,7 +12,7 @@ elif [ "${MAJOR_VERSION}" = "v2" ]; then
 fi
 
 # Check that a basic Rcpp call runs successfully
-docker compose --env-file ${MAJOR_VERSION}/env run --rm rimage -e "Rcpp::evalCpp('2 + 2')"
+docker compose --env-file ${MAJOR_VERSION}/env run --rm r -e "Rcpp::evalCpp('2 + 2')"
 
 # Check number of packages
-docker compose --env-file ${MAJOR_VERSION}/env run --rm rimage -e "nrow(installed.packages())"
+docker compose --env-file ${MAJOR_VERSION}/env run --rm r -e "nrow(installed.packages())"
