@@ -37,16 +37,11 @@ ENV RENV_PATHS_SOURCE=/cache/source \
 
 WORKDIR /renv
 
-# use renv to install packages
+# install renv and use it to install packages
+COPY v2/renv.lock /renv/renv.lock
 ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
-COPY v2/renv.lock /renv/renv.lock
-# Update
-COPY scripts/update.R /root/update.R
-# Alternatively build without updating
-COPY scripts/restore.R /root/restore.R
-COPY scripts/update-restore-add.sh /root/update-restore-add.sh
-RUN --mount=type=cache,target=/cache,id=/cache-2404 bash /root/update-restore-add.sh
+RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e "options(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version['platform'], R.version['arch'], R.version['os']))); install.packages('renv', destdir = '/cache', repos = \"$REPOS\"); renv::init(bare = TRUE); renv::install('pak', repos = \"$REPOS\"); options(renv.config.pak.enabled = TRUE); pak::repo_add(CRAN = paste0('RSPM@', \"$CRAN_DATE\")); renv::restore()"
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
