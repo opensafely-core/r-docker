@@ -5,7 +5,7 @@
 # create base image with those installed to save installing them twice.
 FROM ghcr.io/opensafely-core/base-action:20.04 as base-r
 
-COPY dependencies.txt /root/dependencies.txt
+COPY v1/dependencies.txt /root/dependencies.txt
 
 # add cran repo for R packages and install
 RUN --mount=type=cache,target=/var/cache/apt \
@@ -41,7 +41,7 @@ WORKDIR /renv
 RUN --mount=type=cache,target=/cache,id=/cache-2004 R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE)'
 
 # use renv to install packages
-COPY renv.lock /renv/renv.lock
+COPY v1/renv.lock /renv/renv.lock
 RUN --mount=type=cache,target=/cache,id=/cache-2004 R -e 'renv::restore()'
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
