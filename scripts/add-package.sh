@@ -19,7 +19,7 @@ fi
 # update renv.lock 
 cp ${MAJOR_VERSION}/renv.lock ${MAJOR_VERSION}/renv.lock.bak
 # cannot use docker-compose run as it mangles the output
-docker run --rm "$IMAGE_TAG" cat /renv/renv.lock > ${MAJOR_VERSION}/renv.lock
+docker run --platform linux/amd64 --rm "$IMAGE_TAG" cat /renv/renv.lock > ${MAJOR_VERSION}/renv.lock
 
 echo "$PACKAGE and its dependencies built and cached, ${MAJOR_VERSION}/renv.lock updated." 
 echo "Rebuilding R image with new renv.lock file." 
