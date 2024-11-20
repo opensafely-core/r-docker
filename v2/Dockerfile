@@ -86,7 +86,8 @@ WORKDIR /workspace
 # copy the renv over from the builder image
 COPY --from=builder /renv /renv
 # this will ensure the renv is activated by default
-RUN echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
+RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.quiet = TRUE)' >> /etc/R/Rprofile.site &&\
+    echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
 
 #################################################
 #
