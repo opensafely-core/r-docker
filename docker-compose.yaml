@@ -4,6 +4,7 @@ services:
     image: r:${MAJOR_VERSION}
     build:
       context: .
+      dockerfile: ${MAJOR_VERSION}/Dockerfile
       target: r
       cache_from:  # should speed up the build in CI, where we have a cold cache
         - ghcr.io/opensafely-core/base-docker:${BASE}
