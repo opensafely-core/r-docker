@@ -21,6 +21,7 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 #
 # Next, use the base-docker-plus-r image to create a build image
 FROM base-r as builder
+ARG MAJOR_VERSION="default-arg-to-silence-docker"
 
 # install build time dependencies 
 COPY v2/build-dependencies.txt /root/build-dependencies.txt
@@ -37,12 +38,19 @@ ENV RENV_PATHS_SOURCE=/cache/source \
 
 WORKDIR /renv
 
-# install renv
-RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE)'
-
 # use renv to install packages
-COPY v2/renv.lock /renv/renv.lock
-RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e 'renv::restore()'
+ARG UPDATE="default-arg-to-silence-docker"
+ARG REPOS="default-arg-to-silence-docker"
+ARG CRAN_DATE="default-arg-to-silence-docker"
+COPY ${MAJOR_VERSION}/renv.lock /renv/renv.lock
+# Update
+COPY scripts/update.R /root/update.R
+RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "true" ]; then Rscript /root/update.R; fi
+# Alternatively build without updating
+# For v2 new packages added here also
+ARG PACKAGE
+COPY scripts/restore.R /root/restore.R
+RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$UPDATE" = "false" ]; then Rscript /root/restore.R; fi
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
