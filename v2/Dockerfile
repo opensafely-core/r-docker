@@ -51,24 +51,6 @@ COPY scripts/copy-symlink.sh /tmp/copy-symlink.sh
 RUN --mount=type=cache,target=/cache,id=/cache-2404 bash /tmp/copy-symlink.sh /renv/lib
 
 
-###############################################
-#
-# This stage exists to allow installing a new package. 
-#
-# Building it explicitly with --target add-package will build and install the
-# package supplied by PACKAGE build arg. We do at as a build stage so we can
-# reuse and populate the build cache.  It will then update the renv.lock file,
-# include the cache hashes.  This renv.lock file is copied off this built image
-# by the project tooling.  This will then make normal image build a) use the
-# new renv.lock file and b) re-use the prepopulated cached build from building
-# this special layer.
-FROM builder as add-package
-
-ARG PACKAGE="default-arg-to-silence-docker"
-# install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-2404 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
-
-
 ################################################
 #
 # Finally, build the actual image from the base-r image
