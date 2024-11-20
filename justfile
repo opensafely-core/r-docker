@@ -49,7 +49,7 @@ add-package version package:
       echo "The version argument to add-package must be v1"
       exit 1
     fi
-    bash ./add-package.sh {{ version }} {{ package }}
+    bash scripts/add-package.sh {{ version }} {{ package }}
 
 # r image containing rstudio-server
 build-rstudio version:
