@@ -20,6 +20,7 @@ services:
         - MAJOR_VERSION
         - CRAN_DATE
         - REPOS
+        - UPDATE
     init: true
     platform: linux/amd64
   add-package:
