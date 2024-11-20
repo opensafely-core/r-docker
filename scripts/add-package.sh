@@ -32,4 +32,4 @@ fi
 just test $MAJOR_VERSION
 
 # update packages.csv for backwards compat with current docs
-docker compose --env-file ${MAJOR_VERSION}/env run --platform linux/amd64 -v "/$PWD:/out" "$IMAGE" -q -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file=paste0("/out/", Sys.getenv(\"MAJOR_VERSION\"), "packages.csv")'
+docker compose --env-file ${MAJOR_VERSION}/env run --platform linux/amd64 -v "/$PWD:/out" "$IMAGE" -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file=paste0("/out/", Sys.getenv(\"MAJOR_VERSION\"), "packages.csv")'
