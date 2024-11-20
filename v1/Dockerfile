@@ -23,7 +23,7 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 FROM base-r as builder
 
 # install build time dependencies 
-COPY build-dependencies.txt /root/build-dependencies.txt
+COPY v1/build-dependencies.txt /root/build-dependencies.txt
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/build-dependencies.txt
 
 RUN mkdir -p /cache /renv/lib
