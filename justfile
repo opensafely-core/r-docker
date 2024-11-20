@@ -15,11 +15,6 @@ build version package="nopackage":
     export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
     export GITREF=$(git rev-parse --short HEAD)
 
-    if [ "{{ version }}" = "v1" ] && [ "${UPDATE}" = "true" ]; then
-      echo "Error: UPDATE=true specified with version=v1; UPDATE=true can only be specified with version=v2."
-      exit 1
-    fi
-
     if [ "{{ package }}" = "nopackage" ]; then
       export PACKAGE=""
     else
