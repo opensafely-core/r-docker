@@ -5,7 +5,7 @@
 # create base image with those installed to save installing them twice.
 FROM ghcr.io/opensafely-core/base-action:24.04 as base-r
 
-COPY dependencies.txt /root/dependencies.txt
+COPY v2/dependencies.txt /root/dependencies.txt
 
 # add cran repo for R packages and install
 RUN --mount=type=cache,target=/var/cache/apt \
@@ -23,7 +23,7 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 FROM base-r as builder
 
 # install build time dependencies 
-COPY build-dependencies.txt /root/build-dependencies.txt
+COPY v2/build-dependencies.txt /root/build-dependencies.txt
 RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/build-dependencies.txt
 
 RUN mkdir -p /cache /renv/lib
@@ -41,7 +41,7 @@ WORKDIR /renv
 RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE)'
 
 # use renv to install packages
-COPY renv.lock /renv/renv.lock
+COPY v2/renv.lock /renv/renv.lock
 RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e 'renv::restore()'
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
