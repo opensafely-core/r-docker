@@ -5,7 +5,7 @@ export DOCKER_BUILDKIT := "1"
 export COMPOSE_DOCKER_CLI_BUILD := "1"
 
 # build the R image locally
-build version package="nopackage":
+build version:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -14,12 +14,6 @@ build version package="nopackage":
     # set build args for prod builds
     export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
     export GITREF=$(git rev-parse --short HEAD)
-
-    if [ "{{ package }}" = "nopackage" ]; then
-      export PACKAGE=""
-    else
-      export PACKAGE={{ package }}
-    fi    
     
     # build the thing
     docker-compose --env-file {{ version }}/env build --pull r
@@ -41,11 +35,6 @@ render version:
     
 # build and add a package and its dependencies to the image
 add-package version package:
-    #!/usr/bin/env bash
-    if [ "{{version}}" != "v1" ]; then
-      echo "The version argument to add-package must be v1"
-      exit 1
-    fi
     bash scripts/add-package.sh {{ version }} {{ package }}
 
 # r image containing rstudio-server
