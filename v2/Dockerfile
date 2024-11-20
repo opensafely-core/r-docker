@@ -44,8 +44,6 @@ COPY v2/renv.lock /renv/renv.lock
 # Update
 COPY scripts/update.R /root/update.R
 # Alternatively build without updating
-# For v2 new packages added here also
-ARG PACKAGE
 COPY scripts/restore.R /root/restore.R
 COPY scripts/update-restore-add.sh /root/update-restore-add.sh
 RUN --mount=type=cache,target=/cache,id=/cache-2404 bash /root/update-restore-add.sh
@@ -86,6 +84,10 @@ COPY --from=builder /renv /renv
 # this will ensure the renv is activated by default
 RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.quiet = TRUE)' >> /etc/R/Rprofile.site &&\
     echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
+# Add new package
+ARG PACKAGE="default-arg-to-silence-docker"
+RUN --mount=type=cache,target=/cache,id=/cache-2404 if [ "$PACKAGE" != "" ]; then R -e "renv::install(\"$PACKAGE\"); renv::snapshot(type = \"all\")"; fi
+
 
 #################################################
 #
