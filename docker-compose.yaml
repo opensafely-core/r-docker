@@ -17,6 +17,8 @@ services:
         - VERSION
         - BASE
         - MAJOR_VERSION
+        - CRAN_DATE
+        - REPOS
     init: true
   add-package:
     extends: r
