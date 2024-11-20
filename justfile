@@ -20,7 +20,7 @@ build version package="nopackage":
       exit 1
     fi
 
-    if [ "${{ package }}" = "nopackage" ]; then
+    if [ "{{ package }}" = "nopackage" ]; then
       export PACKAGE=""
     else
       export PACKAGE={{ package }}
