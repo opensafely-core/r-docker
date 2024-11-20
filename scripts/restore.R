@@ -1,6 +1,5 @@
 REPOS <- Sys.getenv("REPOS")
 CRAN_DATE <- Sys.getenv("CRAN_DATE")
-PACKAGE <- Sys.getenv("PACKAGE")
 
 # Set HTTPUserAgent so that PPPM serves binary R packages for Linux
 options(HTTPUserAgent = sprintf(
@@ -21,10 +20,5 @@ renv::init(bare = TRUE)
 renv::restore()
 # To obtain pak in the final set of installed packages we seem to need to reinstall pak
 renv::install("pak")
-
-# Install additional package
-if (!PACKAGE %in% c("", "pak")) {
-  renv::install(PACKAGE)
-}
 
 renv::snapshot(type = "all")
