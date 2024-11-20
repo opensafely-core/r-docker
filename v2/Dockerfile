@@ -38,10 +38,11 @@ ENV RENV_PATHS_SOURCE=/cache/source \
 WORKDIR /renv
 
 # install renv and use it to install packages
-COPY v2/renv.lock /renv/renv.lock
 ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
-RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e "options(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version['platform'], R.version['arch'], R.version['os']))); install.packages('renv', destdir = '/cache', repos = \"$REPOS\"); renv::init(bare = TRUE); renv::install('pak', repos = \"$REPOS\"); options(renv.config.pak.enabled = TRUE); pak::repo_add(CRAN = paste0('RSPM@', \"$CRAN_DATE\")); renv::restore()"
+RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e "options(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version['platform'], R.version['arch'], R.version['os']))); install.packages('renv', destdir = '/cache', repos = \"$REPOS\"); renv::init(bare = TRUE); renv::install('pak', repos = \"$REPOS\")"
+COPY v2/renv.lock /renv/renv.lock
+RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e "options(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version['platform'], R.version['arch'], R.version['os']))); options(renv.config.pak.enabled = TRUE); pak::repo_add(CRAN = paste0('RSPM@', \"$CRAN_DATE\")); renv::restore()"
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
@@ -67,7 +68,7 @@ ARG PACKAGE="default-arg-to-silence-docker"
 ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-2404 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
+RUN --mount=type=cache,target=/cache,id=/cache-2404 R -e "options(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version['platform'], R.version['arch'], R.version['os']))); options(renv.config.pak.enabled = TRUE); renv::activate(); pak::repo_add(CRAN = paste0('RSPM@', \"$CRAN_DATE\")); renv::install(\"$PACKAGE\"); renv::snapshot(type = 'all')"
 
 
 ################################################
