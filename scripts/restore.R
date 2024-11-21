@@ -23,6 +23,6 @@ renv::restore()
 # Install additional package
 if (!PACKAGE %in% c("", "pak")) {
   renv::install(PACKAGE)
+  # Only rewrite renv.lock if we need to because otherwise triggers Docker rebuild
+  renv::snapshot(type = "all")
 }
-
-renv::snapshot(type = "all")
