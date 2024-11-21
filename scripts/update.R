@@ -26,5 +26,7 @@ pkgs <- pkgs[!pkgs %in% c("renv", "dummies", "maptools", "mnlogit", "rgdal", "rg
 # Add sjPlot - requested in issue #160
 pkgs <- c(pkgs, "sjPlot")
 
+# Add dagitty (dependency for dd4d)
+pkgs <- c(pkgs, "dagitty")
 renv::install(pkgs)
 renv::snapshot(type = "all")
