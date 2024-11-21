@@ -113,7 +113,9 @@ RUN chown -R rstudio:rstudio /home/rstudio &&\
     # Remember that the second renv library directory /renv/sandbox/R-4.0/x86_64-pc-linux-gnu/9a444a72
     # contains 14 symlinks to 14 of the 15 packages in ${R_HOME}/library which is /usr/lib/R/library/
     # so that is already setup
-    echo "R_LIBS_SITE=/renv/lib/linux-ubuntu-noble/R-4.4/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site
+    echo "R_LIBS_SITE=/renv/lib/linux-ubuntu-noble/R-4.4/x86_64-pc-linux-gnu" >> /usr/lib/R/etc/Renviron.site &&\
+    # Remove renv activation lines from Rprofile.site because we set R_LIBS_SITE
+    head -n -2 /etc/R/Rprofile.site > tmp.txt && mv tmp.txt /etc/R/Rprofile.site
 
 COPY rstudio/rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
