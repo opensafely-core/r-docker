@@ -13,7 +13,7 @@ options(HTTPUserAgent = sprintf(
   )
 ))
 
-install.packages("renv", repos = c(CRAN = REPOS))
+install.packages("renv", repos = c(CRAN = REPOS), destdir = "/cache")
 renv::install("pak", repos = c(CRAN = REPOS))
 options(renv.config.pak.enabled = TRUE)
 pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
