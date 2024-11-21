@@ -34,4 +34,9 @@ pkgs <- unique(pkgs)
 
 # Install the packages from PPPM on the CRAN_DATE
 renv::install(pkgs)
+
+# Add dd4d from TP r-universe
+pak::repo_add(RUNIVERSE = "https://remlapmot.r-universe.dev/bin/linux/noble/4.4/")
+renv::install("dd4d")
+
 renv::snapshot(type = "all")
