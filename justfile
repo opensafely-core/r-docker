@@ -69,9 +69,9 @@ _env:
     echo "HOSTPLATFORM=$(docker info -f '{{{{ lower .ClientInfo.Os }}')" >> .env
 
 # lint source code
-lint:
+lint version:
     docker pull hadolint/hadolint
-    docker run --rm -i hadolint/hadolint < Dockerfile
+    docker run --rm -i hadolint/hadolint < {{ version }}/Dockerfile
 
 publish version:
     #!/usr/bin/env bash
