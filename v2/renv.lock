@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.posit.co/cran/2024-11-18"
+        "URL": "https://packagemanager.posit.co/cran/2024-11-20"
       }
     ]
   },
@@ -572,7 +572,7 @@
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
-      "Version": "14.0.2-1",
+      "Version": "14.2.0-1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -582,7 +582,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "edff747eebfb8f2e18eed194e000caa1"
+      "Hash": "ce9c35ab9ea9c6ef4e27a08868cdb32b"
     },
     "RcppEigen": {
       "Package": "RcppEigen",
@@ -2589,7 +2589,7 @@
     },
     "forestplot": {
       "Package": "forestplot",
-      "Version": "3.1.5",
+      "Version": "3.1.6",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -2598,7 +2598,7 @@
         "checkmate",
         "grid"
       ],
-      "Hash": "e1c383257d58aafd5ef672e6d5a9538c"
+      "Hash": "848afc7e222f2eee8267711bf142913e"
     },
     "forestploter": {
       "Package": "forestploter",
@@ -4827,7 +4827,7 @@
       "Package": "pak",
       "Version": "0.8.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "tools",
@@ -6017,7 +6017,7 @@
     },
     "rsconnect": {
       "Package": "rsconnect",
-      "Version": "1.3.2",
+      "Version": "1.3.3",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -6036,7 +6036,7 @@
         "tools",
         "yaml"
       ],
-      "Hash": "5fc91933f6f54be0f870a327c21e1d6a"
+      "Hash": "d466c98fdce812325feb4ad406c6ca4b"
     },
     "rstan": {
       "Package": "rstan",
@@ -7065,14 +7065,14 @@
     },
     "tinytable": {
       "Package": "tinytable",
-      "Version": "0.5.0",
+      "Version": "0.6.1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "883a36d41f1af06f538ba718bebd5f7d"
+      "Hash": "284426416e795014477cf40a556eff76"
     },
     "tinytex": {
       "Package": "tinytex",

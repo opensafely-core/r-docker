@@ -143,7 +143,7 @@ their URL below will link to the archive of that package’s source code.
 | foreach               | 1.5.2         | <https://cran.r-project.org/package=foreach>               |
 | forecast              | 8.23.0        | <https://cran.r-project.org/package=forecast>              |
 | foreign               | 0.8-87        | <https://cran.r-project.org/package=foreign>               |
-| forestplot            | 3.1.5         | <https://cran.r-project.org/package=forestplot>            |
+| forestplot            | 3.1.6         | <https://cran.r-project.org/package=forestplot>            |
 | forestploter          | 1.1.2         | <https://cran.r-project.org/package=forestploter>          |
 | Formula               | 1.2-5         | <https://cran.r-project.org/package=Formula>               |
 | fracdiff              | 1.5-3         | <https://cran.r-project.org/package=fracdiff>              |
@@ -372,7 +372,7 @@ their URL below will link to the archive of that package’s source code.
 | RColorBrewer          | 1.1-3         | <https://cran.r-project.org/package=RColorBrewer>          |
 | RConics               | 1.1.1         | <https://cran.r-project.org/package=RConics>               |
 | Rcpp                  | 1.0.13-1      | <https://cran.r-project.org/package=Rcpp>                  |
-| RcppArmadillo         | 14.0.2-1      | <https://cran.r-project.org/package=RcppArmadillo>         |
+| RcppArmadillo         | 14.2.0-1      | <https://cran.r-project.org/package=RcppArmadillo>         |
 | RcppEigen             | 0.3.4.0.2     | <https://cran.r-project.org/package=RcppEigen>             |
 | RcppParallel          | 5.1.9         | <https://cran.r-project.org/package=RcppParallel>          |
 | RcppProgress          | 0.4.2         | <https://cran.r-project.org/package=RcppProgress>          |
@@ -410,7 +410,7 @@ their URL below will link to the archive of that package’s source code.
 | rpart.plot            | 3.1.2         | <https://cran.r-project.org/package=rpart.plot>            |
 | rprojroot             | 2.0.4         | <https://cran.r-project.org/package=rprojroot>             |
 | rsample               | 1.2.1         | <https://cran.r-project.org/package=rsample>               |
-| rsconnect             | 1.3.2         | <https://cran.r-project.org/package=rsconnect>             |
+| rsconnect             | 1.3.3         | <https://cran.r-project.org/package=rsconnect>             |
 | RSpectra              | 0.16-2        | <https://cran.r-project.org/package=RSpectra>              |
 | rstan                 | 2.32.6        | <https://cran.r-project.org/package=rstan>                 |
 | rstantools            | 2.4.0         | <https://cran.r-project.org/package=rstantools>            |
@@ -475,7 +475,7 @@ their URL below will link to the archive of that package’s source code.
 | timeDate              | 4041.110      | <https://cran.r-project.org/package=timeDate>              |
 | timereg               | 2.0.6         | <https://cran.r-project.org/package=timereg>               |
 | timetk                | 2.9.0         | <https://cran.r-project.org/package=timetk>                |
-| tinytable             | 0.5.0         | <https://cran.r-project.org/package=tinytable>             |
+| tinytable             | 0.6.1         | <https://cran.r-project.org/package=tinytable>             |
 | tinytex               | 0.54          | <https://cran.r-project.org/package=tinytex>               |
 | TMB                   | 1.9.15        | <https://cran.r-project.org/package=TMB>                   |
 | tmvtnorm              | 1.6           | <https://cran.r-project.org/package=tmvtnorm>              |
