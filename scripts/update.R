@@ -31,5 +31,7 @@ pkgs <- c(pkgs, "dagitty")
 
 # Ensure no package names are repeated
 pkgs <- unique(pkgs)
+
+# Install the packages from PPPM on the CRAN_DATE
 renv::install(pkgs)
 renv::snapshot(type = "all")
