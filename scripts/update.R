@@ -28,5 +28,8 @@ pkgs <- c(pkgs, "sjPlot")
 
 # Add dagitty (dependency for dd4d)
 pkgs <- c(pkgs, "dagitty")
+
+# Ensure no package names are repeated
+pkgs <- unique(pkgs)
 renv::install(pkgs)
 renv::snapshot(type = "all")
