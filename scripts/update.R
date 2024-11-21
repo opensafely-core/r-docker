@@ -20,7 +20,7 @@ pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
 options(renv.config.pak.enabled = TRUE)
 pkgs <- names(jsonlite::read_json("renv.lock.bak")$Packages)
 
-# Remove R packages that are no longer on CRAN
+# Remove R packages that are no longer on CRAN or already installed
 pkgs <- pkgs[!pkgs %in% c("renv", "dummies", "maptools", "mnlogit", "rgdal", "rgeos", "jsonlite")]
 
 # Add sjPlot - requested in issue #160
