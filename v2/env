@@ -3,4 +3,4 @@ BASE=24.04
 RSTUDIO_BASE_URL=https://download2.rstudio.org/server/jammy/amd64/
 RSTUDIO_DEB=rstudio-server-2024.09.1-394-amd64.deb
 CRAN_DATE=2024-11-18
-REPOS=https://p3m.dev/cran/__linux__/noble/$CRAN_DATE
+REPOS=https://packagemanager.posit.co/cran/__linux__/noble/$CRAN_DATE
