@@ -13,7 +13,7 @@ options(HTTPUserAgent = sprintf(
 ))
 
 file.rename(from = "renv.lock", to = "renv.lock.bak")
-install.packages("renv", repos = c(CRAN = REPOS))
+install.packages("renv", repos = c(CRAN = REPOS), destdir = "/cache")
 renv::init(bare = TRUE)
 renv::install(c("jsonlite", "pak"), repos = c(CRAN = REPOS))
 pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
