@@ -77,6 +77,7 @@ their URL below will link to the archive of that package’s source code.
 | date                  | 1.2-39       | <https://cran.r-project.org/package=date>                  |
 | DBI                   | 1.1.0        | <https://cran.r-project.org/package=DBI>                   |
 | dbplyr                | 1.4.4        | <https://cran.r-project.org/package=dbplyr>                |
+| dd4d                  | 0.0.0.9000   | <https://remlapmot.r-universe.dev/dd4d>                    |
 | Deriv                 | 4.1.6        | <https://cran.r-project.org/package=Deriv>                 |
 | desc                  | 1.2.0        | <https://cran.r-project.org/package=desc>                  |
 | deSolve               | 1.28         | <https://cran.r-project.org/package=deSolve>               |
