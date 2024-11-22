@@ -23,7 +23,7 @@ if ("dd4d" %in% pkgs$Package) {
       Url =
         case_when(
           Package == "dd4d" ~ "<https://remlapmot.r-universe.dev/dd4d>",
-          .default = Url
+          Package != "dd4d" ~ Url
         )
     )
 }
