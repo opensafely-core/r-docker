@@ -41,11 +41,16 @@ experience to approve the package.
 
 ### Install the package within Docker
 
-To add a package, it must be available on CRAN. We cannot currently install
-things from Github or other locations.
+To add a package, by default it will be installed from CRAN.
 
 ```sh
 just add-package PACKAGE
+```
+
+If you need to install a package from another CRAN-like repository, specify its URL as the REPOS argument.
+
+```sh
+just add-package PACKAGE REPOS
 ```
 
 This will attempt to install and build the package and its dependencies, and

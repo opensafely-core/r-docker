@@ -3,6 +3,11 @@ set -euo pipefail
 test -n "$1" || { echo "You must specify a package name. If you want a specific version, append @VERSION"; exit 1; }
 
 export PACKAGE="$1"
+if [ "$2" != "NULL" ]; then
+  export REPOS=$2
+else
+  export REPOS=https://cloud.r-project.org
+fi
 IMAGE_TAG="r-$(echo "${PACKAGE%@*}" | tr "[:upper:]" "[:lower:]")"
 export IMAGE_TAG
 IMAGE=${IMAGE:-r}
