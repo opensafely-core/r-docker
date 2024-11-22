@@ -4,6 +4,11 @@ export MAJOR_VERSION="$1"
 test -n "$2" || { echo "You must specify a package name. If you want a specific version, append @VERSION"; exit 1; }
 
 export PACKAGE="$2"
+if [ "$3" != "NULL" ]; then
+  export REPOS=$3
+else
+  export REPOS=https://cloud.r-project.org
+fi
 IMAGE_TAG="r-$(echo "${PACKAGE%@*}" | tr "[:upper:]" "[:lower:]")"
 export IMAGE_TAG
 IMAGE=${IMAGE:-r}

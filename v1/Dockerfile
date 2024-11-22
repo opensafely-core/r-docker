@@ -65,8 +65,9 @@ RUN --mount=type=cache,target=/cache,id=/cache-2004 bash /tmp/copy-symlink.sh /r
 FROM builder as add-package
 
 ARG PACKAGE="default-arg-to-silence-docker"
+ARG REPOS="default-arg-to-silence-docker"
 # install the package using the cache
-RUN --mount=type=cache,target=/cache,id=/cache-2004 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\"); renv::snapshot(type=\"all\")'"
+RUN --mount=type=cache,target=/cache,id=/cache-2004 bash -c "R -e 'renv::activate(); renv::install(\"$PACKAGE\", repos = \"$REPOS\"); renv::snapshot(type=\"all\")'"
 
 
 ################################################

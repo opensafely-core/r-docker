@@ -40,13 +40,13 @@ render version:
     docker run --platform linux/amd64 --env-file {{ version }}/env --entrypoint bash --rm -v "/$PWD:/out" -v "$PWD/scripts:/out/scripts" r:{{ version }} "/out/scripts/render.sh"
     
 # build and add a package and its dependencies to the image
-add-package version package:
+add-package version package repos="NULL":
     #!/usr/bin/env bash
     if [ "{{version}}" != "v1" ]; then
       echo "The version argument to add-package must be v1"
       exit 1
     fi
-    bash scripts/add-package.sh {{ version }} {{ package }}
+    bash scripts/add-package.sh {{ version }} {{ package }} {{ repos }}
 
 # r image containing rstudio-server
 build-rstudio version:

@@ -30,6 +30,7 @@ services:
       target: add-package
       args:
        - PACKAGE
+       - REPOS
     platform: linux/amd64
   rstudio:
     extends: r
