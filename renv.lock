@@ -1334,6 +1334,26 @@
         "tidyselect"
       ]
     },
+    "dd4d": {
+      "Package": "dd4d",
+      "Version": "0.0.0.9000",
+      "Source": "Repository",
+      "Repository": "https://remlapmot.r-universe.dev",
+      "RemoteUrl": "https://github.com/wjchulme/dd4d",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "291283fd0620d458584108b05d9237104e060c31",
+      "Hash": "95f653ca37fc7eca41757f141f4374a9",
+      "Requirements": [
+        "dagitty",
+        "dplyr",
+        "magrittr",
+        "purrr",
+        "rlang",
+        "tibble",
+        "tidyr",
+        "tidyselect"
+      ]
+    },
     "deSolve": {
       "Package": "deSolve",
       "Version": "1.28",
