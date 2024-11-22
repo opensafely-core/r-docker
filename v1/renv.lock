@@ -1284,6 +1284,19 @@
       "Hash": "2b7d10581cc730804e9ed178c8374bd6",
       "Requirements": []
     },
+    "dagitty": {
+      "Package": "dagitty",
+      "Version": "0.3-4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "dfbd13468fb3d6747b4d9541a648df9d",
+      "Requirements": [
+        "MASS",
+        "V8",
+        "boot",
+        "jsonlite"
+      ]
+    },
     "data.table": {
       "Package": "data.table",
       "Version": "1.13.0",

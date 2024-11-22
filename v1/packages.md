@@ -72,6 +72,7 @@ their URL below will link to the archive of that package’s source code.
 | credentials           | 1.3.0        | <https://cran.r-project.org/package=credentials>           |
 | crosstalk             | 1.1.0.1      | <https://cran.r-project.org/package=crosstalk>             |
 | curl                  | 4.3          | <https://cran.r-project.org/package=curl>                  |
+| dagitty               | 0.3-4        | <https://cran.r-project.org/package=dagitty>               |
 | data.table            | 1.13.0       | <https://cran.r-project.org/package=data.table>            |
 | date                  | 1.2-39       | <https://cran.r-project.org/package=date>                  |
 | DBI                   | 1.1.0        | <https://cran.r-project.org/package=DBI>                   |
