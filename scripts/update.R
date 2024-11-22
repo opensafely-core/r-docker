@@ -29,14 +29,14 @@ pkgs <- c(pkgs, "sjPlot")
 # Add dagitty (dependency for dd4d)
 pkgs <- c(pkgs, "dagitty")
 
+# Add dd4d from TP r-universe
+pak::repo_add(RUNIVERSE = "https://remlapmot.r-universe.dev/bin/linux/noble/4.4/")
+pkgs <- c(pkgs, "dd4d")
+
 # Ensure no package names are repeated
 pkgs <- unique(pkgs)
 
-# Install the packages from PPPM on the CRAN_DATE
+# Install the packages from PPPM on the CRAN_DATE (and dd4d from r-universe)
 renv::install(pkgs)
-
-# Add dd4d from TP r-universe
-pak::repo_add(RUNIVERSE = "https://remlapmot.r-universe.dev/bin/linux/noble/4.4/")
-renv::install("dd4d")
 
 renv::snapshot(type = "all")
