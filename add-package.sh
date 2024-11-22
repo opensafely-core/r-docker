@@ -23,7 +23,7 @@ fi
 # update renv.lock 
 cp renv.lock renv.lock.bak
 # cannot use docker-compose run as it mangles the output
-docker run --rm "$IMAGE_TAG" cat /renv/renv.lock > renv.lock
+docker run --platform linux/amd64 --rm "$IMAGE_TAG" cat /renv/renv.lock > renv.lock
 
 echo "$PACKAGE and its dependencies built and cached, renv.lock updated." 
 echo "Rebuilding R image with new renv.lock file." 
@@ -36,4 +36,4 @@ fi
 just test "$IMAGE"
 
 # update packages.csv for backwards compat with current docs
-docker run "$IMAGE" -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/dev/stdout")' 2>/dev/null > packages.csv
+docker run --platform linux/amd64 "$IMAGE" -e 'write.csv(installed.packages()[, c("Package","Version")], row.names=FALSE, file="/dev/stdout")' 2>/dev/null > packages.csv
