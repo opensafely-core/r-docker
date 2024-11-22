@@ -9,7 +9,7 @@ export IMAGE_TAG
 IMAGE=${IMAGE:-r}
 echo "Attempting to build and install $PACKAGE"
 
-if ! docker-compose build add-package; then
+if ! docker-compose --env-file ${MAJOR_VERSION}/env build add-package; then
     echo "Building $PACKAGE failed."
     echo "You may need to add build dependencies (e.g. -dev packages) to build-dependencies.txt"
     echo "Alternatively, you may need to install an older version of $PACKAGE. Please see the Trouble shooting section of the README."
