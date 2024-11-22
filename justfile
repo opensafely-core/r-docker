@@ -19,8 +19,8 @@ build:
 
 
 # build and add a package and its dependencies to the image
-add-package package:
-    bash ./add-package.sh {{ package }}
+add-package package repos="NULL":
+    bash ./add-package.sh {{ package }} {{ repos }}
 
 # r image containing rstudio-server
 build-rstudio:
