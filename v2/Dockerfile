@@ -3,7 +3,7 @@
 #
 # We need base r dependencies on both the builder and r images, so
 # create base image with those installed to save installing them twice.
-FROM ghcr.io/opensafely-core/base-action:24.04 as base-r
+FROM ghcr.io/opensafely-core/base-action:24.04 as r
 
 COPY v2/dependencies.txt /root/dependencies.txt
 
@@ -17,18 +17,8 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
     RENV_PATHS_SANDBOX=/renv/sandbox \
     RENV_PATHS_LOCKFILE=/renv/renv.lock
 
-#################################################
-#
-# Next, use the base-docker-plus-r image to create a build image
-FROM base-r as builder
-
-# install build time dependencies 
-COPY v2/build-dependencies.txt /root/build-dependencies.txt
-RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked /root/docker-apt-install.sh /root/build-dependencies.txt
-
 RUN mkdir -p /cache /renv/lib
 
-# Build a full arrow package, specifically for zstd compression, but also because its good.
 # The renv cache paths use /cache, which should be mounted as a reusable build-time cache dir.
 ENV RENV_PATHS_SOURCE=/cache/source \
     RENV_PATHS_BINARY=/cache/binary \
@@ -51,11 +41,6 @@ COPY scripts/copy-symlink.sh /tmp/copy-symlink.sh
 RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked bash /tmp/copy-symlink.sh /renv/lib
 
 
-################################################
-#
-# Finally, build the actual image from the base-r image
-FROM base-r as r
-
 # Some static metadata for this specific image, as defined by:
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md#pre-defined-annotation-keys
 # The org.opensafely.action label is used by the jobrunner to indicate this is
@@ -75,8 +60,6 @@ ENV INTERACTIVE_EXEC="/usr/bin/R"
 RUN mkdir /workspace
 WORKDIR /workspace
 
-# copy the renv over from the builder image
-COPY --from=builder /renv /renv
 # this will ensure the renv is activated by default
 RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.quiet = TRUE)' >> /etc/R/Rprofile.site &&\
     echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
