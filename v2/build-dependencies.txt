@@ -11,3 +11,5 @@ libproj-dev
 libsqlite3-dev
 libssl-dev
 libudunits2-dev
+libxml2-dev
+gsfonts
