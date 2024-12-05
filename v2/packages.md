@@ -37,7 +37,7 @@ tcltk, tools, and utils) for the respective version of R.
 | bigD                  | 0.3.0         | <https://cran.r-project.org/package=bigD>                  |
 | biglm                 | 0.9-3         | <https://cran.r-project.org/package=biglm>                 |
 | binom                 | 1.1-1.1       | <https://cran.r-project.org/package=binom>                 |
-| bit                   | 4.5.0         | <https://cran.r-project.org/package=bit>                   |
+| bit                   | 4.5.0.1       | <https://cran.r-project.org/package=bit>                   |
 | bit64                 | 4.5.2         | <https://cran.r-project.org/package=bit64>                 |
 | bitops                | 1.0-9         | <https://cran.r-project.org/package=bitops>                |
 | blob                  | 1.2.4         | <https://cran.r-project.org/package=blob>                  |
@@ -84,7 +84,7 @@ tcltk, tools, and utils) for the respective version of R.
 | corrr                 | 0.4.4         | <https://cran.r-project.org/package=corrr>                 |
 | cowplot               | 1.1.3         | <https://cran.r-project.org/package=cowplot>               |
 | coxme                 | 2.2-22        | <https://cran.r-project.org/package=coxme>                 |
-| cpp11                 | 0.5.0         | <https://cran.r-project.org/package=cpp11>                 |
+| cpp11                 | 0.5.1         | <https://cran.r-project.org/package=cpp11>                 |
 | crayon                | 1.5.3         | <https://cran.r-project.org/package=crayon>                |
 | crosstalk             | 1.2.1         | <https://cran.r-project.org/package=crosstalk>             |
 | curl                  | 6.0.1         | <https://cran.r-project.org/package=curl>                  |
@@ -324,7 +324,7 @@ tcltk, tools, and utils) for the respective version of R.
 | pammtools             | 0.5.93        | <https://cran.r-project.org/package=pammtools>             |
 | pan                   | 1.9           | <https://cran.r-project.org/package=pan>                   |
 | pander                | 0.6.5         | <https://cran.r-project.org/package=pander>                |
-| parallelly            | 1.39.0        | <https://cran.r-project.org/package=parallelly>            |
+| parallelly            | 1.40.1        | <https://cran.r-project.org/package=parallelly>            |
 | parameters            | 0.24.0        | <https://cran.r-project.org/package=parameters>            |
 | parglm                | 0.1.7         | <https://cran.r-project.org/package=parglm>                |
 | parsnip               | 1.2.1         | <https://cran.r-project.org/package=parsnip>               |
@@ -477,7 +477,7 @@ tcltk, tools, and utils) for the respective version of R.
 | sys                   | 3.4.3         | <https://cran.r-project.org/package=sys>                   |
 | systemfonts           | 1.1.0         | <https://cran.r-project.org/package=systemfonts>           |
 | tables                | 0.9.31        | <https://cran.r-project.org/package=tables>                |
-| targets               | 1.9.0         | <https://cran.r-project.org/package=targets>               |
+| targets               | 1.9.1         | <https://cran.r-project.org/package=targets>               |
 | tensorA               | 0.36.2.1      | <https://cran.r-project.org/package=tensorA>               |
 | textshaping           | 0.4.0         | <https://cran.r-project.org/package=textshaping>           |
 | TH.data               | 1.1-2         | <https://cran.r-project.org/package=TH.data>               |
