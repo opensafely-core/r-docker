@@ -3,6 +3,7 @@ set -eu
 MAJOR_VERSION=${1}
 
 if [ "${MAJOR_VERSION}" = "v1" ]; then
+  # Test all R packages can be loaded
   python3 -c "import json; print('\n'.join(json.load(open(\"./$MAJOR_VERSION/renv.lock\"))['Packages']))" | xargs -I {} echo "if (!library({}, warn.conflicts = FALSE, logical.return = TRUE)) {stop(\"Package {} failed to load, please investigate\")}" > .tests.R
   docker run --platform linux/amd64 --rm -v "$PWD:/tests/" r:${MAJOR_VERSION} /tests/.tests.R
 elif [ "${MAJOR_VERSION}" = "v2" ]; then
