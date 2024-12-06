@@ -17,7 +17,7 @@ tcltk, tools, and utils) for the respective version of R.
 | abind                 | 1.4-8         | <https://cran.r-project.org/package=abind>                 |
 | anytime               | 0.3.10        | <https://cran.r-project.org/package=anytime>               |
 | ape                   | 5.8           | <https://cran.r-project.org/package=ape>                   |
-| arrow                 | 17.0.0.1      | <https://cran.r-project.org/package=arrow>                 |
+| arrow                 | 18.1.0        | <https://cran.r-project.org/package=arrow>                 |
 | ash                   | 1.0-15        | <https://cran.r-project.org/package=ash>                   |
 | AsioHeaders           | 1.22.1-2      | <https://cran.r-project.org/package=AsioHeaders>           |
 | askpass               | 1.2.1         | <https://cran.r-project.org/package=askpass>               |
@@ -440,7 +440,7 @@ tcltk, tools, and utils) for the respective version of R.
 | secretbase            | 1.0.3         | <https://cran.r-project.org/package=secretbase>            |
 | segmented             | 2.1-3         | <https://cran.r-project.org/package=segmented>             |
 | selectr               | 0.4-2         | <https://cran.r-project.org/package=selectr>               |
-| seriation             | 1.5.6         | <https://cran.r-project.org/package=seriation>             |
+| seriation             | 1.5.7         | <https://cran.r-project.org/package=seriation>             |
 | sf                    | 1.0-19        | <https://cran.r-project.org/package=sf>                    |
 | sfd                   | 0.1.0         | <https://cran.r-project.org/package=sfd>                   |
 | shades                | 1.4.0         | <https://cran.r-project.org/package=shades>                |

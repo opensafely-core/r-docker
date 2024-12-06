@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.posit.co/cran/2024-12-05"
+        "URL": "https://packagemanager.posit.co/cran/2024-12-06"
       },
       {
         "Name": "A",
@@ -963,7 +963,7 @@
     },
     "arrow": {
       "Package": "arrow",
-      "Version": "17.0.0.1",
+      "Version": "18.1.0",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -981,7 +981,7 @@
         "utils",
         "vctrs"
       ],
-      "Hash": "14af96cb2973f6a6c220ce9c3e5b02cd"
+      "Hash": "d83c5ed8c1a89c5fd5788a8da714364e"
     },
     "ash": {
       "Package": "ash",
@@ -6462,7 +6462,7 @@
     },
     "seriation": {
       "Package": "seriation",
-      "Version": "1.5.6",
+      "Version": "1.5.7",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -6481,7 +6481,7 @@
         "stats",
         "vegan"
       ],
-      "Hash": "78671284f60a1c08b90c2754f024046d"
+      "Hash": "9701ad285dcf9ffc66e9c62d65193f4e"
     },
     "sf": {
       "Package": "sf",
