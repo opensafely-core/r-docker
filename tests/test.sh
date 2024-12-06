@@ -16,3 +16,6 @@ docker compose --env-file ${MAJOR_VERSION}/env run --rm r -e "if (is.numeric(Rcp
 
 # Check number of packages
 docker compose --env-file ${MAJOR_VERSION}/env run --rm r -e "print(paste('Total number of R packages:', nrow(installed.packages())))"
+
+# Check capabilities of arrow package
+docker compose --env-file ${MAJOR_VERSION}/env run --rm r -e "arrow::arrow_info()"
