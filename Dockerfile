@@ -33,7 +33,8 @@ RUN mkdir -p /cache /renv/lib
 ENV RENV_PATHS_SOURCE=/cache/source \
     RENV_PATHS_BINARY=/cache/binary \
     RENV_PATHS_CACHE=/cache/cache \
-    LIBARROW_MINIMAL=false
+    LIBARROW_MINIMAL=false \
+    LIBARROW_BINARY=true
 
 WORKDIR /renv
 
