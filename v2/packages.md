@@ -90,7 +90,7 @@ tcltk, tools, and utils) for the respective version of R.
 | curl                  | 6.0.1         | <https://cran.r-project.org/package=curl>                  |
 | cyclocomp             | 1.1.1         | <https://cran.r-project.org/package=cyclocomp>             |
 | dagitty               | 0.3-4         | <https://cran.r-project.org/package=dagitty>               |
-| data.table            | 1.16.2        | <https://cran.r-project.org/package=data.table>            |
+| data.table            | 1.16.4        | <https://cran.r-project.org/package=data.table>            |
 | datawizard            | 0.13.0        | <https://cran.r-project.org/package=datawizard>            |
 | date                  | 1.2-42        | <https://cran.r-project.org/package=date>                  |
 | DBI                   | 1.2.3         | <https://cran.r-project.org/package=DBI>                   |
@@ -387,7 +387,7 @@ tcltk, tools, and utils) for the respective version of R.
 | RColorBrewer          | 1.1-3         | <https://cran.r-project.org/package=RColorBrewer>          |
 | RConics               | 1.1.1         | <https://cran.r-project.org/package=RConics>               |
 | Rcpp                  | 1.0.13-1      | <https://cran.r-project.org/package=Rcpp>                  |
-| RcppArmadillo         | 14.2.0-1      | <https://cran.r-project.org/package=RcppArmadillo>         |
+| RcppArmadillo         | 14.2.2-1      | <https://cran.r-project.org/package=RcppArmadillo>         |
 | RcppEigen             | 0.3.4.0.2     | <https://cran.r-project.org/package=RcppEigen>             |
 | RcppParallel          | 5.1.9         | <https://cran.r-project.org/package=RcppParallel>          |
 | RcppProgress          | 0.4.2         | <https://cran.r-project.org/package=RcppProgress>          |
@@ -479,7 +479,7 @@ tcltk, tools, and utils) for the respective version of R.
 | tables                | 0.9.31        | <https://cran.r-project.org/package=tables>                |
 | targets               | 1.9.1         | <https://cran.r-project.org/package=targets>               |
 | tensorA               | 0.36.2.1      | <https://cran.r-project.org/package=tensorA>               |
-| textshaping           | 0.4.0         | <https://cran.r-project.org/package=textshaping>           |
+| textshaping           | 0.4.1         | <https://cran.r-project.org/package=textshaping>           |
 | TH.data               | 1.1-2         | <https://cran.r-project.org/package=TH.data>               |
 | tibble                | 3.2.1         | <https://cran.r-project.org/package=tibble>                |
 | tictoc                | 1.2.1         | <https://cran.r-project.org/package=tictoc>                |
