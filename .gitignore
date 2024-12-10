@@ -2,6 +2,7 @@
 renv.lock.bak
 renv/
 .tests.R
+.tests-base.R
 
 # rstudio-server directories
 *.config
