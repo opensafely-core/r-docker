@@ -22,5 +22,5 @@ docker compose --env-file ${MAJOR_VERSION}/env run --rm r -e "print(paste('Total
 docker compose --env-file ${MAJOR_VERSION}/env run --rm r -e "arrow::arrow_info()"
 
 # Test loading the 14 base packages
-echo -e "base\ncompiler\ndatasets\ngrDevices\ngraphics\ngrid\nmethods\nparallel\nsplines\nstats\nstats4\ntcltk\ntools\nutils" | xargs -I {} echo "suppressMessages({options(warn = -1); if (!library({}, logical.return = TRUE)) {stop(\"Package {} failed to load, please investigate\")};})" > .tests.R
-docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/tests" r:"${MAJOR_VERSION}" /tests/.tests.R
+echo -e "base\ncompiler\ndatasets\ngrDevices\ngraphics\ngrid\nmethods\nparallel\nsplines\nstats\nstats4\ntcltk\ntools\nutils" | xargs -I {} echo "suppressMessages({options(warn = -1); if (!library({}, logical.return = TRUE)) {stop(\"Package {} failed to load, please investigate\")};})" > .tests-base.R
+docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/tests" r:"${MAJOR_VERSION}" /tests/.tests-base.R
