@@ -69,7 +69,7 @@ tcltk, tools, and utils) for the respective version of R.
 | clipr                 | 0.8.0         | <https://cran.r-project.org/package=clipr>                 |
 | clock                 | 0.7.1         | <https://cran.r-project.org/package=clock>                 |
 | clue                  | 0.3-66        | <https://cran.r-project.org/package=clue>                  |
-| cluster               | 2.1.6         | <https://cran.r-project.org/package=cluster>               |
+| cluster               | 2.1.7         | <https://cran.r-project.org/package=cluster>               |
 | cmprsk                | 2.2-12        | <https://cran.r-project.org/package=cmprsk>                |
 | cobalt                | 4.5.5         | <https://cran.r-project.org/package=cobalt>                |
 | coda                  | 0.19-4.1      | <https://cran.r-project.org/package=coda>                  |
@@ -117,7 +117,7 @@ tcltk, tools, and utils) for the respective version of R.
 | dtplyr                | 1.3.1         | <https://cran.r-project.org/package=dtplyr>                |
 | dtw                   | 1.23-1        | <https://cran.r-project.org/package=dtw>                   |
 | dtwclust              | 6.0.0         | <https://cran.r-project.org/package=dtwclust>              |
-| duckdb                | 1.1.3         | <https://cran.r-project.org/package=duckdb>                |
+| duckdb                | 1.1.3-1       | <https://cran.r-project.org/package=duckdb>                |
 | e1071                 | 1.7-16        | <https://cran.r-project.org/package=e1071>                 |
 | effectsize            | 0.8.9         | <https://cran.r-project.org/package=effectsize>            |
 | egg                   | 0.4.5         | <https://cran.r-project.org/package=egg>                   |
@@ -225,7 +225,7 @@ tcltk, tools, and utils) for the respective version of R.
 | httr2                 | 1.0.7         | <https://cran.r-project.org/package=httr2>                 |
 | IDPmisc               | 1.1.21        | <https://cran.r-project.org/package=IDPmisc>               |
 | ids                   | 1.0.1         | <https://cran.r-project.org/package=ids>                   |
-| igraph                | 2.1.1         | <https://cran.r-project.org/package=igraph>                |
+| igraph                | 2.1.2         | <https://cran.r-project.org/package=igraph>                |
 | incidence             | 1.7.5         | <https://cran.r-project.org/package=incidence>             |
 | infer                 | 1.0.7         | <https://cran.r-project.org/package=infer>                 |
 | ini                   | 0.3.1         | <https://cran.r-project.org/package=ini>                   |
@@ -269,7 +269,7 @@ tcltk, tools, and utils) for the respective version of R.
 | locfit                | 1.5-9.10      | <https://cran.r-project.org/package=locfit>                |
 | loo                   | 2.8.0         | <https://cran.r-project.org/package=loo>                   |
 | lpSolveAPI            | 5.5.2.0-17.12 | <https://cran.r-project.org/package=lpSolveAPI>            |
-| lubridate             | 1.9.3         | <https://cran.r-project.org/package=lubridate>             |
+| lubridate             | 1.9.4         | <https://cran.r-project.org/package=lubridate>             |
 | magick                | 2.8.5         | <https://cran.r-project.org/package=magick>                |
 | magrittr              | 2.0.3         | <https://cran.r-project.org/package=magrittr>              |
 | markdown              | 1.13          | <https://cran.r-project.org/package=markdown>              |
