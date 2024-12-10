@@ -58,7 +58,7 @@ tcltk, tools, and utils) for the respective version of R.
 | car                   | 3.1-3         | <https://cran.r-project.org/package=car>                   |
 | carData               | 3.0-5         | <https://cran.r-project.org/package=carData>               |
 | cards                 | 0.4.0         | <https://cran.r-project.org/package=cards>                 |
-| caret                 | 6.0-94        | <https://cran.r-project.org/package=caret>                 |
+| caret                 | 7.0-1         | <https://cran.r-project.org/package=caret>                 |
 | caTools               | 1.18.3        | <https://cran.r-project.org/package=caTools>               |
 | cellranger            | 1.1.0         | <https://cran.r-project.org/package=cellranger>            |
 | checkmate             | 2.3.2         | <https://cran.r-project.org/package=checkmate>             |
@@ -335,7 +335,7 @@ tcltk, tools, and utils) for the respective version of R.
 | pch                   | 2.1           | <https://cran.r-project.org/package=pch>                   |
 | pec                   | 2023.04.12    | <https://cran.r-project.org/package=pec>                   |
 | performance           | 0.12.4        | <https://cran.r-project.org/package=performance>           |
-| PerformanceAnalytics  | 2.0.4         | <https://cran.r-project.org/package=PerformanceAnalytics>  |
+| PerformanceAnalytics  | 2.0.8         | <https://cran.r-project.org/package=PerformanceAnalytics>  |
 | permute               | 0.9-7         | <https://cran.r-project.org/package=permute>               |
 | PHEindicatormethods   | 2.0.2         | <https://cran.r-project.org/package=PHEindicatormethods>   |
 | pillar                | 1.9.0         | <https://cran.r-project.org/package=pillar>                |

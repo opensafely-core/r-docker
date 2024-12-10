@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.posit.co/cran/2024-12-09"
+        "URL": "https://packagemanager.posit.co/cran/2024-12-10"
       },
       {
         "Name": "A",
@@ -451,7 +451,7 @@
     },
     "PerformanceAnalytics": {
       "Package": "PerformanceAnalytics",
-      "Version": "2.0.4",
+      "Version": "2.0.8",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -461,7 +461,7 @@
         "xts",
         "zoo"
       ],
-      "Hash": "5ff15925d7e369565203053934e8d9d9"
+      "Hash": "139ae634c4c9f8f03ec834fb0677e8e0"
     },
     "Publish": {
       "Package": "Publish",
@@ -1504,7 +1504,7 @@
     },
     "caret": {
       "Package": "caret",
-      "Version": "6.0-94",
+      "Version": "7.0-1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1526,7 +1526,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "528692344d5a174552e3bf7acdfbaebd"
+      "Hash": "304c0d28bda6454aae3b14ae953e7824"
     },
     "cellranger": {
       "Package": "cellranger",
