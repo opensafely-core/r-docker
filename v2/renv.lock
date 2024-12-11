@@ -8,7 +8,7 @@
       },
       {
         "Name": "A",
-        "URL": "https://remlapmot.r-universe.dev/bin/linux/noble/4.4"
+        "URL": "https://opensafely-core.r-universe.dev/bin/linux/noble/4.4"
       }
     ]
   },
@@ -822,9 +822,9 @@
     },
     "TrialEmulation": {
       "Package": "TrialEmulation",
-      "Version": "0.0.4.1",
+      "Version": "0.0.4.0",
       "Source": "Repository",
-      "Repository": "https://remlapmot.r-universe.dev",
+      "Repository": "RSPM",
       "Requirements": [
         "DBI",
         "R",
@@ -841,7 +841,7 @@
         "parglm",
         "sandwich"
       ],
-      "Hash": "df268cabbf796fd74bdf296dd51c6f3d"
+      "Hash": "0552f21e738f7759e6a2a1c6963c1c6a"
     },
     "UpSetR": {
       "Package": "UpSetR",
@@ -1977,7 +1977,7 @@
       "Package": "dd4d",
       "Version": "0.0.0.9000",
       "Source": "Repository",
-      "Repository": "https://remlapmot.r-universe.dev",
+      "Repository": "https://opensafely-core.r-universe.dev",
       "Requirements": [
         "dagitty",
         "dplyr",

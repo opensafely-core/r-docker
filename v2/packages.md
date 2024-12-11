@@ -95,7 +95,7 @@ tcltk, tools, and utils) for the respective version of R.
 | date                  | 1.2-42        | <https://cran.r-project.org/package=date>                  |
 | DBI                   | 1.2.3         | <https://cran.r-project.org/package=DBI>                   |
 | dbplyr                | 2.5.0         | <https://cran.r-project.org/package=dbplyr>                |
-| dd4d                  | 0.0.0.9000    | <https://remlapmot.r-universe.dev/dd4d>                    |
+| dd4d                  | 0.0.0.9000    | <https://opensafely-core.r-universe.dev/dd4d>              |
 | deldir                | 2.0-4         | <https://cran.r-project.org/package=deldir>                |
 | Deriv                 | 4.1.6         | <https://cran.r-project.org/package=Deriv>                 |
 | desc                  | 1.4.3         | <https://cran.r-project.org/package=desc>                  |
@@ -498,7 +498,7 @@ tcltk, tools, and utils) for the respective version of R.
 | tinytex               | 0.54          | <https://cran.r-project.org/package=tinytex>               |
 | TMB                   | 1.9.15        | <https://cran.r-project.org/package=TMB>                   |
 | tmvtnorm              | 1.6           | <https://cran.r-project.org/package=tmvtnorm>              |
-| TrialEmulation        | 0.0.4.1       | <https://remlapmot.r-universe.dev/TrialEmulation>          |
+| TrialEmulation        | 0.0.4.0       | <https://cran.r-project.org/package=TrialEmulation>        |
 | tseries               | 0.10-58       | <https://cran.r-project.org/package=tseries>               |
 | tsfeatures            | 1.1.1         | <https://cran.r-project.org/package=tsfeatures>            |
 | tsModel               | 0.6-2         | <https://cran.r-project.org/package=tsModel>               |
