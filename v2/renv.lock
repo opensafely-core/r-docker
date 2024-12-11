@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.posit.co/cran/2024-12-10"
+        "URL": "https://packagemanager.posit.co/cran/2024-12-11"
       },
       {
         "Name": "A",
@@ -2301,7 +2301,7 @@
     },
     "effectsize": {
       "Package": "effectsize",
-      "Version": "0.8.9",
+      "Version": "1.0.0",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -2314,7 +2314,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "7aceb5e07b6d48171c6b56714cc305ea"
+      "Hash": "b289af101f62cb7b46c53d1a45ed5198"
     },
     "egg": {
       "Package": "egg",
@@ -6819,14 +6819,14 @@
     },
     "stringdist": {
       "Package": "stringdist",
-      "Version": "0.9.12",
+      "Version": "0.9.14",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R",
         "parallel"
       ],
-      "Hash": "f360720fa3feb7db9d4133b31ebb067f"
+      "Hash": "be192673ec3a4efd32e8823298745a8d"
     },
     "stringi": {
       "Package": "stringi",

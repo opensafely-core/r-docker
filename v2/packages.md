@@ -119,7 +119,7 @@ tcltk, tools, and utils) for the respective version of R.
 | dtwclust              | 6.0.0         | <https://cran.r-project.org/package=dtwclust>              |
 | duckdb                | 1.1.3-1       | <https://cran.r-project.org/package=duckdb>                |
 | e1071                 | 1.7-16        | <https://cran.r-project.org/package=e1071>                 |
-| effectsize            | 0.8.9         | <https://cran.r-project.org/package=effectsize>            |
+| effectsize            | 1.0.0         | <https://cran.r-project.org/package=effectsize>            |
 | egg                   | 0.4.5         | <https://cran.r-project.org/package=egg>                   |
 | ellipse               | 0.5.0         | <https://cran.r-project.org/package=ellipse>               |
 | emmeans               | 1.10.5        | <https://cran.r-project.org/package=emmeans>               |
@@ -464,7 +464,7 @@ tcltk, tools, and utils) for the respective version of R.
 | SQUAREM               | 2021.1        | <https://cran.r-project.org/package=SQUAREM>               |
 | StanHeaders           | 2.32.10       | <https://cran.r-project.org/package=StanHeaders>           |
 | statmod               | 1.5.0         | <https://cran.r-project.org/package=statmod>               |
-| stringdist            | 0.9.12        | <https://cran.r-project.org/package=stringdist>            |
+| stringdist            | 0.9.14        | <https://cran.r-project.org/package=stringdist>            |
 | stringi               | 1.8.4         | <https://cran.r-project.org/package=stringi>               |
 | stringr               | 1.5.1         | <https://cran.r-project.org/package=stringr>               |
 | styler                | 1.10.3        | <https://cran.r-project.org/package=styler>                |
