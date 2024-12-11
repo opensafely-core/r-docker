@@ -25,7 +25,7 @@ dagitty,
 data.table,
 DBI,
 dbplyr,
-dd4d,https://remlapmot.r-universe.dev/bin/linux/noble/4.4/
+dd4d,https://opensafely-core.r-universe.dev/bin/linux/noble/4.4/
 deSolve,
 detectseparation,
 DiagrammeR,
