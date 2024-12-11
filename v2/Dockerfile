@@ -1,17 +1,21 @@
-# syntax=docker/dockerfile:1.2
-#################################################
+# syntax=docker/dockerfile:1.11
+# enable docker linting
+# check=error=true
 #
+#################################################
 # We need base r dependencies on both the builder and r images, so
 # create base image with those installed to save installing them twice.
 FROM ghcr.io/opensafely-core/base-action:24.04 as base-r
-
-COPY v2/dependencies.txt /root/dependencies.txt
+ARG MAJOR_VERSION=v2
 
 # add cran repo for R packages and install
 RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked \
-    echo "deb https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/" > /etc/apt/sources.list.d/cran.list &&\
-    /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc &&\
-    /root/docker-apt-install.sh /root/dependencies.txt
+    --mount=type=cache,target=/var/lib/apt,id=apt-2404,sharing=locked \
+    --mount=type=bind,source=${MAJOR_VERSION}/dependencies.txt,target=/tmp/dependencies.txt <<EOF
+    echo "deb https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/" > /etc/apt/sources.list.d/cran.list
+    /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+    /root/docker-apt-install.sh /tmp/dependencies.txt
+EOF
 
 ENV RENV_PATHS_LIBRARY=/renv/lib \
     RENV_PATHS_SANDBOX=/renv/sandbox \
@@ -23,8 +27,11 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 FROM base-r as builder
 
 # install build time dependencies 
-COPY v2/build-dependencies.txt /root/build-dependencies.txt
-RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked /root/docker-apt-install.sh /root/build-dependencies.txt
+
+RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,id=apt-2404,sharing=locked \
+    --mount=type=bind,source=${MAJOR_VERSION}/build-dependencies.txt,target=/tmp/build-dependencies.txt \
+    /root/docker-apt-install.sh /tmp/build-dependencies.txt
 
 RUN mkdir -p /cache /renv/lib
 
@@ -38,18 +45,17 @@ ENV RENV_PATHS_SOURCE=/cache/source \
 WORKDIR /renv
 
 # use renv to install packages
-ARG REPOS="default-arg-to-silence-docker"
-ARG CRAN_DATE="default-arg-to-silence-docker"
-COPY v2/packages.csv /root/packages.csv
-COPY scripts/build.R /root/build.R
-RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked Rscript /root/build.R
-
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
 # change the symlinks into full copies, to store them in the image.
-COPY scripts/copy-symlink.sh /tmp/copy-symlink.sh
-RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked bash /tmp/copy-symlink.sh /renv/lib
-
+ARG REPOS="default-arg-to-silence-docker"
+ARG CRAN_DATE="default-arg-to-silence-docker"
+RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked \
+    --mount=type=bind,source=scripts/,target=/tmp/scripts/ \
+    --mount=type=bind,source=${MAJOR_VERSION}/packages.csv,target=/tmp/packages.csv <<EOF
+    Rscript /tmp/scripts/build.R
+    bash /tmp/scripts/copy-symlink.sh /renv/lib
+EOF
 
 ################################################
 #
@@ -63,7 +69,9 @@ FROM base-r as r
 LABEL org.opencontainers.image.title="r" \
       org.opencontainers.image.description="R action for opensafely.org" \
       org.opencontainers.image.source="https://github.com/opensafely-core/r-docker" \
-      org.opensafely.action="r"
+      org.opensafely.action="r" \
+      org.opensafely.version="${MAJOR_VERSION}" \
+      org.opensafely.cran-date="${CRAN_DATE}"
 
 # ACTION_EXEC is our default executable
 ENV ACTION_EXEC="/usr/bin/Rscript"
@@ -78,8 +86,10 @@ WORKDIR /workspace
 # copy the renv over from the builder image
 COPY --from=builder /renv /renv
 # this will ensure the renv is activated by default
-RUN echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.quiet = TRUE)' >> /etc/R/Rprofile.site &&\
+RUN <<EOF
+    echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.quiet = TRUE)' >> /etc/R/Rprofile.site
     echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
+EOF
 
 #################################################
 #

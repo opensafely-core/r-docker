@@ -20,7 +20,7 @@ options(renv.config.pak.enabled = TRUE)
 options(pkg.sysreqs = FALSE)
 
 # Read in input list
-input <- utils::read.csv("/root/packages.csv", header = TRUE)
+input <- utils::read.csv("/tmp/packages.csv", header = TRUE)
 # Obtain list of non-CRAN CRAN-like repositories, and add them to pak
 repos <- unique(input[[2]])
 repos <- repos[repos != ""]
