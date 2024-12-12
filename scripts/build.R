@@ -29,3 +29,5 @@ pak::repo_add(.list = repos)
 pkgs <- unique(input[[1]])
 # Install the packages from PPPM on the CRAN_DATE and from the additional CRAN-like repositories
 pak::pkg_install(pkgs)
+
+pak::lockfile_create(pkgs, lockfile = "/pkg.lock")
