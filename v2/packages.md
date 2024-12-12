@@ -408,7 +408,6 @@ tcltk, tools, and utils) for the respective version of R.
 | rematch               | 2.0.0         | <https://cran.r-project.org/package=rematch>               |
 | rematch2              | 2.1.2         | <https://cran.r-project.org/package=rematch2>              |
 | remotes               | 2.5.0         | <https://cran.r-project.org/package=remotes>               |
-| renv                  | 1.0.11        | <https://cran.r-project.org/package=renv>                  |
 | repr                  | 1.1.7         | <https://cran.r-project.org/package=repr>                  |
 | reprex                | 2.1.1         | <https://cran.r-project.org/package=reprex>                |
 | reshape2              | 1.4.4         | <https://cran.r-project.org/package=reshape2>              |
