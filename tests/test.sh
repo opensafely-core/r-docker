@@ -8,8 +8,7 @@ if [ "${MAJOR_VERSION}" = "v1" ]; then
   docker run --platform linux/amd64 --rm -v "$PWD:/tests/" r:${MAJOR_VERSION} /tests/.tests.R
 elif [ "${MAJOR_VERSION}" = "v2" ]; then
   # Test all R packages can be attached then detached
-  python3 -c "import json; print('\n'.join(json.load(open(\"./$MAJOR_VERSION/renv.lock\"))['Packages']))" | xargs -I {} echo "suppressMessages({options(warn = -1); if (!library({}, logical.return = TRUE)) {stop(\"Package {} failed to load, please investigate\")}; detach(\"package:{}\", force = TRUE, unload = TRUE)})" > .tests.R
-  docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/tests" r:"${MAJOR_VERSION}" /tests/.tests.R
+  docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/tests" r:"${MAJOR_VERSION}" /tests/tests/test-loading-packages.R
 fi
 
 # Check that a basic Rcpp call runs successfully
