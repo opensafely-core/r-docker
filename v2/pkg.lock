@@ -5,6 +5,37 @@
   "platform": "x86_64-pc-linux-gnu",
   "packages": [
     {
+      "ref": "pak",
+      "package": "pak",
+      "version": "0.8.0",
+      "type": "standard",
+      "direct": true,
+      "binary": true,
+      "dependencies": [],
+      "vignettes": false,
+      "needscompilation": false,
+      "metadata": {
+        "RemoteType": "standard",
+        "RemotePkgRef": "pak",
+        "RemoteRef": "pak",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/noble/2024-12-11",
+        "RemotePkgPlatform": "x86_64-pc-linux-gnu-ubuntu-24.04",
+        "RemoteSha": "0.8.0"
+      },
+      "sources": ["https://packagemanager.posit.co/cran/__linux__/noble/2024-12-11/src/contrib/pak_0.8.0.tar.gz"],
+      "target": "src/contrib/x86_64-pc-linux-gnu-ubuntu-24.04/4.4/pak_0.8.0.tar.gz",
+      "platform": "x86_64-pc-linux-gnu-ubuntu-24.04",
+      "rversion": "4.4",
+      "directpkg": true,
+      "license": "GPL-3",
+      "dep_types": ["Depends", "Imports", "LinkingTo"],
+      "params": [],
+      "install_args": "",
+      "repotype": "cran",
+      "sysreqs": "",
+      "sysreqs_packages": {}
+    },
+    {
       "ref": "arrow",
       "package": "arrow",
       "version": "18.1.0",
