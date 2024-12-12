@@ -15,3 +15,5 @@ for (i in 1:npkgs) {
     detach(dtch, force = TRUE, unload = TRUE, character.only = TRUE)
     })
 }
+
+print("All non-base R packages successfully loaded and unloaded.")
