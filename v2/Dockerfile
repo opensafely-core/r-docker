@@ -3,9 +3,7 @@
 # check=error=true
 #
 #################################################
-# We need base r dependencies on both the builder and r images, so
-# create base image with those installed to save installing them twice.
-FROM ghcr.io/opensafely-core/base-action:24.04 AS base-r
+FROM ghcr.io/opensafely-core/base-action:24.04 AS r
 ARG MAJOR_VERSION=v2
 
 # add cran repo for R packages and install
@@ -25,11 +23,6 @@ ARG CRAN_DATE="default-arg-to-silence-docker"
 RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked \
     --mount=type=bind,source=scripts/,target=/tmp/scripts/ \
     --mount=type=bind,source=${MAJOR_VERSION}/packages.csv,target=/tmp/packages.csv Rscript /tmp/scripts/build.R
-
-################################################
-#
-# Finally, build the actual image from the base-r image
-FROM base-r AS r
 
 # Some static metadata for this specific image, as defined by:
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md#pre-defined-annotation-keys
