@@ -24,9 +24,7 @@ ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
 RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked \
     --mount=type=bind,source=scripts/,target=/tmp/scripts/ \
-    --mount=type=bind,source=${MAJOR_VERSION}/packages.csv,target=/tmp/packages.csv <<EOF
-    Rscript /tmp/scripts/build.R
-EOF
+    --mount=type=bind,source=${MAJOR_VERSION}/packages.csv,target=/tmp/packages.csv Rscript /tmp/scripts/build.R
 
 ################################################
 #
@@ -64,10 +62,12 @@ FROM r AS rstudio
 
 # Install rstudio-server (and a few dependencies)
 COPY rstudio/rstudio-dependencies.txt /root/rstudio-dependencies.txt
-RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
-    test -f /var/cache/apt/"${RSTUDIO_DEB}" ||\
-    /usr/lib/apt/apt-helper download-file "${RSTUDIO_BASE_URL}${RSTUDIO_DEB}" /var/cache/apt/"${RSTUDIO_DEB}" &&\
+RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked <<EOF
+    /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&
+    test -f /var/cache/apt/"${RSTUDIO_DEB}" ||
+    /usr/lib/apt/apt-helper download-file "${RSTUDIO_BASE_URL}${RSTUDIO_DEB}" /var/cache/apt/"${RSTUDIO_DEB}" &&
     apt-get install --no-install-recommends -y /var/cache/apt/"${RSTUDIO_DEB}"
+EOF
 
 # Configuration
 ## Start by setting up rstudio user using approach in opensafely-core/research-template-docker
@@ -76,8 +76,10 @@ RUN useradd rstudio -m
 COPY rstudio/home/* /home/rstudio/
 COPY rstudio/etc/* /etc/rstudio/
 
-RUN chown -R rstudio:rstudio /home/rstudio &&\
+RUN <<EOF
+    chown -R rstudio:rstudio /home/rstudio &&
     echo "R_LIBS_SITE=/usr/local/lib/R/site-library" >> /usr/lib/R/etc/Renviron.site
+EOF
 
 COPY rstudio/rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
