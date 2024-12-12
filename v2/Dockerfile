@@ -5,7 +5,7 @@
 #################################################
 # We need base r dependencies on both the builder and r images, so
 # create base image with those installed to save installing them twice.
-FROM ghcr.io/opensafely-core/base-action:24.04 as base-r
+FROM ghcr.io/opensafely-core/base-action:24.04 AS base-r
 ARG MAJOR_VERSION=v2
 
 # add cran repo for R packages and install
@@ -24,7 +24,7 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 #################################################
 #
 # Next, use the base-docker-plus-r image to create a build image
-FROM base-r as builder
+FROM base-r AS builder
 
 # install build time dependencies 
 
@@ -60,7 +60,7 @@ EOF
 ################################################
 #
 # Finally, build the actual image from the base-r image
-FROM base-r as r
+FROM base-r AS r
 
 # Some static metadata for this specific image, as defined by:
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md#pre-defined-annotation-keys
@@ -96,7 +96,7 @@ EOF
 # Add rstudio-server to r image - creating rstudio image
 ARG RSTUDIO_BASE_URL="default-arg-to-silence-docker"
 ARG RSTUDIO_DEB="default-arg-to-silence-docker"
-FROM r as rstudio
+FROM r AS rstudio
 
 # Install rstudio-server (and a few dependencies)
 COPY rstudio/rstudio-dependencies.txt /root/rstudio-dependencies.txt
