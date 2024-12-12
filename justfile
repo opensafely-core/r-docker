@@ -27,7 +27,7 @@ build version:
       # update pkg.lock
       cp ${MAJOR_VERSION}/pkg.lock ${MAJOR_VERSION}/pkg.lock.bak
       # cannot use docker-compose run as it mangles the output
-      docker run --platform linux/amd64 --rm r:{{ version }} cat pkg.lock > ${MAJOR_VERSION}/pkg.lock
+      docker run --platform linux/amd64 --rm r:{{ version }} cat /pkg.lock > ${MAJOR_VERSION}/pkg.lock
     fi
 
     # render the packages.md file
