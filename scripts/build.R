@@ -12,11 +12,8 @@ options(HTTPUserAgent = sprintf(
   )
 ))
 
-install.packages("renv", repos = c(CRAN = REPOS), destdir = "/cache")
-renv::init(bare = TRUE)
-renv::install("pak", repos = c(CRAN = REPOS))
+install.packages("pak", repos = c(CRAN = REPOS), destdir = "/cache")
 pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
-options(renv.config.pak.enabled = TRUE)
 options(pkg.sysreqs = FALSE)
 
 # Read in input list
@@ -31,7 +28,7 @@ pak::repo_add(.list = repos)
 # Remove any duplicates from package vector
 pkgs <- unique(input[[1]])
 # Install the packages from PPPM on the CRAN_DATE and from the additional CRAN-like repositories
-renv::install(pkgs)
+pak::pkg_install(pkgs)
 
-# Create renv.lock
-renv::snapshot(type = "all")
+# Create pak lock file pkg.lock
+pak::lockfile_create()
