@@ -17,44 +17,15 @@ RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked \
     /root/docker-apt-install.sh /tmp/dependencies.txt
 EOF
 
-ENV RENV_PATHS_LIBRARY=/renv/lib \
-    RENV_PATHS_SANDBOX=/renv/sandbox \
-    RENV_PATHS_LOCKFILE=/renv/renv.lock
+ENV PKG_CACHE_DIR=/cache
 
-#################################################
-#
-# Next, use the base-docker-plus-r image to create a build image
-FROM base-r AS builder
-
-# install build time dependencies 
-
-RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked \
-    --mount=type=cache,target=/var/lib/apt,id=apt-2404,sharing=locked \
-    --mount=type=bind,source=${MAJOR_VERSION}/build-dependencies.txt,target=/tmp/build-dependencies.txt \
-    /root/docker-apt-install.sh /tmp/build-dependencies.txt
-
-RUN mkdir -p /cache /renv/lib
-
-# Build a full arrow package, specifically for zstd compression, but also because its good.
-# The renv cache paths use /cache, which should be mounted as a reusable build-time cache dir.
-ENV RENV_PATHS_SOURCE=/cache/source \
-    RENV_PATHS_BINARY=/cache/binary \
-    RENV_PATHS_CACHE=/cache/cache \
-    LIBARROW_MINIMAL=false
-
-WORKDIR /renv
-
-# use renv to install packages
-# renv uses symlinks to the the build cache to populate the lib directory. As
-# our cache is mounted only at build (so we can do fast rebuilds), we need to
-# change the symlinks into full copies, to store them in the image.
+# use pak to install packages
 ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
 RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked \
     --mount=type=bind,source=scripts/,target=/tmp/scripts/ \
     --mount=type=bind,source=${MAJOR_VERSION}/packages.csv,target=/tmp/packages.csv <<EOF
     Rscript /tmp/scripts/build.R
-    bash /tmp/scripts/copy-symlink.sh /renv/lib
 EOF
 
 ################################################
@@ -83,13 +54,6 @@ ENV INTERACTIVE_EXEC="/usr/bin/R"
 RUN mkdir /workspace
 WORKDIR /workspace
 
-# copy the renv over from the builder image
-COPY --from=builder /renv /renv
-# this will ensure the renv is activated by default
-RUN <<EOF
-    echo 'options(renv.config.synchronized.check = FALSE, renv.config.startup.quiet = TRUE)' >> /etc/R/Rprofile.site
-    echo 'source("/renv/renv/activate.R")' >> /etc/R/Rprofile.site
-EOF
 
 #################################################
 #
