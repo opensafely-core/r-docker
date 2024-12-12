@@ -30,4 +30,5 @@ pkgs <- unique(input[[1]])
 # Install the packages from PPPM on the CRAN_DATE and from the additional CRAN-like repositories
 pak::pkg_install(pkgs)
 
-pak::lockfile_create(pkgs, lockfile = "/pkg.lock")
+# Create pkg.lock file; append pak to list as seemingly missing from own lock file
+pak::lockfile_create(unique(c("pak", pkgs)), lockfile = "/pkg.lock")
