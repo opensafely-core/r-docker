@@ -25,10 +25,11 @@ nrepos <- length(repos)
 names(repos) <- LETTERS[1:nrepos]
 pak::repo_add(.list = repos)
 
-# Remove any duplicates from package vector
-pkgs <- unique(input[[1]])
-# Install the packages from PPPM on the CRAN_DATE and from the additional CRAN-like repositories
-pak::pkg_install(pkgs)
+# Include pak in packages list, and remove any duplicates
+pkgs <- unique(c("pak", input[[1]]))
 
-# Create pkg.lock file; append pak to list as seemingly missing from own lock file
-pak::lockfile_create(unique(c("pak", pkgs)), lockfile = "/pkg.lock")
+# Create pkg.lock file
+pak::lockfile_create(pkgs, lockfile = "/pkg.lock")
+
+# Install the packages based upon the lockfile
+pak::lockfile_install("/pkg.lock")
