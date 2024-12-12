@@ -69,7 +69,7 @@ tcltk, tools, and utils) for the respective version of R.
 | clipr                 | 0.8.0         | <https://cran.r-project.org/package=clipr>                 |
 | clock                 | 0.7.1         | <https://cran.r-project.org/package=clock>                 |
 | clue                  | 0.3-66        | <https://cran.r-project.org/package=clue>                  |
-| cluster               | 2.1.7         | <https://cran.r-project.org/package=cluster>               |
+| cluster               | 2.1.8         | <https://cran.r-project.org/package=cluster>               |
 | cmprsk                | 2.2-12        | <https://cran.r-project.org/package=cmprsk>                |
 | cobalt                | 4.5.5         | <https://cran.r-project.org/package=cobalt>                |
 | coda                  | 0.19-4.1      | <https://cran.r-project.org/package=coda>                  |
