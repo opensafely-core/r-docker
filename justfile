@@ -18,11 +18,16 @@ build version:
     # build the thing
     docker-compose --env-file {{ version }}/env build --pull r
 
-    if ["{{ version }}" = "v1"]; then
+    if [ "{{ version }}" = "v1" ]; then
       # update renv.lock
       cp ${MAJOR_VERSION}/renv.lock ${MAJOR_VERSION}/renv.lock.bak
       # cannot use docker-compose run as it mangles the output
       docker run --platform linux/amd64 --rm r:{{ version }} cat /renv/renv.lock > ${MAJOR_VERSION}/renv.lock
+    elif [ "{{ version }}" = "v2" ]; then
+      # update pkg.lock
+      cp ${MAJOR_VERSION}/pkg.lock ${MAJOR_VERSION}/pkg.lock.bak
+      # cannot use docker-compose run as it mangles the output
+      docker run --platform linux/amd64 --rm r:{{ version }} cat pkg.lock > ${MAJOR_VERSION}/pkg.lock
     fi
 
     # render the packages.md file
