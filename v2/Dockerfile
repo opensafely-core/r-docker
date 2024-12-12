@@ -15,9 +15,8 @@ RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked \
     /root/docker-apt-install.sh /tmp/dependencies.txt
 EOF
 
-ENV PKG_CACHE_DIR=/cache
-
 # use pak to install packages
+ENV PKG_CACHE_DIR=/cache
 ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
 RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked \
