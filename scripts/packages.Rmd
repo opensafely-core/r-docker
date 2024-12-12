@@ -14,6 +14,7 @@ Some packages may no longer be on CRAN and so their URL below will link to the a
 Each image also contains the 14 base R packages (base, compiler, datasets, grDevices, graphics, grid, methods, parallel, splines, stats, stats4, tcltk, tools, and utils) for the respective version of R.
 
 ```{r, echo=FALSE, results='asis', warning=FALSE}
+if (Sys.getenv("MAJOR_VERSION") == "v1") {
 suppressMessages(library(dplyr))
 renvlock <- jsonlite::fromJSON(paste0("/out/", Sys.getenv("MAJOR_VERSION"), "/renv.lock"))
 pkgs <- renvlock[["Packages"]]
@@ -31,4 +32,8 @@ pkgs <- pkgs %>%
   mutate(Package = as.character(Package), Version = as.character(Version)) %>%
   arrange(Package, .locale = "en")
 knitr::kable(pkgs, row.names = FALSE)
+}
+if (Sys.getenv("MAJOR_VERSION") == "v2") {
+
+}
 ```
