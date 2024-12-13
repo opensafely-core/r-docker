@@ -25,7 +25,8 @@ RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked \
     --mount=type=cache,target=/cachedir,id=/cachedir-2404,sharing=locked \
     --mount=type=cache,target=/metadatacachedir,id=/metadatacachedir-2404,sharing=locked \
     --mount=type=bind,source=scripts/,target=/tmp/scripts/ \
-    --mount=type=bind,source=${MAJOR_VERSION}/packages.csv,target=/tmp/packages.csv Rscript /tmp/scripts/build.R
+    --mount=type=bind,source=${MAJOR_VERSION}/packages.csv,target=/tmp/packages.csv \
+    Rscript /tmp/scripts/build.R
 
 
 ################################################
