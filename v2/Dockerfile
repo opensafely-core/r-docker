@@ -31,7 +31,6 @@ RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked \
 #
 # Finally, build the actual image from the base-r image
 FROM base-r AS r
-RUN R -e "pak::pak_cleanup(force = TRUE)"
 
 # Some static metadata for this specific image, as defined by:
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md#pre-defined-annotation-keys
