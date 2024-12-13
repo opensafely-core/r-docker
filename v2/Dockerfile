@@ -16,14 +16,12 @@ RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked \
 EOF
 
 # use pak to install packages
-ENV PKG_CACHE_DIR=/cache
-ENV PKG_PACKAGE_CACHE_DIR=/cachedir
-ENV PKG_METADATA_CACHE_DIR=/metadatacachedir
+ENV PKG_CACHE_DIR=/cache/main
+ENV PKG_PACKAGE_CACHE_DIR=/cache/package
+ENV PKG_METADATA_CACHE_DIR=/cache/metadata
 ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
 RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked \
-    --mount=type=cache,target=/cachedir,id=/cachedir-2404,sharing=locked \
-    --mount=type=cache,target=/metadatacachedir,id=/metadatacachedir-2404,sharing=locked \
     --mount=type=bind,source=scripts/,target=/tmp/scripts/ \
     --mount=type=bind,source=${MAJOR_VERSION}/packages.csv,target=/tmp/packages.csv \
     Rscript /tmp/scripts/build.R
