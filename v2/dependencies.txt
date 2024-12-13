@@ -2,7 +2,6 @@
 tzdata
 r-base-core=4.4.2-1.2404.0
 r-base-dev=4.4.2-1.2404.0
-pandoc
 
 ## Package specific dependencies. 
 #
@@ -12,7 +11,10 @@ pandoc
 #igraph, XML, xml2
 libxml2
 
-# rmarkdown
+# rmarkdown, knitr
+pandoc
+
+# units
 libudunits2-0
 
 # magick
