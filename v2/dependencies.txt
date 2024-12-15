@@ -8,7 +8,7 @@ r-base-dev=4.4.2-1.2404.0
 # Please add comment with the name of the R package that required this package
 # to be added for future reference.
 
-#igraph, XML, xml2
+# igraph, XML, xml2
 libxml2
 
 # rmarkdown, knitr
