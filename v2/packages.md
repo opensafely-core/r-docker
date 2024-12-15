@@ -122,7 +122,7 @@ tcltk, tools, and utils) for the respective version of R.
 | effectsize            | 1.0.0         | <https://cran.r-project.org/package=effectsize>            |
 | egg                   | 0.4.5         | <https://cran.r-project.org/package=egg>                   |
 | ellipse               | 0.5.0         | <https://cran.r-project.org/package=ellipse>               |
-| emmeans               | 1.10.5        | <https://cran.r-project.org/package=emmeans>               |
+| emmeans               | 1.10.6        | <https://cran.r-project.org/package=emmeans>               |
 | emulator              | 1.2-24        | <https://cran.r-project.org/package=emulator>              |
 | enrichwith            | 0.3.1         | <https://cran.r-project.org/package=enrichwith>            |
 | Epi                   | 2.58          | <https://cran.r-project.org/package=Epi>                   |
@@ -337,7 +337,7 @@ tcltk, tools, and utils) for the respective version of R.
 | performance           | 0.12.4        | <https://cran.r-project.org/package=performance>           |
 | PerformanceAnalytics  | 2.0.8         | <https://cran.r-project.org/package=PerformanceAnalytics>  |
 | permute               | 0.9-7         | <https://cran.r-project.org/package=permute>               |
-| PHEindicatormethods   | 2.0.2         | <https://cran.r-project.org/package=PHEindicatormethods>   |
+| PHEindicatormethods   | 2.1.0         | <https://cran.r-project.org/package=PHEindicatormethods>   |
 | pillar                | 1.9.0         | <https://cran.r-project.org/package=pillar>                |
 | pkgbuild              | 1.4.5         | <https://cran.r-project.org/package=pkgbuild>              |
 | pkgconfig             | 2.0.3         | <https://cran.r-project.org/package=pkgconfig>             |
@@ -415,7 +415,7 @@ tcltk, tools, and utils) for the respective version of R.
 | riskRegression        | 2023.12.21    | <https://cran.r-project.org/package=riskRegression>        |
 | rlang                 | 1.1.4         | <https://cran.r-project.org/package=rlang>                 |
 | rmarkdown             | 2.29          | <https://cran.r-project.org/package=rmarkdown>             |
-| rms                   | 6.8-2         | <https://cran.r-project.org/package=rms>                   |
+| rms                   | 6.9-0         | <https://cran.r-project.org/package=rms>                   |
 | rngWELL               | 0.10-10       | <https://cran.r-project.org/package=rngWELL>               |
 | ROI                   | 1.0-1         | <https://cran.r-project.org/package=ROI>                   |
 | ROI.plugin.lpsolve    | 1.0-2         | <https://cran.r-project.org/package=ROI.plugin.lpsolve>    |
@@ -445,7 +445,7 @@ tcltk, tools, and utils) for the respective version of R.
 | shades                | 1.4.0         | <https://cran.r-project.org/package=shades>                |
 | shape                 | 1.4.6.1       | <https://cran.r-project.org/package=shape>                 |
 | shapviz               | 0.9.6         | <https://cran.r-project.org/package=shapviz>               |
-| shiny                 | 1.9.1         | <https://cran.r-project.org/package=shiny>                 |
+| shiny                 | 1.10.0        | <https://cran.r-project.org/package=shiny>                 |
 | shinyjs               | 2.1.0         | <https://cran.r-project.org/package=shinyjs>               |
 | sjlabelled            | 1.2.0         | <https://cran.r-project.org/package=sjlabelled>            |
 | sjmisc                | 2.8.10        | <https://cran.r-project.org/package=sjmisc>                |
