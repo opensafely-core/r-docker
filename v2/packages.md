@@ -16,7 +16,7 @@ tcltk, tools, and utils) for the respective version of R.
 |:----------------------|:--------------|:-----------------------------------------------------------|
 | abind                 | 1.4-8         | <https://cran.r-project.org/package=abind>                 |
 | anytime               | 0.3.10        | <https://cran.r-project.org/package=anytime>               |
-| ape                   | 5.8           | <https://cran.r-project.org/package=ape>                   |
+| ape                   | 5.8-1         | <https://cran.r-project.org/package=ape>                   |
 | arrow                 | 18.1.0        | <https://cran.r-project.org/package=arrow>                 |
 | ash                   | 1.0-15        | <https://cran.r-project.org/package=ash>                   |
 | AsioHeaders           | 1.22.1-2      | <https://cran.r-project.org/package=AsioHeaders>           |
@@ -179,7 +179,7 @@ tcltk, tools, and utils) for the respective version of R.
 | ggfittext             | 0.10.2        | <https://cran.r-project.org/package=ggfittext>             |
 | ggfortify             | 0.4.17        | <https://cran.r-project.org/package=ggfortify>             |
 | gggenes               | 0.5.1         | <https://cran.r-project.org/package=gggenes>               |
-| ggh4x                 | 0.2.8         | <https://cran.r-project.org/package=ggh4x>                 |
+| ggh4x                 | 0.3.0         | <https://cran.r-project.org/package=ggh4x>                 |
 | ggplot2               | 3.5.1         | <https://cran.r-project.org/package=ggplot2>               |
 | ggpubr                | 0.6.0         | <https://cran.r-project.org/package=ggpubr>                |
 | ggrepel               | 0.9.6         | <https://cran.r-project.org/package=ggrepel>               |
