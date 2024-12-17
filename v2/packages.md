@@ -315,7 +315,7 @@ tcltk, tools, and utils) for the respective version of R.
 | nnet                  | 7.3-19        | <https://cran.r-project.org/package=nnet>                  |
 | norm                  | 1.0-11.1      | <https://cran.r-project.org/package=norm>                  |
 | numDeriv              | 2016.8-1.1    | <https://cran.r-project.org/package=numDeriv>              |
-| openssl               | 2.2.2         | <https://cran.r-project.org/package=openssl>               |
+| openssl               | 2.3.0         | <https://cran.r-project.org/package=openssl>               |
 | operator.tools        | 1.6.3         | <https://cran.r-project.org/package=operator.tools>        |
 | optparse              | 1.7.5         | <https://cran.r-project.org/package=optparse>              |
 | ordinal               | 2023.12-4.1   | <https://cran.r-project.org/package=ordinal>               |
