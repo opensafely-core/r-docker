@@ -79,7 +79,7 @@ COPY rstudio/home/* /home/rstudio/
 COPY rstudio/etc/* /etc/rstudio/
 
 RUN <<EOF
-    chown -R rstudio:rstudio /home/rstudio &&
+    chown -R rstudio:rstudio /home/rstudio
     echo "R_LIBS_SITE=/usr/local/lib/R/site-library" >> /usr/lib/R/etc/Renviron.site
 EOF
 
