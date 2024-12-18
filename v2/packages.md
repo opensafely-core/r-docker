@@ -33,7 +33,7 @@ tcltk, tools, and utils) for the respective version of R.
 | bayestestR            | 0.15.0        | <https://cran.r-project.org/package=bayestestR>            |
 | bbmle                 | 1.0.25.1      | <https://cran.r-project.org/package=bbmle>                 |
 | bdsmatrix             | 1.3-7         | <https://cran.r-project.org/package=bdsmatrix>             |
-| BH                    | 1.84.0-0      | <https://cran.r-project.org/package=BH>                    |
+| BH                    | 1.87.0-1      | <https://cran.r-project.org/package=BH>                    |
 | bigD                  | 0.3.0         | <https://cran.r-project.org/package=bigD>                  |
 | biglm                 | 0.9-3         | <https://cran.r-project.org/package=biglm>                 |
 | binom                 | 1.1-1.1       | <https://cran.r-project.org/package=binom>                 |
@@ -200,7 +200,7 @@ tcltk, tools, and utils) for the respective version of R.
 | gnm                   | 1.1-5         | <https://cran.r-project.org/package=gnm>                   |
 | googledrive           | 2.1.1         | <https://cran.r-project.org/package=googledrive>           |
 | googlesheets4         | 1.1.1         | <https://cran.r-project.org/package=googlesheets4>         |
-| gower                 | 1.0.1         | <https://cran.r-project.org/package=gower>                 |
+| gower                 | 1.0.2         | <https://cran.r-project.org/package=gower>                 |
 | GPfit                 | 1.0-8         | <https://cran.r-project.org/package=GPfit>                 |
 | gridExtra             | 2.3           | <https://cran.r-project.org/package=gridExtra>             |
 | gridtext              | 0.1.5         | <https://cran.r-project.org/package=gridtext>              |
@@ -338,7 +338,7 @@ tcltk, tools, and utils) for the respective version of R.
 | PerformanceAnalytics  | 2.0.8         | <https://cran.r-project.org/package=PerformanceAnalytics>  |
 | permute               | 0.9-7         | <https://cran.r-project.org/package=permute>               |
 | PHEindicatormethods   | 2.1.0         | <https://cran.r-project.org/package=PHEindicatormethods>   |
-| pillar                | 1.9.0         | <https://cran.r-project.org/package=pillar>                |
+| pillar                | 1.10.0        | <https://cran.r-project.org/package=pillar>                |
 | pkgbuild              | 1.4.5         | <https://cran.r-project.org/package=pkgbuild>              |
 | pkgconfig             | 2.0.3         | <https://cran.r-project.org/package=pkgconfig>             |
 | pkgload               | 1.4.0         | <https://cran.r-project.org/package=pkgload>               |
@@ -468,7 +468,7 @@ tcltk, tools, and utils) for the respective version of R.
 | stringr               | 1.5.1         | <https://cran.r-project.org/package=stringr>               |
 | styler                | 1.10.3        | <https://cran.r-project.org/package=styler>                |
 | survey                | 4.4-2         | <https://cran.r-project.org/package=survey>                |
-| survival              | 3.7-0         | <https://cran.r-project.org/package=survival>              |
+| survival              | 3.8-3         | <https://cran.r-project.org/package=survival>              |
 | survminer             | 0.5.0         | <https://cran.r-project.org/package=survminer>             |
 | survMisc              | 0.5.6         | <https://cran.r-project.org/package=survMisc>              |
 | svglite               | 2.1.3         | <https://cran.r-project.org/package=svglite>               |
