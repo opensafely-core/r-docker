@@ -1,0 +1,58 @@
+## Core systemdependencies
+tzdata
+r-base-core=4.4.2-1.2404.0
+r-base-dev=4.4.2-1.2404.0
+
+## Package specific dependencies. 
+#
+# Please add comment with the name of the R package that required this package
+# to be added for future reference.
+
+# igraph, XML, xml2
+libxml2
+
+# rmarkdown, knitr
+pandoc
+
+# units
+libudunits2-0
+
+# magick
+gsfonts
+
+## -dev and -bin package dependencies
+# 
+# The following system dependencies are required for some specific R packages.
+# However, the documented dependency is the a -dev or -bin package version.
+#
+# This is due to a quirk of some Debian packaging practices that means some
+# work is needed. A not uncommon pattern in apt land is to include the major
+# version in the package name, rather than the package version. This is
+# typically done to support migration between major versions within a single OS
+# lifetime. Because the CRAN system dependencies do not know what the major
+# version and thus the name you will have on your OS is, they typically include
+# the `-dev` or `-bin` version of the package, which acts like a meta package and will
+# pull in the correctly named default major version for the OS. However, it
+# frequently pulls in many more packages than the actual library needed. 
+#
+# So, to avoid pulling in more that we need, we figure out the actual name of
+# the package, including major version, and depend on just that. Figuring this
+# out is manual, but the following can help, from the target Ubuntu version:
+#
+# debtree $PACKAGE | dot -Tjpg | display
+#
+# There is usually a package in the form of $PACKAGEVERSION in the tree which is the
+# one we actually need. This will need doing once for every version of base Ubuntu
+# image we use for an R version.
+
+# igraph: documented dependency is libglpk-dev
+libglpk40
+
+# sf
+libgdal34t64
+
+# magick: documented dependency is libmagick++-dev
+libmagick++-6.q16-9t64
+
+# V8, via daggity: documented dependency is libnode-dev
+libnode109
