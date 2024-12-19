@@ -324,7 +324,7 @@ tcltk, tools, and utils) for the respective version of R.
 | pammtools             | 0.5.93        | <https://cran.r-project.org/package=pammtools>             |
 | pan                   | 1.9           | <https://cran.r-project.org/package=pan>                   |
 | pander                | 0.6.5         | <https://cran.r-project.org/package=pander>                |
-| parallelly            | 1.40.1        | <https://cran.r-project.org/package=parallelly>            |
+| parallelly            | 1.41.0        | <https://cran.r-project.org/package=parallelly>            |
 | parameters            | 0.24.0        | <https://cran.r-project.org/package=parameters>            |
 | parglm                | 0.1.7         | <https://cran.r-project.org/package=parglm>                |
 | parsnip               | 1.2.1         | <https://cran.r-project.org/package=parsnip>               |
