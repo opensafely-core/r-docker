@@ -4,11 +4,11 @@ title = "R packages and their repositories for v2 of the OpenSAFELY r image"
 packages = ["arrow", "astsa", "BayesianTools", "bayesm", "BH", "binom", "blob", "brglm2", "brms", "broom", "broom.helpers", "butcher", "caret", "caTools", "cmprsk", "cobalt", "consort", "cowplot", "coxme", "cpp11", "dagitty", "data.table", "DBI", "dbplyr", "deSolve", "detectseparation", "doBy", "doParallel", "dplyr", "dtplyr", "dtwclust", "e1071", "egg", "emmeans", "Epi", "epitools", "estimatr", "fastDummies", "fastshap", "finalfit", "flexsurv", "fontquiver", "foreach", "forecast", "forestploter", "furrr", "fuzzyjoin", "gets", "ggalluvial", "GGally", "ggdist", "ggfortify", "ggh4x", "ggplot2", "ggvenn", "gh", "gitcreds", "glmmTMB", "glmnet", "glue", "Gmisc", "gt", "gtsummary", "haven", "HDInterval", "here", "hexbin", "Hmisc", "hms", "incidence", "interactions", "janitor", "jsonlite", "kableExtra", "knitr", "labelled", "lattice", "latticeExtra", "lcmm", "lme4", "lubridate", "magick", "magrittr", "MASS", "MatchIt", "matrixStats", "metafor", "mgcv", "mice", "mlogit", "modelsummary", "multcomp", "mvtnorm", "naniar", "NHPoisson", "nlme", "optparse", "pammtools", "parameters", "parglm", "patchwork", "pch", "pec", "PHEindicatormethods", "plotly", "plotrix", "predtools", "pscl", "pseudo", "R.utils", "randomForest", "randomForestExplainer", "Rcpp", "RcppArmadillo", "RcppEigen", "RcppParallel", "RcppProgress", "RcppRoll", "RcppThread", "rdrobust", "readxl", "relsurv", "riskRegression", "rlang", "rmarkdown", "rms", "rpart", "rpart.plot", "sandwich", "SCCS", "segmented", "sf", "shapviz", "shiny", "skimr", "splines2", "stringi", "stringr", "survey", "survminer", "svglite", "sweep", "tictoc", "tidyr", "tidyselect", "tidyverse", "timetk", "tsModel", "twopartm", "vcd", "VGAM", "WeightIt", "xml2", "xts", "zip", "zoo"]
 comment = "Packages from v1 image. Note that not all packages from v1 are included in v2."
 
-[v2.additions]
+[v2-additions]
 packages = ["corrr", "DiagrammeR", "infer", "interp", "lintr", "mstate", "parsnip", "sjPlot", "speedglm", "styler", "targets", "tidycmprsk", "tidymodels", "tidypredict"]
 comment = "sjPlot requested in issue 160."
 
-[dummy.data]
+[dummy-data]
 packages = "dd4d"
 repos = "https://opensafely-core.r-universe.dev/bin/linux/noble/4.4/"
 comment = "Will's package for simulating dummy data. First added for Will and Becky's workshop at the 2024 OpenSAFELY Symposium."
@@ -17,6 +17,6 @@ comment = "Will's package for simulating dummy data. First added for Will and Be
 packages = ["AsioHeaders", "languageserver", "httpgd"]
 comment = "Packages to work with the VSCode R extension."
 
-[trial.emulation]
+[trial-emulation]
 packages = "TrialEmulation"
 comment = "The Bristol group are planning to perform target trial emulation analyses."
