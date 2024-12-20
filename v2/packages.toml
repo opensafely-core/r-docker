@@ -1,7 +1,11 @@
 title = "R packages and their repositories for v2 of the OpenSAFELY r image"
 
-# R has 14 base packages which are included in the image: base, compiler, datasets, grDevices, graphics, grid, methods, parallel, splines, stats, stats4, tcltk, tools, utils
-# R has 14 recommended packages which are included in the image: boot, class, cluster, codetools, foreign, KernSmooth, lattice, mgcv, nlme, nnet, rpart, survival, MASS, Matrix
+# base packages
+# rownames(installed.packages(priority = "base"))
+# R has 14 base packages which are included in the image: base, compiler, datasets, grDevices, graphics, grid, methods, parallel, splines, stats, stats4, tcltk, tools, utils; these do not need to be listed below
+# recommended packages
+# rownames(installed.packages(priority = "recommended"))
+# R has 15 recommended packages, 14 of which are included in the image: boot, class, cluster, codetools, foreign, KernSmooth, lattice, mgcv, nlme, nnet, rpart, spatial, survival, MASS, Matrix; spatial is currently not included.
 
 [v1]
 packages = [
