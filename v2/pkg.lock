@@ -449,7 +449,14 @@
       "install_args": "",
       "repotype": "cran",
       "sysreqs": "V8 engine version 6+ is needed for ES6 and WASM\n        support. On Linux you can build against libv8-dev (Debian) or\n        v8-devel (Fedora). We also provide static libv8 binaries for\n        most platforms, see the README for details.",
-      "sysreqs_packages": {}
+      "sysreqs_packages": [
+        {
+          "sysreq": "v8",
+          "packages": ["libnode-dev"],
+          "pre_install": {},
+          "post_install": {}
+        }
+      ]
     },
     {
       "ref": "vctrs",
@@ -637,7 +644,14 @@
       "install_args": "",
       "repotype": "cran",
       "sysreqs": "xz (for building from source)",
-      "sysreqs_packages": {}
+      "sysreqs_packages": [
+        {
+          "sysreq": "xz",
+          "packages": ["xz-utils"],
+          "pre_install": {},
+          "post_install": {}
+        }
+      ]
     },
     {
       "ref": "formula.tools",
@@ -3434,12 +3448,6 @@
       "sysreqs": "pandoc (>= 1.12.3), pandoc-citeproc",
       "sysreqs_packages": [
         {
-          "sysreq": "pandoc-citeproc",
-          "packages": ["pandoc-citeproc"],
-          "pre_install": {},
-          "post_install": {}
-        },
-        {
           "sysreq": "pandoc",
           "packages": ["pandoc"],
           "pre_install": {},
@@ -3818,12 +3826,6 @@
       "repotype": "cran",
       "sysreqs": "pandoc (>= 1.12.3), pandoc-citeproc",
       "sysreqs_packages": [
-        {
-          "sysreq": "pandoc-citeproc",
-          "packages": ["pandoc-citeproc"],
-          "pre_install": {},
-          "post_install": {}
-        },
         {
           "sysreq": "pandoc",
           "packages": ["pandoc"],
@@ -4366,7 +4368,14 @@
       "install_args": "",
       "repotype": "cran",
       "sysreqs": "xclip (https://github.com/astrand/xclip) or xsel\n        (http://www.vergenet.net/~conrad/software/xsel/) for accessing\n        the X11 clipboard, or wl-clipboard\n        (https://github.com/bugaevc/wl-clipboard) for systems using\n        Wayland.",
-      "sysreqs_packages": {}
+      "sysreqs_packages": [
+        {
+          "sysreq": "x11",
+          "packages": ["libx11-dev"],
+          "pre_install": {},
+          "post_install": {}
+        }
+      ]
     },
     {
       "ref": "forcats",
@@ -9697,7 +9706,7 @@
       "sysreqs_packages": [
         {
           "sysreq": "imagemagick",
-          "packages": ["imagemagick", "libmagick++-dev", "gsfonts"],
+          "packages": ["libmagick++-dev", "gsfonts"],
           "pre_install": {},
           "post_install": {}
         }
