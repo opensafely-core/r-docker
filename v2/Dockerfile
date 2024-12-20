@@ -22,7 +22,7 @@ ENV PKG_METADATA_CACHE_DIR=/cache/metadata
 ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
 RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked \
-    --mount=type=bind,source=scripts/,target=/tmp/scripts/ \
+    --mount=type=bind,source=scripts/build-toml.R,target=/tmp/scripts/build-toml.R \
     --mount=type=bind,source=${MAJOR_VERSION}/packages.toml,target=/tmp/packages.toml \
     Rscript /tmp/scripts/build-toml.R
 
