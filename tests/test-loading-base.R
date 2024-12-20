@@ -10,3 +10,5 @@ for (i in 1:length(basepkgs)) {
 }
 
 print("All base R packages successfully loaded.")
+
+# Note that the loading of the recommended packages is tested with the pkg.lock file packages because they are listed in there.
