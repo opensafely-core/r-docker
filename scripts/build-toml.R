@@ -28,7 +28,7 @@ pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
 options(pkg.sysreqs = FALSE)
 
 # Obtain package names
-pkgs <- unique(c("pak", na.omit(unlist(sapply(input, "[", "packages")))))
+pkgs <- unique(na.omit(unlist(sapply(input, "[", "packages"))))
 
 # Obtain non-CRAN CRAN-like repositories, and add them to pak
 repos <- unique(na.omit(unlist(sapply(input, "[", "repos"))))
@@ -42,3 +42,6 @@ pak::lockfile_create(pkgs, lockfile = "/pkg.lock")
 
 # Install the packages based upon the lockfile
 pak::lockfile_install("/pkg.lock")
+
+# pak is not required in the final image
+remove.packages("pak")
