@@ -320,7 +320,6 @@ tcltk, tools, and utils) for the respective version of R.
 | optparse              | 1.7.5         | <https://cran.r-project.org/package=optparse>              |
 | ordinal               | 2023.12-4.1   | <https://cran.r-project.org/package=ordinal>               |
 | padr                  | 0.6.3         | <https://cran.r-project.org/package=padr>                  |
-| pak                   | 0.8.0         | <https://cran.r-project.org/package=pak>                   |
 | pammtools             | 0.5.93        | <https://cran.r-project.org/package=pammtools>             |
 | pan                   | 1.9           | <https://cran.r-project.org/package=pan>                   |
 | pander                | 0.6.5         | <https://cran.r-project.org/package=pander>                |

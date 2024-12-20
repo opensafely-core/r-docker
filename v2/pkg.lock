@@ -5,37 +5,6 @@
   "platform": "x86_64-pc-linux-gnu",
   "packages": [
     {
-      "ref": "pak",
-      "package": "pak",
-      "version": "0.8.0",
-      "type": "standard",
-      "direct": true,
-      "binary": true,
-      "dependencies": [],
-      "vignettes": false,
-      "needscompilation": false,
-      "metadata": {
-        "RemoteType": "standard",
-        "RemotePkgRef": "pak",
-        "RemoteRef": "pak",
-        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/noble/2024-12-20",
-        "RemotePkgPlatform": "x86_64-pc-linux-gnu-ubuntu-24.04",
-        "RemoteSha": "0.8.0"
-      },
-      "sources": ["https://packagemanager.posit.co/cran/__linux__/noble/2024-12-20/src/contrib/pak_0.8.0.tar.gz"],
-      "target": "src/contrib/x86_64-pc-linux-gnu-ubuntu-24.04/4.4/pak_0.8.0.tar.gz",
-      "platform": "x86_64-pc-linux-gnu-ubuntu-24.04",
-      "rversion": "4.4",
-      "directpkg": true,
-      "license": "GPL-3",
-      "dep_types": ["Depends", "Imports", "LinkingTo"],
-      "params": [],
-      "install_args": "",
-      "repotype": "cran",
-      "sysreqs": "",
-      "sysreqs_packages": {}
-    },
-    {
       "ref": "boot",
       "package": "boot",
       "version": "1.3-31",
@@ -480,14 +449,7 @@
       "install_args": "",
       "repotype": "cran",
       "sysreqs": "V8 engine version 6+ is needed for ES6 and WASM\n        support. On Linux you can build against libv8-dev (Debian) or\n        v8-devel (Fedora). We also provide static libv8 binaries for\n        most platforms, see the README for details.",
-      "sysreqs_packages": [
-        {
-          "sysreq": "v8",
-          "packages": ["libnode-dev"],
-          "pre_install": {},
-          "post_install": {}
-        }
-      ]
+      "sysreqs_packages": {}
     },
     {
       "ref": "vctrs",
@@ -675,14 +637,7 @@
       "install_args": "",
       "repotype": "cran",
       "sysreqs": "xz (for building from source)",
-      "sysreqs_packages": [
-        {
-          "sysreq": "xz",
-          "packages": ["xz-utils"],
-          "pre_install": {},
-          "post_install": {}
-        }
-      ]
+      "sysreqs_packages": {}
     },
     {
       "ref": "formula.tools",
@@ -3479,6 +3434,12 @@
       "sysreqs": "pandoc (>= 1.12.3), pandoc-citeproc",
       "sysreqs_packages": [
         {
+          "sysreq": "pandoc-citeproc",
+          "packages": ["pandoc-citeproc"],
+          "pre_install": {},
+          "post_install": {}
+        },
+        {
           "sysreq": "pandoc",
           "packages": ["pandoc"],
           "pre_install": {},
@@ -3857,6 +3818,12 @@
       "repotype": "cran",
       "sysreqs": "pandoc (>= 1.12.3), pandoc-citeproc",
       "sysreqs_packages": [
+        {
+          "sysreq": "pandoc-citeproc",
+          "packages": ["pandoc-citeproc"],
+          "pre_install": {},
+          "post_install": {}
+        },
         {
           "sysreq": "pandoc",
           "packages": ["pandoc"],
@@ -4399,14 +4366,7 @@
       "install_args": "",
       "repotype": "cran",
       "sysreqs": "xclip (https://github.com/astrand/xclip) or xsel\n        (http://www.vergenet.net/~conrad/software/xsel/) for accessing\n        the X11 clipboard, or wl-clipboard\n        (https://github.com/bugaevc/wl-clipboard) for systems using\n        Wayland.",
-      "sysreqs_packages": [
-        {
-          "sysreq": "x11",
-          "packages": ["libx11-dev"],
-          "pre_install": {},
-          "post_install": {}
-        }
-      ]
+      "sysreqs_packages": {}
     },
     {
       "ref": "forcats",
@@ -9737,7 +9697,7 @@
       "sysreqs_packages": [
         {
           "sysreq": "imagemagick",
-          "packages": ["libmagick++-dev", "gsfonts"],
+          "packages": ["imagemagick", "libmagick++-dev", "gsfonts"],
           "pre_install": {},
           "post_install": {}
         }
