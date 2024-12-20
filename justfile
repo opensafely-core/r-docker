@@ -83,3 +83,6 @@ publish-rstudio version:
       docker tag rstudio:{{ version }} ghcr.io/opensafely-core/rstudio:latest
       docker push ghcr.io/opensafely-core/rstudio:latest
     fi
+
+check-toml:
+    uvx --python 3.13 toml-validator v2/packages.toml
