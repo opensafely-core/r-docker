@@ -15,7 +15,7 @@ tcltk, tools, and utils) for the respective version of R.
 | Package               | Version       | Url                                                        |
 |:----------------------|:--------------|:-----------------------------------------------------------|
 | abind                 | 1.4-8         | <https://cran.r-project.org/package=abind>                 |
-| anytime               | 0.3.10        | <https://cran.r-project.org/package=anytime>               |
+| anytime               | 0.3.11        | <https://cran.r-project.org/package=anytime>               |
 | ape                   | 5.8-1         | <https://cran.r-project.org/package=ape>                   |
 | arrow                 | 18.1.0        | <https://cran.r-project.org/package=arrow>                 |
 | ash                   | 1.0-15        | <https://cran.r-project.org/package=ash>                   |
@@ -486,7 +486,7 @@ tcltk, tools, and utils) for the respective version of R.
 | tictoc                | 1.2.1         | <https://cran.r-project.org/package=tictoc>                |
 | tidycmprsk            | 1.1.0         | <https://cran.r-project.org/package=tidycmprsk>            |
 | tidymodels            | 1.2.0         | <https://cran.r-project.org/package=tidymodels>            |
-| tidypredict           | 0.5           | <https://cran.r-project.org/package=tidypredict>           |
+| tidypredict           | 0.5.1         | <https://cran.r-project.org/package=tidypredict>           |
 | tidyquant             | 1.0.9         | <https://cran.r-project.org/package=tidyquant>             |
 | tidyr                 | 1.3.1         | <https://cran.r-project.org/package=tidyr>                 |
 | tidyselect            | 1.2.1         | <https://cran.r-project.org/package=tidyselect>            |
