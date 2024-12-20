@@ -28,6 +28,8 @@ pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
 options(pkg.sysreqs = FALSE)
 # update metadata database everytime
 options(pkg.metadata_update_after = as.difftime(1, units = "secs"))
+# disable updating existing system requirements on CI
+options(pkg.sysreqs_update = FALSE)
 
 # Obtain package names
 pkgs <- unique(na.omit(unlist(sapply(input, "[", "packages"))))
