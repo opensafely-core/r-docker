@@ -20,7 +20,7 @@ options(pkg.sysreqs = FALSE)
 input <- configr::read.config("/tmp/packages.toml")
 
 # Obtain package names
-pkgs <- unique(na.omit(unlist(sapply(input, "[", "packages"))))
+pkgs <- unique(c("pak", "configr", na.omit(unlist(sapply(input, "[", "packages")))))
 
 # Obtain non-CRAN CRAN-like repositories, and add them to pak
 repos <- unique(na.omit(unlist(sapply(input, "[", "repos"))))
