@@ -12,15 +12,23 @@ options(HTTPUserAgent = sprintf(
   )
 ))
 
-install.packages(c("configr", "pak"), repos = c(CRAN = REPOS), destdir = "/cache")
-pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
-options(pkg.sysreqs = FALSE)
+install.packages(c("RcppTOML", "pak"), repos = c(CRAN = REPOS), destdir = "/cache")
 
 # Read in packages.toml
-input <- configr::read.config("/tmp/packages.toml")
+input <- RcppTOML::parseTOML("/tmp/packages.toml")
+# unload Rcpp and RcppTOML (as they are loaded [but not attached] by line above)
+unloadNamespace("RcppTOML")
+unloadNamespace("Rcpp")
+# Delete RcppTOML as we don't use it again
+remove.packages("RcppTOML")
+
+# Set pak to use PPPM CRAN snapshot repository
+pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
+# Disable pak updating system requirements
+options(pkg.sysreqs = FALSE)
 
 # Obtain package names
-pkgs <- unique(c("pak", "configr", na.omit(unlist(sapply(input, "[", "packages")))))
+pkgs <- unique(c("pak", na.omit(unlist(sapply(input, "[", "packages")))))
 
 # Obtain non-CRAN CRAN-like repositories, and add them to pak
 repos <- unique(na.omit(unlist(sapply(input, "[", "repos"))))
