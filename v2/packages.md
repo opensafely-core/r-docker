@@ -77,7 +77,6 @@ tcltk, tools, and utils) for the respective version of R.
 | collections           | 0.3.7         | <https://cran.r-project.org/package=collections>           |
 | colorspace            | 2.1-1         | <https://cran.r-project.org/package=colorspace>            |
 | commonmark            | 1.9.2         | <https://cran.r-project.org/package=commonmark>            |
-| configr               | 0.3.5         | <https://cran.r-project.org/package=configr>               |
 | conflicted            | 1.2.0         | <https://cran.r-project.org/package=conflicted>            |
 | consort               | 1.2.2         | <https://cran.r-project.org/package=consort>               |
 | corpcor               | 1.6.10        | <https://cran.r-project.org/package=corpcor>               |
@@ -394,7 +393,6 @@ tcltk, tools, and utils) for the respective version of R.
 | RcppProgress          | 0.4.2         | <https://cran.r-project.org/package=RcppProgress>          |
 | RcppRoll              | 0.3.1         | <https://cran.r-project.org/package=RcppRoll>              |
 | RcppThread            | 2.1.7         | <https://cran.r-project.org/package=RcppThread>            |
-| RcppTOML              | 0.2.2         | <https://cran.r-project.org/package=RcppTOML>              |
 | RCurl                 | 1.98-1.16     | <https://cran.r-project.org/package=RCurl>                 |
 | Rdpack                | 2.6.2         | <https://cran.r-project.org/package=Rdpack>                |
 | rdrobust              | 2.2           | <https://cran.r-project.org/package=rdrobust>              |
