@@ -26,6 +26,8 @@ remove.packages("RcppTOML")
 pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
 # Disable pak updating system requirements
 options(pkg.sysreqs = FALSE)
+# update metadata database everytime
+options(pkg.metadata_update_after = as.difftime(1, units = "secs"))
 
 # Obtain package names
 pkgs <- unique(na.omit(unlist(sapply(input, "[", "packages"))))
