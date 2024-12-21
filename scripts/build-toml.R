@@ -12,15 +12,7 @@ options(HTTPUserAgent = sprintf(
   )
 ))
 
-install.packages(c("RcppTOML", "pak"), repos = c(CRAN = REPOS), destdir = "/cache")
-
-# Read in packages.toml
-input <- RcppTOML::parseTOML("/tmp/packages.toml")
-# unload Rcpp and RcppTOML (as they are loaded [but not attached] by line above)
-unloadNamespace("RcppTOML")
-unloadNamespace("Rcpp")
-# Delete RcppTOML as we don't use it again
-remove.packages("RcppTOML")
+install.packages("pak", repos = c(CRAN = REPOS), destdir = "/cache")
 
 # Set pak to use PPPM CRAN snapshot repository
 pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
@@ -30,6 +22,17 @@ options(pkg.sysreqs = FALSE)
 options(pkg.metadata_update_after = as.difftime(1, units = "secs"))
 # disable updating existing system requirements on CI
 options(pkg.sysreqs_update = FALSE)
+
+# use pak to manage RcppTOML
+pak::pkg_install("RcppTOML")
+
+# Read in packages.toml
+input <- RcppTOML::parseTOML("/tmp/packages.toml")
+# unload Rcpp and RcppTOML (as they are loaded [but not attached] by line above)
+unloadNamespace("RcppTOML")
+unloadNamespace("Rcpp")
+# Delete RcppTOML as we don't use it again
+pak::pkg_remove("RcppTOML")
 
 # Obtain package names
 pkgs <- unique(na.omit(unlist(sapply(input, "[", "packages"))))
