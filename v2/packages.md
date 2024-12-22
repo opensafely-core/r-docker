@@ -427,7 +427,7 @@ tcltk, tools, and utils) for the respective version of R.
 | rstan                 | 2.32.6        | <https://cran.r-project.org/package=rstan>                 |
 | rstantools            | 2.4.0         | <https://cran.r-project.org/package=rstantools>            |
 | rstatix               | 0.7.2         | <https://cran.r-project.org/package=rstatix>               |
-| rstpm2                | 1.6.6         | <https://cran.r-project.org/package=rstpm2>                |
+| rstpm2                | 1.6.6.1       | <https://cran.r-project.org/package=rstpm2>                |
 | rstudioapi            | 0.17.1        | <https://cran.r-project.org/package=rstudioapi>            |
 | rvest                 | 1.0.4         | <https://cran.r-project.org/package=rvest>                 |
 | s2                    | 1.1.7         | <https://cran.r-project.org/package=s2>                    |
