@@ -236,7 +236,7 @@ tcltk, tools, and utils) for the respective version of R.
 | ipred                 | 0.9-15        | <https://cran.r-project.org/package=ipred>                 |
 | isoband               | 0.2.7         | <https://cran.r-project.org/package=isoband>               |
 | iterators             | 1.0.14        | <https://cran.r-project.org/package=iterators>             |
-| janitor               | 2.2.0         | <https://cran.r-project.org/package=janitor>               |
+| janitor               | 2.2.1         | <https://cran.r-project.org/package=janitor>               |
 | jomo                  | 2.7-6         | <https://cran.r-project.org/package=jomo>                  |
 | jpeg                  | 0.1-10        | <https://cran.r-project.org/package=jpeg>                  |
 | jquerylib             | 0.1.4         | <https://cran.r-project.org/package=jquerylib>             |
