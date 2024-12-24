@@ -1,0 +1,56 @@
+---
+title: "Package Versions for `r Sys.getenv('MAJOR_VERSION')`"
+output:
+  github_document:
+    html_preview: false
+---
+
+This r:`r Sys.getenv('MAJOR_VERSION')` OpenSAFELY image is based on Ubuntu `r Sys.getenv('BASE')` with R `r getRversion()`.
+
+## R packages
+
+The image comes pre-installed with a set of R packages listed in the table below.
+Some packages may no longer be on CRAN and so their URL below will link to the archive of that package's source code.
+Each image also contains the 14 base R packages (base, compiler, datasets, grDevices, graphics, grid, methods, parallel, splines, stats, stats4, tcltk, tools, and utils) for the respective version of R.
+
+```{r, echo=FALSE, results='asis', warning=FALSE}
+if (Sys.getenv("MAJOR_VERSION") == "v1") {
+suppressMessages(library(dplyr))
+renvlock <- jsonlite::fromJSON(paste0("/out/", Sys.getenv("MAJOR_VERSION"), "/renv.lock"))
+pkgs <- renvlock[["Packages"]]
+pkgs <- data.frame(Reduce(rbind, pkgs))
+pkgs <- pkgs %>% dplyr::select(Package, Version, Repository)
+pkgs <- pkgs %>%
+  mutate(
+    Url = case_when(
+      Repository == "RSPM" | Repository == "CRAN" ~ paste0("<https://cran.r-project.org/package=", Package, ">"),
+      Repository != "RSPM" | Repository != "CRAN" ~ paste0("<", Repository, "/", Package, ">")
+    )
+  )
+pkgs <- pkgs %>%
+  dplyr::select(Package, Version, Url) %>%
+  mutate(Package = as.character(Package), Version = as.character(Version)) %>%
+  arrange(Package, .locale = "en")
+knitr::kable(pkgs, row.names = FALSE)
+}
+if (Sys.getenv("MAJOR_VERSION") == "v2") {
+suppressMessages(library(dplyr))
+pkglock <- jsonlite::fromJSON(paste0("/out/", Sys.getenv("MAJOR_VERSION"), "/pkg.lock"))
+pkgs <- pkglock[["packages"]]
+metadataremoterepos <- pkgs$metadata$RemoteRepos
+pkgs <- pkgs %>% dplyr::select(package, version, sources, repotype)
+pkgs <- pkgs %>% mutate(metadataremoterepos = metadataremoterepos)
+pkgs <- pkgs %>%
+  mutate(
+    url = case_when(
+      repotype == "cran" ~ paste0("<https://cran.r-project.org/package=", package, ">"),
+      repotype == "cranlike" ~ paste0("<", sub("/bin/linux/noble/4.4/", "", metadataremoterepos), "/", package, ">")
+    )
+  )
+pkgs <- pkgs %>%
+  dplyr::select(package, version, url) %>%
+  arrange(package, .locale = "en")
+pkgs <- pkgs %>% rename(Package = package, Version = version, Url = url)
+knitr::kable(pkgs, row.names = FALSE)
+}
+```

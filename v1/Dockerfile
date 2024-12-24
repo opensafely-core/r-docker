@@ -5,10 +5,10 @@
 # create base image with those installed to save installing them twice.
 FROM ghcr.io/opensafely-core/base-action:20.04 as base-r
 
-COPY dependencies.txt /root/dependencies.txt
+COPY v1/dependencies.txt /root/dependencies.txt
 
 # add cran repo for R packages and install
-RUN --mount=type=cache,target=/var/cache/apt \
+RUN --mount=type=cache,target=/var/cache/apt,id=apt-2004 \
     echo "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" > /etc/apt/sources.list.d/cran.list &&\
     /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc &&\
     /root/docker-apt-install.sh /root/dependencies.txt
@@ -23,8 +23,8 @@ ENV RENV_PATHS_LIBRARY=/renv/lib \
 FROM base-r as builder
 
 # install build time dependencies 
-COPY build-dependencies.txt /root/build-dependencies.txt
-RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/build-dependencies.txt
+COPY v1/build-dependencies.txt /root/build-dependencies.txt
+RUN --mount=type=cache,target=/var/cache/apt,id=apt-2004 /root/docker-apt-install.sh /root/build-dependencies.txt
 
 RUN mkdir -p /cache /renv/lib
 
@@ -41,13 +41,13 @@ WORKDIR /renv
 RUN --mount=type=cache,target=/cache,id=/cache-2004 R -e 'install.packages("renv", destdir="/cache"); renv::init(bare = TRUE)'
 
 # use renv to install packages
-COPY renv.lock /renv/renv.lock
+COPY v1/renv.lock /renv/renv.lock
 RUN --mount=type=cache,target=/cache,id=/cache-2004 R -e 'renv::restore()'
 
 # renv uses symlinks to the the build cache to populate the lib directory. As
 # our cache is mounted only at build (so we can do fast rebuilds), we need to
 # change the symlinks into full copies, to store them in the image.
-COPY copy-symlink.sh /tmp/copy-symlink.sh
+COPY scripts/copy-symlink.sh /tmp/copy-symlink.sh
 RUN --mount=type=cache,target=/cache,id=/cache-2004 bash /tmp/copy-symlink.sh /renv/lib
 
 
@@ -108,7 +108,7 @@ FROM r as rstudio
 
 # Install rstudio-server (and a few dependencies)
 COPY rstudio/rstudio-dependencies.txt /root/rstudio-dependencies.txt
-RUN --mount=type=cache,target=/var/cache/apt /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
+RUN --mount=type=cache,target=/var/cache/apt,id=apt-2004 /root/docker-apt-install.sh /root/rstudio-dependencies.txt &&\
     test -f /var/cache/apt/"${RSTUDIO_DEB}" ||\
     /usr/lib/apt/apt-helper download-file "${RSTUDIO_BASE_URL}${RSTUDIO_DEB}" /var/cache/apt/"${RSTUDIO_DEB}" &&\
     apt-get install --no-install-recommends -y /var/cache/apt/"${RSTUDIO_DEB}"
