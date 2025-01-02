@@ -63,7 +63,7 @@ tcltk, tools, and utils) for the respective version of R.
 | cellranger            | 1.1.0         | <https://cran.r-project.org/package=cellranger>            |
 | checkmate             | 2.3.2         | <https://cran.r-project.org/package=checkmate>             |
 | chk                   | 0.9.2         | <https://cran.r-project.org/package=chk>                   |
-| class                 | 7.3-22        | <https://cran.r-project.org/package=class>                 |
+| class                 | 7.3-23        | <https://cran.r-project.org/package=class>                 |
 | classInt              | 0.4-10        | <https://cran.r-project.org/package=classInt>              |
 | cli                   | 3.6.3         | <https://cran.r-project.org/package=cli>                   |
 | clipr                 | 0.8.0         | <https://cran.r-project.org/package=clipr>                 |
@@ -245,7 +245,7 @@ tcltk, tools, and utils) for the respective version of R.
 | juicyjuice            | 0.1.0         | <https://cran.r-project.org/package=juicyjuice>            |
 | kableExtra            | 1.4.0         | <https://cran.r-project.org/package=kableExtra>            |
 | kernlab               | 0.9-33        | <https://cran.r-project.org/package=kernlab>               |
-| KernSmooth            | 2.23-24       | <https://cran.r-project.org/package=KernSmooth>            |
+| KernSmooth            | 2.23-26       | <https://cran.r-project.org/package=KernSmooth>            |
 | km.ci                 | 0.5-6         | <https://cran.r-project.org/package=km.ci>                 |
 | KMsurv                | 0.1-5         | <https://cran.r-project.org/package=KMsurv>                |
 | knitr                 | 1.49          | <https://cran.r-project.org/package=knitr>                 |
@@ -274,7 +274,7 @@ tcltk, tools, and utils) for the respective version of R.
 | magrittr              | 2.0.3         | <https://cran.r-project.org/package=magrittr>              |
 | markdown              | 1.13          | <https://cran.r-project.org/package=markdown>              |
 | marqLevAlg            | 2.0.8         | <https://cran.r-project.org/package=marqLevAlg>            |
-| MASS                  | 7.3-61        | <https://cran.r-project.org/package=MASS>                  |
+| MASS                  | 7.3-63        | <https://cran.r-project.org/package=MASS>                  |
 | MatchIt               | 4.6.0         | <https://cran.r-project.org/package=MatchIt>               |
 | mathjaxr              | 1.6-0         | <https://cran.r-project.org/package=mathjaxr>              |
 | Matrix                | 1.7-1         | <https://cran.r-project.org/package=Matrix>                |
@@ -312,7 +312,7 @@ tcltk, tools, and utils) for the respective version of R.
 | nleqslv               | 3.3.5         | <https://cran.r-project.org/package=nleqslv>               |
 | nlme                  | 3.1-166       | <https://cran.r-project.org/package=nlme>                  |
 | nloptr                | 2.1.1         | <https://cran.r-project.org/package=nloptr>                |
-| nnet                  | 7.3-19        | <https://cran.r-project.org/package=nnet>                  |
+| nnet                  | 7.3-20        | <https://cran.r-project.org/package=nnet>                  |
 | norm                  | 1.0-11.1      | <https://cran.r-project.org/package=norm>                  |
 | numDeriv              | 2016.8-1.1    | <https://cran.r-project.org/package=numDeriv>              |
 | openssl               | 2.3.0         | <https://cran.r-project.org/package=openssl>               |
@@ -530,7 +530,7 @@ tcltk, tools, and utils) for the respective version of R.
 | workflowsets          | 1.1.0         | <https://cran.r-project.org/package=workflowsets>          |
 | xfun                  | 0.49          | <https://cran.r-project.org/package=xfun>                  |
 | xgboost               | 1.7.8.1       | <https://cran.r-project.org/package=xgboost>               |
-| XML                   | 3.99-0.17     | <https://cran.r-project.org/package=XML>                   |
+| XML                   | 3.99-0.18     | <https://cran.r-project.org/package=XML>                   |
 | xml2                  | 1.3.6         | <https://cran.r-project.org/package=xml2>                  |
 | xmlparsedata          | 1.0.5         | <https://cran.r-project.org/package=xmlparsedata>          |
 | xtable                | 1.8-4         | <https://cran.r-project.org/package=xtable>                |
