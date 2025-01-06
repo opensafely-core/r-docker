@@ -274,7 +274,7 @@ tcltk, tools, and utils) for the respective version of R.
 | magrittr              | 2.0.3         | <https://cran.r-project.org/package=magrittr>              |
 | markdown              | 1.13          | <https://cran.r-project.org/package=markdown>              |
 | marqLevAlg            | 2.0.8         | <https://cran.r-project.org/package=marqLevAlg>            |
-| MASS                  | 7.3-63        | <https://cran.r-project.org/package=MASS>                  |
+| MASS                  | 7.3-64        | <https://cran.r-project.org/package=MASS>                  |
 | MatchIt               | 4.6.0         | <https://cran.r-project.org/package=MatchIt>               |
 | mathjaxr              | 1.6-0         | <https://cran.r-project.org/package=mathjaxr>              |
 | Matrix                | 1.7-1         | <https://cran.r-project.org/package=Matrix>                |
