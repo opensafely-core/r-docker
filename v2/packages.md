@@ -87,7 +87,7 @@ tcltk, tools, and utils) for the respective version of R.
 | cpp11                 | 0.5.1         | <https://cran.r-project.org/package=cpp11>                 |
 | crayon                | 1.5.3         | <https://cran.r-project.org/package=crayon>                |
 | crosstalk             | 1.2.1         | <https://cran.r-project.org/package=crosstalk>             |
-| curl                  | 6.0.1         | <https://cran.r-project.org/package=curl>                  |
+| curl                  | 6.1.0         | <https://cran.r-project.org/package=curl>                  |
 | cyclocomp             | 1.1.1         | <https://cran.r-project.org/package=cyclocomp>             |
 | dagitty               | 0.3-4         | <https://cran.r-project.org/package=dagitty>               |
 | data.table            | 1.16.4        | <https://cran.r-project.org/package=data.table>            |
