@@ -48,7 +48,7 @@ tcltk, tools, and utils) for the respective version of R.
 | brms                  | 2.22.0        | <https://cran.r-project.org/package=brms>                  |
 | Brobdingnag           | 1.2-9         | <https://cran.r-project.org/package=Brobdingnag>           |
 | broom                 | 1.0.7         | <https://cran.r-project.org/package=broom>                 |
-| broom.helpers         | 1.17.0        | <https://cran.r-project.org/package=broom.helpers>         |
+| broom.helpers         | 1.18.0        | <https://cran.r-project.org/package=broom.helpers>         |
 | broom.mixed           | 0.2.9.6       | <https://cran.r-project.org/package=broom.mixed>           |
 | bslib                 | 0.8.0         | <https://cran.r-project.org/package=bslib>                 |
 | butcher               | 0.3.4         | <https://cran.r-project.org/package=butcher>               |
@@ -186,7 +186,7 @@ tcltk, tools, and utils) for the respective version of R.
 | ggridges              | 0.5.6         | <https://cran.r-project.org/package=ggridges>              |
 | ggsci                 | 3.2.0         | <https://cran.r-project.org/package=ggsci>                 |
 | ggsignif              | 0.6.4         | <https://cran.r-project.org/package=ggsignif>              |
-| ggstats               | 0.7.0         | <https://cran.r-project.org/package=ggstats>               |
+| ggstats               | 0.8.0         | <https://cran.r-project.org/package=ggstats>               |
 | ggtext                | 0.1.2         | <https://cran.r-project.org/package=ggtext>                |
 | ggvenn                | 0.1.10        | <https://cran.r-project.org/package=ggvenn>                |
 | gh                    | 1.4.1         | <https://cran.r-project.org/package=gh>                    |
@@ -225,7 +225,7 @@ tcltk, tools, and utils) for the respective version of R.
 | httr2                 | 1.0.7         | <https://cran.r-project.org/package=httr2>                 |
 | IDPmisc               | 1.1.21        | <https://cran.r-project.org/package=IDPmisc>               |
 | ids                   | 1.0.1         | <https://cran.r-project.org/package=ids>                   |
-| igraph                | 2.1.2         | <https://cran.r-project.org/package=igraph>                |
+| igraph                | 2.1.3         | <https://cran.r-project.org/package=igraph>                |
 | incidence             | 1.7.5         | <https://cran.r-project.org/package=incidence>             |
 | infer                 | 1.0.7         | <https://cran.r-project.org/package=infer>                 |
 | ini                   | 0.3.1         | <https://cran.r-project.org/package=ini>                   |
@@ -279,7 +279,7 @@ tcltk, tools, and utils) for the respective version of R.
 | mathjaxr              | 1.6-0         | <https://cran.r-project.org/package=mathjaxr>              |
 | Matrix                | 1.7-1         | <https://cran.r-project.org/package=Matrix>                |
 | MatrixModels          | 0.5-3         | <https://cran.r-project.org/package=MatrixModels>          |
-| matrixStats           | 1.4.1         | <https://cran.r-project.org/package=matrixStats>           |
+| matrixStats           | 1.5.0         | <https://cran.r-project.org/package=matrixStats>           |
 | maxstat               | 0.7-25        | <https://cran.r-project.org/package=maxstat>               |
 | mclust                | 6.1.1         | <https://cran.r-project.org/package=mclust>                |
 | memoise               | 2.0.1         | <https://cran.r-project.org/package=memoise>               |
@@ -337,7 +337,7 @@ tcltk, tools, and utils) for the respective version of R.
 | PerformanceAnalytics  | 2.0.8         | <https://cran.r-project.org/package=PerformanceAnalytics>  |
 | permute               | 0.9-7         | <https://cran.r-project.org/package=permute>               |
 | PHEindicatormethods   | 2.1.0         | <https://cran.r-project.org/package=PHEindicatormethods>   |
-| pillar                | 1.10.0        | <https://cran.r-project.org/package=pillar>                |
+| pillar                | 1.10.1        | <https://cran.r-project.org/package=pillar>                |
 | pkgbuild              | 1.4.5         | <https://cran.r-project.org/package=pkgbuild>              |
 | pkgconfig             | 2.0.3         | <https://cran.r-project.org/package=pkgconfig>             |
 | pkgload               | 1.4.0         | <https://cran.r-project.org/package=pkgload>               |
@@ -391,7 +391,7 @@ tcltk, tools, and utils) for the respective version of R.
 | RcppParallel          | 5.1.9         | <https://cran.r-project.org/package=RcppParallel>          |
 | RcppProgress          | 0.4.2         | <https://cran.r-project.org/package=RcppProgress>          |
 | RcppRoll              | 0.3.1         | <https://cran.r-project.org/package=RcppRoll>              |
-| RcppThread            | 2.1.7         | <https://cran.r-project.org/package=RcppThread>            |
+| RcppThread            | 2.2.0         | <https://cran.r-project.org/package=RcppThread>            |
 | RCurl                 | 1.98-1.16     | <https://cran.r-project.org/package=RCurl>                 |
 | Rdpack                | 2.6.2         | <https://cran.r-project.org/package=Rdpack>                |
 | rdrobust              | 2.2           | <https://cran.r-project.org/package=rdrobust>              |
@@ -419,7 +419,7 @@ tcltk, tools, and utils) for the respective version of R.
 | ROI                   | 1.0-1         | <https://cran.r-project.org/package=ROI>                   |
 | ROI.plugin.lpsolve    | 1.0-2         | <https://cran.r-project.org/package=ROI.plugin.lpsolve>    |
 | roxygen2              | 7.3.2         | <https://cran.r-project.org/package=roxygen2>              |
-| rpart                 | 4.1.23        | <https://cran.r-project.org/package=rpart>                 |
+| rpart                 | 4.1.24        | <https://cran.r-project.org/package=rpart>                 |
 | rpart.plot            | 3.1.2         | <https://cran.r-project.org/package=rpart.plot>            |
 | rprojroot             | 2.0.4         | <https://cran.r-project.org/package=rprojroot>             |
 | rsample               | 1.2.1         | <https://cran.r-project.org/package=rsample>               |
@@ -528,7 +528,7 @@ tcltk, tools, and utils) for the respective version of R.
 | wk                    | 0.9.4         | <https://cran.r-project.org/package=wk>                    |
 | workflows             | 1.1.4         | <https://cran.r-project.org/package=workflows>             |
 | workflowsets          | 1.1.0         | <https://cran.r-project.org/package=workflowsets>          |
-| xfun                  | 0.49          | <https://cran.r-project.org/package=xfun>                  |
+| xfun                  | 0.50          | <https://cran.r-project.org/package=xfun>                  |
 | xgboost               | 1.7.8.1       | <https://cran.r-project.org/package=xgboost>               |
 | XML                   | 3.99-0.18     | <https://cran.r-project.org/package=XML>                   |
 | xml2                  | 1.3.6         | <https://cran.r-project.org/package=xml2>                  |
