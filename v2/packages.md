@@ -230,8 +230,8 @@ tcltk, tools, and utils) for the respective version of R.
 | incidence             | 1.7.5         | <https://cran.r-project.org/package=incidence>             |
 | infer                 | 1.0.7         | <https://cran.r-project.org/package=infer>                 |
 | ini                   | 0.3.1         | <https://cran.r-project.org/package=ini>                   |
-| inline                | 0.3.20        | <https://cran.r-project.org/package=inline>                |
-| insight               | 1.0.0         | <https://cran.r-project.org/package=insight>               |
+| inline                | 0.3.21        | <https://cran.r-project.org/package=inline>                |
+| insight               | 1.0.1         | <https://cran.r-project.org/package=insight>               |
 | interactions          | 1.2.0         | <https://cran.r-project.org/package=interactions>          |
 | interp                | 1.1-6         | <https://cran.r-project.org/package=interp>                |
 | ipred                 | 0.9-15        | <https://cran.r-project.org/package=ipred>                 |
@@ -316,7 +316,7 @@ tcltk, tools, and utils) for the respective version of R.
 | nnet                  | 7.3-20        | <https://cran.r-project.org/package=nnet>                  |
 | norm                  | 1.0-11.1      | <https://cran.r-project.org/package=norm>                  |
 | numDeriv              | 2016.8-1.1    | <https://cran.r-project.org/package=numDeriv>              |
-| openssl               | 2.3.0         | <https://cran.r-project.org/package=openssl>               |
+| openssl               | 2.3.1         | <https://cran.r-project.org/package=openssl>               |
 | operator.tools        | 1.6.3         | <https://cran.r-project.org/package=operator.tools>        |
 | optparse              | 1.7.5         | <https://cran.r-project.org/package=optparse>              |
 | ordinal               | 2023.12-4.1   | <https://cran.r-project.org/package=ordinal>               |
