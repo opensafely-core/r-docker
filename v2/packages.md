@@ -91,7 +91,7 @@ tcltk, tools, and utils) for the respective version of R.
 | cyclocomp             | 1.1.1         | <https://cran.r-project.org/package=cyclocomp>             |
 | dagitty               | 0.3-4         | <https://cran.r-project.org/package=dagitty>               |
 | data.table            | 1.16.4        | <https://cran.r-project.org/package=data.table>            |
-| datawizard            | 0.13.0        | <https://cran.r-project.org/package=datawizard>            |
+| datawizard            | 1.0.0         | <https://cran.r-project.org/package=datawizard>            |
 | date                  | 1.2-42        | <https://cran.r-project.org/package=date>                  |
 | DBI                   | 1.2.3         | <https://cran.r-project.org/package=DBI>                   |
 | dbplyr                | 2.5.0         | <https://cran.r-project.org/package=dbplyr>                |
@@ -131,7 +131,7 @@ tcltk, tools, and utils) for the respective version of R.
 | estimability          | 1.5.1         | <https://cran.r-project.org/package=estimability>          |
 | estimatr              | 1.0.4         | <https://cran.r-project.org/package=estimatr>              |
 | etm                   | 1.1.1         | <https://cran.r-project.org/package=etm>                   |
-| evaluate              | 1.0.1         | <https://cran.r-project.org/package=evaluate>              |
+| evaluate              | 1.0.3         | <https://cran.r-project.org/package=evaluate>              |
 | exactRankTests        | 0.8-35        | <https://cran.r-project.org/package=exactRankTests>        |
 | expm                  | 1.0-0         | <https://cran.r-project.org/package=expm>                  |
 | fansi                 | 1.0.6         | <https://cran.r-project.org/package=fansi>                 |
@@ -215,7 +215,7 @@ tcltk, tools, and utils) for the respective version of R.
 | here                  | 1.0.1         | <https://cran.r-project.org/package=here>                  |
 | hexbin                | 1.28.5        | <https://cran.r-project.org/package=hexbin>                |
 | highr                 | 0.11          | <https://cran.r-project.org/package=highr>                 |
-| Hmisc                 | 5.2-1         | <https://cran.r-project.org/package=Hmisc>                 |
+| Hmisc                 | 5.2-2         | <https://cran.r-project.org/package=Hmisc>                 |
 | hms                   | 1.1.3         | <https://cran.r-project.org/package=hms>                   |
 | htmlTable             | 2.4.3         | <https://cran.r-project.org/package=htmlTable>             |
 | htmltools             | 0.5.8.1       | <https://cran.r-project.org/package=htmltools>             |
@@ -307,7 +307,7 @@ tcltk, tools, and utils) for the respective version of R.
 | multcomp              | 1.4-26        | <https://cran.r-project.org/package=multcomp>              |
 | multicool             | 1.0.1         | <https://cran.r-project.org/package=multicool>             |
 | munsell               | 0.5.1         | <https://cran.r-project.org/package=munsell>               |
-| mvtnorm               | 1.3-2         | <https://cran.r-project.org/package=mvtnorm>               |
+| mvtnorm               | 1.3-3         | <https://cran.r-project.org/package=mvtnorm>               |
 | naniar                | 1.1.0         | <https://cran.r-project.org/package=naniar>                |
 | NHPoisson             | 3.3           | <https://cran.r-project.org/package=NHPoisson>             |
 | nleqslv               | 3.3.5         | <https://cran.r-project.org/package=nleqslv>               |
@@ -467,7 +467,7 @@ tcltk, tools, and utils) for the respective version of R.
 | SQUAREM               | 2021.1        | <https://cran.r-project.org/package=SQUAREM>               |
 | StanHeaders           | 2.32.10       | <https://cran.r-project.org/package=StanHeaders>           |
 | statmod               | 1.5.0         | <https://cran.r-project.org/package=statmod>               |
-| stringdist            | 0.9.14        | <https://cran.r-project.org/package=stringdist>            |
+| stringdist            | 0.9.15        | <https://cran.r-project.org/package=stringdist>            |
 | stringi               | 1.8.4         | <https://cran.r-project.org/package=stringi>               |
 | stringr               | 1.5.1         | <https://cran.r-project.org/package=stringr>               |
 | styler                | 1.10.3        | <https://cran.r-project.org/package=styler>                |
