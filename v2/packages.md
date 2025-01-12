@@ -264,7 +264,7 @@ tcltk, tools, and utils) for the respective version of R.
 | lifecycle             | 1.0.4         | <https://cran.r-project.org/package=lifecycle>             |
 | lintr                 | 3.1.2         | <https://cran.r-project.org/package=lintr>                 |
 | listenv               | 0.9.1         | <https://cran.r-project.org/package=listenv>               |
-| lme4                  | 1.1-35.5      | <https://cran.r-project.org/package=lme4>                  |
+| lme4                  | 1.1-36        | <https://cran.r-project.org/package=lme4>                  |
 | lmtest                | 0.9-40        | <https://cran.r-project.org/package=lmtest>                |
 | lobstr                | 1.1.2         | <https://cran.r-project.org/package=lobstr>                |
 | locfit                | 1.5-9.10      | <https://cran.r-project.org/package=locfit>                |
@@ -286,7 +286,7 @@ tcltk, tools, and utils) for the respective version of R.
 | memoise               | 2.0.1         | <https://cran.r-project.org/package=memoise>               |
 | metadat               | 1.2-0         | <https://cran.r-project.org/package=metadat>               |
 | metafor               | 4.6-0         | <https://cran.r-project.org/package=metafor>               |
-| mets                  | 1.3.4         | <https://cran.r-project.org/package=mets>                  |
+| mets                  | 1.3.5         | <https://cran.r-project.org/package=mets>                  |
 | mgcv                  | 1.9-1         | <https://cran.r-project.org/package=mgcv>                  |
 | mice                  | 3.17.0        | <https://cran.r-project.org/package=mice>                  |
 | microbenchmark        | 1.5.0         | <https://cran.r-project.org/package=microbenchmark>        |
