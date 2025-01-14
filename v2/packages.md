@@ -126,7 +126,7 @@ tcltk, tools, and utils) for the respective version of R.
 | emmeans               | 1.10.6        | <https://cran.r-project.org/package=emmeans>               |
 | emulator              | 1.2-24        | <https://cran.r-project.org/package=emulator>              |
 | enrichwith            | 0.3.1         | <https://cran.r-project.org/package=enrichwith>            |
-| Epi                   | 2.58          | <https://cran.r-project.org/package=Epi>                   |
+| Epi                   | 2.59          | <https://cran.r-project.org/package=Epi>                   |
 | epitools              | 0.5-10.1      | <https://cran.r-project.org/package=epitools>              |
 | estimability          | 1.5.1         | <https://cran.r-project.org/package=estimability>          |
 | estimatr              | 1.0.4         | <https://cran.r-project.org/package=estimatr>              |
@@ -153,7 +153,7 @@ tcltk, tools, and utils) for the respective version of R.
 | forcats               | 1.0.0         | <https://cran.r-project.org/package=forcats>               |
 | foreach               | 1.5.2         | <https://cran.r-project.org/package=foreach>               |
 | forecast              | 8.23.0        | <https://cran.r-project.org/package=forecast>              |
-| foreign               | 0.8-87        | <https://cran.r-project.org/package=foreign>               |
+| foreign               | 0.8-88        | <https://cran.r-project.org/package=foreign>               |
 | forestplot            | 3.1.6         | <https://cran.r-project.org/package=forestplot>            |
 | forestploter          | 1.1.2         | <https://cran.r-project.org/package=forestploter>          |
 | Formula               | 1.2-5         | <https://cran.r-project.org/package=Formula>               |
@@ -257,7 +257,7 @@ tcltk, tools, and utils) for the respective version of R.
 | later                 | 1.4.1         | <https://cran.r-project.org/package=later>                 |
 | lattice               | 0.22-6        | <https://cran.r-project.org/package=lattice>               |
 | latticeExtra          | 0.6-30        | <https://cran.r-project.org/package=latticeExtra>          |
-| lava                  | 1.8.0         | <https://cran.r-project.org/package=lava>                  |
+| lava                  | 1.8.1         | <https://cran.r-project.org/package=lava>                  |
 | lazyeval              | 0.2.2         | <https://cran.r-project.org/package=lazyeval>              |
 | lcmm                  | 2.1.0         | <https://cran.r-project.org/package=lcmm>                  |
 | lhs                   | 1.2.0         | <https://cran.r-project.org/package=lhs>                   |
@@ -276,7 +276,7 @@ tcltk, tools, and utils) for the respective version of R.
 | markdown              | 1.13          | <https://cran.r-project.org/package=markdown>              |
 | marqLevAlg            | 2.0.8         | <https://cran.r-project.org/package=marqLevAlg>            |
 | MASS                  | 7.3-64        | <https://cran.r-project.org/package=MASS>                  |
-| MatchIt               | 4.6.0         | <https://cran.r-project.org/package=MatchIt>               |
+| MatchIt               | 4.7.0         | <https://cran.r-project.org/package=MatchIt>               |
 | mathjaxr              | 1.6-0         | <https://cran.r-project.org/package=mathjaxr>              |
 | Matrix                | 1.7-1         | <https://cran.r-project.org/package=Matrix>                |
 | MatrixModels          | 0.5-3         | <https://cran.r-project.org/package=MatrixModels>          |
@@ -387,7 +387,7 @@ tcltk, tools, and utils) for the respective version of R.
 | rbibutils             | 2.3           | <https://cran.r-project.org/package=rbibutils>             |
 | RColorBrewer          | 1.1-3         | <https://cran.r-project.org/package=RColorBrewer>          |
 | RConics               | 1.1.1         | <https://cran.r-project.org/package=RConics>               |
-| Rcpp                  | 1.0.13-1      | <https://cran.r-project.org/package=Rcpp>                  |
+| Rcpp                  | 1.0.14        | <https://cran.r-project.org/package=Rcpp>                  |
 | RcppArmadillo         | 14.2.2-1      | <https://cran.r-project.org/package=RcppArmadillo>         |
 | RcppEigen             | 0.3.4.0.2     | <https://cran.r-project.org/package=RcppEigen>             |
 | RcppParallel          | 5.1.9         | <https://cran.r-project.org/package=RcppParallel>          |
@@ -480,7 +480,7 @@ tcltk, tools, and utils) for the respective version of R.
 | sys                   | 3.4.3         | <https://cran.r-project.org/package=sys>                   |
 | systemfonts           | 1.1.0         | <https://cran.r-project.org/package=systemfonts>           |
 | tables                | 0.9.31        | <https://cran.r-project.org/package=tables>                |
-| targets               | 1.9.1         | <https://cran.r-project.org/package=targets>               |
+| targets               | 1.10.0        | <https://cran.r-project.org/package=targets>               |
 | tensorA               | 0.36.2.1      | <https://cran.r-project.org/package=tensorA>               |
 | textshaping           | 0.4.1         | <https://cran.r-project.org/package=textshaping>           |
 | TH.data               | 1.1-2         | <https://cran.r-project.org/package=TH.data>               |
