@@ -28,13 +28,15 @@ can take a long time (e.g. an hour).  However, to alleviate this, the
 v1/Dockerfile is carefully designed to use local buildkit cache, so subequent
 rebuilds should be very fast.
 
+In v2, where possible we install binary R packages for Linux from the Posit Public Package Manager (PPPM). And we use the pak package to install packages. This has several advantages including parallel downloads of packages. Therefore, building the v2 image only takes approx. 5 minutes, which is orders of magnitude faster than building the v1 image.
+
 ## Adding new packages
 
 :warning: To do this you will need:
 
  * Enough bandwidth to comfortably push potentionally gigabytes worth of
    Docker layers.
- * Several hours worth of CPU time to re-compile all the packages (if
+ * (Under v1) Several hours worth of CPU time to re-compile all the packages (if
    this is the first time you've done this and don't have them cached
    locally).
  * Push access to ghcr.io.
@@ -63,13 +65,37 @@ just add-package-v1 PACKAGE REPOS
 ```
 
 This will attempt to install and build the package and its dependencies, and
-update the `v1/renv.lock`. It will then rebuild the R image with the new lock file
+update the _v1/renv.lock_. It will then rebuild the R image with the new lock file
 and test it.
 
 Note that the first time you do this it will need to compile every
 included R package (because you won't have the R package builds cached
 locally). This can take **several hours**. (When we solve the caching
 problem here we'll be able to do this all in CI.)
+
+#### Under v2
+
+Add a new section for the new package/s to _v2/packages.toml_. If all the packages are from CRAN then the section should be structured as follows.
+
+```toml
+[relevant-section-title]
+packages = ["package-name-1", "package-name-2"]
+comment = "Explanatory comment about why the package/s are being added."
+```
+
+If the package is not on CRAN please add it to the <https://opensafely-core.r-universe.dev> by adding it to _packages.json_ in the registry repository <https://github.com/opensafely-core/opensafely-core.r-universe.dev>, then enter the relevant Linux binary package URL, as an additional `repos` key-value pair in the new section in _v2/packages.toml_, currently this is done as follows.
+
+```toml
+repos = "https://opensafely-core.r-universe.dev/bin/linux/noble/4.4/"
+```
+
+If the package requires any runtime dependencies add those to _v2/dependencies.txt_
+
+Then build the v2 image.
+
+```sh
+just build v2
+```
 
 ### Push the new Docker image to Github Container Registry
 
@@ -85,7 +111,7 @@ just publish VERSION
 ### Commit changes to this repository
 
 Commit and push the small resulting change (should only be a few extra
-lines in `v1/packages.csv`, `VERSION/packages.md`, and `v1/renv.lock`) to a branch, then get the changes
+lines under v1 in _v1/packages.csv_, _v1/packages.md_, and _v1/renv.lock_; and under v2 in _v2/packages.toml_, _v2/packages.md_, and _v2/pkg.lock_) to a branch, then get the changes
 merged via pull request.
 
 The review is a trivial exercise because the Docker image has already been
@@ -136,3 +162,52 @@ And then push the new rstudio image to the GitHub container registry with
 ```sh
 just publish-rstudio VERSION
 ```
+
+## How to update the version of R and the packages
+
+In v2, we choose a date from which to install the packages from CRAN, we strongly recommend that the version of R in the image was the release version of R on this date. R release dates can be found on the [R wikipedia page](https://en.wikipedia.org/wiki/R_(programming_language)#Version_names).
+
+In v2, when installing packages we use a Posit Public Package Manager (PPPM) snapshot repository on the chosen `CRAN_DATE`.
+
+We use a fixed date because CRAN follows a rolling release model.
+As such we know that on a particular date CRAN has tested these package versions with the release version of R.
+Hence this is an extremely stable approach to choosing a set of package versions.
+And we can add additional packages at their versions on this date reliably (and without updating dependency packages already included in the image).
+
+The CRAN apt repository for R is available [here](https://cran.r-project.org/bin/linux/ubuntu/noble-cran40/) (note you may need to amend the Ubuntu codename in the URL if using a newer base image), find the package number you require and edit the number in _v2/dependencies.txt_ and _v2/build-dependencies.txt_.
+
+Then amend the `CRAN_DATE` and `REPOS` arguments in _v2/env_.
+
+To update run
+
+```sh
+just build v2
+```
+
+To test the updated image run
+
+```sh
+just test v2
+```
+
+### How to choose a version of R and CRAN date
+
+Choose a version of R.
+
+Choose a CRAN date when that version of R.
+
+We follow a very similar approach to the versioned stack of the Rocker project. They list their R versions and CRAN dates on their [wiki](https://github.com/rocker-org/rocker-versioned2/wiki/Versions).
+
+We recommend not choosing a date within the first week of a new version of R being released, because there may be alot of packages updated on CRAN during this time.
+
+You then need to check that a PPPM snapshot repository exists for your chosen date. Navigate to <https://p3m.dev/client/#/repos/cran/setup> and inspect your chosen date. Set this date as the `REPOS` argument in _v2/env_.
+
+If you choose a version of R that is not the current version of R we recommend following the Rocker approach and choosing the CRAN date as the day before the next version of R was released. For example, if choosing R 4.4.1, R 4.4.2 was released on 2024-10-31 therefore we would choose 2024-10-30 as the CRAN date. Or as is the case here we are using the current version of R (4.4.2) therefore we choose the latest available date on PPPM as the CRAN date.
+
+You can find out when the next release of R is scheduled for on the [R developer page](https://developer.r-project.org/).
+
+We set the `HTTPUserAgent` in the appropriate places so that we obtain binary R packages for Linux from the PPPM. There is additional information about this on the [PPPM website](https://p3m.dev/__docs__/admin/serving-binaries/#binary-user-agents).
+
+## Differences between packages included in the v1 and v2 images
+
+In v2, compared to v1, several packages have either been superseeded by other packages or have been removed from CRAN. These include dummies, maptools (if required terra could be provided as a replacement), mnlogit, rgdal, and rgeos (the sf package is still included which acts as a replacement for rgdal and rgeos). Several additional packages such as sjPlot have been provided due to requests.
