@@ -1,0 +1,6 @@
+MAJOR_VERSION=v2
+BASE=24.04
+RSTUDIO_BASE_URL=https://download2.rstudio.org/server/jammy/amd64/
+RSTUDIO_DEB=rstudio-server-2024.12.0-467-amd64.deb
+CRAN_DATE=2025-01-15
+REPOS=https://packagemanager.posit.co/cran/__linux__/noble/${CRAN_DATE}
