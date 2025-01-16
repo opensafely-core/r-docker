@@ -8,17 +8,24 @@ Docker image for running R code in OpenSAFELY, both locally and in production.
 * docker-compose
 * [just](https://github.com/casey/just)
 
+And the tests additionally require
+
+* curl
+* python3
+
 ## Building
 
 ```sh
-just build
+just build VERSION
 ```
 
-Under the hood, this builds `./Dockerfile` using docker-compose and buildkit.
+where `VERSION` is either v1 or v2.
 
-We currently build a lot of packages, so an initial build on a fresh checkout
+Under the hood, this builds `VERSION/Dockerfile` using docker-compose and buildkit.
+
+In v1, we currently build a lot of packages, so an initial build on a fresh checkout
 can take a long time (e.g. an hour).  However, to alleviate this, the
-Dockerfile is carefully designed to use local buildkit cache, so subequent
+v1/Dockerfile is carefully designed to use local buildkit cache, so subequent
 rebuilds should be very fast.
 
 ## Adding new packages
@@ -41,20 +48,22 @@ experience to approve the package.
 
 ### Install the package within Docker
 
+#### Under v1
+
 To add a package, by default it will be installed from CRAN.
 
 ```sh
-just add-package PACKAGE
+just add-package-v1 PACKAGE
 ```
 
 If you need to install a package from another CRAN-like repository, specify its URL as the REPOS argument.
 
 ```sh
-just add-package PACKAGE REPOS
+just add-package-v1 PACKAGE REPOS
 ```
 
 This will attempt to install and build the package and its dependencies, and
-update the `renv.lock`. It will then rebuild the R image with the new lock file
+update the `v1/renv.lock`. It will then rebuild the R image with the new lock file
 and test it.
 
 Note that the first time you do this it will need to compile every
@@ -70,13 +79,13 @@ See [GitHub's documentation](https://docs.github.com/en/packages/working-with-a-
 When you have authentication configured, run:
 
 ```sh
-just publish
+just publish VERSION
 ```
 
 ### Commit changes to this repository
 
 Commit and push the small resulting change (should only be a few extra
-lines in `packages.csv` and `renv.lock`) to a branch, then get the changes
+lines in `v1/packages.csv`, `VERSION/packages.md`, and `v1/renv.lock`) to a branch, then get the changes
 merged via pull request.
 
 The review is a trivial exercise because the Docker image has already been
@@ -93,19 +102,19 @@ separately in the tech team manual. If you don't have access, ask in
 #### System dependencies
 
 If the package requires any system build dependencies (e.g. -dev packages with
-headers), they should be added to `build-dependencies.txt`. If it requires
-runtime dependencies, they should be added to `dependencies.txt`. Packages
+headers), they should be added to `VERSION/build-dependencies.txt`. If it requires
+runtime dependencies, they should be added to `VERSION/dependencies.txt`. Packages
 don't advertise their system dependencies, so you may need to figure them out
 by trying to add the package and reading any error output on failure.
 
-#### Installing an older version
+#### Installing an older version in the v1 image only
 
 If the package still fails to build, you may be able to install an older version.
 
 Find a previous version at `https://cran.r-project.org/src/contrib/Archive/{PACKAGE}/`, and attempt to install it specifically with
 
 ```sh
-just add-package PACKAGE@VERSION
+just add-package-v1 PACKAGE@VERSION
 ```
 
 ## Building, testing, and publishing the rstudio image
@@ -113,17 +122,17 @@ just add-package PACKAGE@VERSION
 The rstudio image is based on the r image including rstudio-server. To build run
 
 ```sh
-just build-rstudio
+just build-rstudio VERSION
 ```
 
 To test that rstudio-server appears at `http://localhost:8787` run
 
 ```sh
-just test-rstudio
+just test-rstudio VERSION
 ```
 
 And then push the new rstudio image to the GitHub container registry with
 
 ```sh
-just publish-rstudio
+just publish-rstudio VERSION
 ```
