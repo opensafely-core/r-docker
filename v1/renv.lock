@@ -1145,6 +1145,14 @@
       "Hash": "89cf4b8207269ccf82fbeb6473fd662b",
       "Requirements": []
     },
+    "collections": {
+      "Package": "collections",
+      "Version": "0.3.7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "90a0eda114ab0bef170ddbf5ef0cd93f",
+      "Requirements": []
+    },
     "colorspace": {
       "Package": "colorspace",
       "Version": "1.4-1",
@@ -1290,6 +1298,20 @@
       "Repository": "CRAN",
       "Hash": "2b7d10581cc730804e9ed178c8374bd6",
       "Requirements": []
+    },
+    "cyclocomp": {
+      "Package": "cyclocomp",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "cdc4a473222b0112d4df0bcfbed12d44",
+      "Requirements": [
+        "callr",
+        "crayon",
+        "desc",
+        "remotes",
+        "withr"
+      ]
     },
     "dagitty": {
       "Package": "dagitty",
@@ -2889,6 +2911,27 @@
         "vctrs"
       ]
     },
+    "languageserver": {
+      "Package": "languageserver",
+      "Version": "0.3.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "50c873d1859d0f7143906ca7419d534e",
+      "Requirements": [
+        "R6",
+        "callr",
+        "collections",
+        "desc",
+        "fs",
+        "jsonlite",
+        "lintr",
+        "repr",
+        "stringi",
+        "styler",
+        "xml2",
+        "xmlparsedata"
+      ]
+    },
     "later": {
       "Package": "later",
       "Version": "1.1.0.1",
@@ -2966,6 +3009,24 @@
         "cli",
         "glue",
         "rlang"
+      ]
+    },
+    "lintr": {
+      "Package": "lintr",
+      "Version": "3.1.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "08cff46381a242d44c0d8dd0aabd9f71",
+      "Requirements": [
+        "backports",
+        "codetools",
+        "cyclocomp",
+        "digest",
+        "glue",
+        "knitr",
+        "rex",
+        "xml2",
+        "xmlparsedata"
       ]
     },
     "listenv": {
@@ -4274,6 +4335,16 @@
         "stringr"
       ]
     },
+    "rex": {
+      "Package": "rex",
+      "Version": "1.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ae34cd56890607370665bee5bd17812f",
+      "Requirements": [
+        "lazyeval"
+      ]
+    },
     "rgdal": {
       "Package": "rgdal",
       "Version": "1.5-16",
@@ -5451,6 +5522,14 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "d4d71a75dd3ea9eb5fa28cc21f9585e2",
+      "Requirements": []
+    },
+    "xmlparsedata": {
+      "Package": "xmlparsedata",
+      "Version": "1.0.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "45e4bf3c46476896e821fc0a408fb4fc",
       "Requirements": []
     },
     "xtable": {
