@@ -353,6 +353,7 @@ tcltk, tools, and utils) for the respective version of R.
 | relimp                | 1.0-5        | <https://cran.r-project.org/package=relimp>                |
 | relsurv               | 2.2-3        | <https://cran.r-project.org/package=relsurv>               |
 | rematch               | 1.0.1        | <https://cran.r-project.org/package=rematch>               |
+| rematch2              | 2.1.2        | <https://cran.r-project.org/package=rematch2>              |
 | remotes               | 2.2.0        | <https://cran.r-project.org/package=remotes>               |
 | renv                  | 0.16.0       | <https://cran.r-project.org/package=renv>                  |
 | repr                  | 1.1.0        | <https://cran.r-project.org/package=repr>                  |
@@ -408,6 +409,7 @@ tcltk, tools, and utils) for the respective version of R.
 | stringdist            | 0.9.10       | <https://cran.r-project.org/package=stringdist>            |
 | stringi               | 1.4.6        | <https://cran.r-project.org/package=stringi>               |
 | stringr               | 1.4.0        | <https://cran.r-project.org/package=stringr>               |
+| styler                | 1.2.0        | <https://cran.r-project.org/package=styler>                |
 | survey                | 4.1-1        | <https://cran.r-project.org/package=survey>                |
 | survival              | 3.2-3        | <https://cran.r-project.org/package=survival>              |
 | survminer             | 0.4.8        | <https://cran.r-project.org/package=survminer>             |
