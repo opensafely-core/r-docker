@@ -33,10 +33,17 @@ build version:
     # render the packages.md file
     {{ just_executable() }} render {{ version }}
 
+    # create the packages.csv file
+    {{ just_executable() }} packages-csv {{ version }}
+
 # render the version/packages.md file
 render version:
     docker run --platform linux/amd64 --env-file {{ version }}/env --entrypoint bash --rm -v "/$PWD:/out" -v "$PWD/scripts:/out/scripts" r:{{ version }} "/out/scripts/render.sh"
-    
+
+# create the version/packages.csv file
+packages-csv version:
+    docker run --platform linux/amd64 --env-file {{ version }}/env r:{{ version }} -e 'write.csv(installed.packages()[, c("Package","Version")], row.names = FALSE, file = "/dev/stdout")' 2>/dev/null > {{ version }}/packages.csv
+
 # build and add a package and its dependencies to the image
 add-package-v1 package repos="NULL":
     bash v1/scripts/add-package.sh {{ package }} {{ repos }}
