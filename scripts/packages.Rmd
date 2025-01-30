@@ -40,11 +40,17 @@ pkgs <- pkglock[["packages"]]
 metadataremoterepos <- pkgs$metadata$RemoteRepos
 pkgs <- pkgs %>% dplyr::select(package, version, sources, repotype)
 pkgs <- pkgs %>% mutate(metadataremoterepos = metadataremoterepos)
+pkgs <- pkgs %>% mutate(
+  metadataremoterepos = case_when(
+    stringi::stri_sub(metadataremoterepos, -1) != "/" ~ paste0(metadataremoterepos, "/"),
+    .default = metadataremoterepos
+  )
+)
 pkgs <- pkgs %>%
   mutate(
     url = case_when(
       repotype == "cran" ~ paste0("<https://cran.r-project.org/package=", package, ">"),
-      repotype == "cranlike" ~ paste0("<", sub("/bin/linux/noble/4.4/", "", metadataremoterepos), "/", package, ">")
+      repotype == "cranlike" ~ paste0("<", sub("/bin/linux/noble/4.4/", "/", metadataremoterepos), package, ">")
     )
   )
 pkgs <- pkgs %>%
