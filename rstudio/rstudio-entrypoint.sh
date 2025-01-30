@@ -21,9 +21,14 @@ if [ $(find /workspace -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
   cat /home/rstudio/rstudio-rprofile.R >> /home/rstudio/.Rprofile
 fi
 
-# Set file line endings as crlf if docker run from Windows
+# Set RStudio session user settings
+#  - Enable autosave on blur - auto save when editor loses focus
+#  - Enable autosave on idle - commit changes to documents on idle
+#  - Set file line endings as crlf if docker run from Windows
 if [ "$HOSTPLATFORM" = "win32" ] || [ "$HOSTPLATFORM" = "windows" ]; then
-  echo -e "{\n\t\"line_ending_conversion\": \"windows\"\n}" >> /etc/rstudio/rstudio-prefs.json
+  echo -e "{\n\t\"line_ending_conversion\": \"windows\",\n\t\"auto_save_on_blur\": true,\n\t\"auto_save_on_idle\": \"commit\"\n}" > /etc/rstudio/rstudio-prefs.json
+else
+  echo -e "{\n\t\"auto_save_on_blur\": true,\n\t\"auto_save_on_idle\": \"commit\"\n}" > /etc/rstudio/rstudio-prefs.json  
 fi
 
 # Start RStudio Server session in foreground
