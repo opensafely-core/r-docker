@@ -55,4 +55,4 @@ libgdal30
 libmagick++-6.q16-8
 
 # V8, via daggity: documented dependency is libnode-dev
-libnode109
+libnode72
