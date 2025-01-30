@@ -61,6 +61,7 @@ tcltk, tools, and utils) for the respective version of R.
 | cobalt                | 4.4.0        | <https://cran.r-project.org/package=cobalt>                |
 | coda                  | 0.19-3       | <https://cran.r-project.org/package=coda>                  |
 | codetools             | 0.2-16       | <https://cran.r-project.org/package=codetools>             |
+| collections           | 0.3.7        | <https://cran.r-project.org/package=collections>           |
 | colorspace            | 1.4-1        | <https://cran.r-project.org/package=colorspace>            |
 | colourpicker          | 1.0          | <https://cran.r-project.org/package=colourpicker>          |
 | commonmark            | 1.7          | <https://cran.r-project.org/package=commonmark>            |
@@ -75,6 +76,7 @@ tcltk, tools, and utils) for the respective version of R.
 | credentials           | 1.3.0        | <https://cran.r-project.org/package=credentials>           |
 | crosstalk             | 1.1.0.1      | <https://cran.r-project.org/package=crosstalk>             |
 | curl                  | 4.3          | <https://cran.r-project.org/package=curl>                  |
+| cyclocomp             | 1.1.1        | <https://cran.r-project.org/package=cyclocomp>             |
 | dagitty               | 0.3-4        | <https://cran.r-project.org/package=dagitty>               |
 | data.table            | 1.13.0       | <https://cran.r-project.org/package=data.table>            |
 | date                  | 1.2-39       | <https://cran.r-project.org/package=date>                  |
@@ -216,6 +218,7 @@ tcltk, tools, and utils) for the respective version of R.
 | ks                    | 1.11.7       | <https://cran.r-project.org/package=ks>                    |
 | labeling              | 0.3          | <https://cran.r-project.org/package=labeling>              |
 | labelled              | 2.7.0        | <https://cran.r-project.org/package=labelled>              |
+| languageserver        | 0.3.6        | <https://cran.r-project.org/package=languageserver>        |
 | later                 | 1.1.0.1      | <https://cran.r-project.org/package=later>                 |
 | lattice               | 0.20-41      | <https://cran.r-project.org/package=lattice>               |
 | latticeExtra          | 0.6-29       | <https://cran.r-project.org/package=latticeExtra>          |
@@ -223,6 +226,7 @@ tcltk, tools, and utils) for the respective version of R.
 | lazyeval              | 0.2.2        | <https://cran.r-project.org/package=lazyeval>              |
 | lcmm                  | 2.0.0        | <https://cran.r-project.org/package=lcmm>                  |
 | lifecycle             | 1.0.3        | <https://cran.r-project.org/package=lifecycle>             |
+| lintr                 | 3.1.2        | <https://cran.r-project.org/package=lintr>                 |
 | listenv               | 0.8.0        | <https://cran.r-project.org/package=listenv>               |
 | lme4                  | 1.1-23       | <https://cran.r-project.org/package=lme4>                  |
 | lmtest                | 0.9-37       | <https://cran.r-project.org/package=lmtest>                |
@@ -353,12 +357,14 @@ tcltk, tools, and utils) for the respective version of R.
 | relimp                | 1.0-5        | <https://cran.r-project.org/package=relimp>                |
 | relsurv               | 2.2-3        | <https://cran.r-project.org/package=relsurv>               |
 | rematch               | 1.0.1        | <https://cran.r-project.org/package=rematch>               |
+| rematch2              | 2.1.2        | <https://cran.r-project.org/package=rematch2>              |
 | remotes               | 2.2.0        | <https://cran.r-project.org/package=remotes>               |
 | renv                  | 0.16.0       | <https://cran.r-project.org/package=renv>                  |
 | repr                  | 1.1.0        | <https://cran.r-project.org/package=repr>                  |
 | reprex                | 0.3.0        | <https://cran.r-project.org/package=reprex>                |
 | reshape               | 0.8.8        | <https://cran.r-project.org/package=reshape>               |
 | reshape2              | 1.4.4        | <https://cran.r-project.org/package=reshape2>              |
+| rex                   | 1.2.1        | <https://cran.r-project.org/package=rex>                   |
 | rgdal                 | 1.5-16       | <https://cran.r-project.org/package=rgdal>                 |
 | rgeos                 | 0.5-3        | <https://cran.r-project.org/package=rgeos>                 |
 | rio                   | 0.5.16       | <https://cran.r-project.org/package=rio>                   |
@@ -408,6 +414,7 @@ tcltk, tools, and utils) for the respective version of R.
 | stringdist            | 0.9.10       | <https://cran.r-project.org/package=stringdist>            |
 | stringi               | 1.4.6        | <https://cran.r-project.org/package=stringi>               |
 | stringr               | 1.4.0        | <https://cran.r-project.org/package=stringr>               |
+| styler                | 1.2.0        | <https://cran.r-project.org/package=styler>                |
 | survey                | 4.1-1        | <https://cran.r-project.org/package=survey>                |
 | survival              | 3.2-3        | <https://cran.r-project.org/package=survival>              |
 | survminer             | 0.4.8        | <https://cran.r-project.org/package=survminer>             |
@@ -458,6 +465,7 @@ tcltk, tools, and utils) for the respective version of R.
 | xgboost               | 1.7.5.1      | <https://cran.r-project.org/package=xgboost>               |
 | XML                   | 3.99-0.6     | <https://cran.r-project.org/package=XML>                   |
 | xml2                  | 1.3.2        | <https://cran.r-project.org/package=xml2>                  |
+| xmlparsedata          | 1.0.5        | <https://cran.r-project.org/package=xmlparsedata>          |
 | xtable                | 1.8-4        | <https://cran.r-project.org/package=xtable>                |
 | xts                   | 0.12-0       | <https://cran.r-project.org/package=xts>                   |
 | yaml                  | 2.2.1        | <https://cran.r-project.org/package=yaml>                  |

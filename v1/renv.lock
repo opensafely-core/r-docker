@@ -706,6 +706,13 @@
       "Version": "0.2.1",
       "Source": "Repository",
       "Repository": "CRAN",
+      "RemoteType": "standard",
+      "RemotePkgRef": "assertthat",
+      "RemoteRef": "assertthat",
+      "RemoteRepos": "https://cloud.r-project.org",
+      "RemoteReposName": "CRAN",
+      "RemotePkgPlatform": "source",
+      "RemoteSha": "0.2.1",
       "Hash": "50c838a310445e954bc13f26f26a6ecf",
       "Requirements": []
     },
@@ -1138,6 +1145,14 @@
       "Hash": "89cf4b8207269ccf82fbeb6473fd662b",
       "Requirements": []
     },
+    "collections": {
+      "Package": "collections",
+      "Version": "0.3.7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "90a0eda114ab0bef170ddbf5ef0cd93f",
+      "Requirements": []
+    },
     "colorspace": {
       "Package": "colorspace",
       "Version": "1.4-1",
@@ -1284,6 +1299,20 @@
       "Hash": "2b7d10581cc730804e9ed178c8374bd6",
       "Requirements": []
     },
+    "cyclocomp": {
+      "Package": "cyclocomp",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "cdc4a473222b0112d4df0bcfbed12d44",
+      "Requirements": [
+        "callr",
+        "crayon",
+        "desc",
+        "remotes",
+        "withr"
+      ]
+    },
     "dagitty": {
       "Package": "dagitty",
       "Version": "0.3-4",
@@ -1339,10 +1368,11 @@
       "Version": "0.0.0.9000",
       "Source": "Repository",
       "Repository": "https://remlapmot.r-universe.dev",
+      "RemoteType": "repository",
       "RemoteUrl": "https://github.com/wjchulme/dd4d",
       "RemoteRef": "HEAD",
       "RemoteSha": "291283fd0620d458584108b05d9237104e060c31",
-      "Hash": "95f653ca37fc7eca41757f141f4374a9",
+      "Hash": "23178f77d596f93597b32c0c19282024",
       "Requirements": [
         "dagitty",
         "dplyr",
@@ -2881,6 +2911,27 @@
         "vctrs"
       ]
     },
+    "languageserver": {
+      "Package": "languageserver",
+      "Version": "0.3.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "50c873d1859d0f7143906ca7419d534e",
+      "Requirements": [
+        "R6",
+        "callr",
+        "collections",
+        "desc",
+        "fs",
+        "jsonlite",
+        "lintr",
+        "repr",
+        "stringi",
+        "styler",
+        "xml2",
+        "xmlparsedata"
+      ]
+    },
     "later": {
       "Package": "later",
       "Version": "1.1.0.1",
@@ -2958,6 +3009,24 @@
         "cli",
         "glue",
         "rlang"
+      ]
+    },
+    "lintr": {
+      "Package": "lintr",
+      "Version": "3.1.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "08cff46381a242d44c0d8dd0aabd9f71",
+      "Requirements": [
+        "backports",
+        "codetools",
+        "cyclocomp",
+        "digest",
+        "glue",
+        "knitr",
+        "rex",
+        "xml2",
+        "xmlparsedata"
       ]
     },
     "listenv": {
@@ -4189,6 +4258,16 @@
       "Hash": "c66b930d20bb6d858cd18e1cebcfae5c",
       "Requirements": []
     },
+    "rematch2": {
+      "Package": "rematch2",
+      "Version": "2.1.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "76c9e04c712a05848ae7a23d2f170a40",
+      "Requirements": [
+        "tibble"
+      ]
+    },
     "remotes": {
       "Package": "remotes",
       "Version": "2.2.0",
@@ -4254,6 +4333,16 @@
         "Rcpp",
         "plyr",
         "stringr"
+      ]
+    },
+    "rex": {
+      "Package": "rex",
+      "Version": "1.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ae34cd56890607370665bee5bd17812f",
+      "Requirements": [
+        "lazyeval"
       ]
     },
     "rgdal": {
@@ -4818,6 +4907,25 @@
         "glue",
         "magrittr",
         "stringi"
+      ]
+    },
+    "styler": {
+      "Package": "styler",
+      "Version": "1.2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "7787dacaca761c15c514197f545111d8",
+      "Requirements": [
+        "backports",
+        "cli",
+        "magrittr",
+        "purrr",
+        "rematch2",
+        "rlang",
+        "rprojroot",
+        "tibble",
+        "withr",
+        "xfun"
       ]
     },
     "survMisc": {
@@ -5414,6 +5522,14 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "d4d71a75dd3ea9eb5fa28cc21f9585e2",
+      "Requirements": []
+    },
+    "xmlparsedata": {
+      "Package": "xmlparsedata",
+      "Version": "1.0.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "45e4bf3c46476896e821fc0a408fb4fc",
       "Requirements": []
     },
     "xtable": {
