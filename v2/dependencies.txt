@@ -1,7 +1,7 @@
 ## Core systemdependencies
 tzdata
-r-base-core=4.4.2-1.2404.0
-r-base-dev=4.4.2-1.2404.0
+r-base-core=4.4.2-1.2204.0
+r-base-dev=4.4.2-1.2204.0
 
 ## Package specific dependencies. 
 #
@@ -41,6 +41,14 @@ gsfonts
 #
 # debtree $PACKAGE | dot -Tjpg | display
 #
+# or if that plot is very large it's often the first proper entry of
+#
+# debtree $PACKAGE
+#
+# and sometimes grepping can be helpful
+#
+# debtree $PACKAGE | grep obvious-part-of-package-name*
+#
 # There is usually a package in the form of $PACKAGEVERSION in the tree which is the
 # one we actually need. This will need doing once for every version of base Ubuntu
 # image we use for an R version.
@@ -48,11 +56,11 @@ gsfonts
 # igraph: documented dependency is libglpk-dev
 libglpk40
 
-# sf
-libgdal34t64
+# sf - libgdal-dev
+libgdal30
 
 # magick: documented dependency is libmagick++-dev
-libmagick++-6.q16-9t64
+libmagick++-6.q16-8
 
 # V8, via daggity: documented dependency is libnode-dev
-libnode109
+libnode72
