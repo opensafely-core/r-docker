@@ -10,7 +10,7 @@ ARG MAJOR_VERSION=v2
 RUN --mount=type=cache,target=/var/cache/apt,id=apt-2204,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,id=apt-2204,sharing=locked \
     --mount=type=bind,source=${MAJOR_VERSION}/dependencies.txt,target=/tmp/dependencies.txt <<EOF
-    echo "deb https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/" > /etc/apt/sources.list.d/cran.list
+    echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" > /etc/apt/sources.list.d/cran.list
     /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
     /root/docker-apt-install.sh /tmp/dependencies.txt
 EOF
