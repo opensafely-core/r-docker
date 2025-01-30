@@ -174,7 +174,7 @@ As such we know that on a particular date CRAN has tested these package versions
 Hence this is an extremely stable approach to choosing a set of package versions.
 And we can add additional packages at their versions on this date reliably (and without updating dependency packages already included in the image).
 
-The CRAN apt repository for R is available [here](https://cran.r-project.org/bin/linux/ubuntu/noble-cran40/) (note you may need to amend the Ubuntu codename in the URL if using a newer base image), find the package number you require and edit the number in _v2/dependencies.txt_ and _v2/build-dependencies.txt_.
+The CRAN apt repository for R is available [here](https://cran.r-project.org/bin/linux/ubuntu/jammy-cran40/) (note you may need to amend the Ubuntu codename in the URL if using a newer base image), find the package number you require and edit the number in _v2/dependencies.txt_ and _v2/build-dependencies.txt_.
 
 Then amend the `CRAN_DATE` and `REPOS` arguments in _v2/env_.
 
