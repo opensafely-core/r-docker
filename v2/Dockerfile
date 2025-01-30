@@ -3,7 +3,7 @@
 # check=error=true
 #
 #################################################
-FROM ghcr.io/opensafely-core/base-action:24.04 AS base-r
+FROM ghcr.io/opensafely-core/base-action:22.04 AS base-r
 ARG MAJOR_VERSION=v2
 
 # add cran repo for R packages and install
