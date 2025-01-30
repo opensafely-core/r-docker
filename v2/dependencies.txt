@@ -41,6 +41,14 @@ gsfonts
 #
 # debtree $PACKAGE | dot -Tjpg | display
 #
+# or if that plot is very large it's often the first proper entry of
+#
+# debtree $PACKAGE
+#
+# and sometimes grepping can be helpful
+#
+# debtree $PACKAGE | grep obvious-part-of-package-name*
+#
 # There is usually a package in the form of $PACKAGEVERSION in the tree which is the
 # one we actually need. This will need doing once for every version of base Ubuntu
 # image we use for an R version.
