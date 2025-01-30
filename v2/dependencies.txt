@@ -48,8 +48,8 @@ gsfonts
 # igraph: documented dependency is libglpk-dev
 libglpk40
 
-# sf
 libgdal34t64
+# sf - libgdal-dev
 
 # magick: documented dependency is libmagick++-dev
 libmagick++-6.q16-9t64
