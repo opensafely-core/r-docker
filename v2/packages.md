@@ -1,7 +1,7 @@
 Package Versions for v2
 ================
 
-This r:v2 OpenSAFELY image is based on Ubuntu 24.04 with R 4.4.2.
+This r:v2 OpenSAFELY image is based on Ubuntu 22.04 with R 4.4.2.
 
 ## R packages
 
@@ -13,7 +13,7 @@ grDevices, graphics, grid, methods, parallel, splines, stats, stats4,
 tcltk, tools, and utils) for the respective version of R.
 
 | Package               | Version       | Url                                                        |
-|:----------------------|:--------------|:-----------------------------------------------------------|
+| :-------------------- | :------------ | :--------------------------------------------------------- |
 | abind                 | 1.4-8         | <https://cran.r-project.org/package=abind>                 |
 | anytime               | 0.3.11        | <https://cran.r-project.org/package=anytime>               |
 | ape                   | 5.8-1         | <https://cran.r-project.org/package=ape>                   |
