@@ -1,7 +1,7 @@
 Package Versions for v2
 ================
 
-This r:v2 OpenSAFELY image is based on Ubuntu 24.04 with R 4.4.2.
+This r:v2 OpenSAFELY image is based on Ubuntu 22.04 with R 4.4.2.
 
 ## R packages
 
@@ -13,7 +13,7 @@ grDevices, graphics, grid, methods, parallel, splines, stats, stats4,
 tcltk, tools, and utils) for the respective version of R.
 
 | Package               | Version       | Url                                                        |
-|:----------------------|:--------------|:-----------------------------------------------------------|
+| :-------------------- | :------------ | :--------------------------------------------------------- |
 | abind                 | 1.4-8         | <https://cran.r-project.org/package=abind>                 |
 | anytime               | 0.3.11        | <https://cran.r-project.org/package=anytime>               |
 | ape                   | 5.8-1         | <https://cran.r-project.org/package=ape>                   |
@@ -22,7 +22,7 @@ tcltk, tools, and utils) for the respective version of R.
 | AsioHeaders           | 1.22.1-2      | <https://cran.r-project.org/package=AsioHeaders>           |
 | askpass               | 1.2.1         | <https://cran.r-project.org/package=askpass>               |
 | assertthat            | 0.2.1         | <https://cran.r-project.org/package=assertthat>            |
-| astsa                 | 2.1           | <https://cran.r-project.org/package=astsa>                 |
+| astsa                 | 2.2           | <https://cran.r-project.org/package=astsa>                 |
 | aweek                 | 1.0.3         | <https://cran.r-project.org/package=aweek>                 |
 | backports             | 1.5.0         | <https://cran.r-project.org/package=backports>             |
 | base64enc             | 0.1-3         | <https://cran.r-project.org/package=base64enc>             |
@@ -30,7 +30,7 @@ tcltk, tools, and utils) for the respective version of R.
 | BayesianTools         | 0.1.8         | <https://cran.r-project.org/package=BayesianTools>         |
 | bayesm                | 3.1-6         | <https://cran.r-project.org/package=bayesm>                |
 | bayesplot             | 1.11.1        | <https://cran.r-project.org/package=bayesplot>             |
-| bayestestR            | 0.15.0        | <https://cran.r-project.org/package=bayestestR>            |
+| bayestestR            | 0.15.1        | <https://cran.r-project.org/package=bayestestR>            |
 | bbmle                 | 1.0.25.1      | <https://cran.r-project.org/package=bbmle>                 |
 | bdsmatrix             | 1.3-7         | <https://cran.r-project.org/package=bdsmatrix>             |
 | BH                    | 1.87.0-1      | <https://cran.r-project.org/package=BH>                    |
@@ -38,7 +38,7 @@ tcltk, tools, and utils) for the respective version of R.
 | biglm                 | 0.9-3         | <https://cran.r-project.org/package=biglm>                 |
 | binom                 | 1.1-1.1       | <https://cran.r-project.org/package=binom>                 |
 | bit                   | 4.5.0.1       | <https://cran.r-project.org/package=bit>                   |
-| bit64                 | 4.5.2         | <https://cran.r-project.org/package=bit64>                 |
+| bit64                 | 4.6.0-1       | <https://cran.r-project.org/package=bit64>                 |
 | bitops                | 1.0-9         | <https://cran.r-project.org/package=bitops>                |
 | blob                  | 1.2.4         | <https://cran.r-project.org/package=blob>                  |
 | boot                  | 1.3-31        | <https://cran.r-project.org/package=boot>                  |
@@ -48,7 +48,7 @@ tcltk, tools, and utils) for the respective version of R.
 | brms                  | 2.22.0        | <https://cran.r-project.org/package=brms>                  |
 | Brobdingnag           | 1.2-9         | <https://cran.r-project.org/package=Brobdingnag>           |
 | broom                 | 1.0.7         | <https://cran.r-project.org/package=broom>                 |
-| broom.helpers         | 1.18.0        | <https://cran.r-project.org/package=broom.helpers>         |
+| broom.helpers         | 1.19.0        | <https://cran.r-project.org/package=broom.helpers>         |
 | broom.mixed           | 0.2.9.6       | <https://cran.r-project.org/package=broom.mixed>           |
 | bslib                 | 0.8.0         | <https://cran.r-project.org/package=bslib>                 |
 | butcher               | 0.3.4         | <https://cran.r-project.org/package=butcher>               |
@@ -62,12 +62,12 @@ tcltk, tools, and utils) for the respective version of R.
 | caTools               | 1.18.3        | <https://cran.r-project.org/package=caTools>               |
 | cellranger            | 1.1.0         | <https://cran.r-project.org/package=cellranger>            |
 | checkmate             | 2.3.2         | <https://cran.r-project.org/package=checkmate>             |
-| chk                   | 0.9.2         | <https://cran.r-project.org/package=chk>                   |
+| chk                   | 0.10.0        | <https://cran.r-project.org/package=chk>                   |
 | class                 | 7.3-23        | <https://cran.r-project.org/package=class>                 |
 | classInt              | 0.4-11        | <https://cran.r-project.org/package=classInt>              |
 | cli                   | 3.6.3         | <https://cran.r-project.org/package=cli>                   |
 | clipr                 | 0.8.0         | <https://cran.r-project.org/package=clipr>                 |
-| clock                 | 0.7.1         | <https://cran.r-project.org/package=clock>                 |
+| clock                 | 0.7.2         | <https://cran.r-project.org/package=clock>                 |
 | clue                  | 0.3-66        | <https://cran.r-project.org/package=clue>                  |
 | cluster               | 2.1.8         | <https://cran.r-project.org/package=cluster>               |
 | cmprsk                | 2.2-12        | <https://cran.r-project.org/package=cmprsk>                |
@@ -87,12 +87,11 @@ tcltk, tools, and utils) for the respective version of R.
 | cpp11                 | 0.5.1         | <https://cran.r-project.org/package=cpp11>                 |
 | crayon                | 1.5.3         | <https://cran.r-project.org/package=crayon>                |
 | crosstalk             | 1.2.1         | <https://cran.r-project.org/package=crosstalk>             |
-| curl                  | 6.1.0         | <https://cran.r-project.org/package=curl>                  |
+| curl                  | 6.2.0         | <https://cran.r-project.org/package=curl>                  |
 | cyclocomp             | 1.1.1         | <https://cran.r-project.org/package=cyclocomp>             |
 | dagitty               | 0.3-4         | <https://cran.r-project.org/package=dagitty>               |
 | data.table            | 1.16.4        | <https://cran.r-project.org/package=data.table>            |
 | datawizard            | 1.0.0         | <https://cran.r-project.org/package=datawizard>            |
-| date                  | 1.2-42        | <https://cran.r-project.org/package=date>                  |
 | DBI                   | 1.2.3         | <https://cran.r-project.org/package=DBI>                   |
 | dbplyr                | 2.5.0         | <https://cran.r-project.org/package=dbplyr>                |
 | dd4d                  | 0.0.0.9000    | <https://opensafely-core.r-universe.dev/dd4d>              |
@@ -118,7 +117,7 @@ tcltk, tools, and utils) for the respective version of R.
 | dtplyr                | 1.3.1         | <https://cran.r-project.org/package=dtplyr>                |
 | dtw                   | 1.23-1        | <https://cran.r-project.org/package=dtw>                   |
 | dtwclust              | 6.0.0         | <https://cran.r-project.org/package=dtwclust>              |
-| duckdb                | 1.1.3-1       | <https://cran.r-project.org/package=duckdb>                |
+| duckdb                | 1.1.3-2       | <https://cran.r-project.org/package=duckdb>                |
 | e1071                 | 1.7-16        | <https://cran.r-project.org/package=e1071>                 |
 | effectsize            | 1.0.0         | <https://cran.r-project.org/package=effectsize>            |
 | egg                   | 0.4.5         | <https://cran.r-project.org/package=egg>                   |
@@ -136,7 +135,7 @@ tcltk, tools, and utils) for the respective version of R.
 | expm                  | 1.0-0         | <https://cran.r-project.org/package=expm>                  |
 | fansi                 | 1.0.6         | <https://cran.r-project.org/package=fansi>                 |
 | farver                | 2.1.2         | <https://cran.r-project.org/package=farver>                |
-| fastDummies           | 1.7.4         | <https://cran.r-project.org/package=fastDummies>           |
+| fastDummies           | 1.7.5         | <https://cran.r-project.org/package=fastDummies>           |
 | fastGHQuad            | 1.0.1         | <https://cran.r-project.org/package=fastGHQuad>            |
 | fastmap               | 1.2.0         | <https://cran.r-project.org/package=fastmap>               |
 | fastshap              | 0.1.1         | <https://cran.r-project.org/package=fastshap>              |
@@ -176,7 +175,7 @@ tcltk, tools, and utils) for the respective version of R.
 | ggalluvial            | 0.12.5        | <https://cran.r-project.org/package=ggalluvial>            |
 | GGally                | 2.2.1         | <https://cran.r-project.org/package=GGally>                |
 | ggdist                | 3.3.2         | <https://cran.r-project.org/package=ggdist>                |
-| ggeffects             | 2.0.0         | <https://cran.r-project.org/package=ggeffects>             |
+| ggeffects             | 2.1.0         | <https://cran.r-project.org/package=ggeffects>             |
 | ggfittext             | 0.10.2        | <https://cran.r-project.org/package=ggfittext>             |
 | ggfortify             | 0.4.17        | <https://cran.r-project.org/package=ggfortify>             |
 | gggenes               | 0.5.1         | <https://cran.r-project.org/package=gggenes>               |
@@ -223,10 +222,10 @@ tcltk, tools, and utils) for the respective version of R.
 | httpgd                | 2.0.2         | <https://cran.r-project.org/package=httpgd>                |
 | httpuv                | 1.6.15        | <https://cran.r-project.org/package=httpuv>                |
 | httr                  | 1.4.7         | <https://cran.r-project.org/package=httr>                  |
-| httr2                 | 1.0.7         | <https://cran.r-project.org/package=httr2>                 |
+| httr2                 | 1.1.0         | <https://cran.r-project.org/package=httr2>                 |
 | IDPmisc               | 1.1.21        | <https://cran.r-project.org/package=IDPmisc>               |
 | ids                   | 1.0.1         | <https://cran.r-project.org/package=ids>                   |
-| igraph                | 2.1.3         | <https://cran.r-project.org/package=igraph>                |
+| igraph                | 2.1.4         | <https://cran.r-project.org/package=igraph>                |
 | incidence             | 1.7.5         | <https://cran.r-project.org/package=incidence>             |
 | infer                 | 1.0.7         | <https://cran.r-project.org/package=infer>                 |
 | ini                   | 0.3.1         | <https://cran.r-project.org/package=ini>                   |
@@ -278,14 +277,14 @@ tcltk, tools, and utils) for the respective version of R.
 | MASS                  | 7.3-64        | <https://cran.r-project.org/package=MASS>                  |
 | MatchIt               | 4.7.0         | <https://cran.r-project.org/package=MatchIt>               |
 | mathjaxr              | 1.6-0         | <https://cran.r-project.org/package=mathjaxr>              |
-| Matrix                | 1.7-1         | <https://cran.r-project.org/package=Matrix>                |
+| Matrix                | 1.7-2         | <https://cran.r-project.org/package=Matrix>                |
 | MatrixModels          | 0.5-3         | <https://cran.r-project.org/package=MatrixModels>          |
 | matrixStats           | 1.5.0         | <https://cran.r-project.org/package=matrixStats>           |
 | maxstat               | 0.7-25        | <https://cran.r-project.org/package=maxstat>               |
 | mclust                | 6.1.1         | <https://cran.r-project.org/package=mclust>                |
 | memoise               | 2.0.1         | <https://cran.r-project.org/package=memoise>               |
 | metadat               | 1.2-0         | <https://cran.r-project.org/package=metadat>               |
-| metafor               | 4.6-0         | <https://cran.r-project.org/package=metafor>               |
+| metafor               | 4.8-0         | <https://cran.r-project.org/package=metafor>               |
 | mets                  | 1.3.5         | <https://cran.r-project.org/package=mets>                  |
 | mgcv                  | 1.9-1         | <https://cran.r-project.org/package=mgcv>                  |
 | mice                  | 3.17.0        | <https://cran.r-project.org/package=mice>                  |
@@ -304,14 +303,14 @@ tcltk, tools, and utils) for the respective version of R.
 | msm                   | 1.8.2         | <https://cran.r-project.org/package=msm>                   |
 | mstate                | 0.3.3         | <https://cran.r-project.org/package=mstate>                |
 | muhaz                 | 1.2.6.4       | <https://cran.r-project.org/package=muhaz>                 |
-| multcomp              | 1.4-26        | <https://cran.r-project.org/package=multcomp>              |
+| multcomp              | 1.4-28        | <https://cran.r-project.org/package=multcomp>              |
 | multicool             | 1.0.1         | <https://cran.r-project.org/package=multicool>             |
 | munsell               | 0.5.1         | <https://cran.r-project.org/package=munsell>               |
 | mvtnorm               | 1.3-3         | <https://cran.r-project.org/package=mvtnorm>               |
 | naniar                | 1.1.0         | <https://cran.r-project.org/package=naniar>                |
 | NHPoisson             | 3.3           | <https://cran.r-project.org/package=NHPoisson>             |
 | nleqslv               | 3.3.5         | <https://cran.r-project.org/package=nleqslv>               |
-| nlme                  | 3.1-166       | <https://cran.r-project.org/package=nlme>                  |
+| nlme                  | 3.1-167       | <https://cran.r-project.org/package=nlme>                  |
 | nloptr                | 2.1.1         | <https://cran.r-project.org/package=nloptr>                |
 | nnet                  | 7.3-20        | <https://cran.r-project.org/package=nnet>                  |
 | norm                  | 1.0-11.1      | <https://cran.r-project.org/package=norm>                  |
@@ -334,12 +333,12 @@ tcltk, tools, and utils) for the respective version of R.
 | pcaPP                 | 2.0-5         | <https://cran.r-project.org/package=pcaPP>                 |
 | pch                   | 2.1           | <https://cran.r-project.org/package=pch>                   |
 | pec                   | 2023.04.12    | <https://cran.r-project.org/package=pec>                   |
-| performance           | 0.12.4        | <https://cran.r-project.org/package=performance>           |
+| performance           | 0.13.0        | <https://cran.r-project.org/package=performance>           |
 | PerformanceAnalytics  | 2.0.8         | <https://cran.r-project.org/package=PerformanceAnalytics>  |
 | permute               | 0.9-7         | <https://cran.r-project.org/package=permute>               |
 | PHEindicatormethods   | 2.1.0         | <https://cran.r-project.org/package=PHEindicatormethods>   |
 | pillar                | 1.10.1        | <https://cran.r-project.org/package=pillar>                |
-| pkgbuild              | 1.4.5         | <https://cran.r-project.org/package=pkgbuild>              |
+| pkgbuild              | 1.4.6         | <https://cran.r-project.org/package=pkgbuild>              |
 | pkgconfig             | 2.0.3         | <https://cran.r-project.org/package=pkgconfig>             |
 | pkgload               | 1.4.0         | <https://cran.r-project.org/package=pkgload>               |
 | plotly                | 4.10.4        | <https://cran.r-project.org/package=plotly>                |
@@ -369,9 +368,9 @@ tcltk, tools, and utils) for the respective version of R.
 | qgam                  | 1.3.4         | <https://cran.r-project.org/package=qgam>                  |
 | quadprog              | 1.5-8         | <https://cran.r-project.org/package=quadprog>              |
 | quantmod              | 0.4.26        | <https://cran.r-project.org/package=quantmod>              |
-| quantreg              | 5.99.1        | <https://cran.r-project.org/package=quantreg>              |
+| quantreg              | 6.00          | <https://cran.r-project.org/package=quantreg>              |
 | QuickJSR              | 1.5.1         | <https://cran.r-project.org/package=QuickJSR>              |
-| qvcalc                | 1.0.3         | <https://cran.r-project.org/package=qvcalc>                |
+| qvcalc                | 1.0.4         | <https://cran.r-project.org/package=qvcalc>                |
 | R.cache               | 0.16.0        | <https://cran.r-project.org/package=R.cache>               |
 | R.methodsS3           | 1.8.2         | <https://cran.r-project.org/package=R.methodsS3>           |
 | R.oo                  | 1.27.0        | <https://cran.r-project.org/package=R.oo>                  |
@@ -390,7 +389,7 @@ tcltk, tools, and utils) for the respective version of R.
 | Rcpp                  | 1.0.14        | <https://cran.r-project.org/package=Rcpp>                  |
 | RcppArmadillo         | 14.2.2-1      | <https://cran.r-project.org/package=RcppArmadillo>         |
 | RcppEigen             | 0.3.4.0.2     | <https://cran.r-project.org/package=RcppEigen>             |
-| RcppParallel          | 5.1.9         | <https://cran.r-project.org/package=RcppParallel>          |
+| RcppParallel          | 5.1.10        | <https://cran.r-project.org/package=RcppParallel>          |
 | RcppProgress          | 0.4.2         | <https://cran.r-project.org/package=RcppProgress>          |
 | RcppRoll              | 0.3.1         | <https://cran.r-project.org/package=RcppRoll>              |
 | RcppThread            | 2.2.0         | <https://cran.r-project.org/package=RcppThread>            |
@@ -405,7 +404,7 @@ tcltk, tools, and utils) for the respective version of R.
 | reformulas            | 0.4.0         | <https://cran.r-project.org/package=reformulas>            |
 | registry              | 0.5-1         | <https://cran.r-project.org/package=registry>              |
 | relimp                | 1.0-5         | <https://cran.r-project.org/package=relimp>                |
-| relsurv               | 2.2-9         | <https://cran.r-project.org/package=relsurv>               |
+| relsurv               | 2.3-2         | <https://cran.r-project.org/package=relsurv>               |
 | rematch               | 2.0.0         | <https://cran.r-project.org/package=rematch>               |
 | rematch2              | 2.1.2         | <https://cran.r-project.org/package=rematch2>              |
 | remotes               | 2.5.0         | <https://cran.r-project.org/package=remotes>               |
@@ -414,9 +413,9 @@ tcltk, tools, and utils) for the respective version of R.
 | reshape2              | 1.4.4         | <https://cran.r-project.org/package=reshape2>              |
 | rex                   | 1.2.1         | <https://cran.r-project.org/package=rex>                   |
 | riskRegression        | 2023.12.21    | <https://cran.r-project.org/package=riskRegression>        |
-| rlang                 | 1.1.4         | <https://cran.r-project.org/package=rlang>                 |
+| rlang                 | 1.1.5         | <https://cran.r-project.org/package=rlang>                 |
 | rmarkdown             | 2.29          | <https://cran.r-project.org/package=rmarkdown>             |
-| rms                   | 6.9-0         | <https://cran.r-project.org/package=rms>                   |
+| rms                   | 7.0-0         | <https://cran.r-project.org/package=rms>                   |
 | rngWELL               | 0.10-10       | <https://cran.r-project.org/package=rngWELL>               |
 | RobStatTM             | 1.0.11        | <https://cran.r-project.org/package=RobStatTM>             |
 | robustbase            | 0.99-4-1      | <https://cran.r-project.org/package=robustbase>            |
@@ -440,7 +439,7 @@ tcltk, tools, and utils) for the respective version of R.
 | sass                  | 0.4.9         | <https://cran.r-project.org/package=sass>                  |
 | scales                | 1.3.0         | <https://cran.r-project.org/package=scales>                |
 | SCCS                  | 1.7           | <https://cran.r-project.org/package=SCCS>                  |
-| secretbase            | 1.0.3         | <https://cran.r-project.org/package=secretbase>            |
+| secretbase            | 1.0.4         | <https://cran.r-project.org/package=secretbase>            |
 | segmented             | 2.1-3         | <https://cran.r-project.org/package=segmented>             |
 | selectr               | 0.4-2         | <https://cran.r-project.org/package=selectr>               |
 | seriation             | 1.5.7         | <https://cran.r-project.org/package=seriation>             |
@@ -448,7 +447,7 @@ tcltk, tools, and utils) for the respective version of R.
 | sfd                   | 0.1.0         | <https://cran.r-project.org/package=sfd>                   |
 | shades                | 1.4.0         | <https://cran.r-project.org/package=shades>                |
 | shape                 | 1.4.6.1       | <https://cran.r-project.org/package=shape>                 |
-| shapviz               | 0.9.6         | <https://cran.r-project.org/package=shapviz>               |
+| shapviz               | 0.9.7         | <https://cran.r-project.org/package=shapviz>               |
 | shiny                 | 1.10.0        | <https://cran.r-project.org/package=shiny>                 |
 | shinyjs               | 2.1.0         | <https://cran.r-project.org/package=shinyjs>               |
 | sjlabelled            | 1.2.0         | <https://cran.r-project.org/package=sjlabelled>            |
@@ -478,12 +477,12 @@ tcltk, tools, and utils) for the respective version of R.
 | svglite               | 2.1.3         | <https://cran.r-project.org/package=svglite>               |
 | sweep                 | 0.2.5         | <https://cran.r-project.org/package=sweep>                 |
 | sys                   | 3.4.3         | <https://cran.r-project.org/package=sys>                   |
-| systemfonts           | 1.1.0         | <https://cran.r-project.org/package=systemfonts>           |
+| systemfonts           | 1.2.1         | <https://cran.r-project.org/package=systemfonts>           |
 | tables                | 0.9.31        | <https://cran.r-project.org/package=tables>                |
 | targets               | 1.10.0        | <https://cran.r-project.org/package=targets>               |
 | tensorA               | 0.36.2.1      | <https://cran.r-project.org/package=tensorA>               |
-| textshaping           | 0.4.1         | <https://cran.r-project.org/package=textshaping>           |
-| TH.data               | 1.1-2         | <https://cran.r-project.org/package=TH.data>               |
+| textshaping           | 1.0.0         | <https://cran.r-project.org/package=textshaping>           |
+| TH.data               | 1.1-3         | <https://cran.r-project.org/package=TH.data>               |
 | tibble                | 3.2.1         | <https://cran.r-project.org/package=tibble>                |
 | tictoc                | 1.2.1         | <https://cran.r-project.org/package=tictoc>                |
 | tidycmprsk            | 1.1.0         | <https://cran.r-project.org/package=tidycmprsk>            |
@@ -497,7 +496,7 @@ tcltk, tools, and utils) for the respective version of R.
 | timeDate              | 4041.110      | <https://cran.r-project.org/package=timeDate>              |
 | timereg               | 2.0.6         | <https://cran.r-project.org/package=timereg>               |
 | timetk                | 2.9.0         | <https://cran.r-project.org/package=timetk>                |
-| tinytable             | 0.6.1         | <https://cran.r-project.org/package=tinytable>             |
+| tinytable             | 0.7.0         | <https://cran.r-project.org/package=tinytable>             |
 | tinytex               | 0.54          | <https://cran.r-project.org/package=tinytex>               |
 | TMB                   | 1.9.16        | <https://cran.r-project.org/package=TMB>                   |
 | tmvtnorm              | 1.6           | <https://cran.r-project.org/package=tmvtnorm>              |
@@ -520,7 +519,7 @@ tcltk, tools, and utils) for the respective version of R.
 | V8                    | 6.0.0         | <https://cran.r-project.org/package=V8>                    |
 | vcd                   | 1.4-13        | <https://cran.r-project.org/package=vcd>                   |
 | vctrs                 | 0.6.5         | <https://cran.r-project.org/package=vctrs>                 |
-| vegan                 | 2.6-8         | <https://cran.r-project.org/package=vegan>                 |
+| vegan                 | 2.6-10        | <https://cran.r-project.org/package=vegan>                 |
 | VGAM                  | 1.1-12        | <https://cran.r-project.org/package=VGAM>                  |
 | viridis               | 0.6.5         | <https://cran.r-project.org/package=viridis>               |
 | viridisLite           | 0.4.2         | <https://cran.r-project.org/package=viridisLite>           |
@@ -541,6 +540,6 @@ tcltk, tools, and utils) for the respective version of R.
 | xtable                | 1.8-4         | <https://cran.r-project.org/package=xtable>                |
 | xts                   | 0.14.1        | <https://cran.r-project.org/package=xts>                   |
 | yaml                  | 2.3.10        | <https://cran.r-project.org/package=yaml>                  |
-| yardstick             | 1.3.1         | <https://cran.r-project.org/package=yardstick>             |
+| yardstick             | 1.3.2         | <https://cran.r-project.org/package=yardstick>             |
 | zip                   | 2.3.1         | <https://cran.r-project.org/package=zip>                   |
 | zoo                   | 1.8-12        | <https://cran.r-project.org/package=zoo>                   |

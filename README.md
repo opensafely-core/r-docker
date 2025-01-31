@@ -83,10 +83,16 @@ packages = ["package-name-1", "package-name-2"]
 comment = "Explanatory comment about why the package/s are being added."
 ```
 
-If the package is not on CRAN please add it to the <https://opensafely-core.r-universe.dev> by adding it to _packages.json_ in the registry repository <https://github.com/opensafely-core/opensafely-core.r-universe.dev>, then enter the relevant Linux binary package URL, as an additional `repos` key-value pair in the new section in _v2/packages.toml_, currently this is done as follows.
+If the package is not on CRAN please add it to the <https://opensafely-core.r-universe.dev> by adding it to _packages.json_ in the registry repository <https://github.com/opensafely-core/opensafely-core.r-universe.dev>. If the package only contains R code enter the relevant Linux binary package URL, as an additional `repos` key-value pair in the new section in _v2/packages.toml_, currently this is done as follows.
 
 ```toml
 repos = "https://opensafely-core.r-universe.dev/bin/linux/noble/4.4/"
+```
+
+However, if the package contains code to be compiled (such as C, C++, Rust, etc.) please add the R-Universe source package URL as follows (this is because on R-Universe Linux binary packages are built on Ubuntu Noble Numbat whereas the r:v2 image is currently built on Ubuntu Jammy Jellyfish; when they use the same version of Ubuntu the Linux binary package URL above can be used for all packages).
+
+```toml
+repos = "https://opensafely-core.r-universe.dev/"
 ```
 
 If the package requires any runtime dependencies add those to _v2/dependencies.txt_
@@ -174,7 +180,7 @@ As such we know that on a particular date CRAN has tested these package versions
 Hence this is an extremely stable approach to choosing a set of package versions.
 And we can add additional packages at their versions on this date reliably (and without updating dependency packages already included in the image).
 
-The CRAN apt repository for R is available [here](https://cran.r-project.org/bin/linux/ubuntu/noble-cran40/) (note you may need to amend the Ubuntu codename in the URL if using a newer base image), find the package number you require and edit the number in _v2/dependencies.txt_ and _v2/build-dependencies.txt_.
+The CRAN apt repository for R is available [here](https://cran.r-project.org/bin/linux/ubuntu/jammy-cran40/) (note you may need to amend the Ubuntu codename in the URL if using a newer base image), find the package number you require and edit the number in _v2/dependencies.txt_ and _v2/build-dependencies.txt_.
 
 Then amend the `CRAN_DATE` and `REPOS` arguments in _v2/env_.
 

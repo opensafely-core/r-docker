@@ -3,14 +3,15 @@
 # check=error=true
 #
 #################################################
-FROM ghcr.io/opensafely-core/base-action:24.04 AS base-r
+ARG BASE=22.04
+FROM ghcr.io/opensafely-core/base-action:$BASE AS base-r
 ARG MAJOR_VERSION=v2
 
 # add cran repo for R packages and install
-RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked \
-    --mount=type=cache,target=/var/lib/apt,id=apt-2404,sharing=locked \
+RUN --mount=type=cache,target=/var/cache/apt,id=apt-2204,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,id=apt-2204,sharing=locked \
     --mount=type=bind,source=${MAJOR_VERSION}/dependencies.txt,target=/tmp/dependencies.txt <<EOF
-    echo "deb https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/" > /etc/apt/sources.list.d/cran.list
+    echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" > /etc/apt/sources.list.d/cran.list
     /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
     /root/docker-apt-install.sh /tmp/dependencies.txt
 EOF
@@ -21,7 +22,7 @@ ENV PKG_PACKAGE_CACHE_DIR=/cache/package
 ENV PKG_METADATA_CACHE_DIR=/cache/metadata
 ARG REPOS="default-arg-to-silence-docker"
 ARG CRAN_DATE="default-arg-to-silence-docker"
-RUN --mount=type=cache,target=/cache,id=/cache-2404,sharing=locked \
+RUN --mount=type=cache,target=/cache,id=/cache-2204,sharing=locked \
     --mount=type=bind,source=scripts/build-toml.R,target=/tmp/scripts/build-toml.R \
     --mount=type=bind,source=${MAJOR_VERSION}/packages.toml,target=/tmp/packages.toml \
     Rscript /tmp/scripts/build-toml.R
@@ -63,8 +64,8 @@ FROM r AS rstudio
 
 # Install rstudio-server (and a few dependencies)
 COPY rstudio/rstudio-dependencies.txt /root/rstudio-dependencies.txt
-RUN --mount=type=cache,target=/var/cache/apt,id=apt-2404,sharing=locked \
-    --mount=type=cache,target=/var/lib/apt,id=apt-2404,sharing=locked \
+RUN --mount=type=cache,target=/var/cache/apt,id=apt-2204,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,id=apt-2204,sharing=locked \
     --mount=type=bind,source=rstudio/rstudio-dependencies.txt,target=/tmp/rstudio-dependencies.txt <<EOF
     /root/docker-apt-install.sh /tmp/rstudio-dependencies.txt
     test -f /var/cache/apt/"${RSTUDIO_DEB}" || /usr/lib/apt/apt-helper download-file "${RSTUDIO_BASE_URL}${RSTUDIO_DEB}" /var/cache/apt/"${RSTUDIO_DEB}"
