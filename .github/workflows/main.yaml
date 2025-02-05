@@ -2,6 +2,11 @@ name: CI
 on:
   workflow_dispatch:
   push:
+
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   tests:
     runs-on: ubuntu-22.04
@@ -27,3 +32,13 @@ jobs:
       run: |
         just _env  # ideally needs creating before we run the tests
         just test-rstudio ${{ matrix.version }}
+
+    - name: Log into GitHub Container Registry
+      if: github.ref == 'refs/heads/main'
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
+
+    - name: Publish images
+      if: github.ref == 'refs/heads/main'
+      run: |
+        just publish ${{ matrix.version }}
+        just publish-rstudio ${{ matrix.version }}
