@@ -5,7 +5,7 @@ Docker image for running R code in OpenSAFELY, both locally and in production.
 ## Installation requirements to build this image
 
 * docker
-* docker-compose
+* docker compose
 * [just](https://github.com/casey/just)
 
 And the tests additionally require
@@ -21,7 +21,7 @@ just build VERSION
 
 where `VERSION` is either v1 or v2.
 
-Under the hood, this builds `VERSION/Dockerfile` using docker-compose and buildkit.
+Under the hood, this builds `VERSION/Dockerfile` using docker compose and buildkit.
 
 In v1, we currently build a lot of packages, so an initial build on a fresh checkout
 can take a long time (e.g. an hour).  However, to alleviate this, the
