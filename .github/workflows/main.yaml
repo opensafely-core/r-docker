@@ -1,0 +1,29 @@
+name: CI
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  tests:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        version: [v2]
+    steps:
+    - uses: actions/checkout@v4
+    - uses: "opensafely-core/setup-action@v1"
+      with:
+          install-just: true
+    - name: Install uv
+      uses: astral-sh/setup-uv@v5
+    - name: check
+      run: just check
+    - name: Build image
+      run: just build ${{ matrix.version }}
+    - name: Run tests
+      run: just test ${{ matrix.version }}
+    - name: Build rstudio
+      run: just build-rstudio ${{ matrix.version }}
+    - name: Test rstudio
+      run: |
+        just _env  # ideally needs creating before we run the tests
+        just test-rstudio ${{ matrix.version }}

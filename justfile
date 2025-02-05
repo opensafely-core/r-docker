@@ -46,7 +46,7 @@ build-rstudio version:
     docker compose --env-file {{ version }}/env build --pull rstudio
 
 # test the locally built image
-test version:
+test version: _env
     #!/usr/bin/env bash
     source {{ version }}/env
     bash tests/test.sh {{ version }}
@@ -84,5 +84,5 @@ publish-rstudio version:
       docker push ghcr.io/opensafely-core/rstudio:latest
     fi
 
-check-toml:
+check:
     uvx --python 3.13 toml-validator v2/packages.toml
