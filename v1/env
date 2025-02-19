@@ -1,4 +1,4 @@
 MAJOR_VERSION=v1
 BASE=20.04
 RSTUDIO_BASE_URL=https://download2.rstudio.org/server/focal/amd64/
-RSTUDIO_DEB=rstudio-server-2024.09.0-375-amd64.deb
+RSTUDIO_DEB=rstudio-server-2024.12.1-563-amd64.deb
