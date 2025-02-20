@@ -16,17 +16,17 @@ build version:
     export GITREF=$(git rev-parse --short HEAD)
 
     # build the thing
-    docker-compose --env-file {{ version }}/env build --pull r
+    docker compose --env-file {{ version }}/env build --pull r
 
     if [ "{{ version }}" = "v1" ]; then
       # update renv.lock
       cp ${MAJOR_VERSION}/renv.lock ${MAJOR_VERSION}/renv.lock.bak
-      # cannot use docker-compose run as it mangles the output
+      # cannot use docker compose run as it mangles the output
       docker run --platform linux/amd64 --rm r:{{ version }} cat /renv/renv.lock > ${MAJOR_VERSION}/renv.lock
     elif [ "{{ version }}" = "v2" ]; then
       # update pkg.lock
       cp ${MAJOR_VERSION}/pkg.lock ${MAJOR_VERSION}/pkg.lock.bak
-      # cannot use docker-compose run as it mangles the output
+      # cannot use docker compose run as it mangles the output
       docker run --platform linux/amd64 --rm r:{{ version }} cat /pkg.lock > ${MAJOR_VERSION}/pkg.lock
     fi
 
@@ -43,10 +43,10 @@ add-package-v1 package repos="NULL":
 
 # r image containing rstudio-server
 build-rstudio version:
-    docker-compose --env-file {{ version }}/env build --pull rstudio
+    docker compose --env-file {{ version }}/env build --pull rstudio
 
 # test the locally built image
-test version:
+test version: _env
     #!/usr/bin/env bash
     source {{ version }}/env
     bash tests/test.sh {{ version }}
@@ -84,5 +84,5 @@ publish-rstudio version:
       docker push ghcr.io/opensafely-core/rstudio:latest
     fi
 
-check-toml:
+check:
     uvx --python 3.13 toml-validator v2/packages.toml

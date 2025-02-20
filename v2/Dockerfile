@@ -63,7 +63,6 @@ ARG RSTUDIO_DEB="default-arg-to-silence-docker"
 FROM r AS rstudio
 
 # Install rstudio-server (and a few dependencies)
-COPY rstudio/rstudio-dependencies.txt /root/rstudio-dependencies.txt
 RUN --mount=type=cache,target=/var/cache/apt,id=apt-2204,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,id=apt-2204,sharing=locked \
     --mount=type=bind,source=rstudio/rstudio-dependencies.txt,target=/tmp/rstudio-dependencies.txt <<EOF

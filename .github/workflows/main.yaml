@@ -1,0 +1,70 @@
+name: CI
+on:
+  workflow_dispatch:
+  push:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  matrix:
+    runs-on: ubuntu-22.04
+    outputs:
+      versions: ${{ steps.versions.outputs.versions }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set matrix
+        id: versions
+        run: |
+          set -x
+          if [[ "${{ github.ref }}" == 'refs/heads/main' ]]; then
+            # build, test and publish both versions on main.
+            # v1 will take ~2 hours
+            echo 'versions=["v1", "v2"]' >> "$GITHUB_OUTPUT"
+          else
+            # only build v2 in CI as v1 is too slow
+            echo 'versions=["v2"]' >> "$GITHUB_OUTPUT"
+          fi
+  tests:
+    needs: matrix
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        version: ${{fromJson(needs.matrix.outputs.versions)}}
+
+    steps:
+
+    - uses: actions/checkout@v4
+    - uses: "opensafely-core/setup-action@v1"
+      with:
+          install-just: true
+    - name: Install uv
+      uses: astral-sh/setup-uv@4db96194c378173c656ce18a155ffc14a9fc4355
+
+    - name: check
+      run: just check
+
+    - name: build
+      run: just build ${{ matrix.version }}
+
+    - name: Run tests
+      run: just test ${{ matrix.version }}
+
+    - name: Build rstudio
+      run: just build-rstudio ${{ matrix.version }}
+
+    - name: Test rstudio
+      run: |
+        just _env  # ideally needs creating before we run the tests
+        just test-rstudio ${{ matrix.version }}
+
+    - name: Log into GitHub Container Registry
+      if: github.ref == 'refs/heads/main'
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
+
+    - name: Publish images
+      if: github.ref == 'refs/heads/main'
+      run: |
+        just publish ${{ matrix.version }}
+        just publish-rstudio ${{ matrix.version }}
