@@ -58,6 +58,7 @@ tcltk, tools, and utils) for the respective version of R.
 | car                   | 3.1-3         | <https://cran.r-project.org/package=car>                   |
 | carData               | 3.0-5         | <https://cran.r-project.org/package=carData>               |
 | cards                 | 0.4.0         | <https://cran.r-project.org/package=cards>                 |
+| cardx                 | 0.2.2         | <https://cran.r-project.org/package=cardx>                 |
 | caret                 | 7.0-1         | <https://cran.r-project.org/package=caret>                 |
 | caTools               | 1.18.3        | <https://cran.r-project.org/package=caTools>               |
 | cellranger            | 1.1.0         | <https://cran.r-project.org/package=cellranger>            |
