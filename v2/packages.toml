@@ -198,3 +198,7 @@ comment = "Packages to work with the VSCode R extension."
 [trial-emulation]
 packages = "TrialEmulation"
 comment = "The Bristol group are planning to perform target trial emulation analyses."
+
+[cardx]
+packages = "cardx"
+comment = "Requested by Will. This is a soft (Suggests list) dependency of gtsummary, and hence wasn't previously installed."
