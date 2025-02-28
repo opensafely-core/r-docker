@@ -22,3 +22,8 @@ docker compose --env-file ${MAJOR_VERSION}/env run --rm r -e "arrow::arrow_info(
 
 # Test loading the 14 base packages
 docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/tests" r:"${MAJOR_VERSION}" /tests/tests/test-loading-base.R
+
+# Test user installed paackages on v2
+if [ "${MAJOR_VERSION}" = "v2" ]; then
+  docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/tests" r:"${MAJOR_VERSION}" /tests/tests/test-user-install-package.R
+fi
