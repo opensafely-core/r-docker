@@ -32,6 +32,7 @@ RUN --mount=type=cache,target=/cache,id=/cache-2204,sharing=locked \
 #
 # Finally, build the actual image from the base-r image
 FROM base-r AS r
+ARG REPOS="default-arg-to-silence-docker"
 
 # Some static metadata for this specific image, as defined by:
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md#pre-defined-annotation-keys
@@ -54,6 +55,11 @@ ENV INTERACTIVE_EXEC="/usr/bin/R"
 RUN mkdir /workspace
 WORKDIR /workspace
 
+# Settings to make it easier for users to add packages
+RUN --mount=type=bind,source=scripts/rprofile-site-append.R,target=/tmp/rprofile-site-append.R <<EOF
+    echo "REPOS=${REPOS}" >> /usr/lib/R/etc/Renviron.site
+    cat /tmp/rprofile-site-append.R >> /usr/lib/R/etc/Rprofile.site
+EOF
 
 #################################################
 #
