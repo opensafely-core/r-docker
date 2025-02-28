@@ -32,6 +32,7 @@ RUN --mount=type=cache,target=/cache,id=/cache-2204,sharing=locked \
 #
 # Finally, build the actual image from the base-r image
 FROM base-r AS r
+ARG REPOS="default-arg-to-silence-docker"
 
 # Some static metadata for this specific image, as defined by:
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md#pre-defined-annotation-keys
@@ -53,6 +54,13 @@ ENV INTERACTIVE_EXEC="/usr/bin/R"
 # setup /workspace
 RUN mkdir /workspace
 WORKDIR /workspace
+
+# Settings to make it easier for users to add packages
+RUN <<EOF
+    echo ".libPaths(c('/workspace/r-v2-library', .libPaths()))" >> /usr/lib/R/etc/Rprofile.site
+    echo "options(repos = c(CRAN = \"$REPOS\"))" >> /usr/lib/R/etc/Rprofile.site
+    echo "options(HTTPUserAgent = sprintf('R/%s R (%s)', getRversion(), paste(getRversion(), R.version['platform'], R.version['arch'], R.version['os'])))" >> /usr/lib/R/etc/Rprofile.site
+EOF
 
 
 #################################################
