@@ -22,3 +22,15 @@ docker compose --env-file ${MAJOR_VERSION}/env run --rm r -e "arrow::arrow_info(
 
 # Test loading the 14 base packages
 docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/tests" r:"${MAJOR_VERSION}" /tests/tests/test-loading-base.R
+
+# Test user installed paackages on v2
+if [ "${MAJOR_VERSION}" = "v2" ]; then
+  # Test installing and loading in same R session
+  docker run --platform linux/amd64 --env-file "${MAJOR_VERSION}"/env --rm -v "${PWD}:/workspace" r:"${MAJOR_VERSION}" -e "unlink('/workspace/lib', recursive = TRUE)"
+  docker run --platform linux/amd64 --env-file "${MAJOR_VERSION}"/env --rm -v "${PWD}:/workspace" r:"${MAJOR_VERSION}" /workspace/tests/test-user-install-package.R
+  
+  # Test installing and loafding in different R sessions
+  docker run --platform linux/amd64 --env-file "${MAJOR_VERSION}"/env --rm -v "${PWD}:/workspace" r:"${MAJOR_VERSION}" -e "unlink('/workspace/lib', recursive = TRUE)"
+  docker run --platform linux/amd64 --env-file "${MAJOR_VERSION}"/env --rm -v "${PWD}:/workspace" r:"${MAJOR_VERSION}" /workspace/tests/test-preinstalled-user-package-step-1.R
+  docker run --platform linux/amd64 --env-file "${MAJOR_VERSION}"/env --rm -v "${PWD}:/workspace" r:"${MAJOR_VERSION}" /workspace/tests/test-preinstalled-user-package-step-2.R
+fi
