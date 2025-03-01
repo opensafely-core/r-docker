@@ -9,12 +9,6 @@ print("HTTPUserAgent setting:")
 print(getOption('HTTPUserAgent'))
 stopifnot(getOption("HTTPUserAgent") == sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version['platform'], R.version['arch'], R.version['os'])))
 
-print("Library paths")
-print(.libPaths())
-stopifnot(.libPaths()[1] == "/workspace/r-v2-library")
-
-print("Library settings tests passed.")
-
 # Test installing then removing a package to /workspace/r-v2-library
 # I have chosen the tmsens package because it has no dependencies
 install.packages("tmsens")
@@ -25,8 +19,14 @@ print("Loading user installed package test passed.")
 # Remove the test package
 detach(package:tmsens)
 list.files("/workspace/r-v2-library/tmsens")
+
+print("Library paths")
+print(.libPaths())
+stopifnot(.libPaths()[1] == "/workspace/r-v2-library")
+
 remove.packages("tmsens")
 print(list.files('workspace/r-v2-library'))
+unlink("/workspace/r-v2-library", recursive = TRUE)
 print("Removing user installed package test passed.")
 
 print("Installing and removing a user installed package tests passed.")

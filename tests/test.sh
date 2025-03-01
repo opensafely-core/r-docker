@@ -25,5 +25,10 @@ docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD
 
 # Test user installed paackages on v2
 if [ "${MAJOR_VERSION}" = "v2" ]; then
-  docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/tests" r:"${MAJOR_VERSION}" /tests/tests/test-user-install-package.R
+  # Test installing and loading in same R session
+  docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/workspace" r:"${MAJOR_VERSION}" /workspace/tests/test-user-install-package.R
+  
+  # Test installing and loafding in different R sessions
+  docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/workspace" r:"${MAJOR_VERSION}" /workspace/tests/test-loading-preinstalled-user-package-step-1.R
+  docker run --platform linux/amd64 --env-file ${MAJOR_VERSION}/env --rm -v "${PWD}:/workspace" r:"${MAJOR_VERSION}" /workspace/tests/test-loading-preinstalled-user-package-step-2.R
 fi
