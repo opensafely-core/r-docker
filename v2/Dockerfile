@@ -60,9 +60,10 @@ RUN <<EOF
     echo "REPOS=${REPOS}" >> /usr/lib/R/etc/Renviron.site
     echo "options(repos = c(CRAN = \"$REPOS\"))" >> /usr/lib/R/etc/Rprofile.site
     echo "options(HTTPUserAgent = sprintf('R/%s R (%s)', getRversion(), paste(getRversion(), R.version['platform'], R.version['arch'], R.version['os'])))" >> /usr/lib/R/etc/Rprofile.site
-    echo "if (!dir.exists('/workspace/r-v2-library')) dir.create('/workspace/r-v2-library')" >> /usr/lib/R/etc/Rprofile.site
-    echo ".libPaths(c('/workspace/r-v2-library', .libPaths()))" >> /usr/lib/R/etc/Rprofile.site
+    echo "if (dir.exists('/workspace/r-v2-library')) .libPaths(c('/workspace/r-v2-library', .libPaths()))" >> /usr/lib/R/etc/Rprofile.site
+    echo "install.packages <- function(...) {if (!dir.exists('/workspace/r-v2-library')) { dir.create('/workspace/r-v2-library'); .libPaths(c('/workspace/r-v2-library', .libPaths()))}; utils::install.packages(...)}" >> /usr/lib/R/etc/Rprofile.site
 EOF
+
 
 
 #################################################
