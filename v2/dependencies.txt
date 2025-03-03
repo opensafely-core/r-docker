@@ -1,7 +1,7 @@
 ## Core systemdependencies
 tzdata
-r-base-core=4.4.2-1.2204.0
-r-base-dev=4.4.2-1.2204.0
+r-base-core=4.4.3-1.2204.0
+r-base-dev=4.4.3-1.2204.0
 
 ## Package specific dependencies. 
 #
