@@ -42,9 +42,20 @@ library(bpbounds)
 print("Test installing a second package passed.")
 detach(package:bpbounds)
 
-# Clean up, i.e., remove packages and delete /workspace/lib/v2 directory
-remove.packages(c("tmsens", "bpbounds"))
+# Test adding a package which needs compilation
+# Note this will be downloaded as precompiled from PPPM
+# Again chosen because pak's 2 hard dependencies are base R packages
+# and hence are already installed.
+install.packages("pak")
+library(pak)
+detach(package:pak)
+print("Test installing and loading a package which needs compilation passed.")
+
+# Test uninstalling packages
+remove.packages(c("tmsens", "bpbounds", "pak"))
+print("Test uninstalling user installed packages passed.")
+
+# Cleanup lib directory
 unlink("/workspace/lib", recursive = TRUE)
-print("Removing user installed package test passed.")
 
 print("Installing and removing a user installed package tests passed.")
