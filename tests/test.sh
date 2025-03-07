@@ -29,7 +29,7 @@ fi
 run_test_command "${MAJOR_VERSION}" /tests "if (is.numeric(Rcpp::evalCpp('2 + 2'))) {print('Rcpp test passed')}"
 
 # Check number of packages
-run_test_command "${MAJOR_VERSION}" /tests "print(paste('Total number of R packages:', nrow(installed.packages())))"
+run_test_script "${MAJOR_VERSION}" /tests /tests/tests/test-number-packages.R
 
 # Check capabilities of arrow package
 run_test_script "${MAJOR_VERSION}" /tests /tests/tests/test-arrow.R
