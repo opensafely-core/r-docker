@@ -40,11 +40,11 @@ run_test_script "${MAJOR_VERSION}" /tests /tests/tests/test-loading-base.R
 # Test user installed paackages on v2
 if [ "${MAJOR_VERSION}" = "v2" ]; then
   # Test installing and loading in same R session
-  run_test_command "${MAJOR_VERSION}" /workspace "unlink('/workspace/lib', recursive = TRUE)"
+  run_test_script "${MAJOR_VERSION}" /workspace /workspace/tests/unlink-lib.R
   run_test_script "${MAJOR_VERSION}" /workspace /workspace/tests/test-user-install-package.R
   
   # Test installing and loafding in different R sessions
-  run_test_command ${MAJOR_VERSION} /workspace "unlink('/workspace/lib', recursive = TRUE)"
+  run_test_script ${MAJOR_VERSION} /workspace /workspace/tests/unlink-lib.R
   run_test_script ${MAJOR_VERSION} /workspace /workspace/tests/test-preinstalled-user-package-step-1.R
   run_test_script ${MAJOR_VERSION} /workspace /workspace/tests/test-preinstalled-user-package-step-2.R
 fi
