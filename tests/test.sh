@@ -32,7 +32,7 @@ run_test_command "${MAJOR_VERSION}" /tests "if (is.numeric(Rcpp::evalCpp('2 + 2'
 run_test_command "${MAJOR_VERSION}" /tests "print(paste('Total number of R packages:', nrow(installed.packages())))"
 
 # Check capabilities of arrow package
-run_test_command "${MAJOR_VERSION}" /tests "arrow::arrow_info()"
+run_test_script "${MAJOR_VERSION}" /tests /tests/tests/test-arrow.R
 
 # Test loading the 14 base packages
 run_test_script "${MAJOR_VERSION}" /tests /tests/tests/test-loading-base.R
