@@ -9,13 +9,6 @@ run_test_script() {
   docker run --platform linux/amd64 --env-file "${MAJOR_VERSION}"/env --rm -v "${PWD}:${DIRECTORY}" r:"${MAJOR_VERSION}" "${TEST_SCRIPT}"
 }
 
-run_test_command() {
-  MAJOR_VERSION=$1
-  DIRECTORY=$2
-  TEST_COMMAND=$3
-  docker run --platform linux/amd64 --env-file "${MAJOR_VERSION}"/env --rm -v "${PWD}:${DIRECTORY}" r:"${MAJOR_VERSION}" -e "${TEST_COMMAND}"
-}
-
 if [ "${MAJOR_VERSION}" = "v1" ]; then
   # Test all R packages can be loaded
   python3 -c "import json; print('\n'.join(json.load(open(\"./$MAJOR_VERSION/renv.lock\"))['Packages']))" | xargs -I {} echo "if (!library({}, warn.conflicts = FALSE, logical.return = TRUE)) {stop(\"Package {} failed to load, please investigate\")}" > .tests.R
