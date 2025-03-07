@@ -37,7 +37,7 @@ if [ "${MAJOR_VERSION}" = "v2" ]; then
   run_test "${MAJOR_VERSION}" /workspace /workspace/tests/test-user-install-package.R
   
   # Test installing and loafding in different R sessions
-  run_test ${MAJOR_VERSION} /workspace /workspace/tests/unlink-lib.R
-  run_test ${MAJOR_VERSION} /workspace /workspace/tests/test-preinstalled-user-package-step-1.R
-  run_test ${MAJOR_VERSION} /workspace /workspace/tests/test-preinstalled-user-package-step-2.R
+  run_test "${MAJOR_VERSION}" /workspace /workspace/tests/unlink-lib.R
+  run_test "${MAJOR_VERSION}" /workspace /workspace/tests/test-preinstalled-user-package-step-1.R
+  run_test "${MAJOR_VERSION}" /workspace /workspace/tests/test-preinstalled-user-package-step-2.R
 fi
