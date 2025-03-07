@@ -11,12 +11,12 @@ options(
     )
   )
 )
-if (dir.exists('/workspace/lib/v2'))
-  .libPaths(c('/workspace/lib/v2', .libPaths()))
+if (dir.exists('/workspace/.local-packages/r/v2'))
+  .libPaths(c('/workspace/.local-packages/r/v2', .libPaths()))
 install.packages <- function(...) {
-  if (!dir.exists("/workspace/lib/v2")) {
-    dir.create("/workspace/lib/v2", recursive = TRUE)
-    .libPaths(c("/workspace/lib/v2", .libPaths()))
+  if (!dir.exists("/workspace/.local-packages/r/v2")) {
+    dir.create("/workspace/.local-packages/r/v2", recursive = TRUE)
+    .libPaths(c("/workspace/.local-packages/r/v2", .libPaths()))
   }
   utils::install.packages(...)
 }
