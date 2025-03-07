@@ -26,7 +26,7 @@ elif [ "${MAJOR_VERSION}" = "v2" ]; then
 fi
 
 # Check that a basic Rcpp call runs successfully
-run_test_command "${MAJOR_VERSION}" /tests "if (is.numeric(Rcpp::evalCpp('2 + 2'))) {print('Rcpp test passed')}"
+run_test_script "${MAJOR_VERSION}" /tests /tests/tests/test-rcpp.R
 
 # Check number of packages
 run_test_script "${MAJOR_VERSION}" /tests /tests/tests/test-number-packages.R
