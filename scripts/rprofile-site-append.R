@@ -17,6 +17,7 @@ install.packages <- function(...) {
   if (!dir.exists("/workspace/.local-packages/r/v2")) {
     dir.create("/workspace/.local-packages/r/v2", recursive = TRUE)
     .libPaths(c("/workspace/.local-packages/r/v2", .libPaths()))
+    file.create("/workspace/.local-packages/.gitignore")
   }
   utils::install.packages(...)
 }
