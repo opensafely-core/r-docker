@@ -2,7 +2,7 @@
 set -eu
 MAJOR_VERSION=${1}
 
-trap "rm -rf .tests.R ./lib || true" EXIT
+trap "rm -rf .tests.R ./local-packages || true" EXIT
 
 run_test() {
   MAJOR_VERSION=$1
@@ -34,11 +34,12 @@ run_test "${MAJOR_VERSION}" ./tests/test-loading-base.R
 # Test user installed paackages on v2
 if [ "${MAJOR_VERSION}" = "v2" ]; then
   # Test installing and loading in same R session
-  rm -rf ./lib
+  run_test "${MAJOR_VERSION}" ./tests/unlink-libdir.R
   run_test "${MAJOR_VERSION}" ./tests/test-user-install-package.R
   
   # Test installing and loafding in different R sessions
-  rm -rf ./lib
+  run_test "${MAJOR_VERSION}" ./tests/unlink-libdir.R
   run_test "${MAJOR_VERSION}" ./tests/test-preinstalled-user-package-step-1.R
   run_test "${MAJOR_VERSION}" ./tests/test-preinstalled-user-package-step-2.R
+  run_test "${MAJOR_VERSION}" ./tests/unlink-libdir.R
 fi

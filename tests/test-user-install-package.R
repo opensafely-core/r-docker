@@ -31,7 +31,7 @@ library(tmsens)
 print("Loading user installed package test passed.")
 
 print("Library paths")
-stopifnot(.libPaths()[1] == "/workspace/lib/v2")
+stopifnot(.libPaths()[1] == "/workspace/.local-packages/r/v2")
 
 # Test adding a second package works
 # (again bpbounds chosen because it also has no hard dependencies)
