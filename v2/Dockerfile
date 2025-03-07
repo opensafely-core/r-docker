@@ -60,6 +60,7 @@ RUN --mount=type=bind,source=scripts/rprofile-site-append.R,target=/tmp/rprofile
     echo "REPOS=${REPOS}" >> /usr/lib/R/etc/Renviron.site
     cat /tmp/rprofile-site-append.R >> /usr/lib/R/etc/Rprofile.site
 EOF
+COPY scripts/local-packages-README.md /usr/local-packages-README.md
 
 #################################################
 #

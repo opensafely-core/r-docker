@@ -19,5 +19,8 @@ install.packages <- function(...) {
     .libPaths(c("/workspace/.local-packages/r/v2", .libPaths()))
     file.create("/workspace/.local-packages/.gitignore")
   }
+  if (!file.exists("/workspace/.local-packages/README.md")) {
+      file.copy("/usr/local-packages-README.md", "/workspace/.local-packages/README.md")
+  }
   utils::install.packages(...)
 }
