@@ -2,7 +2,7 @@
 set -eu
 MAJOR_VERSION=${1}
 
-trap "rm -rf .tests.R ./local-packages || true" EXIT
+trap "rm -rf .tests.R ./.local-packages || true" EXIT
 
 run_test() {
   MAJOR_VERSION=$1
