@@ -54,4 +54,7 @@ detach(package:pak)
 remove.packages(c("tmsens", "bpbounds", "pak"))
 print("Test uninstalling user installed packages passed.")
 
+# Test .local-packages/README.md exists
+stopifnot(file.exists("/workspace/.local-packages/README.md"))
+
 print("Installing and removing a user installed package tests passed.")
