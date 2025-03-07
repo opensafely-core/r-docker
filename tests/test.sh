@@ -34,11 +34,11 @@ run_test "${MAJOR_VERSION}" ./tests/test-loading-base.R
 # Test user installed paackages on v2
 if [ "${MAJOR_VERSION}" = "v2" ]; then
   # Test installing and loading in same R session
-  run_test "${MAJOR_VERSION}" ./tests/unlink-lib.R
+  rm -rf ./lib
   run_test "${MAJOR_VERSION}" ./tests/test-user-install-package.R
-
+  
   # Test installing and loafding in different R sessions
-  run_test "${MAJOR_VERSION}" ./tests/unlink-lib.R
+  rm -rf ./lib
   run_test "${MAJOR_VERSION}" ./tests/test-preinstalled-user-package-step-1.R
   run_test "${MAJOR_VERSION}" ./tests/test-preinstalled-user-package-step-2.R
 fi

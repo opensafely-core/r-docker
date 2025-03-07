@@ -29,8 +29,6 @@ print("Installation test passed.")
 # Test loading that package
 library(tmsens)
 print("Loading user installed package test passed.")
-# Remove the test package
-detach(package:tmsens)
 
 print("Library paths")
 stopifnot(.libPaths()[1] == "/workspace/lib/v2")
@@ -40,7 +38,6 @@ stopifnot(.libPaths()[1] == "/workspace/lib/v2")
 install.packages("bpbounds")
 library(bpbounds)
 print("Test installing a second package passed.")
-detach(package:bpbounds)
 
 # Test adding a package which needs compilation
 # Note this will be downloaded as precompiled from PPPM
@@ -48,14 +45,13 @@ detach(package:bpbounds)
 # and hence are already installed.
 install.packages("pak")
 library(pak)
-detach(package:pak)
 print("Test installing and loading a package which needs compilation passed.")
 
 # Test uninstalling packages
+detach(package:tmsens)
+detach(package:bpbounds)
+detach(package:pak)
 remove.packages(c("tmsens", "bpbounds", "pak"))
 print("Test uninstalling user installed packages passed.")
-
-# Cleanup lib directory
-unlink("/workspace/lib", recursive = TRUE)
 
 print("Installing and removing a user installed package tests passed.")
