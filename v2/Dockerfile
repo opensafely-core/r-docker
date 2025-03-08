@@ -25,13 +25,18 @@ ARG CRAN_DATE="default-arg-to-silence-docker"
 RUN --mount=type=cache,target=/cache,id=/cache-2204,sharing=locked \
     --mount=type=bind,source=scripts/build-toml.R,target=/tmp/scripts/build-toml.R \
     --mount=type=bind,source=${MAJOR_VERSION}/packages.toml,target=/tmp/packages.toml \
+    --mount=type=bind,source=scripts/rprofile-site-append-1.R,target=/tmp/rprofile-site-append-1.R  <<EOF
+    echo "REPOS=${REPOS}" >> /usr/lib/R/etc/Renviron.site
+    cat /tmp/rprofile-site-append-1.R >> /usr/lib/R/etc/Rprofile.site
     Rscript /tmp/scripts/build-toml.R
+EOF
 
 
 ################################################
 #
 # Finally, build the actual image from the base-r image
 FROM base-r AS r
+ARG REPOS="default-arg-to-silence-docker"
 
 # Some static metadata for this specific image, as defined by:
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md#pre-defined-annotation-keys
@@ -54,6 +59,10 @@ ENV INTERACTIVE_EXEC="/usr/bin/R"
 RUN mkdir /workspace
 WORKDIR /workspace
 
+# Settings to make it easier for users to add packages
+RUN --mount=type=bind,source=scripts/rprofile-site-append-2.R,target=/tmp/rprofile-site-append-2.R \
+    cat /tmp/rprofile-site-append-2.R >> /usr/lib/R/etc/Rprofile.site
+COPY scripts/local-packages-README.md /usr/local-packages-README.md
 
 #################################################
 #
