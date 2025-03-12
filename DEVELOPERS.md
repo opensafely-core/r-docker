@@ -195,7 +195,7 @@ just test v2
 
 Choose a version of R.
 
-Choose a CRAN date when that version of R.
+Choose a CRAN date when that version of R was the current version of R.
 
 We follow a very similar approach to the versioned stack of the Rocker project. They list their R versions and CRAN dates on their [wiki](https://github.com/rocker-org/rocker-versioned2/wiki/Versions).
 
