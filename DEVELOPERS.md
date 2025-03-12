@@ -203,7 +203,7 @@ We recommend not choosing a date within the first week of a new version of R bei
 
 You then need to check that a PPPM snapshot repository exists for your chosen date. Navigate to <https://p3m.dev/client/#/repos/cran/setup> and inspect your chosen date. Set this date as the `REPOS` variable in _v2/env_.
 
-If you choose a version of R that is not the current version of R we recommend following the Rocker approach and choosing the CRAN date as the day before the next version of R was released. For example, if choosing R 4.4.1, R 4.4.2 was released on 2024-10-31 therefore we would choose 2024-10-30 as the CRAN date. Or as is the case here we are using the current version of R (4.4.2) therefore we choose the latest available date on PPPM as the CRAN date.
+If you choose a version of R that is not the current version of R we recommend following the Rocker approach and choosing the CRAN date as the day before the next version of R was released. For example, if choosing R 4.4.1, R 4.4.2 was released on 2024-10-31 therefore we would choose 2024-10-30 as the CRAN date. Or as is the case here we are using the current version of R, therefore we choose the latest available date on PPPM as the CRAN date.
 
 You can find out when the next release of R is scheduled for on the [R developer page](https://developer.r-project.org/).
 
