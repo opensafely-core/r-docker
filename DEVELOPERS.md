@@ -25,7 +25,7 @@ Under the hood, this builds `VERSION/Dockerfile` using docker compose and buildk
 
 In v1, we currently build a lot of packages, so an initial build on a fresh checkout
 can take a long time (e.g. an hour).  However, to alleviate this, the
-v1/Dockerfile is carefully designed to use local buildkit cache, so subequent
+v1/Dockerfile is carefully designed to use local buildkit cache, so subsequent
 rebuilds should be very fast.
 
 In v2, where possible we install binary R packages for Linux from the Posit Public Package Manager (PPPM). And we use the pak package to install packages. This has several advantages including parallel downloads of packages. Therefore, building the v2 image only takes approx. 5 minutes, which is orders of magnitude faster than building the v1 image.
