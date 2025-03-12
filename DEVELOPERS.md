@@ -95,7 +95,13 @@ Then build the v2 image.
 just build v2
 ```
 
-### Push the new Docker image to Github Container Registry
+### Publishing the images
+
+The images are now published by the GitHub Actions workflow.
+
+#### Publishing the images from your machine
+
+Push the new Docker image to Github Container Registry
 
 You will need to configure authentication to GitHub's container registry first.
 See [GitHub's documentation](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry).
