@@ -23,6 +23,14 @@ where `VERSION` is either v1 or v2.
 
 Under the hood, this builds `VERSION/Dockerfile` using docker compose and buildkit.
 
+### Building on GitHub Actions
+
+The v1 image is built on GitHub Actions when there is a new commit on main (i.e., when a PR is merged). Typically, the build takes approximately 2 hours.
+
+The v2 image is built on GitHub Actions when there is a new commit on a branch. Typically, the build takes approximately 5 minutes.
+
+### Building locally
+
 In v1, we currently build a lot of packages, so an initial build on a fresh checkout
 can take a long time (e.g. an hour).  However, to alleviate this, the
 v1/Dockerfile is carefully designed to use local buildkit cache, so subsequent
