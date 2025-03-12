@@ -65,11 +65,6 @@ This will attempt to install and build the package and its dependencies, and
 update the _v1/renv.lock_. It will then rebuild the R image with the new lock file
 and test it.
 
-Note that the first time you do this it will need to compile every
-included R package (because you won't have the R package builds cached
-locally). This can take **several hours**. (When we solve the caching
-problem here we'll be able to do this all in CI.)
-
 #### Under v2
 
 Add a new section for the new package/s to _v2/packages.toml_. If all the packages are from CRAN then the section should be structured as follows.
