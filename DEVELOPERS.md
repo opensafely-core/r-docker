@@ -118,9 +118,6 @@ Commit and push the small resulting change (should only be a few extra
 lines under v1 in _v1/packages.md_ and _v1/renv.lock_; and under v2 in _v2/packages.toml_, _v2/packages.md_, and _v2/pkg.lock_) to a branch, then get the changes
 merged via pull request.
 
-The review is a trivial exercise because the Docker image has already been
-pushed to GitHub.
-
 ### Deploy the new Docker image
 
 The updated image will need pulling into production. This is covered
