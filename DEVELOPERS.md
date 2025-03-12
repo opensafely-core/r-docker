@@ -40,17 +40,6 @@ In v2, where possible we install binary R packages for Linux from the Posit Publ
 
 ## Adding new packages
 
-:warning: To do this you will need:
-
- * Enough bandwidth to comfortably push potentionally gigabytes worth of
-   Docker layers.
- * (Under v1) Several hours worth of CPU time to re-compile all the packages (if
-   this is the first time you've done this and don't have them cached
-   locally).
- * Push access to ghcr.io.
-
-If you don't have all these things then please don't start.
-
 ### Confirm that the package is suitable to add
 
 Before adding a package, check with an OpenSAFELY team member with R
