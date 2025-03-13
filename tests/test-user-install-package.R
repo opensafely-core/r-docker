@@ -1,3 +1,6 @@
+# Delete /workspace/.local-packages if it exists
+unlink('/workspace/.local-packages', recursive = TRUE)
+
 # Test settings
 print("Library paths settings checks")
 
@@ -56,5 +59,8 @@ print("Test uninstalling user installed packages passed.")
 
 # Test .local-packages/README.md exists
 stopifnot(file.exists("/workspace/.local-packages/README.md"))
+
+# Delete /workspace/.local-packages
+unlink('/workspace/.local-packages', recursive = TRUE)
 
 print("Installing and removing a user installed package tests passed.")

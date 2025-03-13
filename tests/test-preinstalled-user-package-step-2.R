@@ -2,4 +2,6 @@
 stopifnot(.libPaths()[1] == "/workspace/.local-packages/r/v2")
 # Load the pre-installed package from previous R session which is now in repo
 library(tmsens)
+# Delete /workspace/.local-packages
+unlink('/workspace/.local-packages', recursive = TRUE)
 print("Step 2: Loading a pre-installed user package in a different R session test passed.")
