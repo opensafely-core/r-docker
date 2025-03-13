@@ -7,7 +7,13 @@ trap "rm -rf .tests.R .local-packages || true" EXIT
 run_test() {
   MAJOR_VERSION=$1
   TEST_SCRIPT=$2
-  docker run --platform linux/amd64 --env-file "${MAJOR_VERSION}"/env --rm -v "${PWD}:/workspace" r:"${MAJOR_VERSION}" "${TEST_SCRIPT}"
+  OPSYS=$(uname -s)
+  if [ "$OPSYS" = "Linux" ]; then
+    UIDARG="--user $(id -u):$(id -g)"
+  else
+    UIDARG=''
+  fi
+  docker run --platform linux/amd64 --env-file "${MAJOR_VERSION}"/env --rm -v "${PWD}:/workspace" $UIDARG r:"${MAJOR_VERSION}" "${TEST_SCRIPT}"
 }
 
 if [ "${MAJOR_VERSION}" = "v1" ]; then
@@ -34,12 +40,12 @@ run_test "${MAJOR_VERSION}" ./tests/test-loading-base.R
 # Test user installed paackages on v2
 if [ "${MAJOR_VERSION}" = "v2" ]; then
   # Test installing and loading in same R session
-  run_test "${MAJOR_VERSION}" ./tests/unlink-libdir.R
+  rm -rf .local-packages
   run_test "${MAJOR_VERSION}" ./tests/test-user-install-package.R
   
   # Test installing and loafding in different R sessions
-  run_test "${MAJOR_VERSION}" ./tests/unlink-libdir.R
+  rm -rf .local-packages
   run_test "${MAJOR_VERSION}" ./tests/test-preinstalled-user-package-step-1.R
   run_test "${MAJOR_VERSION}" ./tests/test-preinstalled-user-package-step-2.R
-  run_test "${MAJOR_VERSION}" ./tests/unlink-libdir.R
+  rm -rf .local-packages
 fi
