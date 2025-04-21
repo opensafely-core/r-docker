@@ -76,13 +76,7 @@ packages = ["package-name-1", "package-name-2"]
 comment = "Explanatory comment about why the package/s are being added."
 ```
 
-If the package is not on CRAN please add it to the <https://opensafely-core.r-universe.dev> by adding it to _packages.json_ in the registry repository <https://github.com/opensafely-core/opensafely-core.r-universe.dev>. If the package only contains R code enter the relevant Linux binary package URL, as an additional `repos` key-value pair in the new section in _v2/packages.toml_, currently this is done as follows.
-
-```toml
-repos = "https://opensafely-core.r-universe.dev/bin/linux/noble/4.4/"
-```
-
-However, if the package contains code to be compiled (such as C, C++, Rust, etc.) please add the R-Universe source package URL as follows (this is because on R-Universe Linux binary packages are built on Ubuntu Noble Numbat whereas the r:v2 image is currently built on Ubuntu Jammy Jellyfish; when they use the same version of Ubuntu the Linux binary package URL above can be used for all packages).
+If the package is not on CRAN please add it to the <https://opensafely-core.r-universe.dev> by adding it to _packages.json_ in the registry repository <https://github.com/opensafely-core/opensafely-core.r-universe.dev>. Then add the OpenSAFELY-Core R-Universe source package URL as follows.
 
 ```toml
 repos = "https://opensafely-core.r-universe.dev/"
