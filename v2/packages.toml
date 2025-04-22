@@ -184,7 +184,7 @@ comment = "sjPlot requested in issue 160."
 
 [dummy-data]
 packages = "dd4d"
-repos = "https://opensafely-core.r-universe.dev/bin/linux/noble/4.4/"
+repos = "https://opensafely-core.r-universe.dev/"
 comment = "Will's package for simulating dummy data. First added for Will and Becky's workshop at the 2024 OpenSAFELY Symposium."
 
 [vscode]
