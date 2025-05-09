@@ -551,7 +551,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["Rcpp", "jsonlite", "curl"],
+      "dependencies": ["curl", "jsonlite", "Rcpp"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -589,7 +589,7 @@
       "type": "standard",
       "direct": true,
       "binary": false,
-      "dependencies": ["rlang", "dagitty", "dplyr", "purrr", "tidyr", "tibble", "tidyselect", "magrittr"],
+      "dependencies": ["dagitty", "dplyr", "magrittr", "purrr", "rlang", "tibble", "tidyr", "tidyselect"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -600,14 +600,13 @@
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.0.0.9000"
       },
-      "sources": ["https://opensafely-core.r-universe.dev//src/contrib/dd4d_0.0.0.9000.tar.gz"],
-      "target": "src/contrib/dd4d_0.0.0.9000.tar.gz",
+      "sources": ["https://opensafely-core.r-universe.dev//src/contrib/sha256-c5ba3aeba6a18c91a8beb8fb674afa16b0ad3d1a5dcae1b3e5c097c558b4c232"],
+      "target": "src/contrib/sha256-c5ba3aeba6a18c91a8beb8fb674afa16b0ad3d1a5dcae1b3e5c097c558b4c232",
       "platform": "source",
       "rversion": "*",
       "directpkg": true,
-      "license": "MIT + file LICENSE",
-      "sha256": "df21d7fba586cdb127eacd9c1f3c7bbe85c899bc51b87a3e73587288d4bd2d66",
-      "filesize": 97477,
+      "sha256": "c5ba3aeba6a18c91a8beb8fb674afa16b0ad3d1a5dcae1b3e5c097c558b4c232",
+      "filesize": 97340,
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
       "install_args": "",
@@ -1081,7 +1080,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["nlme", "lattice", "Rcpp", "digest"],
+      "dependencies": ["digest", "lattice", "nlme", "Rcpp"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -1174,7 +1173,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["coda", "emulator", "mvtnorm", "tmvtnorm", "IDPmisc", "Rcpp", "ellipse", "numDeriv", "msm", "MASS", "Matrix", "DHARMa", "gap", "bridgesampling"],
+      "dependencies": ["bridgesampling", "coda", "DHARMa", "ellipse", "emulator", "gap", "IDPmisc", "MASS", "Matrix", "msm", "mvtnorm", "numDeriv", "Rcpp", "tmvtnorm"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -1205,7 +1204,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["mvtnorm", "Matrix", "Brobdingnag", "stringr", "coda", "scales"],
+      "dependencies": ["Brobdingnag", "coda", "Matrix", "mvtnorm", "scales", "stringr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -1298,7 +1297,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["rlang", "fastmap"],
+      "dependencies": ["fastmap", "rlang"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -1515,7 +1514,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["Matrix", "gap", "lmtest", "ape", "qgam", "lme4"],
+      "dependencies": ["ape", "gap", "lme4", "lmtest", "Matrix", "qgam"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -1763,7 +1762,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["rlang", "htmltools"],
+      "dependencies": ["htmltools", "rlang"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -1832,7 +1831,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["gap.datasets", "dplyr", "ggplot2", "plotly", "Rdpack"],
+      "dependencies": ["dplyr", "gap.datasets", "ggplot2", "plotly", "Rdpack"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -2341,7 +2340,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["rlang", "cachem"],
+      "dependencies": ["cachem", "rlang"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -2372,7 +2371,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["nlme", "Matrix"],
+      "dependencies": ["Matrix", "nlme"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -2472,7 +2471,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["survival", "mvtnorm", "expm", "generics", "tibble"],
+      "dependencies": ["expm", "generics", "mvtnorm", "survival", "tibble"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -2734,7 +2733,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["mgcv", "shiny", "plyr", "doParallel"],
+      "dependencies": ["doParallel", "mgcv", "plyr", "shiny"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -2920,7 +2919,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["fs", "rlang", "htmltools", "R6", "rappdirs"],
+      "dependencies": ["fs", "htmltools", "R6", "rappdirs", "rlang"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -3113,7 +3112,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["mvtnorm", "Matrix", "gmm"],
+      "dependencies": ["gmm", "Matrix", "mvtnorm"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -3392,7 +3391,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["MASS", "Matrix", "nnet", "enrichwith", "numDeriv"],
+      "dependencies": ["enrichwith", "MASS", "Matrix", "nnet", "numDeriv"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -3560,7 +3559,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Rcpp", "rstan", "ggplot2", "loo", "posterior", "Matrix", "mgcv", "rstantools", "bayesplot", "bridgesampling", "glue", "rlang", "future", "future.apply", "matrixStats", "nleqslv", "nlme", "coda", "abind", "backports"],
+      "dependencies": ["abind", "backports", "bayesplot", "bridgesampling", "coda", "future", "future.apply", "ggplot2", "glue", "loo", "Matrix", "matrixStats", "mgcv", "nleqslv", "nlme", "posterior", "Rcpp", "rlang", "rstan", "rstantools"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -3653,7 +3652,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["vctrs", "rlang", "generics", "numDeriv", "lifecycle", "pillar"],
+      "dependencies": ["generics", "lifecycle", "numDeriv", "pillar", "rlang", "vctrs"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -4038,7 +4037,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["abind", "checkmate", "rlang", "tibble", "vctrs", "tensorA", "pillar", "distributional", "matrixStats"],
+      "dependencies": ["abind", "checkmate", "distributional", "matrixStats", "pillar", "rlang", "tensorA", "tibble", "vctrs"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -4200,7 +4199,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["StanHeaders", "inline", "gridExtra", "Rcpp", "RcppParallel", "loo", "pkgbuild", "QuickJSR", "ggplot2"],
+      "dependencies": ["ggplot2", "gridExtra", "inline", "loo", "pkgbuild", "QuickJSR", "Rcpp", "RcppParallel", "StanHeaders"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -4705,7 +4704,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "lattice", "e1071", "foreach", "ModelMetrics", "nlme", "plyr", "pROC", "recipes", "reshape2", "withr"],
+      "dependencies": ["e1071", "foreach", "ggplot2", "lattice", "ModelMetrics", "nlme", "plyr", "pROC", "recipes", "reshape2", "withr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -4891,7 +4890,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["rpart", "MASS", "survival", "nnet", "class", "prodlim"],
+      "dependencies": ["class", "MASS", "nnet", "prodlim", "rpart", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -4953,7 +4952,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["cli", "future.apply", "numDeriv", "progressr", "survival", "SQUAREM"],
+      "dependencies": ["cli", "future.apply", "numDeriv", "progressr", "SQUAREM", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -4984,7 +4983,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["Rcpp", "data.table"],
+      "dependencies": ["data.table", "Rcpp"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -5046,7 +5045,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["Rcpp", "data.table", "diagram", "survival", "KernSmooth", "lava"],
+      "dependencies": ["data.table", "diagram", "KernSmooth", "lava", "Rcpp", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -5139,7 +5138,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["dplyr", "cli", "clock", "generics", "glue", "gower", "hardhat", "ipred", "lifecycle", "lubridate", "magrittr", "Matrix", "purrr", "rlang", "sparsevctrs", "tibble", "tidyr", "tidyselect", "timeDate", "vctrs", "withr"],
+      "dependencies": ["cli", "clock", "dplyr", "generics", "glue", "gower", "hardhat", "ipred", "lifecycle", "lubridate", "magrittr", "Matrix", "purrr", "rlang", "sparsevctrs", "tibble", "tidyr", "tidyselect", "timeDate", "vctrs", "withr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -5480,7 +5479,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "gtable", "gridExtra", "chk", "rlang", "crayon", "backports"],
+      "dependencies": ["backports", "chk", "crayon", "ggplot2", "gridExtra", "gtable", "rlang"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -5604,7 +5603,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["survival", "bdsmatrix", "nlme", "Matrix"],
+      "dependencies": ["bdsmatrix", "Matrix", "nlme", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -5666,7 +5665,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["V8", "jsonlite", "boot", "MASS"],
+      "dependencies": ["boot", "jsonlite", "MASS", "V8"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -5821,7 +5820,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ROI", "ROI.plugin.lpsolve", "lpSolveAPI", "pkgload"],
+      "dependencies": ["lpSolveAPI", "pkgload", "ROI", "ROI.plugin.lpsolve"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -5945,7 +5944,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["registry", "slam", "checkmate"],
+      "dependencies": ["checkmate", "registry", "slam"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -5976,7 +5975,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["ROI", "lpSolveAPI"],
+      "dependencies": ["lpSolveAPI", "ROI"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -6100,7 +6099,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["boot", "broom", "cowplot", "Deriv", "dplyr", "ggplot2", "MASS", "Matrix", "modelr", "microbenchmark", "rlang", "tibble", "tidyr"],
+      "dependencies": ["boot", "broom", "cowplot", "Deriv", "dplyr", "ggplot2", "MASS", "Matrix", "microbenchmark", "modelr", "rlang", "tibble", "tidyr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -6379,7 +6378,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["proxy", "dtw", "clue", "cluster", "dplyr", "flexclust", "foreach", "ggplot2", "ggrepel", "rlang", "Matrix", "RSpectra", "Rcpp", "RcppParallel", "reshape2", "shiny", "shinyjs"],
+      "dependencies": ["clue", "cluster", "dplyr", "dtw", "flexclust", "foreach", "ggplot2", "ggrepel", "Matrix", "proxy", "Rcpp", "RcppParallel", "reshape2", "rlang", "RSpectra", "shiny", "shinyjs"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -6417,7 +6416,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["lattice", "modeltools", "class"],
+      "dependencies": ["class", "lattice", "modeltools"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -6603,7 +6602,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["gridExtra", "ggplot2", "gtable"],
+      "dependencies": ["ggplot2", "gridExtra", "gtable"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -6634,7 +6633,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["estimability", "numDeriv", "mvtnorm"],
+      "dependencies": ["estimability", "mvtnorm", "numDeriv"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -6696,7 +6695,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["cmprsk", "etm", "MASS", "survival", "plyr", "dplyr", "Matrix", "numDeriv", "data.table", "zoo", "mgcv", "magrittr"],
+      "dependencies": ["cmprsk", "data.table", "dplyr", "etm", "magrittr", "MASS", "Matrix", "mgcv", "numDeriv", "plyr", "survival", "zoo"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -6727,7 +6726,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["survival", "lattice", "data.table", "Rcpp"],
+      "dependencies": ["data.table", "lattice", "Rcpp", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -6851,7 +6850,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["data.table", "tibble", "stringr"],
+      "dependencies": ["data.table", "stringr", "tibble"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -6975,7 +6974,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["lme4", "survival", "MASS", "ordinal", "tibble"],
+      "dependencies": ["lme4", "MASS", "ordinal", "survival", "tibble"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7006,7 +7005,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["pan", "jomo", "haven"],
+      "dependencies": ["haven", "jomo", "pan"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7037,7 +7036,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["ucminf", "MASS", "Matrix", "numDeriv", "nlme"],
+      "dependencies": ["MASS", "Matrix", "nlme", "numDeriv", "ucminf"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7130,7 +7129,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["numDeriv", "lattice", "MASS", "bdsmatrix", "Matrix", "mvtnorm"],
+      "dependencies": ["bdsmatrix", "lattice", "MASS", "Matrix", "mvtnorm", "numDeriv"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7192,7 +7191,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["survival", "assertthat", "deSolve", "generics", "magrittr", "mstate", "Matrix", "muhaz", "mvtnorm", "numDeriv", "quadprog", "Rcpp", "rlang", "rstpm2", "purrr", "statmod", "tibble", "tidyr", "dplyr", "tidyselect", "ggplot2"],
+      "dependencies": ["assertthat", "deSolve", "dplyr", "generics", "ggplot2", "magrittr", "Matrix", "mstate", "muhaz", "mvtnorm", "numDeriv", "purrr", "quadprog", "Rcpp", "rlang", "rstpm2", "statmod", "survival", "tibble", "tidyr", "tidyselect"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7285,7 +7284,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["survival", "Rcpp", "mgcv", "bbmle", "fastGHQuad", "mvtnorm"],
+      "dependencies": ["bbmle", "fastGHQuad", "mgcv", "mvtnorm", "Rcpp", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7533,7 +7532,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["xts", "zoo", "TTR", "curl", "jsonlite"],
+      "dependencies": ["curl", "jsonlite", "TTR", "xts", "zoo"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7564,7 +7563,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["quadprog", "zoo", "quantmod", "jsonlite"],
+      "dependencies": ["jsonlite", "quadprog", "quantmod", "zoo"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7595,7 +7594,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["xts", "zoo", "curl"],
+      "dependencies": ["curl", "xts", "zoo"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7719,7 +7718,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["stringdist", "stringr", "dplyr", "tidyr", "purrr", "geosphere", "tibble"],
+      "dependencies": ["dplyr", "geosphere", "purrr", "stringdist", "stringr", "tibble", "tidyr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7874,7 +7873,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "dplyr", "tidyr", "lazyeval", "rlang", "tidyselect"],
+      "dependencies": ["dplyr", "ggplot2", "lazyeval", "rlang", "tidyr", "tidyselect"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7905,7 +7904,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "dplyr", "tidyr", "ggstats", "gtable", "lifecycle", "plyr", "progress", "RColorBrewer", "rlang", "scales", "magrittr"],
+      "dependencies": ["dplyr", "ggplot2", "ggstats", "gtable", "lifecycle", "magrittr", "plyr", "progress", "RColorBrewer", "rlang", "scales", "tidyr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7943,7 +7942,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "rlang", "cli", "scales", "tibble", "vctrs", "withr", "distributional", "numDeriv", "glue", "quadprog", "gtable", "Rcpp"],
+      "dependencies": ["cli", "distributional", "ggplot2", "glue", "gtable", "numDeriv", "quadprog", "Rcpp", "rlang", "scales", "tibble", "vctrs", "withr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -7974,7 +7973,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "dplyr", "tidyr", "gridExtra", "scales", "stringr", "tibble"],
+      "dependencies": ["dplyr", "ggplot2", "gridExtra", "scales", "stringr", "tibble", "tidyr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -8005,7 +8004,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "gtable", "scales", "vctrs", "rlang", "lifecycle", "cli"],
+      "dependencies": ["cli", "ggplot2", "gtable", "lifecycle", "rlang", "scales", "vctrs"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -8229,7 +8228,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["TMB", "lme4", "Matrix", "nlme", "numDeriv", "mgcv", "reformulas"],
+      "dependencies": ["lme4", "Matrix", "mgcv", "nlme", "numDeriv", "reformulas", "TMB"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -8298,7 +8297,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Matrix", "foreach", "shape", "survival", "Rcpp"],
+      "dependencies": ["foreach", "Matrix", "Rcpp", "shape", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -8391,7 +8390,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["checkmate", "abind"],
+      "dependencies": ["abind", "checkmate"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -8422,7 +8421,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Rcpp", "htmlTable", "abind", "checkmate", "forestplot", "Hmisc", "glue", "knitr", "lattice", "lubridate", "magrittr", "rlang", "rmarkdown", "stringr", "XML", "yaml"],
+      "dependencies": ["abind", "checkmate", "forestplot", "glue", "Hmisc", "htmlTable", "knitr", "lattice", "lubridate", "magrittr", "Rcpp", "rlang", "rmarkdown", "stringr", "XML", "yaml"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -8453,7 +8452,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["stringr", "knitr", "magrittr", "checkmate", "htmlwidgets", "htmltools", "rstudioapi"],
+      "dependencies": ["checkmate", "htmltools", "htmlwidgets", "knitr", "magrittr", "rstudioapi", "stringr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -8515,7 +8514,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["viridisLite", "ggplot2", "gridExtra"],
+      "dependencies": ["ggplot2", "gridExtra", "viridisLite"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -8938,7 +8937,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "cluster", "rpart", "nnet", "foreign", "gtable", "gridExtra", "data.table", "htmlTable", "viridis", "htmltools", "base64enc", "colorspace", "rmarkdown", "knitr", "Formula"],
+      "dependencies": ["base64enc", "cluster", "colorspace", "data.table", "foreign", "Formula", "ggplot2", "gridExtra", "gtable", "htmlTable", "htmltools", "knitr", "nnet", "rmarkdown", "rpart", "viridis"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9031,7 +9030,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "aweek"],
+      "dependencies": ["aweek", "ggplot2"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9062,7 +9061,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["broom", "coda", "dplyr", "forcats", "nlme", "purrr", "stringr", "tibble", "tidyr", "furrr"],
+      "dependencies": ["broom", "coda", "dplyr", "forcats", "furrr", "nlme", "purrr", "stringr", "tibble", "tidyr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9093,7 +9092,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "cli", "generics", "broom", "jtools", "rlang", "tibble"],
+      "dependencies": ["broom", "cli", "generics", "ggplot2", "jtools", "rlang", "tibble"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9124,7 +9123,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["cli", "generics", "broom", "broom.mixed", "ggplot2", "magrittr", "pander", "pkgconfig", "rlang", "sandwich", "tibble"],
+      "dependencies": ["broom", "broom.mixed", "cli", "generics", "ggplot2", "magrittr", "pander", "pkgconfig", "rlang", "sandwich", "tibble"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9193,7 +9192,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["dplyr", "hms", "lifecycle", "lubridate", "magrittr", "purrr", "rlang", "stringi", "stringr", "snakecase", "tidyselect", "tidyr"],
+      "dependencies": ["dplyr", "hms", "lifecycle", "lubridate", "magrittr", "purrr", "rlang", "snakecase", "stringi", "stringr", "tidyr", "tidyselect"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9224,7 +9223,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["stringr", "stringi"],
+      "dependencies": ["stringi", "stringr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9286,7 +9285,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["knitr", "magrittr", "stringr", "xml2", "rmarkdown", "scales", "viridisLite", "htmltools", "rstudioapi", "digest", "svglite"],
+      "dependencies": ["digest", "htmltools", "knitr", "magrittr", "rmarkdown", "rstudioapi", "scales", "stringr", "svglite", "viridisLite", "xml2"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9399,7 +9398,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["haven", "cli", "dplyr", "lifecycle", "rlang", "vctrs", "stringr", "tidyr", "tidyselect"],
+      "dependencies": ["cli", "dplyr", "haven", "lifecycle", "rlang", "stringr", "tidyr", "tidyselect", "vctrs"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9499,7 +9498,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["lattice", "png", "jpeg", "RColorBrewer", "interp", "MASS"],
+      "dependencies": ["interp", "jpeg", "lattice", "MASS", "png", "RColorBrewer"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9568,7 +9567,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["nlme", "survival", "mvtnorm", "spacefillr", "marqLevAlg", "doParallel", "numDeriv"],
+      "dependencies": ["doParallel", "marqLevAlg", "mvtnorm", "nlme", "numDeriv", "spacefillr", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9661,7 +9660,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Matrix", "MASS", "lattice", "boot", "nlme", "minqa", "nloptr", "reformulas"],
+      "dependencies": ["boot", "lattice", "MASS", "Matrix", "minqa", "nlme", "nloptr", "reformulas"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9723,7 +9722,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Rcpp", "magrittr", "curl"],
+      "dependencies": ["curl", "magrittr", "Rcpp"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9792,7 +9791,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["backports", "chk", "rlang", "Rcpp"],
+      "dependencies": ["backports", "chk", "Rcpp", "rlang"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -9916,7 +9915,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Matrix", "metadat", "numDeriv", "nlme", "mathjaxr", "pbapply", "digest"],
+      "dependencies": ["digest", "mathjaxr", "Matrix", "metadat", "nlme", "numDeriv", "pbapply"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10009,7 +10008,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["dplyr", "Formula", "vctrs", "pillar", "glue", "Rdpack", "tidyselect"],
+      "dependencies": ["dplyr", "Formula", "glue", "pillar", "Rdpack", "tidyselect", "vctrs"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10040,7 +10039,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["dfidx", "Formula", "zoo", "lmtest", "statmod", "MASS", "Rdpack"],
+      "dependencies": ["dfidx", "Formula", "lmtest", "MASS", "Rdpack", "statmod", "zoo"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10071,7 +10070,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["insight", "datawizard"],
+      "dependencies": ["datawizard", "insight"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10195,7 +10194,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["bayestestR", "insight", "datawizard"],
+      "dependencies": ["bayestestR", "datawizard", "insight"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10226,7 +10225,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["knitr", "htmltools"],
+      "dependencies": ["htmltools", "knitr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10295,7 +10294,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["survival", "rlang", "data.table", "lattice", "RColorBrewer", "viridisLite"],
+      "dependencies": ["data.table", "lattice", "RColorBrewer", "rlang", "survival", "viridisLite"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10326,7 +10325,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["mvtnorm", "survival", "TH.data", "sandwich", "codetools"],
+      "dependencies": ["codetools", "mvtnorm", "sandwich", "survival", "TH.data"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10357,7 +10356,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["survival", "MASS"],
+      "dependencies": ["MASS", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10419,7 +10418,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["dplyr", "ggplot2", "purrr", "tidyr", "tibble", "norm", "magrittr", "visdat", "rlang", "forcats", "viridis", "glue", "UpSetR", "cli", "vctrs", "lifecycle"],
+      "dependencies": ["cli", "dplyr", "forcats", "ggplot2", "glue", "lifecycle", "magrittr", "norm", "purrr", "rlang", "tibble", "tidyr", "UpSetR", "vctrs", "viridis", "visdat"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10512,7 +10511,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["ggplot2", "tidyr", "dplyr", "purrr", "readr", "magrittr", "tibble", "glue", "forcats", "cli", "scales"],
+      "dependencies": ["cli", "dplyr", "forcats", "ggplot2", "glue", "magrittr", "purrr", "readr", "scales", "tibble", "tidyr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10543,7 +10542,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["carData", "abind", "Formula", "MASS", "mgcv", "nnet", "pbkrtest", "quantreg", "lme4", "nlme", "scales"],
+      "dependencies": ["abind", "carData", "Formula", "lme4", "MASS", "mgcv", "nlme", "nnet", "pbkrtest", "quantreg", "scales"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10667,7 +10666,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["lme4", "broom", "dplyr", "MASS", "numDeriv", "Matrix", "doBy"],
+      "dependencies": ["broom", "doBy", "dplyr", "lme4", "MASS", "Matrix", "numDeriv"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10698,7 +10697,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["SparseM", "Matrix", "MatrixModels", "survival", "MASS"],
+      "dependencies": ["MASS", "Matrix", "MatrixModels", "SparseM", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10822,7 +10821,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["timereg", "lava", "numDeriv", "mvtnorm", "Rcpp", "survival"],
+      "dependencies": ["lava", "mvtnorm", "numDeriv", "Rcpp", "survival", "timereg"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10853,7 +10852,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["mgcv", "survival", "checkmate", "magrittr", "rlang", "tidyr", "ggplot2", "dplyr", "purrr", "tibble", "lazyeval", "Formula", "mvtnorm", "pec", "vctrs"],
+      "dependencies": ["checkmate", "dplyr", "Formula", "ggplot2", "lazyeval", "magrittr", "mgcv", "mvtnorm", "pec", "purrr", "rlang", "survival", "tibble", "tidyr", "vctrs"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10915,7 +10914,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["prodlim", "survival", "data.table", "lava", "multcomp"],
+      "dependencies": ["data.table", "lava", "multcomp", "prodlim", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10946,7 +10945,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["Rcpp", "Matrix"],
+      "dependencies": ["Matrix", "Rcpp"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -10977,7 +10976,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["survival", "lava", "numDeriv"],
+      "dependencies": ["lava", "numDeriv", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11039,7 +11038,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Rcpp", "Matrix"],
+      "dependencies": ["Matrix", "Rcpp"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11070,7 +11069,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "gtable", "rlang", "cli", "farver"],
+      "dependencies": ["cli", "farver", "ggplot2", "gtable", "rlang"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11101,7 +11100,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["survival", "Hmisc"],
+      "dependencies": ["Hmisc", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11132,7 +11131,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["prodlim", "foreach", "rms", "survival", "riskRegression", "lava", "timereg"],
+      "dependencies": ["foreach", "lava", "prodlim", "riskRegression", "rms", "survival", "timereg"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11163,7 +11162,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["broom", "dplyr", "purrr", "rlang", "tibble", "tidyselect", "tidyr", "lifecycle"],
+      "dependencies": ["broom", "dplyr", "lifecycle", "purrr", "rlang", "tibble", "tidyr", "tidyselect"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11194,7 +11193,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "scales", "httr", "jsonlite", "magrittr", "digest", "viridisLite", "base64enc", "htmltools", "htmlwidgets", "tidyr", "RColorBrewer", "dplyr", "vctrs", "tibble", "lazyeval", "rlang", "crosstalk", "purrr", "data.table", "promises"],
+      "dependencies": ["base64enc", "crosstalk", "data.table", "digest", "dplyr", "ggplot2", "htmltools", "htmlwidgets", "httr", "jsonlite", "lazyeval", "magrittr", "promises", "purrr", "RColorBrewer", "rlang", "scales", "tibble", "tidyr", "vctrs", "viridisLite"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11256,7 +11255,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Rcpp", "pROC", "RConics", "ggplot2", "dplyr", "magrittr", "mvtnorm"],
+      "dependencies": ["dplyr", "ggplot2", "magrittr", "mvtnorm", "pROC", "RConics", "Rcpp"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11349,7 +11348,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["MASS", "broom", "magrittr"],
+      "dependencies": ["broom", "magrittr", "MASS"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11411,7 +11410,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["KMsurv", "geepack"],
+      "dependencies": ["geepack", "KMsurv"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11504,7 +11503,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["R.oo", "R.methodsS3"],
+      "dependencies": ["R.methodsS3", "R.oo"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11566,7 +11565,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["htmltools", "htmlwidgets", "httpuv", "jsonlite", "magrittr", "crosstalk", "jquerylib", "promises"],
+      "dependencies": ["crosstalk", "htmltools", "htmlwidgets", "httpuv", "jquerylib", "jsonlite", "magrittr", "promises"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -11976,7 +11975,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["survival", "ggplot2", "pammtools", "scales", "Rcpp"],
+      "dependencies": ["ggplot2", "pammtools", "Rcpp", "scales", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -12107,7 +12106,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Hmisc", "survival", "quantreg", "ggplot2", "Matrix", "SparseM", "rpart", "nlme", "polspline", "multcomp", "htmlTable", "htmltools", "MASS", "cluster", "digest", "colorspace", "knitr"],
+      "dependencies": ["cluster", "colorspace", "digest", "ggplot2", "Hmisc", "htmlTable", "htmltools", "knitr", "MASS", "Matrix", "multcomp", "nlme", "polspline", "quantreg", "rpart", "SparseM", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -12262,7 +12261,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["fds", "deSolve"],
+      "dependencies": ["deSolve", "fds"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -12386,7 +12385,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["locfit", "ash", "ks", "KernSmooth", "ggplot2", "RColorBrewer"],
+      "dependencies": ["ash", "ggplot2", "KernSmooth", "ks", "locfit", "RColorBrewer"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -12665,7 +12664,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["MASS", "pcaPP", "hdrcde", "cluster", "colorspace", "ks"],
+      "dependencies": ["cluster", "colorspace", "hdrcde", "ks", "MASS", "pcaPP"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -12771,7 +12770,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["survival", "corpcor", "fda", "R.methodsS3", "gnm"],
+      "dependencies": ["corpcor", "fda", "gnm", "R.methodsS3", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -12833,7 +12832,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["e1071", "class", "KernSmooth"],
+      "dependencies": ["class", "e1071", "KernSmooth"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13027,7 +13026,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["stringi", "shades", "gridtext", "ggplot2", "cli"],
+      "dependencies": ["cli", "ggplot2", "gridtext", "shades", "stringi"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13058,7 +13057,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["ggplot2", "ggfittext", "rlang"],
+      "dependencies": ["ggfittext", "ggplot2", "rlang"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13089,7 +13088,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["curl", "markdown", "rlang", "Rcpp", "png", "jpeg", "stringr", "xml2"],
+      "dependencies": ["curl", "jpeg", "markdown", "png", "Rcpp", "rlang", "stringr", "xml2"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13182,7 +13181,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["Matrix", "data.table", "jsonlite"],
+      "dependencies": ["data.table", "jsonlite", "Matrix"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13220,7 +13219,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["httpuv", "mime", "jsonlite", "xtable", "fontawesome", "htmltools", "R6", "sourcetools", "later", "promises", "crayon", "rlang", "fastmap", "withr", "commonmark", "glue", "bslib", "cachem", "lifecycle"],
+      "dependencies": ["bslib", "cachem", "commonmark", "crayon", "fastmap", "fontawesome", "glue", "htmltools", "httpuv", "jsonlite", "later", "lifecycle", "mime", "promises", "R6", "rlang", "sourcetools", "withr", "xtable"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13251,7 +13250,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["htmltools", "jsonlite", "pillar", "base64enc"],
+      "dependencies": ["base64enc", "htmltools", "jsonlite", "pillar"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13444,7 +13443,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Matrix", "survival", "lattice", "minqa", "numDeriv", "mitools", "Rcpp"],
+      "dependencies": ["lattice", "Matrix", "minqa", "mitools", "numDeriv", "Rcpp", "survival"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13537,7 +13536,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["ggplot2", "ggrepel", "ggsci", "tidyr", "purrr", "dplyr", "cowplot", "ggsignif", "scales", "gridExtra", "glue", "polynom", "rlang", "rstatix", "tibble", "magrittr"],
+      "dependencies": ["cowplot", "dplyr", "ggplot2", "ggrepel", "ggsci", "ggsignif", "glue", "gridExtra", "magrittr", "polynom", "purrr", "rlang", "rstatix", "scales", "tibble", "tidyr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13754,7 +13753,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["tidyr", "purrr", "broom", "rlang", "tibble", "dplyr", "magrittr", "corrplot", "tidyselect", "car", "generics"],
+      "dependencies": ["broom", "car", "corrplot", "dplyr", "generics", "magrittr", "purrr", "rlang", "tibble", "tidyr", "tidyselect"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13785,7 +13784,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["ggplot2", "ggpubr", "gridExtra", "magrittr", "maxstat", "scales", "survival", "broom", "dplyr", "tidyr", "survMisc", "purrr", "tibble", "rlang", "ggtext"],
+      "dependencies": ["broom", "dplyr", "ggplot2", "ggpubr", "ggtext", "gridExtra", "magrittr", "maxstat", "purrr", "rlang", "scales", "survival", "survMisc", "tibble", "tidyr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -13816,7 +13815,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["survival", "knitr", "KMsurv", "ggplot2", "data.table", "zoo", "gridExtra", "km.ci", "xtable"],
+      "dependencies": ["data.table", "ggplot2", "gridExtra", "km.ci", "KMsurv", "knitr", "survival", "xtable", "zoo"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14102,7 +14101,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["Rcpp", "dplyr", "lubridate", "rlang"],
+      "dependencies": ["dplyr", "lubridate", "Rcpp", "rlang"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14133,7 +14132,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["xts", "quadprog", "zoo"],
+      "dependencies": ["quadprog", "xts", "zoo"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14320,7 +14319,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["pyinit", "rrcov", "robustbase"],
+      "dependencies": ["pyinit", "robustbase", "rrcov"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14382,7 +14381,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["robustbase", "mvtnorm", "lattice", "pcaPP"],
+      "dependencies": ["lattice", "mvtnorm", "pcaPP", "robustbase"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14475,7 +14474,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["stringr", "R6"],
+      "dependencies": ["R6", "stringr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14537,7 +14536,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["broom", "dplyr", "forecast", "lubridate", "tibble", "tidyr", "timetk", "rlang", "tidyverse", "tidyquant"],
+      "dependencies": ["broom", "dplyr", "forecast", "lubridate", "rlang", "tibble", "tidyquant", "tidyr", "tidyverse", "timetk"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14618,7 +14617,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["dplyr", "ggplot2", "httr", "httr2", "curl", "lazyeval", "lubridate", "magrittr", "PerformanceAnalytics", "RobStatTM", "quantmod", "purrr", "readr", "readxl", "stringr", "tibble", "tidyr", "timetk", "timeDate", "TTR", "xts", "rlang", "zoo", "cli"],
+      "dependencies": ["cli", "curl", "dplyr", "ggplot2", "httr", "httr2", "lazyeval", "lubridate", "magrittr", "PerformanceAnalytics", "purrr", "quantmod", "readr", "readxl", "rlang", "RobStatTM", "stringr", "tibble", "tidyr", "timeDate", "timetk", "TTR", "xts", "zoo"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14649,7 +14648,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["fracdiff", "forecast", "purrr", "RcppRoll", "tibble", "tseries", "urca", "future", "furrr"],
+      "dependencies": ["forecast", "fracdiff", "furrr", "future", "purrr", "RcppRoll", "tibble", "tseries", "urca"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14835,7 +14834,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["broom", "conflicted", "cli", "dbplyr", "dplyr", "dtplyr", "forcats", "ggplot2", "googledrive", "googlesheets4", "haven", "hms", "httr", "jsonlite", "lubridate", "magrittr", "modelr", "pillar", "purrr", "ragg", "readr", "readxl", "reprex", "rlang", "rstudioapi", "rvest", "stringr", "tibble", "tidyr", "xml2"],
+      "dependencies": ["broom", "cli", "conflicted", "dbplyr", "dplyr", "dtplyr", "forcats", "ggplot2", "googledrive", "googlesheets4", "haven", "hms", "httr", "jsonlite", "lubridate", "magrittr", "modelr", "pillar", "purrr", "ragg", "readr", "readxl", "reprex", "rlang", "rstudioapi", "rvest", "stringr", "tibble", "tidyr", "xml2"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14866,7 +14865,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["recipes", "rsample", "dplyr", "ggplot2", "forcats", "stringr", "plotly", "lubridate", "padr", "purrr", "readr", "stringi", "tibble", "tidyr", "xts", "zoo", "rlang", "tidyselect", "slider", "anytime", "timeDate", "forecast", "tsfeatures", "hms", "generics"],
+      "dependencies": ["anytime", "dplyr", "forcats", "forecast", "generics", "ggplot2", "hms", "lubridate", "padr", "plotly", "purrr", "readr", "recipes", "rlang", "rsample", "slider", "stringi", "stringr", "tibble", "tidyr", "tidyselect", "timeDate", "tsfeatures", "xts", "zoo"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -14959,7 +14958,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["MASS", "colorspace", "lmtest"],
+      "dependencies": ["colorspace", "lmtest", "MASS"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15021,7 +15020,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["cobalt", "ggplot2", "chk", "rlang", "crayon", "sandwich", "generics"],
+      "dependencies": ["chk", "cobalt", "crayon", "generics", "ggplot2", "rlang", "sandwich"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15400,7 +15399,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["permute", "lattice", "MASS", "cluster", "mgcv"],
+      "dependencies": ["cluster", "lattice", "MASS", "mgcv", "permute"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15431,7 +15430,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["dplyr", "glue", "htmltools", "htmlwidgets", "igraph", "magrittr", "purrr", "RColorBrewer", "readr", "rlang", "cli", "rstudioapi", "scales", "stringr", "tibble", "tidyr", "viridisLite", "visNetwork"],
+      "dependencies": ["cli", "dplyr", "glue", "htmltools", "htmlwidgets", "igraph", "magrittr", "purrr", "RColorBrewer", "readr", "rlang", "rstudioapi", "scales", "stringr", "tibble", "tidyr", "viridisLite", "visNetwork"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15506,7 +15505,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["htmlwidgets", "htmltools", "jsonlite", "magrittr"],
+      "dependencies": ["htmltools", "htmlwidgets", "jsonlite", "magrittr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15568,7 +15567,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Rcpp", "deldir"],
+      "dependencies": ["deldir", "Rcpp"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15723,7 +15722,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["bayestestR", "insight", "parameters", "performance", "datawizard"],
+      "dependencies": ["bayestestR", "datawizard", "insight", "parameters", "performance"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15754,7 +15753,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["insight", "datawizard"],
+      "dependencies": ["datawizard", "insight"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15785,7 +15784,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["insight", "datawizard"],
+      "dependencies": ["datawizard", "insight"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15816,7 +15815,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["dplyr", "insight", "datawizard", "magrittr", "purrr", "rlang", "sjlabelled", "tidyselect"],
+      "dependencies": ["datawizard", "dplyr", "insight", "magrittr", "purrr", "rlang", "sjlabelled", "tidyselect"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15847,7 +15846,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["bayestestR", "datawizard", "dplyr", "ggeffects", "ggplot2", "knitr", "insight", "MASS", "parameters", "performance", "purrr", "rlang", "scales", "sjlabelled", "sjmisc", "sjstats", "tidyr"],
+      "dependencies": ["bayestestR", "datawizard", "dplyr", "ggeffects", "ggplot2", "insight", "knitr", "MASS", "parameters", "performance", "purrr", "rlang", "scales", "sjlabelled", "sjmisc", "sjstats", "tidyr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15940,7 +15939,7 @@
       "type": "standard",
       "direct": true,
       "binary": true,
-      "dependencies": ["Matrix", "MASS", "biglm"],
+      "dependencies": ["biglm", "MASS", "Matrix"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -15971,7 +15970,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["R.methodsS3", "R.oo", "R.utils", "digest"],
+      "dependencies": ["digest", "R.methodsS3", "R.oo", "R.utils"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -16157,7 +16156,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["scales", "cli", "DiceDesign", "dplyr", "glue", "hardhat", "lifecycle", "pillar", "purrr", "rlang", "sfd", "tibble", "vctrs", "withr"],
+      "dependencies": ["cli", "DiceDesign", "dplyr", "glue", "hardhat", "lifecycle", "pillar", "purrr", "rlang", "scales", "sfd", "tibble", "vctrs", "withr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -16250,7 +16249,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["lhs", "lattice"],
+      "dependencies": ["lattice", "lhs"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -16374,7 +16373,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["tibble", "cli", "rlang"],
+      "dependencies": ["cli", "rlang", "tibble"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -16467,7 +16466,7 @@
       "type": "standard",
       "direct": false,
       "binary": true,
-      "dependencies": ["cli", "generics", "glue", "hardhat", "lifecycle", "modelenv", "parsnip", "recipes", "rlang", "tidyselect", "sparsevctrs", "vctrs", "withr"],
+      "dependencies": ["cli", "generics", "glue", "hardhat", "lifecycle", "modelenv", "parsnip", "recipes", "rlang", "sparsevctrs", "tidyselect", "vctrs", "withr"],
       "vignettes": false,
       "needscompilation": false,
       "metadata": {
@@ -16767,7 +16766,6 @@
       "params": [],
       "install_args": "",
       "repotype": "cran",
-      "sysreqs": "",
       "sysreqs_packages": {}
     },
     {
