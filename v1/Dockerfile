@@ -129,5 +129,5 @@ RUN chown -R rstudio:rstudio /home/rstudio &&\
 
 COPY rstudio/rstudio-entrypoint.sh /usr/local/bin/rstudio-entrypoint.sh
 
-ENV USER rstudio
+ENV USER=rstudio
 ENTRYPOINT ["/usr/local/bin/rstudio-entrypoint.sh"]

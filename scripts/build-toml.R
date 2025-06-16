@@ -1,7 +1,15 @@
 REPOS <- Sys.getenv("REPOS")
 CRAN_DATE <- Sys.getenv("CRAN_DATE")
 
-install.packages("pak", repos = c(CRAN = REPOS), destdir = "/cache")
+install.packages(
+  "pak",
+  repos = sprintf("https://r-lib.github.io/p/pak/stable/%s/%s/%s",
+    .Platform$pkgType,
+    R.Version()$os,
+    R.Version()$arch
+  ),
+  destdir = "/cache"
+)
 
 # Set pak to use PPPM CRAN snapshot repository
 pak::repo_add(CRAN = paste0("RSPM@", CRAN_DATE))
