@@ -202,3 +202,7 @@ comment = "The Bristol group are planning to perform target trial emulation anal
 [cardx]
 packages = "cardx"
 comment = "Requested by Will. This is a soft (Suggests list) dependency of gtsummary, and hence wasn't previously installed."
+
+[marginaleffects]
+packages = "marginaleffects"
+comment = "Requested by Will. This is a package to compute and plot marginal effects for fitted statistical models."
