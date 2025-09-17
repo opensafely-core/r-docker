@@ -272,6 +272,7 @@ tcltk, tools, and utils) for the respective version of R.
 | lubridate             | 1.9.4         | <https://cran.r-project.org/package=lubridate>             |
 | magick                | 2.8.5         | <https://cran.r-project.org/package=magick>                |
 | magrittr              | 2.0.3         | <https://cran.r-project.org/package=magrittr>              |
+| marginaleffects       | 0.25.0        | <https://cran.r-project.org/package=marginaleffects>       |
 | markdown              | 1.13          | <https://cran.r-project.org/package=markdown>              |
 | marqLevAlg            | 2.0.8         | <https://cran.r-project.org/package=marqLevAlg>            |
 | MASS                  | 7.3-65        | <https://cran.r-project.org/package=MASS>                  |
