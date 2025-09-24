@@ -13,7 +13,7 @@ jobs:
     outputs:
       versions: ${{ steps.versions.outputs.versions }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Set matrix
         id: versions
         run: |
@@ -35,7 +35,7 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - uses: "opensafely-core/setup-action@v1"
       with:
           install-just: true
