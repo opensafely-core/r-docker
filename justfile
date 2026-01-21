@@ -1,11 +1,25 @@
 set dotenv-load := true
 
+export UBUNTU_PRO_TOKEN_FILE := env_var_or_default('UBUNTU_PRO_TOKEN_FILE', justfile_directory() + "/.secrets/ubuntu_pro_token")
 #enable modern docker build features
 export DOCKER_BUILDKIT := "1"
 export COMPOSE_DOCKER_CLI_BUILD := "1"
 
+
+ensure-pro-token:
+  #!/bin/bash
+  set -euo pipefail
+  token_file="{{ UBUNTU_PRO_TOKEN_FILE }}"
+  if test -z "${UBUNTU_PRO_TOKEN:-}"; then
+    echo "UBUNTU_PRO_TOKEN is required to create $token_file" >&2
+    exit 1
+  fi
+  mkdir -p "$(dirname "$token_file")"
+  umask 077
+  printf '%s' "$UBUNTU_PRO_TOKEN" > "$token_file"
+
 # build the R image locally
-build version:
+build version: ensure-pro-token
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -42,7 +56,7 @@ add-package-v1 package repos="NULL":
     bash v1/scripts/add-package.sh {{ package }} {{ repos }}
 
 # r image containing rstudio-server
-build-rstudio version:
+build-rstudio version: ensure-pro-token
     docker compose --env-file {{ version }}/env build --pull rstudio
 
 # test the locally built image

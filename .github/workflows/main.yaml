@@ -6,7 +6,8 @@ on:
 permissions:
   contents: read
   packages: write
-
+env:
+  UBUNTU_PRO_TOKEN: ${{ secrets.UBUNTU_PRO_TOKEN }}
 jobs:
   matrix:
     runs-on: ubuntu-22.04
