@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: ${MAJOR_VERSION}/Dockerfile
       target: r
+      secrets:
+        - ubuntu_pro_token
       cache_from:  # should speed up the build in CI, where we have a cold cache
         - ghcr.io/opensafely-core/base-docker:${BASE}
         - ghcr.io/opensafely-core/r:${MAJOR_VERSION}
@@ -49,3 +51,7 @@ services:
     environment:
       HOSTPLATFORM: ${HOSTPLATFORM}
       HOSTUID: ${HOSTUID}
+
+secrets:
+  ubuntu_pro_token:
+    file: ${UBUNTU_PRO_TOKEN_FILE:-.secrets/ubuntu_pro_token}
