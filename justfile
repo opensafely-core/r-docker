@@ -23,9 +23,9 @@ build version:
       cp ${MAJOR_VERSION}/renv.lock ${MAJOR_VERSION}/renv.lock.bak
       # cannot use docker compose run as it mangles the output
       docker run --platform linux/amd64 --rm r:{{ version }} cat /renv/renv.lock > ${MAJOR_VERSION}/renv.lock
-    elif [ "{{ version }}" = "v2" ]; then
+    elif [[ "{{ version }}" =~ ^v[23]$ ]]; then
       # update pkg.lock
-      cp ${MAJOR_VERSION}/pkg.lock ${MAJOR_VERSION}/pkg.lock.bak
+      [[ -f ${MAJOR_VERSION}/pkg.lock ]] && cp ${MAJOR_VERSION}/pkg.lock ${MAJOR_VERSION}/pkg.lock.bak || true
       # cannot use docker compose run as it mangles the output
       docker run --platform linux/amd64 --rm r:{{ version }} cat /pkg.lock > ${MAJOR_VERSION}/pkg.lock
     fi
@@ -84,5 +84,8 @@ publish-rstudio version:
       docker push ghcr.io/opensafely-core/rstudio:latest
     fi
 
-check:
-    uvx --python 3.13 toml-validator v2/packages.toml
+check version:
+    #!/usr/bin/env bash
+    if [[ "{{ version }}" =~ ^v[23]$ ]]; then
+      uvx --python 3.13 toml-validator {{ version }}/packages.toml
+    fi
