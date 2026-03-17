@@ -4,30 +4,32 @@ This repo manages the Docker image for the OpenSAFELY R runtime and rstudio-serv
 images are based on a base Ubuntu LTS version, and come pre-installed with
 a set of standard R packages.
 
-The current latest version is `v2`, and you should use that unless you have
+The current latest version is `v3`, and you should use that unless you have
 a specific reason. You can use it in your `project.yaml` like so:
 
 ```
 actions:
   my_action:
-    run: r:v2 analysis/my_script.R
+    run: r:v3 analysis/my_script.R
 ```
 
 The rstudio images are designed for use with `opensafely launch`. For example, to launch an rstudio-server session (i.e., RStudio running in a browser window) run the following in a Terminal from your research repository.
 
 ```sh
-opensafely launch rstudio:v2
+opensafely launch rstudio:v3
 ```
 
 ## Version List
 
 Current available versions for the r image, in reverse chronological order:
 
+ - v3: Ubuntu 22.04 and R 4.5.3 - [full package list](v3/packages.md)
  - v2: Ubuntu 22.04 and R 4.4.3 - [full package list](v2/packages.md)
- - v1: Ubuntu 20.04 and R 4.0.5 - [full package list](v1/packages.md) - please note that v1 is deprecated, new projects should use r:v2.
+ - v1: Ubuntu 20.04 and R 4.0.5 - [full package list](v1/packages.md) - please note that v1 is deprecated, new projects should use r:v3.
 
 Current available versions for the rstudio image, in reverse chronological order:
 
+ - v3: rstudio-server running r:v3
  - v2: rstudio-server running r:v2
  - v1: rstudio-server running r:v1
 
@@ -46,10 +48,10 @@ use `v1` instead of `latest`.
 
 We do not plan to add anymore packages to the v1 image.
 
-For the v2 image, the versions of R packages from CRAN tied to a CRAN date.
+For the v2 and v3 images, the versions of R packages from CRAN tied to a CRAN date.
 We can easily install any additional package from the same CRAN date.
 Additional packages may be requested by creating an issue in the repo.
-In the v2 image you can request packages that are not on CRAN.
+In the v2 and v3 images you can request packages that are not on CRAN.
 
 Occasionally, we will create a new major version of the image with all packages
 updated to their latest version. We may also possibly remove old and uneeded
@@ -58,8 +60,8 @@ incompatible changes, which is occasionally needed.
 
 ### User installed R packages
 
-Especially when working in say a Codespace using the rstudio:v2 image you may wish to add some packages for your post release analysis.
-The v2 images are configured to allow you to install your own packages, which will be saved to a _.local-packages/r/v2_ directory in your research repository.
+Especially when working in say a Codespace using the rstudio:v2 or rstudio:v3 images you may wish to add some packages for your post release analysis.
+The v2 and v3 images are configured to allow you to install your own packages, which will be saved to a _.local-packages/r/v#_ directory in your research repository.
 If the packages is on CRAN, to do this simply run the following.
 
 ```r
