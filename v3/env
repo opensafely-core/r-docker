@@ -1,0 +1,6 @@
+MAJOR_VERSION=v3
+BASE=22.04
+RSTUDIO_BASE_URL=https://download2.rstudio.org/server/jammy/amd64/
+RSTUDIO_DEB=rstudio-server-2026.01.1-403-amd64.deb
+CRAN_DATE=2026-03-17
+REPOS=https://packagemanager.posit.co/cran/__linux__/jammy/${CRAN_DATE}
