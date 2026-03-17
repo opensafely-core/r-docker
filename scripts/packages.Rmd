@@ -33,7 +33,7 @@ pkgs <- pkgs %>%
   arrange(Package, .locale = "en")
 knitr::kable(pkgs, row.names = FALSE)
 }
-if (Sys.getenv("MAJOR_VERSION") == "v2") {
+if (Sys.getenv("MAJOR_VERSION") %in% c("v2", "v3")) {
 suppressMessages(library(dplyr))
 pkglock <- jsonlite::fromJSON(paste0("/out/", Sys.getenv("MAJOR_VERSION"), "/pkg.lock"))
 pkgs <- pkglock[["packages"]]
@@ -46,11 +46,12 @@ pkgs <- pkgs %>% mutate(
     .default = metadataremoterepos
   )
 )
+r_minor_version <- if (Sys.getenv("MAJOR_VERSION") == "v3") "4.5" else "4.4"
 pkgs <- pkgs %>%
   mutate(
     url = case_when(
       repotype == "cran" ~ paste0("<https://cran.r-project.org/package=", package, ">"),
-      repotype == "cranlike" ~ paste0("<", sub("/bin/linux/noble/4.4/", "/", metadataremoterepos), package, ">"),
+      repotype == "cranlike" ~ paste0("<", sub(paste0("/bin/linux/noble/", r_minor_version, "/"), "/", metadataremoterepos), package, ">"),
       .default = paste0("<https://cran.r-project.org/package=", package, ">")
     )
   )
