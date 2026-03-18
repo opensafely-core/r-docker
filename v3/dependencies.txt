@@ -1,5 +1,6 @@
 ## Core systemdependencies
 tzdata
+libopenblas0-pthread
 r-base-core=4.5.3-1.2204.0
 r-base-dev=4.5.3-1.2204.0
 
