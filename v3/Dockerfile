@@ -14,6 +14,8 @@ RUN --mount=type=cache,target=/var/cache/apt,id=apt-2204,sharing=locked \
     echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" > /etc/apt/sources.list.d/cran.list
     /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
     /root/docker-apt-install.sh /tmp/dependencies.txt
+    ln -sf /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 /usr/lib/R/lib/libRblas.so
+    ln -sf /usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3 /usr/lib/R/lib/libRlapack.so
 EOF
 
 # use pak to install packages
