@@ -214,3 +214,7 @@ comment = "Requested by Ruth Costello. This is a package to for flexible mediati
 [parglm-alternative]
 packages = "fastglm"
 comment = "This is an alternative to the parglm package. These are both faster alternatives to the standard stats::glm() function which is very slow."
+
+[sequential-target-trial-emulation]
+packages = "SEQTaRget"
+comment = "The Bristol group are planning to perform sequential target trial emulation analyses."
