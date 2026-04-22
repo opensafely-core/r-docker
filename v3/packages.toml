@@ -211,6 +211,6 @@ comment = "Requested by Will. This is a package to compute and plot marginal eff
 packages = "medflex"
 comment = "Requested by Ruth Costello. This is a package to for flexible mediation analysis using natural effect models"
 
-[parglm-replacement]
+[parglm-alternative]
 packages = "fastglm"
-comment = "The parglm package was archived on CRAN on 2026-01-29. Tom has identified this as its closest replacement on CRAN on the v3 CRAN_DATE."
+comment = "This is an alternative to the parglm package. These are both faster alternatives to the standard stats::glm() function which is very slow."
