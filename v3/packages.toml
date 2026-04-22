@@ -105,6 +105,7 @@ packages = [
   "optparse",
   "pammtools",
   "parameters",
+  "parglm",
   "patchwork",
   "pch",
   "pec",
