@@ -218,3 +218,12 @@ comment = "This is an alternative to the parglm package. These are both faster a
 [sequential-target-trial-emulation]
 packages = "SEQTaRget"
 comment = "The Bristol group are planning to perform sequential target trial emulation analyses."
+
+[memory-help]
+packages = [
+    "bench",
+    "profvis",
+    "qs2",
+    "RhpcBLASctl"
+]
+comment = "Packages required for profiling and memory efficiency, as recommended by Will's updated guidance."
