@@ -35,6 +35,8 @@ jobs:
     steps:
 
     - uses: actions/checkout@v7
+    - name: Ensure host ~/.gitconfig is a file
+      run: touch "$HOME/.gitconfig"
     - uses: "opensafely-core/setup-action@v1"
       with:
           install-just: true
