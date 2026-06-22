@@ -210,3 +210,7 @@ comment = "Requested by Will. This is a package to compute and plot marginal eff
 [mediation-package]
 packages = "medflex"
 comment = "Requested by Ruth Costello. This is a package to for flexible mediation analysis using natural effect models"
+
+[mediation]
+packages = "mediation"
+comment = "Requested by Ruth Costello. Needed for mediation analysis with a survival outcome."
