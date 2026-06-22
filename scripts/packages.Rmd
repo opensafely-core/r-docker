@@ -50,7 +50,8 @@ pkgs <- pkgs %>%
   mutate(
     url = case_when(
       repotype == "cran" ~ paste0("<https://cran.r-project.org/package=", package, ">"),
-      repotype == "cranlike" ~ paste0("<", sub("/bin/linux/noble/4.4/", "/", metadataremoterepos), package, ">")
+      repotype == "cranlike" ~ paste0("<", sub("/bin/linux/noble/4.4/", "/", metadataremoterepos), package, ">"),
+      .default = paste0("<https://cran.r-project.org/package=", package, ">")
     )
   )
 pkgs <- pkgs %>%
