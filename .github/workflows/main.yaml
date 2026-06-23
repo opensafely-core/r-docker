@@ -13,7 +13,6 @@ jobs:
     outputs:
       versions: ${{ steps.versions.outputs.versions }}
     steps:
-      - uses: actions/checkout@v7
       - name: Set matrix
         id: versions
         run: |
