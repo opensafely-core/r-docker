@@ -211,6 +211,10 @@ comment = "Requested by Will. This is a package to compute and plot marginal eff
 packages = "medflex"
 comment = "Requested by Ruth Costello. This is a package to for flexible mediation analysis using natural effect models"
 
+[mediation]
+packages = "mediation"
+comment = "Requested by Ruth Costello. Needed for mediation analysis with a survival outcome."
+
 [parglm-alternative]
 packages = "fastglm"
 comment = "This is an alternative to the parglm package. These are both faster alternatives to the standard stats::glm() function which is very slow."
