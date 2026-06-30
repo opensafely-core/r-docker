@@ -268,6 +268,7 @@ tcltk, tools, and utils) for the respective version of R.
 | lobstr                | 1.1.2         | <https://cran.r-project.org/package=lobstr>                |
 | locfit                | 1.5-9.11      | <https://cran.r-project.org/package=locfit>                |
 | loo                   | 2.8.0         | <https://cran.r-project.org/package=loo>                   |
+| lpSolve               | 5.6.23        | <https://cran.r-project.org/package=lpSolve>               |
 | lpSolveAPI            | 5.5.2.0-17.12 | <https://cran.r-project.org/package=lpSolveAPI>            |
 | lubridate             | 1.9.4         | <https://cran.r-project.org/package=lubridate>             |
 | magick                | 2.8.5         | <https://cran.r-project.org/package=magick>                |
@@ -284,6 +285,7 @@ tcltk, tools, and utils) for the respective version of R.
 | maxstat               | 0.7-25        | <https://cran.r-project.org/package=maxstat>               |
 | mclust                | 6.1.1         | <https://cran.r-project.org/package=mclust>                |
 | medflex               | 0.6-10        | <https://cran.r-project.org/package=medflex>               |
+| mediation             | 4.5.0         | <https://cran.r-project.org/package=mediation>             |
 | memoise               | 2.0.1         | <https://cran.r-project.org/package=memoise>               |
 | metadat               | 1.4-0         | <https://cran.r-project.org/package=metadat>               |
 | metafor               | 4.8-0         | <https://cran.r-project.org/package=metafor>               |
