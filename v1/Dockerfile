@@ -9,6 +9,7 @@ COPY v1/dependencies.txt /root/dependencies.txt
 
 # add cran repo for R packages and install
 RUN --mount=type=cache,target=/var/cache/apt,id=apt-2004 \
+    --mount=type=secret,id=ubuntu_pro_token \
     echo "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" > /etc/apt/sources.list.d/cran.list &&\
     /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc &&\
     /root/docker-apt-install.sh /root/dependencies.txt
@@ -24,7 +25,9 @@ FROM base-r as builder
 
 # install build time dependencies 
 COPY v1/build-dependencies.txt /root/build-dependencies.txt
-RUN --mount=type=cache,target=/var/cache/apt,id=apt-2004 /root/docker-apt-install.sh /root/build-dependencies.txt
+RUN --mount=type=cache,target=/var/cache/apt,id=apt-2004 \
+    --mount=type=secret,id=ubuntu_pro_token \
+    /root/docker-apt-install.sh /root/build-dependencies.txt
 
 RUN mkdir -p /cache /renv/lib
 
