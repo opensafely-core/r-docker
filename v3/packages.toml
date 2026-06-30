@@ -47,7 +47,6 @@ packages = [
   "epitools",
   "estimatr",
   "fastDummies",
-  "fastshap",
   "finalfit",
   "flexsurv",
   "fontquiver",
