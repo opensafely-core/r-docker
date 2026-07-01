@@ -32,6 +32,8 @@ services:
       args:
        - PACKAGE
        - REPOS
+      secrets:
+        - ubuntu_pro_token
     platform: linux/amd64
   rstudio:
     extends: r
@@ -42,6 +44,8 @@ services:
         # supplied by just
         - RSTUDIO_BASE_URL
         - RSTUDIO_DEB
+      secrets:
+        - ubuntu_pro_token
     ports:
       - 8787:8787
     platform: linux/amd64
