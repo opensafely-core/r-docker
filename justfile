@@ -15,6 +15,10 @@ build version:
     export BUILD_DATE=$(date -u +'%y-%m-%dT%H:%M:%SZ')
     export GITREF=$(git rev-parse --short HEAD)
 
+    # Ensure the Ubuntu Pro token secret file exists so the compose secrets reference resolves.
+    mkdir -p .secrets
+    test -f .secrets/ubuntu_pro_token || touch .secrets/ubuntu_pro_token
+
     # build the thing
     docker compose --env-file {{ version }}/env build --pull r
 

@@ -44,6 +44,11 @@ jobs:
     - name: check
       run: just check
 
+    - name: Write Ubuntu Pro token
+      run: |
+        mkdir -p .secrets
+        printf '%s' '${{ secrets.UBUNTU_PRO_TOKEN }}' > .secrets/ubuntu_pro_token
+
     - name: build
       run: just build ${{ matrix.version }}
 

@@ -20,6 +20,8 @@ services:
         - MAJOR_VERSION
         - CRAN_DATE
         - REPOS
+      secrets:
+        - ubuntu_pro_token
     init: true
     platform: linux/amd64
   add-package:
@@ -49,3 +51,7 @@ services:
     environment:
       HOSTPLATFORM: ${HOSTPLATFORM}
       HOSTUID: ${HOSTUID}
+
+secrets:
+  ubuntu_pro_token:
+    file: ${UBUNTU_PRO_TOKEN_FILE:-.secrets/ubuntu_pro_token}
