@@ -16,7 +16,8 @@ Each image also contains the 14 base R packages (base, compiler, datasets, grDev
 ```{r, echo=FALSE, results='asis', warning=FALSE}
 if (Sys.getenv("MAJOR_VERSION") == "v1") {
 suppressMessages(library(dplyr))
-renvlock <- jsonlite::fromJSON(paste0("/out/", Sys.getenv("MAJOR_VERSION"), "/renv.lock"))
+# read the lockfile baked into the image rather than the host copy mounted at
+renvlock <- jsonlite::fromJSON("/renv/renv.lock")
 pkgs <- renvlock[["Packages"]]
 pkgs <- data.frame(Reduce(rbind, pkgs))
 pkgs <- pkgs %>% dplyr::select(Package, Version, Repository)
@@ -35,7 +36,8 @@ knitr::kable(pkgs, row.names = FALSE)
 }
 if (Sys.getenv("MAJOR_VERSION") %in% c("v2", "v3")) {
 suppressMessages(library(dplyr))
-pkglock <- jsonlite::fromJSON(paste0("/out/", Sys.getenv("MAJOR_VERSION"), "/pkg.lock"))
+# as above: read the in-image lockfile, not the host copy at /out
+pkglock <- jsonlite::fromJSON("/pkg.lock")
 pkgs <- pkglock[["packages"]]
 metadataremoterepos <- pkgs$metadata$RemoteRepos
 pkgs <- pkgs %>% dplyr::select(package, version, sources, repotype)
