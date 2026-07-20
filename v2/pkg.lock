@@ -30,7 +30,7 @@
       "license": "Apache License 2.0",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -61,7 +61,7 @@
       "license": "Apache License 2.0",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -92,7 +92,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -123,7 +123,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -154,7 +154,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -185,7 +185,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -216,7 +216,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -247,7 +247,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -278,7 +278,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -309,7 +309,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -340,7 +340,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -371,7 +371,7 @@
       "license": "Apache License (== 2.0) | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -402,7 +402,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -433,7 +433,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -464,7 +464,7 @@
       "license": "Unlimited",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -495,7 +495,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "libcurl (>= 7.62): libcurl-devel (rpm) or\n        libcurl4-openssl-dev (deb)",
       "sysreqs_packages": [
@@ -539,7 +539,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -570,7 +570,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "V8 engine version 6+ is needed for ES6 and WASM\n        support. On Linux you can build against libv8-dev (Debian) or\n        v8-devel (Fedora). We also provide static libv8 binaries for\n        most platforms, see the README for details.",
       "sysreqs_packages": [
@@ -596,20 +596,20 @@
         "RemoteType": "standard",
         "RemotePkgRef": "dd4d",
         "RemoteRef": "dd4d",
-        "RemoteRepos": "https://opensafely-core.r-universe.dev/",
+        "RemoteRepos": "https://opensafely-core.r-universe.dev",
         "RemotePkgPlatform": "source",
         "RemoteSha": "0.0.0.9000"
       },
-      "sources": ["https://opensafely-core.r-universe.dev//src/contrib/sha256-247a7753ed195beae773c7dfdcbae514dae1183e34ae49f0767b8cc2e0eb3551"],
-      "target": "src/contrib/sha256-247a7753ed195beae773c7dfdcbae514dae1183e34ae49f0767b8cc2e0eb3551",
+      "sources": ["https://opensafely-core.r-universe.dev/src/contrib/dd4d_0.0.0.9000.tar.gz?sha256=2c0ec119ac1b09d58afbb09ce89fcb8aa19260bf5cb79ef524a3a1f9e4fc22fb&file=/dd4d_0.0.0.9000.tar.gz"],
+      "target": "src/contrib/dd4d_0.0.0.9000.tar.gz/dd4d_0.0.0.9000.tar.gz",
       "platform": "source",
       "rversion": "*",
       "directpkg": true,
-      "sha256": "247a7753ed195beae773c7dfdcbae514dae1183e34ae49f0767b8cc2e0eb3551",
-      "filesize": 98105,
+      "sha256": "2c0ec119ac1b09d58afbb09ce89fcb8aa19260bf5cb79ef524a3a1f9e4fc22fb",
+      "filesize": 96126,
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cranlike",
       "sysreqs_packages": {}
     },
@@ -639,7 +639,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -670,7 +670,7 @@
       "license": "BSD_3_clause + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -701,7 +701,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -732,7 +732,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -763,7 +763,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -794,7 +794,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -825,7 +825,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -856,7 +856,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -887,7 +887,7 @@
       "license": "BSD_3_clause + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -918,7 +918,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -949,7 +949,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -980,7 +980,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1011,7 +1011,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1042,7 +1042,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1073,7 +1073,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1104,7 +1104,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1135,7 +1135,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make",
       "sysreqs_packages": [
@@ -1173,7 +1173,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1204,7 +1204,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1235,7 +1235,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1266,7 +1266,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1297,7 +1297,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1328,7 +1328,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1359,7 +1359,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "C++11",
       "sysreqs_packages": {}
@@ -1390,7 +1390,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1421,7 +1421,7 @@
       "license": "MIT + file LICENSE | Unlimited",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1452,7 +1452,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1483,7 +1483,7 @@
       "license": "LGPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1514,7 +1514,7 @@
       "license": "GPL (>= 2) | file LICENCE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1545,7 +1545,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1576,7 +1576,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1607,7 +1607,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1638,7 +1638,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1669,7 +1669,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make",
       "sysreqs_packages": [
@@ -1707,7 +1707,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1738,7 +1738,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1769,7 +1769,7 @@
       "license": "LGPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "cmake (>= 3.2.0) which is used only on Linux or\n        macOS systems when no system build of nlopt (>= 2.7.0) can be\n        found.",
       "sysreqs_packages": [
@@ -1807,7 +1807,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1838,7 +1838,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1869,7 +1869,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1900,7 +1900,7 @@
       "license": "Apache License 2.0",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1931,7 +1931,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1962,7 +1962,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -1993,7 +1993,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2024,7 +2024,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2055,7 +2055,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make",
       "sysreqs_packages": [
@@ -2093,7 +2093,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2124,7 +2124,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2155,7 +2155,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2186,7 +2186,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2217,7 +2217,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2248,7 +2248,7 @@
       "license": "BSD_3_clause + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2279,7 +2279,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2310,7 +2310,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2341,7 +2341,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2372,7 +2372,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2403,7 +2403,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2434,7 +2434,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2465,7 +2465,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2496,7 +2496,7 @@
       "license": "BSD_2_clause + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "On a Unix-alike, one of the C functions\n        mach_absolute_time (macOS), clock_gettime or gethrtime. If none\n        of these is found, the obsolescent POSIX function gettimeofday\n        will be tried.",
       "sysreqs_packages": {}
@@ -2527,7 +2527,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2558,7 +2558,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2589,7 +2589,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2620,7 +2620,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2651,7 +2651,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2682,7 +2682,7 @@
       "license": "LGPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2713,7 +2713,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2744,7 +2744,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "xz (for building from source)",
       "sysreqs_packages": [
@@ -2782,7 +2782,7 @@
       "license": "GPL-2 | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2813,7 +2813,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2844,7 +2844,7 @@
       "license": "GPL-2 | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2875,7 +2875,7 @@
       "license": "Apache License (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2906,7 +2906,7 @@
       "license": "Apache License (>= 2.0)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "C++17; for AWS S3 support on Linux, libcurl and\n        openssl (optional); cmake >= 3.16 (build-time only, and only\n        for full source build)",
       "sysreqs_packages": [
@@ -2956,7 +2956,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -2987,7 +2987,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3018,7 +3018,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3049,7 +3049,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3080,7 +3080,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3111,7 +3111,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3142,7 +3142,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3173,7 +3173,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3204,7 +3204,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3235,7 +3235,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3266,7 +3266,7 @@
       "license": "BSD_2_clause + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3297,7 +3297,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3328,7 +3328,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3359,7 +3359,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3390,7 +3390,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3421,7 +3421,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3452,7 +3452,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3483,7 +3483,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3514,7 +3514,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3545,7 +3545,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3576,7 +3576,7 @@
       "license": "GPL (>= 2) | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make, zlib",
       "sysreqs_packages": [
@@ -3620,7 +3620,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3651,7 +3651,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3682,7 +3682,7 @@
       "license": "Apache License (== 2.0)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3713,7 +3713,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3744,7 +3744,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3775,7 +3775,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3806,7 +3806,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "OpenSSL >= 1.0.2",
       "sysreqs_packages": [
@@ -3844,7 +3844,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3875,7 +3875,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3906,7 +3906,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3937,7 +3937,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3968,7 +3968,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -3999,7 +3999,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4030,7 +4030,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4061,7 +4061,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4092,7 +4092,7 @@
       "license": "BSL-1.0",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4123,7 +4123,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4154,7 +4154,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4185,7 +4185,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4216,7 +4216,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4247,7 +4247,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "pandoc (>= 1.12.3), pandoc-citeproc",
       "sysreqs_packages": [
@@ -4291,7 +4291,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "pngquant",
       "sysreqs_packages": {}
@@ -4322,7 +4322,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4353,7 +4353,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4384,7 +4384,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4415,7 +4415,7 @@
       "license": "LGPL (>= 2.1)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4446,7 +4446,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4477,7 +4477,7 @@
       "license": "GPL-2 | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4508,7 +4508,7 @@
       "license": "LGPL (>= 2.1)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4539,7 +4539,7 @@
       "license": "LGPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4570,7 +4570,7 @@
       "license": "LGPL (>= 2.1)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4601,7 +4601,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "pandoc (>= 1.12.3), pandoc-citeproc",
       "sysreqs_packages": [
@@ -4645,7 +4645,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4676,7 +4676,7 @@
       "license": "LGPL (>= 2.1)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4707,7 +4707,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4738,7 +4738,7 @@
       "license": "BSD_3_clause + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4769,7 +4769,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4800,7 +4800,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4831,7 +4831,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make",
       "sysreqs_packages": [
@@ -4869,7 +4869,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -4900,7 +4900,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make, pandoc",
       "sysreqs_packages": [
@@ -4944,7 +4944,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "pandoc, C++14",
       "sysreqs_packages": [
@@ -4982,7 +4982,7 @@
       "license": "BSD_3_clause + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make, pandoc",
       "sysreqs_packages": [
@@ -5026,7 +5026,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5057,7 +5057,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5088,7 +5088,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5119,7 +5119,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "xclip (https://github.com/astrand/xclip) or xsel\n        (http://www.vergenet.net/~conrad/software/xsel/) for accessing\n        the X11 clipboard, or wl-clipboard\n        (https://github.com/bugaevc/wl-clipboard) for systems using\n        Wayland.",
       "sysreqs_packages": [
@@ -5157,7 +5157,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5188,7 +5188,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5219,7 +5219,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5250,7 +5250,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5281,7 +5281,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5312,7 +5312,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5343,7 +5343,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5374,7 +5374,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "C++11",
       "sysreqs_packages": {}
@@ -5405,7 +5405,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5436,7 +5436,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5467,7 +5467,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5498,7 +5498,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5529,7 +5529,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5560,7 +5560,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5591,7 +5591,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5622,7 +5622,7 @@
       "license": "Unlimited",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5653,7 +5653,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5684,7 +5684,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5715,7 +5715,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5746,7 +5746,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5777,7 +5777,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5808,7 +5808,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5839,7 +5839,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5870,7 +5870,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5901,7 +5901,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5932,7 +5932,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -5963,7 +5963,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "A system with zoneinfo data (e.g.\n        /usr/share/zoneinfo) as well as a recent-enough C++11 compiler\n        (such as g++-4.8 or later). On Windows the zoneinfo included\n        with R is used.",
       "sysreqs_packages": {}
@@ -5994,7 +5994,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6025,7 +6025,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6056,7 +6056,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6087,7 +6087,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6118,7 +6118,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6149,7 +6149,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6180,7 +6180,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6211,7 +6211,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6242,7 +6242,7 @@
       "license": "LGPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6273,7 +6273,7 @@
       "license": "LGPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6304,7 +6304,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6335,7 +6335,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6366,7 +6366,7 @@
       "license": "MPL-2.0 | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6397,7 +6397,7 @@
       "license": "LGPL (>= 2.1)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6428,7 +6428,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6459,7 +6459,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6490,7 +6490,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6521,7 +6521,7 @@
       "license": "LGPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6552,7 +6552,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6583,7 +6583,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6614,7 +6614,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6645,7 +6645,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6676,7 +6676,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6707,7 +6707,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6738,7 +6738,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6769,7 +6769,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6800,7 +6800,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6831,7 +6831,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6862,7 +6862,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6893,7 +6893,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6924,7 +6924,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make",
       "sysreqs_packages": [
@@ -6962,7 +6962,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -6993,7 +6993,7 @@
       "license": "GPL-3 | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7024,7 +7024,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7055,7 +7055,7 @@
       "license": "MPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7086,7 +7086,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7117,7 +7117,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7148,7 +7148,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7179,7 +7179,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7210,7 +7210,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7241,7 +7241,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7272,7 +7272,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7303,7 +7303,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7334,7 +7334,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7365,7 +7365,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7396,7 +7396,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs_packages": {}
     },
@@ -7426,7 +7426,7 @@
       "license": "MIT + file LICENCE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7457,7 +7457,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7488,7 +7488,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7519,7 +7519,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7550,7 +7550,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7581,7 +7581,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7612,7 +7612,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7643,7 +7643,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7674,7 +7674,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7705,7 +7705,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7736,7 +7736,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7767,7 +7767,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7798,7 +7798,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7829,7 +7829,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7860,7 +7860,7 @@
       "license": "file LICENCE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7891,7 +7891,7 @@
       "license": "file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7922,7 +7922,7 @@
       "license": "GPL-3 | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7953,7 +7953,7 @@
       "license": "Apache License (== 2.0)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -7984,7 +7984,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8015,7 +8015,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8046,7 +8046,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8077,7 +8077,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8108,7 +8108,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8139,7 +8139,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8170,7 +8170,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8201,7 +8201,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8232,7 +8232,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8263,7 +8263,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8294,7 +8294,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8325,7 +8325,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8356,7 +8356,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8387,7 +8387,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8418,7 +8418,7 @@
       "license": "GPL (>= 2.0)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "openssl",
       "sysreqs_packages": [
@@ -8456,7 +8456,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8487,7 +8487,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8518,7 +8518,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8549,7 +8549,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8580,7 +8580,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8611,7 +8611,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8642,7 +8642,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8673,7 +8673,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8704,7 +8704,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "git",
       "sysreqs_packages": [
@@ -8742,7 +8742,7 @@
       "license": "AGPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make",
       "sysreqs_packages": [
@@ -8780,7 +8780,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8811,7 +8811,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "C++17",
       "sysreqs_packages": {}
@@ -8842,7 +8842,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8873,7 +8873,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8904,7 +8904,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -8935,7 +8935,7 @@
       "license": "BSD_3_clause + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "libxml2 (>= 2.6.3)",
       "sysreqs_packages": [
@@ -8973,7 +8973,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9004,7 +9004,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9035,7 +9035,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9066,7 +9066,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9097,7 +9097,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9128,7 +9128,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9159,7 +9159,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9190,7 +9190,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make, zlib: zlib1g-dev (deb), zlib-devel (rpm)",
       "sysreqs_packages": [
@@ -9234,7 +9234,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9265,7 +9265,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9296,7 +9296,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9327,7 +9327,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9358,7 +9358,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9389,7 +9389,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9420,7 +9420,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9451,7 +9451,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9482,7 +9482,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9513,7 +9513,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9544,7 +9544,7 @@
       "license": "AGPL-3 | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "pandoc (https://johnmacfarlane.net/pandoc) for\n        exporting markdown files to other formats.",
       "sysreqs_packages": [
@@ -9582,7 +9582,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9613,7 +9613,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9644,7 +9644,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9675,7 +9675,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9706,7 +9706,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "fontconfig, freetype2",
       "sysreqs_packages": [
@@ -9750,7 +9750,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "Package vignettes based on R Markdown v2 or\n        reStructuredText require Pandoc (http://pandoc.org). The\n        function rst2pdf() requires rst2pdf\n        (https://github.com/rst2pdf/rst2pdf).",
       "sysreqs_packages": [
@@ -9788,7 +9788,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9819,7 +9819,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9850,7 +9850,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "libjpeg",
       "sysreqs_packages": [
@@ -9888,7 +9888,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9919,7 +9919,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "libpng",
       "sysreqs_packages": [
@@ -9957,7 +9957,7 @@
       "license": "GPL (>= 2.0)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -9988,7 +9988,7 @@
       "license": "GPL (>= 2.0)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10019,7 +10019,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "C++17",
       "sysreqs_packages": {}
@@ -10050,7 +10050,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10081,7 +10081,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "C++11, A system with zoneinfo data (e.g.\n        /usr/share/zoneinfo). On Windows the zoneinfo included with R\n        is used.",
       "sysreqs_packages": {}
@@ -10112,7 +10112,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "ImageMagick++: ImageMagick-c++-devel (rpm) or\n        libmagick++-dev (deb)",
       "sysreqs_packages": [
@@ -10150,7 +10150,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10181,7 +10181,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10212,7 +10212,7 @@
       "license": "Artistic-2.0",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10243,7 +10243,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10274,7 +10274,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10305,7 +10305,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10336,7 +10336,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10367,7 +10367,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10398,7 +10398,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10429,7 +10429,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10460,7 +10460,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10491,7 +10491,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10522,7 +10522,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10553,7 +10553,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10584,7 +10584,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "pandoc (>= 1.12.3) for vignettes",
       "sysreqs_packages": [
@@ -10622,7 +10622,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10653,7 +10653,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10684,7 +10684,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10715,7 +10715,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10746,7 +10746,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10777,7 +10777,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10808,7 +10808,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10839,7 +10839,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10870,7 +10870,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10901,7 +10901,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10932,7 +10932,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10963,7 +10963,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -10994,7 +10994,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11025,7 +11025,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11056,7 +11056,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11087,7 +11087,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11118,7 +11118,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11149,7 +11149,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11180,7 +11180,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "C++11",
       "sysreqs_packages": {}
@@ -11211,7 +11211,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11242,7 +11242,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11273,7 +11273,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11304,7 +11304,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11335,7 +11335,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11366,7 +11366,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11397,7 +11397,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11428,7 +11428,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11459,7 +11459,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11490,7 +11490,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11521,7 +11521,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11552,7 +11552,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11583,7 +11583,7 @@
       "license": "LGPL (>= 2.1)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11614,7 +11614,7 @@
       "license": "LGPL (>= 2.1)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11645,7 +11645,7 @@
       "license": "LGPL (>= 2.1)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11676,7 +11676,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11707,7 +11707,7 @@
       "license": "GPL-3 | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11738,7 +11738,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11769,7 +11769,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11800,7 +11800,7 @@
       "license": "GPL (>= 2) | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11831,7 +11831,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make, Intel TBB, Windows: cmd.exe and\n        cscript.exe, Solaris: g++ is required",
       "sysreqs_packages": [
@@ -11869,7 +11869,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11900,7 +11900,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11931,7 +11931,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11962,7 +11962,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -11993,7 +11993,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12024,7 +12024,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12055,7 +12055,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12086,7 +12086,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12117,7 +12117,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12148,7 +12148,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12179,7 +12179,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "pandoc (>= 1.14) - http://pandoc.org",
       "sysreqs_packages": [
@@ -12217,7 +12217,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12248,7 +12248,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12279,7 +12279,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12310,7 +12310,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12341,7 +12341,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12372,7 +12372,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12403,7 +12403,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12434,7 +12434,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12465,7 +12465,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12496,7 +12496,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12527,7 +12527,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12558,7 +12558,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12589,7 +12589,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "USE_C17",
       "sysreqs_packages": {}
@@ -12620,7 +12620,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12651,7 +12651,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12682,7 +12682,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12713,7 +12713,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12744,7 +12744,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12775,7 +12775,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12806,7 +12806,7 @@
       "license": "BSD_3_clause + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make, libcurl",
       "sysreqs_packages": [
@@ -12850,7 +12850,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12881,7 +12881,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12912,7 +12912,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12943,7 +12943,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -12974,7 +12974,7 @@
       "license": "Apache License (== 2.0)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "OpenSSL >= 1.0.1",
       "sysreqs_packages": [
@@ -13012,7 +13012,7 @@
       "license": "GPL-2 | MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GDAL (>= 2.0.1), GEOS (>= 3.4.0), PROJ (>= 4.8.0),\n        sqlite3",
       "sysreqs_packages": [
@@ -13068,7 +13068,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "udunits-2",
       "sysreqs_packages": [
@@ -13106,7 +13106,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13137,7 +13137,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13168,7 +13168,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13199,7 +13199,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "C++11",
       "sysreqs_packages": {}
@@ -13230,7 +13230,7 @@
       "license": "BSD_3_clause + file LICENCE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13261,7 +13261,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13292,7 +13292,7 @@
       "license": "Apache License (== 2.0) | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "GNU make, C++17",
       "sysreqs_packages": [
@@ -13330,7 +13330,7 @@
       "license": "GPL-3 | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13361,7 +13361,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13392,7 +13392,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13423,7 +13423,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13454,7 +13454,7 @@
       "license": "file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "ICU4C (>= 61, optional)",
       "sysreqs_packages": [
@@ -13492,7 +13492,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13523,7 +13523,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13554,7 +13554,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13585,7 +13585,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13616,7 +13616,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13647,7 +13647,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13678,7 +13678,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13709,7 +13709,7 @@
       "license": "GPL-3 | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13740,7 +13740,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13771,7 +13771,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13802,7 +13802,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13833,7 +13833,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13864,7 +13864,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13895,7 +13895,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -13926,7 +13926,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs_packages": {}
     },
@@ -13956,7 +13956,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "libpng",
       "sysreqs_packages": [
@@ -13994,7 +13994,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14025,7 +14025,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14056,7 +14056,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14087,7 +14087,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14118,7 +14118,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14149,7 +14149,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14180,7 +14180,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14211,7 +14211,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14242,7 +14242,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14273,7 +14273,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14304,7 +14304,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "freetype2, libpng, libtiff, libjpeg",
       "sysreqs_packages": [
@@ -14360,7 +14360,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14391,7 +14391,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "pandoc (>= 2.0) - https://pandoc.org/",
       "sysreqs_packages": [
@@ -14429,7 +14429,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14460,7 +14460,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14491,7 +14491,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14522,7 +14522,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14553,7 +14553,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14584,7 +14584,7 @@
       "license": "BSD_3_clause + file LICENCE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14615,7 +14615,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14646,7 +14646,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14677,7 +14677,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "freetype2, harfbuzz, fribidi",
       "sysreqs_packages": [
@@ -14727,7 +14727,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14758,7 +14758,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14789,7 +14789,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14820,7 +14820,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14851,7 +14851,7 @@
       "license": "Apache License (== 2.0) | file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14882,7 +14882,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14913,7 +14913,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14944,7 +14944,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -14975,7 +14975,7 @@
       "license": "GPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15006,7 +15006,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15037,7 +15037,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15068,7 +15068,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15099,7 +15099,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15130,7 +15130,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15161,7 +15161,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "libxml2: libxml2-dev (deb), libxml2-devel (rpm)",
       "sysreqs_packages": [
@@ -15199,7 +15199,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15230,7 +15230,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15261,7 +15261,7 @@
       "license": "GPL-2 | GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15292,7 +15292,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15323,7 +15323,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15354,7 +15354,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15385,7 +15385,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15416,7 +15416,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15447,7 +15447,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15478,7 +15478,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15509,7 +15509,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15540,7 +15540,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15571,7 +15571,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "libxml2 (optional), glpk (>= 4.57, optional)",
       "sysreqs_packages": [
@@ -15615,7 +15615,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15646,7 +15646,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15677,7 +15677,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15708,7 +15708,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15739,7 +15739,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15770,7 +15770,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15801,7 +15801,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15832,7 +15832,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15863,7 +15863,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15894,7 +15894,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15925,7 +15925,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15956,7 +15956,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -15987,7 +15987,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16018,7 +16018,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16049,7 +16049,7 @@
       "license": "GPL",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16080,7 +16080,7 @@
       "license": "LGPL (>= 2.1)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16111,7 +16111,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16142,7 +16142,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16173,7 +16173,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16204,7 +16204,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16235,7 +16235,7 @@
       "license": "AGPL (>= 3)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16266,7 +16266,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16297,7 +16297,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16328,7 +16328,7 @@
       "license": "LGPL (>= 2.1)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16359,7 +16359,7 @@
       "license": "GPL-2",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16390,7 +16390,7 @@
       "license": "GPL-3",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16421,7 +16421,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16452,7 +16452,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16483,7 +16483,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16514,7 +16514,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16545,7 +16545,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16576,7 +16576,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16607,7 +16607,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16638,7 +16638,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16669,7 +16669,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16700,7 +16700,7 @@
       "license": "BSL-1.0",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16731,7 +16731,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16762,7 +16762,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16793,7 +16793,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16824,7 +16824,7 @@
       "license": "MIT + file LICENSE",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16855,7 +16855,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "",
       "sysreqs_packages": {}
@@ -16886,7 +16886,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "repotype": "cran",
       "sysreqs": "libpng, cairo, freetype2, fontconfig",
       "sysreqs_packages": [
@@ -16941,7 +16941,7 @@
       "license": "GPL (>= 2)",
       "dep_types": ["Depends", "Imports", "LinkingTo"],
       "params": [],
-      "install_args": "",
+      "install_args": [],
       "sysreqs_packages": {}
     }
   ]
