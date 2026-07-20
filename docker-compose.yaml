@@ -48,6 +48,14 @@ services:
         - ubuntu_pro_token
     ports:
       - 8787:8787
+    # no curl/wget in the image, so probe the port with bash's /dev/tcp;
+    # this makes `docker compose up --wait` block until rserver is listening
+    healthcheck:
+      test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/8787"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+      start_period: 5s
     platform: linux/amd64
     volumes:
       - ${PWD}:/workspace
