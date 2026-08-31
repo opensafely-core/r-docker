@@ -99,6 +99,13 @@ COPY rstudio/etc/* /etc/rstudio/
 RUN --mount=type=bind,source=v3/rsession-ai-off.conf,target=/tmp/rsession-ai-off.conf \
     cat /tmp/rsession-ai-off.conf >> /etc/rstudio/rsession.conf
 
+# rstudio-server 2026.08 added reduce_remote_filesystem_operations (default on),
+# which disables file monitoring and code indexing because the /workspace bind
+# mount looks like a remote filesystem. There is no rsession.conf equivalent, and
+# the entrypoint rewrites /etc/rstudio/rstudio-prefs.json on every start, so set
+# it in the user prefs layer instead.
+COPY v3/rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
+
 RUN <<EOF
     chown -R rstudio:rstudio /home/rstudio
     echo "R_LIBS_SITE=/usr/local/lib/R/site-library" >> /usr/lib/R/etc/Renviron.site
