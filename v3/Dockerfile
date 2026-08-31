@@ -94,6 +94,11 @@ RUN useradd rstudio -m
 COPY rstudio/home/* /home/rstudio/
 COPY rstudio/etc/* /etc/rstudio/
 
+# rstudio/etc is shared with v1 and v2, so append the v3-only settings here
+# rather than editing the shared rsession.conf.
+RUN --mount=type=bind,source=v3/rsession-ai-off.conf,target=/tmp/rsession-ai-off.conf \
+    cat /tmp/rsession-ai-off.conf >> /etc/rstudio/rsession.conf
+
 RUN <<EOF
     chown -R rstudio:rstudio /home/rstudio
     echo "R_LIBS_SITE=/usr/local/lib/R/site-library" >> /usr/lib/R/etc/Renviron.site
