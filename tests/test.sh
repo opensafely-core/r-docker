@@ -14,7 +14,7 @@ if [ "${MAJOR_VERSION}" = "v1" ]; then
   # Test all R packages can be loaded
   python3 -c "import json; print('\n'.join(json.load(open(\"./$MAJOR_VERSION/renv.lock\"))['Packages']))" | xargs -I {} echo "if (!library({}, warn.conflicts = FALSE, logical.return = TRUE)) {stop(\"Package {} failed to load, please investigate\")}" > .tests.R
   run_test "${MAJOR_VERSION}" .tests.R
-elif [ "${MAJOR_VERSION}" = "v2" ]; then
+elif [[ "${MAJOR_VERSION}" =~ ^v[23]$ ]]; then
   # Test all R packages can be attached then detached
   run_test "${MAJOR_VERSION}" ./tests/test-loading-packages.R
 fi
@@ -31,8 +31,8 @@ run_test "${MAJOR_VERSION}" ./tests/test-arrow.R
 # Test loading the 14 base packages
 run_test "${MAJOR_VERSION}" ./tests/test-loading-base.R
 
-# Test user installed paackages on v2
-if [ "${MAJOR_VERSION}" = "v2" ]; then
+# Test user installed paackages on v2 and v3
+if [[ "${MAJOR_VERSION}" =~ ^v[23]$ ]]; then
   # Test installing and loading in same R session
   run_test "${MAJOR_VERSION}" ./tests/test-user-install-package.R
   

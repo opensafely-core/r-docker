@@ -5,7 +5,7 @@
 #################################################
 ARG BASE=22.04
 FROM ghcr.io/opensafely-core/base-action:$BASE AS base-r
-ARG MAJOR_VERSION=v2
+ARG MAJOR_VERSION=v3
 
 # add cran repo for R packages and install
 RUN --mount=type=cache,target=/var/cache/apt,id=apt-2204,sharing=locked \
@@ -14,6 +14,8 @@ RUN --mount=type=cache,target=/var/cache/apt,id=apt-2204,sharing=locked \
     echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" > /etc/apt/sources.list.d/cran.list
     /usr/lib/apt/apt-helper download-file 'https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc' /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
     /root/docker-apt-install.sh /tmp/dependencies.txt
+    ln -sf /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 /usr/lib/R/lib/libRblas.so
+    ln -sf /usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3 /usr/lib/R/lib/libRlapack.so
 EOF
 
 # use pak to install packages
@@ -37,7 +39,7 @@ EOF
 # Finally, build the actual image from the base-r image
 FROM base-r AS r
 ARG REPOS="default-arg-to-silence-docker"
-ARG MAJOR_VERSION=v2
+ARG MAJOR_VERSION=v3
 ENV MAJOR_VERSION=${MAJOR_VERSION}
 RUN echo "MAJOR_VERSION=${MAJOR_VERSION}" >> /usr/lib/R/etc/Renviron.site
 
@@ -91,6 +93,18 @@ RUN useradd rstudio -m
 # copy R/rstudio config into user home dir
 COPY rstudio/home/* /home/rstudio/
 COPY rstudio/etc/* /etc/rstudio/
+
+# rstudio/etc is shared with v1 and v2, so append the v3-only settings here
+# rather than editing the shared rsession.conf.
+RUN --mount=type=bind,source=v3/rsession-ai-off.conf,target=/tmp/rsession-ai-off.conf \
+    cat /tmp/rsession-ai-off.conf >> /etc/rstudio/rsession.conf
+
+# rstudio-server 2026.08 added reduce_remote_filesystem_operations (default on),
+# which disables file monitoring and code indexing because the /workspace bind
+# mount looks like a remote filesystem. There is no rsession.conf equivalent, and
+# the entrypoint rewrites /etc/rstudio/rstudio-prefs.json on every start, so set
+# it in the user prefs layer instead.
+COPY v3/rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
 
 RUN <<EOF
     chown -R rstudio:rstudio /home/rstudio

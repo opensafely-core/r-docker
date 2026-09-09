@@ -1,5 +1,5 @@
 # User library directory should already exist, hence .libPaths() is amended
-stopifnot(.libPaths()[1] == "/workspace/.local-packages/r/v2")
+stopifnot(.libPaths()[1] == paste0("/workspace/.local-packages/r/", Sys.getenv("MAJOR_VERSION")))
 # Load the pre-installed package from previous R session which is now in repo
 library(tmsens)
 # Delete /workspace/.local-packages

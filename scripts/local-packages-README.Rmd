@@ -1,10 +1,24 @@
+---
+title: ""
+output:
+  github_document:
+    html_preview: false
+---
+
+```{r setup, include=FALSE}
+v <- Sys.getenv("MAJOR_VERSION")
+r_img <- paste0("`r:", v, "`")
+rstudio_img <- paste0("`rstudio:", v, "`")
+local_dir <- paste0("_.local-packages/r/", v, "_")
+```
+
 # .local-packages a directory for user installed libraries
 
-This directory contains user installed libraries, for say use running OpenSAFELY code in a Codespace or locally.
+This directory contains user installed libraries, for say running OpenSAFELY code in a Codespace or locally.
 
 ## How to add and remove user installed R packages
 
-The _.local-packages/r/v2_ directory contains user installed R packages to work in the `r:v2` and `rstudio:v2` images.
+The `r local_dir` directory contains user installed R packages to work in the `r r_img` and `r rstudio_img` images.
 
 You can install additional packages by running
 
@@ -14,7 +28,7 @@ install.packages("PACKAGENAME")
 
 or by using the RStudio _Package_ pane _Install_ button.
 
-Note that packages are installed from the same date from CRAN as the other packages in the `r:v2` image. This is to ensure user installed packages work with the other packages in the image (at the time of installation).
+Note that packages are installed from the same date from CRAN as the other packages in the `r r_img` image. This is to ensure user installed packages work with the other packages in the image (at the time of installation).
 
 If you no longer require a package you can also remove it as follows.
 

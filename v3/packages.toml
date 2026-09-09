@@ -1,0 +1,232 @@
+title = "R packages and their repositories for v3 of the OpenSAFELY r image"
+
+# base packages
+# rownames(installed.packages(priority = "base"))
+# R has 14 base packages which are included in the image: base, compiler, datasets, grDevices, graphics, grid, methods, parallel, splines, stats, stats4, tcltk, tools, utils; these do not need to be listed below
+# recommended packages
+# rownames(installed.packages(priority = "recommended"))
+# R has 15 recommended packages, 14 of which are included in the image: boot, class, cluster, codetools, foreign, KernSmooth, lattice, mgcv, nlme, nnet, rpart, spatial, survival, MASS, Matrix; spatial is currently not included.
+
+[v1]
+packages = [
+  "arrow",
+  "astsa",
+  "BayesianTools",
+  "bayesm",
+  "BH",
+  "binom",
+  "blob",
+  "brglm2",
+  "brms",
+  "broom",
+  "broom.helpers",
+  "butcher",
+  "caret",
+  "caTools",
+  "cmprsk",
+  "cobalt",
+  "consort",
+  "cowplot",
+  "coxme",
+  "cpp11",
+  "dagitty",
+  "data.table",
+  "DBI",
+  "dbplyr",
+  "deSolve",
+  "detectseparation",
+  "doBy",
+  "doParallel",
+  "dplyr",
+  "dtplyr",
+  "dtwclust",
+  "e1071",
+  "egg",
+  "emmeans",
+  "Epi",
+  "epitools",
+  "estimatr",
+  "fastDummies",
+  "finalfit",
+  "flexsurv",
+  "fontquiver",
+  "foreach",
+  "forecast",
+  "forestploter",
+  "furrr",
+  "fuzzyjoin",
+  "gets",
+  "ggalluvial",
+  "GGally",
+  "ggdist",
+  "ggfortify",
+  "ggh4x",
+  "ggplot2",
+  "ggvenn",
+  "gh",
+  "gitcreds",
+  "glmmTMB",
+  "glmnet",
+  "glue",
+  "Gmisc", 
+  "gt",
+  "gtsummary",
+  "haven",
+  "HDInterval",
+  "here",
+  "hexbin",
+  "Hmisc",
+  "hms",
+  "incidence",
+  "interactions",
+  "janitor",
+  "jsonlite",
+  "kableExtra",
+  "knitr",
+  "labelled",
+  "latticeExtra",
+  "lcmm",
+  "lme4",
+  "lubridate",
+  "magick",
+  "magrittr",
+  "MatchIt",
+  "matrixStats",
+  "metafor",
+  "mice",
+  "mlogit",
+  "modelsummary",
+  "mstate",
+  "multcomp",
+  "mvtnorm",
+  "naniar",
+  "NHPoisson",
+  "optparse",
+  "pammtools",
+  "parameters",
+  "parglm",
+  "patchwork",
+  "pch",
+  "pec",
+  "PHEindicatormethods",
+  "plotly",
+  "plotrix",
+  "predtools",
+  "pscl",
+  "pseudo",
+  "R.utils",
+  "randomForest",
+  "randomForestExplainer",
+  "Rcpp",
+  "RcppArmadillo",
+  "RcppEigen",
+  "RcppParallel",
+  "RcppProgress",
+  "RcppRoll",
+  "RcppThread",
+  "rdrobust",
+  "readxl",
+  "relsurv",
+  "riskRegression",
+  "rlang",
+  "rmarkdown",
+  "rms",
+  "rpart.plot",
+  "sandwich",
+  "SCCS",
+  "segmented",
+  "sf",
+  "shapviz",
+  "shiny",
+  "skimr",
+  "splines2",
+  "stringi",
+  "stringr",
+  "survey",
+  "survminer",
+  "svglite",
+  "sweep",
+  "tictoc",
+  "tidyr",
+  "tidyselect",
+  "tidyverse",
+  "timetk",
+  "tsModel",
+  "twopartm",
+  "vcd",
+  "VGAM",
+  "WeightIt",
+  "xml2",
+  "xts",
+  "zip",
+  "zoo"
+]
+comment = "Packages from v1 image. Note that not all packages from v1 are included in v3."
+
+[v2-additions]
+packages = [
+  "corrr",
+  "DiagrammeR",
+  "infer",
+  "interp",
+  "lintr",
+  "parsnip",
+  "sjPlot",
+  "speedglm",
+  "styler",
+  "targets",
+  "tidycmprsk",
+  "tidymodels",
+  "tidypredict"
+]
+comment = "sjPlot requested in issue 160."
+
+[dummy-data]
+packages = "dd4d"
+repos = "https://opensafely-core.r-universe.dev/"
+comment = "Will's package for simulating dummy data. First added for Will and Becky's workshop at the 2024 OpenSAFELY Symposium."
+
+[vscode]
+packages = [
+  "AsioHeaders",
+  "languageserver",
+  "httpgd"
+]
+comment = "Packages to work with the VSCode R extension."
+
+[trial-emulation]
+packages = "TrialEmulation"
+comment = "The Bristol group are planning to perform target trial emulation analyses."
+
+[cardx]
+packages = "cardx"
+comment = "Requested by Will. This is a soft (Suggests list) dependency of gtsummary, and hence wasn't previously installed."
+
+[marginaleffects]
+packages = "marginaleffects"
+comment = "Requested by Will. This is a package to compute and plot marginal effects for fitted statistical models."
+
+[mediation-package]
+packages = "medflex"
+comment = "Requested by Ruth Costello. This is a package to for flexible mediation analysis using natural effect models"
+
+[mediation]
+packages = "mediation"
+comment = "Requested by Ruth Costello. Needed for mediation analysis with a survival outcome."
+
+[parglm-alternative]
+packages = "fastglm"
+comment = "This is an alternative to the parglm package. These are both faster alternatives to the standard stats::glm() function which is very slow."
+
+[sequential-target-trial-emulation]
+packages = "SEQTaRget"
+comment = "The Bristol group are planning to perform sequential target trial emulation analyses."
+
+[memory-help]
+packages = [
+    "bench",
+    "profvis",
+    "qs2",
+    "RhpcBLASctl"
+]
+comment = "Packages required for profiling and memory efficiency, as recommended by Will's updated guidance."

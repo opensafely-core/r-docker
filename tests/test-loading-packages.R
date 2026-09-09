@@ -7,12 +7,12 @@ npkgs <- length(pkgs)
 
 for (i in 1:npkgs) {
     package <- pkgs[i]
-    suppressMessages({
-    if (!library(package, logical.return = TRUE, character.only = TRUE)) {
-      stop(paste("Package", package, "failed to load, please investigate"))
-    }
+    tryCatch({
+    suppressMessages(library(package, character.only = TRUE))
     dtch <- paste0("package:", package)
     detach(dtch, force = TRUE, unload = TRUE, character.only = TRUE)
+    }, error = function(e) {
+      stop(paste0("Package ", package, " failed to load: ", conditionMessage(e)))
     })
 }
 
