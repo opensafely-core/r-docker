@@ -110,8 +110,8 @@ When you have authentication configured, tag and push the new Docker image to
 Github Container Registry:
 
 ```sh
-docker tag r:{{ version }} ghcr.io/opensafely-core/r:{{ version }}-pre
-docker push ghcr.io/opensafely-core/r:{{ version }}-pre
+docker tag r:VERSION ghcr.io/opensafely-core/r:VERSION-pre
+docker push ghcr.io/opensafely-core/r:VERSION-pre
 ```
 
 ### Commit changes to this repository
