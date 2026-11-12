@@ -1,3 +1,5 @@
+import 'justfile.base'
+
 set dotenv-load := true
 
 #enable modern docker build features
@@ -67,8 +69,7 @@ _env:
 
 # lint source code
 lint version:
-    docker pull hadolint/hadolint
-    docker run --rm -i hadolint/hadolint < {{ version }}/Dockerfile
+    {{ docker_run_safe }} -i ghcr.io/hadolint/hadolint:{{ hadolint_version }} < {{ version }}/Dockerfile
 
 publish version:
     #!/usr/bin/env bash
