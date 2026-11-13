@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 export MAJOR_VERSION=v1
-test -n "$2" || { echo "You must specify a package name. If you want a specific version, append @VERSION"; exit 1; }
+test -n "${1:-}" || { echo "You must specify a package name. If you want a specific version, append @VERSION"; exit 1; }
 
 export PACKAGE="$1"
-if [ "$2" != "NULL" ]; then
-  export REPOS=$2
+if [ "${2:-NULL}" != "NULL" ]; then
+  export REPOS="$2"
 else
   export REPOS=https://cloud.r-project.org
 fi

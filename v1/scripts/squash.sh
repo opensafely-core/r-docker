@@ -3,10 +3,11 @@
 # This will attempt to squash the current image into a single layer
 set -euo pipefail
 IMAGE=ghcr.io/opensafely-core/r
+VERSION=v1
 TAG=squashed
 
-docker pull $IMAGE
-docker run -dit --entrypoint bash --name r-squash $IMAGE
+docker pull "$IMAGE:$VERSION"
+docker run -dit --entrypoint bash --name r-squash "$IMAGE:$VERSION"
 trap "docker kill r-squash" EXIT
 
 # export and import the image, changing the CMD, ENTRYPOINT, and WORKDIR back

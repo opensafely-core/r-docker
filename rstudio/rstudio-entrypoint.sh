@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # On Linux set rstudio user id to same as id of host if rstudio user id not already the same
-if [ "$HOSTPLATFORM" = "linux" -a "$(id -u rstudio)" != "$HOSTUID" ]; then
-  usermod -u $HOSTUID rstudio
+if [ "$HOSTPLATFORM" = "linux" ] && [ "$(id -u rstudio)" != "$HOSTUID" ]; then
+  usermod -u "$HOSTUID" rstudio
 fi
 
 # Check for 1 .Rproj file
-if [ $(find /workspace -type f -name "*.Rproj" | wc -w) -eq 1 ]; then
+if [ "$(find /workspace -type f -name "*.Rproj" | wc -w)" -eq 1 ]; then
 
   # Copy in Git user.name and user.email from copied local-gitconfig from additionally mounted volume
   if test -f /home/rstudio/local-gitconfig; then
