@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # On Linux set rstudio user id to same as id of host if rstudio user id not already the same
-if [ "$HOSTPLATFORM" = "linux" -a "$(id -u rstudio)" != "$HOSTUID" ]; then
+if [ "$HOSTPLATFORM" = "linux" ] && [ "$(id -u rstudio)" != "$HOSTUID" ]; then
   usermod -u "$HOSTUID" rstudio
 fi
 
