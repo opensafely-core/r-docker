@@ -5,7 +5,7 @@ MAJOR_VERSION="$1"
 
 trap "docker compose kill > /dev/null 2>&1 || true" EXIT
 
-docker compose --env-file ${MAJOR_VERSION}/env up -d --wait --wait-timeout 30 rstudio
+docker compose --env-file "${MAJOR_VERSION}"/env up -d --wait --wait-timeout 30 rstudio
 
 # --retry-all-errors: plain --retry doesn't cover connection resets (curl exit 56),
 # which is what Docker Desktop's port proxy returns while rserver is still starting
