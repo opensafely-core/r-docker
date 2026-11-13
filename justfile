@@ -89,7 +89,10 @@ publish-rstudio version:
       docker push ghcr.io/opensafely-core/rstudio:latest
     fi
 
-check version:
+shellcheck dir="scripts":
+    find rstudio/ scripts/ tests/ v1/ v2/ v3/ -name \*.sh -print0 | xargs -0 {{ docker_run_safe }} -v "$PWD:/mnt:ro" koalaman/shellcheck:{{ shellcheck_version }}
+
+check version: && shellcheck
     #!/usr/bin/env bash
     if [[ "{{ version }}" =~ ^v[23]$ ]]; then
       uvx --python 3.13 toml-validator {{ version }}/packages.toml
